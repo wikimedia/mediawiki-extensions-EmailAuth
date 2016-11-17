@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"emailauth-desc": "Sprawdza podejrzane logowania przez e-mail.",
+	"emailauth-token-label": "Kod weryfikacyjny",
+	"emailauth-email-subject": "Twój kod weryfikacyjny logowania do $1",
+	"emailauth-email-body": "Twój kod weryfikacyjny logowania do $1 to $2",
+	"emailauth-login-failure": "Nieprawidłowy kod weryfikacyjny!"
+}

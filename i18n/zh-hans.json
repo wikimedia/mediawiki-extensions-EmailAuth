@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"emailauth-desc": "通过电子邮件验证可疑登录。",
+	"emailauth-token-label": "验证码",
+	"emailauth-token-help": "一次性2FA令牌已通过电子邮件发送。",
+	"emailauth-login-retry-limit": "失败太多次！"
+}

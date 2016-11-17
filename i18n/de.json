@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"emailauth-desc": "Verifiziert verdächtige Anmeldeversuche mithilfe von E-Mails.",
+	"emailauth-token-label": "Verifizierungscode",
+	"emailauth-token-help": "Durch E-Mails versandter Einmal-2FA-Token.",
+	"emailauth-email-subject": "Dein Anmelde-Verifizierungscode für $1",
+	"emailauth-email-body": "Dein Anmelde-Verifizierungscode für $1 ist $2",
+	"emailauth-login-message": "Du musst deinen Anmeldeversuch verifizieren. Ein Verifizierungscode wurde an deine E-Mail-Adresse ($1) versandt. Bitte gib hier diesen Code ein.",
+	"emailauth-login-failure": "Ungültiger Verifizierungscode!",
+	"emailauth-login-retry-limit": "Zu viele Fehlversuche!"
+}
