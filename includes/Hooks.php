@@ -15,6 +15,7 @@ class Hooks {
 				'size' => 6,
 				'autofocus' => true,
 				'persistent' => false,
+				'autocomplete' => false,
 				'spellcheck' => false,
 			];
 		}
