@@ -54,7 +54,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 				'ip' => $user->getRequest()->getIP(),
 			] );
 			return AuthenticationResponse::newPass();
-		} else if ( $req && $req->token ) {
+		} elseif ( $req && $req->token ) {
 			// do not log if the code is simply missing - accidental enter or confused bot
 			LoggerFactory::getInstance( 'EmailAuth' )->info( 'Failed verification for {user}', [
 				'user' => $user->getName(),

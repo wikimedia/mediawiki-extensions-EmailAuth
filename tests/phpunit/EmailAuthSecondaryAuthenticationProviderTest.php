@@ -22,10 +22,11 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase  {
 	/** @var LoggerInterface|PHPUnit_Framework_MockObject_MockObject */
 	protected $logger;
 
-	public function setUp() {
+	protected function setUp() {
 		parent::setUp();
 
-		$this->setTemporaryHook( 'EmailAuthRequireToken', function () {} );
+		$this->setTemporaryHook( 'EmailAuthRequireToken', function () {
+		} );
 
 		$this->provider = new EmailAuthSecondaryAuthenticationProvider();
 
@@ -44,8 +45,6 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase  {
 				return $this->session->get( $key );
 			} );
 		$this->provider->setManager( $this->manager );
-
-		return $this->provider;
 	}
 
 	public function testGetAuthenticationRequests() {
