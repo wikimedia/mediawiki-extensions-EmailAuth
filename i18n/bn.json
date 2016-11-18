@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman"
+		]
+	},
+	"emailauth-token-label": "যাচাইকরণ কোড",
+	"emailauth-login-failure": "অবৈধ যাচাইকরণ কোড!"
+}
