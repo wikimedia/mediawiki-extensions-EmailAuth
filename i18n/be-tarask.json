@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"emailauth-token-label": "Код праверкі",
+	"emailauth-login-failure": "Няслушны код пацьверджаньня!"
+}
