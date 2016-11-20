@@ -4,6 +4,7 @@
 			"Robby"
 		]
 	},
+	"emailauth-desc": "Verifizéiert verdächtegt Alogge per E-Mail.",
 	"emailauth-token-label": "Iwwerpréifungs-Code",
 	"emailauth-token-help": "Eemol gültegen 2FA-Token dee per E-Mail geschéckt gouf.",
 	"emailauth-email-subject": "Ären Iwwerpréifings-Code fir $1 fir Iech anzeloggen",
