@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"emailauth-token-label": "Verifieringskod",
+	"emailauth-login-retry-limit": "För många misslyckanden!"
+}
