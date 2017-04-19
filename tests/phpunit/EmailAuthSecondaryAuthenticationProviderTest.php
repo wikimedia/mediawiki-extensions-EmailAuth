@@ -9,8 +9,8 @@ use MediaWiki\Auth\AuthManager;
 use MediaWikiTestCase;
 use PHPUnit_Framework_MockObject_MockObject;
 use Psr\Log\LoggerInterface;
-use TestingAccessWrapper;
 use User;
+use Wikimedia\TestingAccessWrapper;
 
 class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase  {
 	/** @var EmailAuthSecondaryAuthenticationProvider|PHPUnit_Framework_MockObject_MockObject */
