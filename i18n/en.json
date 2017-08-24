@@ -2,7 +2,7 @@
 	"@metadata": {
 		"authors": []
 	},
-	"emailauth-desc": "Verifies suspicious logins by email.",
+	"emailauth-desc": "Verifies suspicious logins by email",
 	"emailauth-token-label": "Verification code",
 	"emailauth-token-help": "One-time 2FA token sent by email.",
 	"emailauth-email-subject": "Your login verification code to $1",
