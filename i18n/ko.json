@@ -4,6 +4,7 @@
 			"Ykhwong"
 		]
 	},
+	"emailauth-desc": "이메일을 통해 의심스러운 로그인을 확인합니다",
 	"emailauth-token-label": "인증 코드",
 	"emailauth-token-help": "1회용 2FA 토큰을 이메일로 보냈습니다.",
 	"emailauth-email-subject": "$1의 로그인 인증 코드",
