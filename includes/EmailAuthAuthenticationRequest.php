@@ -3,7 +3,6 @@
 namespace MediaWiki\Extensions\EmailAuth;
 
 use MediaWiki\Auth\AuthenticationRequest;
-use Message;
 
 class EmailAuthAuthenticationRequest extends AuthenticationRequest {
 	public $token;
