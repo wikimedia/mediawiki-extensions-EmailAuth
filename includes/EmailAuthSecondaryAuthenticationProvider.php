@@ -77,7 +77,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 	/**
 	 * @param User $user
-	 * @param $token
+	 * @param string $token
 	 * @return Message[]|bool [ form message, email subject, email body ] or false if no
 	 *   verification should happen
 	 */
