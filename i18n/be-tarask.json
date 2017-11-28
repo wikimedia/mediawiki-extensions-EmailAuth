@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Red Winged Duck"
 		]
 	},
+	"emailauth-desc": "Правярае праз электронную пошту падазорныя ўваходы ў сыстэму",
 	"emailauth-token-label": "Код праверкі",
+	"emailauth-token-help": "Аднаразовы токен двухфактарнай аўтарызацыі дасланы праз электронную пошту.",
 	"emailauth-login-failure": "Няслушны код пацьверджаньня!"
 }
