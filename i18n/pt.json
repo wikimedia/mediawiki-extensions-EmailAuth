@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hamilton Abreu"
+			"Hamilton Abreu",
+			"Athena in Wonderland"
 		]
 	},
-	"emailauth-desc": "Verifica autenticações suspeitas por correio eletrónico.",
+	"emailauth-desc": "Verifica autenticações suspeitas por correio eletrónico",
 	"emailauth-token-label": "Código de verificação",
 	"emailauth-token-help": "Chave 2FA de utilização única enviada por correio eletrónico.",
 	"emailauth-email-subject": "O seu código de verificação para autenticação na wiki $1",
