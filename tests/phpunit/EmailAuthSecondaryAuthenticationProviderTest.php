@@ -12,6 +12,9 @@ use Psr\Log\LoggerInterface;
 use User;
 use Wikimedia\TestingAccessWrapper;
 
+/**
+ * @covers \MediaWiki\Extensions\EmailAuth\EmailAuthSecondaryAuthenticationProvider
+ */
 class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
 	/** @var EmailAuthSecondaryAuthenticationProvider|PHPUnit_Framework_MockObject_MockObject */
 	protected $provider;
