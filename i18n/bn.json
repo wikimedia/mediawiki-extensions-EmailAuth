@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aftabuzzaman"
+			"Aftabuzzaman",
+			"আফতাবুজ্জামান"
 		]
 	},
 	"emailauth-desc": "ইমেল দ্বারা সন্দেহজনক প্রবেশ যাচাই করা।",
