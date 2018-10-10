@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"emailauth-token-label": "Codece de verifeche",
+	"emailauth-login-retry-limit": "Troppe tendative fallite!"
+}
