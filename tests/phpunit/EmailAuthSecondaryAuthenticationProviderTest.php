@@ -7,7 +7,7 @@ use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\AuthManager;
 use MediaWikiTestCase;
-use PHPUnit_Framework_MockObject_MockObject;
+use PHPUnit\Framework\MockObject\MockObject;
 use Psr\Log\LoggerInterface;
 use User;
 use Wikimedia\TestingAccessWrapper;
@@ -16,13 +16,13 @@ use Wikimedia\TestingAccessWrapper;
  * @covers \MediaWiki\Extensions\EmailAuth\EmailAuthSecondaryAuthenticationProvider
  */
 class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
-	/** @var EmailAuthSecondaryAuthenticationProvider|PHPUnit_Framework_MockObject_MockObject */
+	/** @var EmailAuthSecondaryAuthenticationProvider|MockObject */
 	protected $provider;
-	/** @var AuthManager|PHPUnit_Framework_MockObject_MockObject */
+	/** @var AuthManager|MockObject */
 	protected $manager;
 	/** @var HashBagOStuff */
 	protected $session;
-	/** @var LoggerInterface|PHPUnit_Framework_MockObject_MockObject */
+	/** @var LoggerInterface|MockObject */
 	protected $logger;
 
 	protected function setUp() {
