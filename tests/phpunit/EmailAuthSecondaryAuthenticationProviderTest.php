@@ -25,7 +25,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
 	/** @var LoggerInterface|MockObject */
 	protected $logger;
 
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 
 		$this->setTemporaryHook( 'EmailAuthRequireToken', function () {
