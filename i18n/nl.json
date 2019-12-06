@@ -4,5 +4,6 @@
 			"Mainframe98"
 		]
 	},
-	"emailauth-token-label": "Verificatie code"
+	"emailauth-token-label": "Verificatie code",
+	"emailauth-login-retry-limit": "Te veel fouten!"
 }
