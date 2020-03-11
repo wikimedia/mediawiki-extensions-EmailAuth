@@ -19,9 +19,7 @@
 		]
 	},
 	"Hooks": {
-		"AuthChangeFormFields": [
-			"MediaWiki\\Extensions\\EmailAuth\\Hooks::onAuthChangeFormFields"
-		]
+		"AuthChangeFormFields": "MediaWiki\\Extensions\\EmailAuth\\Hooks::onAuthChangeFormFields"
 	},
 	"AuthManagerAutoConfig": {
 		"secondaryauth": {
