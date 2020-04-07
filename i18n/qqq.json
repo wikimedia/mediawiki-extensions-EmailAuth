@@ -1,5 +1,7 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": []
+	},
 	"emailauth-desc": "{{desc|name=EmailAuth|url=https://www.mediawiki.org/wiki/Extension:EmailAuth}}",
 	"emailauth-token-label": "Label of the verification token input field.",
 	"emailauth-token-help": "API help message for the verification token field.",

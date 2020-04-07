@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hamilton Abreu",
-			"Athena in Wonderland"
+			"Athena in Wonderland",
+			"Hamilton Abreu"
 		]
 	},
 	"emailauth-desc": "Verifica autenticações suspeitas por correio eletrónico",
