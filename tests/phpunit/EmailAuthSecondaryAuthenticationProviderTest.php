@@ -28,7 +28,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
 	protected function setUp() : void {
 		parent::setUp();
 
-		$this->setTemporaryHook( 'EmailAuthRequireToken', function () {
+		$this->setTemporaryHook( 'EmailAuthRequireToken', static function () {
 		} );
 
 		$this->provider = new EmailAuthSecondaryAuthenticationProvider();
@@ -63,13 +63,13 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
 		$this->assertSame( AuthenticationResponse::PASS, $response->status );
 
 		// require token  when instructed by hook
-		$this->setTemporaryHook( 'EmailAuthRequireToken', function ( $user, &$verificationRequired ) {
+		$this->setTemporaryHook( 'EmailAuthRequireToken', static function ( $user, &$verificationRequired ) {
 			$verificationRequired = true;
 		} );
 		$this->session->clear();
 		$user = $this->getMockUser( true );
 		$user->expects( $this->once() )->method( 'sendMail' )
-			->willReturnCallback( function ( $s, $b ) use ( &$body ) {
+			->willReturnCallback( static function ( $s, $b ) use ( &$body ) {
 				$body = $b;
 			} );
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
@@ -109,7 +109,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
 		$this->assertSame( AuthenticationResponse::PASS, $response->status );
 
 		// messages can be changed
-		$this->setTemporaryHook( 'EmailAuthRequireToken', function ( $user, &$verificationRequired,
+		$this->setTemporaryHook( 'EmailAuthRequireToken', static function ( $user, &$verificationRequired,
 			&$formMessage, &$subjectMessage, &$bodyMessage
 		) {
 			$verificationRequired = true;
@@ -120,7 +120,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
 		$this->session->clear();
 		$user = $this->getMockUser( true );
 		$user->expects( $this->once() )->method( 'sendMail' )
-			->willReturnCallback( function ( $s, $b ) use ( &$subject2, &$body2 ) {
+			->willReturnCallback( static function ( $s, $b ) use ( &$subject2, &$body2 ) {
 				$subject2 = $s;
 				$body2 = $b;
 			} );
@@ -141,7 +141,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
 
 	protected function getMockUser( $isEmailConfirmed ) {
 		$user = $this->getMockBuilder( User::class )
-			->setMethods( [ 'isEmailConfirmed', 'sendMail' ] )->getMock();
+			->onlyMethods( [ 'isEmailConfirmed', 'sendMail' ] )->getMock();
 		$user->expects( $this->any() )->method( 'isEmailConfirmed' )->willReturn( $isEmailConfirmed );
 		/** @var User $user */
 		$user->mName = 'Foo';
