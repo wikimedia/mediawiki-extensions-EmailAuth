@@ -2,11 +2,13 @@
 
 namespace MediaWiki\Extensions\EmailAuth;
 
+use Config;
 use HashBagOStuff;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\AuthManager;
-use MediaWikiTestCase;
+use MediaWiki\User\UserNameUtils;
+use MediaWikiIntegrationTestCase;
 use PHPUnit\Framework\MockObject\MockObject;
 use Psr\Log\LoggerInterface;
 use User;
@@ -15,7 +17,7 @@ use Wikimedia\TestingAccessWrapper;
 /**
  * @covers \MediaWiki\Extensions\EmailAuth\EmailAuthSecondaryAuthenticationProvider
  */
-class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
+class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationTestCase {
 	/** @var EmailAuthSecondaryAuthenticationProvider|MockObject */
 	protected $provider;
 	/** @var AuthManager|MockObject */
@@ -34,7 +36,6 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
 		$this->provider = new EmailAuthSecondaryAuthenticationProvider();
 
 		$this->logger = $this->getMockBuilder( LoggerInterface::class )->getMockForAbstractClass();
-		$this->provider->setLogger( $this->logger );
 
 		$this->manager = $this->getMockBuilder( AuthManager::class )->disableOriginalConstructor()
 			->getMock();
@@ -47,7 +48,13 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiTestCase {
 			->willReturnCallback( function ( $key ) {
 				return $this->session->get( $key );
 			} );
-		$this->provider->setManager( $this->manager );
+		$this->provider->init(
+			$this->logger,
+			$this->manager,
+			$this->createHookContainer(),
+			$this->createNoOpAbstractMock( Config::class ),
+			$this->createNoOpMock( UserNameUtils::class )
+		);
 	}
 
 	public function testGetAuthenticationRequests() {
