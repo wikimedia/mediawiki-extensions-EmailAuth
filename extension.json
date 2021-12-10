@@ -8,6 +8,9 @@
 	"descriptionmsg": "emailauth-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "access",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
 	"AutoloadClasses": {
 		"MediaWiki\\Extensions\\EmailAuth\\EmailAuthAuthenticationRequest": "includes/EmailAuthAuthenticationRequest.php",
 		"MediaWiki\\Extensions\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider": "includes/EmailAuthSecondaryAuthenticationProvider.php",
@@ -29,5 +32,5 @@
 			}
 		}
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
