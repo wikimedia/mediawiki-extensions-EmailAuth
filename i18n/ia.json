@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"emailauth-desc": "Verifica aperturas de session suspecte per e-mail",
+	"emailauth-token-label": "Codice de verification",
+	"emailauth-token-help": "Token 2FA a uso unic inviate per e-mail.",
+	"emailauth-email-subject": "Tu codice de verification de session sur $1",
+	"emailauth-email-body": "Tu codice de verification de session sur $1 es $2",
+	"emailauth-login-message": "Tu debe verificar tu session. Un codice de verification ha essite inviate a tu adresse de e-mail ($1). Per favor insere iste codice hic.",
+	"emailauth-login-failure": "Codice de verification invalide!",
+	"emailauth-login-retry-limit": "Troppo de fallimentos!"
+}

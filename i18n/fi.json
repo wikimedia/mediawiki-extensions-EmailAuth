@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Pyscowicz"
+			"Pyscowicz",
+			"MITO"
 		]
 	},
+	"emailauth-desc": "Vahvistaa epäilyttävät kirjautumiset sähköpostitse",
 	"emailauth-token-label": "Vahvistuskoodi",
+	"emailauth-token-help": "Kertaluonteinen 2FA-avain lähetetään sähköpostitse.",
+	"emailauth-email-subject": "Kirjautumistunnuksesi on $1",
+	"emailauth-login-failure": "Väärä vahvistuskoodi!",
 	"emailauth-login-retry-limit": "Liian monia epäonnistumisia!"
 }
