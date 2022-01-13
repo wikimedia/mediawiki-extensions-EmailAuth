@@ -84,7 +84,8 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 	protected function runEmailAuthRequireToken( User $user, $token ) {
 		global $wgSitename;
 
-		if ( !$user->isEmailConfirmed() ) { // nothing we can do
+		if ( !$user->isEmailConfirmed() ) {
+			// nothing we can do
 			return false;
 		}
 
