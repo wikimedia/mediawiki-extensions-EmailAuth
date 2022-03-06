@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Extensions\EmailAuth;
+namespace MediaWiki\Extension\EmailAuth;
 
 use Config;
 use HashBagOStuff;
@@ -15,7 +15,7 @@ use User;
 use Wikimedia\TestingAccessWrapper;
 
 /**
- * @covers \MediaWiki\Extensions\EmailAuth\EmailAuthSecondaryAuthenticationProvider
+ * @covers \MediaWiki\Extension\EmailAuth\EmailAuthSecondaryAuthenticationProvider
  */
 class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationTestCase {
 	/** @var EmailAuthSecondaryAuthenticationProvider|MockObject */

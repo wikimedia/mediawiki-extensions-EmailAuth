@@ -1,11 +1,11 @@
 <?php
 
-namespace MediaWiki\Extensions\EmailAuth;
+namespace MediaWiki\Extension\EmailAuth;
 
 use MediaWiki\Auth\AuthenticationRequestTestCase;
 
 /**
- * @covers \MediaWiki\Extensions\EmailAuth\EmailAuthAuthenticationRequest
+ * @covers \MediaWiki\Extension\EmailAuth\EmailAuthAuthenticationRequest
  */
 class EmailAuthAuthenticationRequestTest extends AuthenticationRequestTestCase {
 	protected function getInstance( array $args = [] ) {

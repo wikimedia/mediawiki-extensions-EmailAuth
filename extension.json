@@ -12,9 +12,9 @@
 		"MediaWiki": ">= 1.31.0"
 	},
 	"AutoloadClasses": {
-		"MediaWiki\\Extensions\\EmailAuth\\EmailAuthAuthenticationRequest": "includes/EmailAuthAuthenticationRequest.php",
-		"MediaWiki\\Extensions\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider": "includes/EmailAuthSecondaryAuthenticationProvider.php",
-		"MediaWiki\\Extensions\\EmailAuth\\Hooks": "includes/Hooks.php"
+		"MediaWiki\\Extension\\EmailAuth\\EmailAuthAuthenticationRequest": "includes/EmailAuthAuthenticationRequest.php",
+		"MediaWiki\\Extension\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider": "includes/EmailAuthSecondaryAuthenticationProvider.php",
+		"MediaWiki\\Extension\\EmailAuth\\Hooks": "includes/Hooks.php"
 	},
 	"MessagesDirs": {
 		"EmailAuth": [
@@ -22,12 +22,12 @@
 		]
 	},
 	"Hooks": {
-		"AuthChangeFormFields": "MediaWiki\\Extensions\\EmailAuth\\Hooks::onAuthChangeFormFields"
+		"AuthChangeFormFields": "MediaWiki\\Extension\\EmailAuth\\Hooks::onAuthChangeFormFields"
 	},
 	"AuthManagerAutoConfig": {
 		"secondaryauth": {
-			"MediaWiki\\Extensions\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider": {
-				"class": "MediaWiki\\Extensions\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider",
+			"MediaWiki\\Extension\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider": {
+				"class": "MediaWiki\\Extension\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider",
 				"sort": 50
 			}
 		}

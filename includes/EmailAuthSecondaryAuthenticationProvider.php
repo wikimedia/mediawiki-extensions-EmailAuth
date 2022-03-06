@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Extensions\EmailAuth;
+namespace MediaWiki\Extension\EmailAuth;
 
 use Hooks;
 use MediaWiki\Auth\AbstractSecondaryAuthenticationProvider;

@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Extensions\EmailAuth;
+namespace MediaWiki\Extension\EmailAuth;
 
 use MediaWiki\Auth\AuthenticationRequest;
 
