@@ -1,10 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"המקיסט"
+			"המקיסט",
+			"Amire80"
 		]
 	},
 	"emailauth-desc": "אמת הרשמות חשודות באמצעות אימייל",
 	"emailauth-token-label": "קוד אימות",
-	"emailauth-login-failure": "קוד אימות שגוי!"
+	"emailauth-token-help": "אסימון 2FA חד־פעמי שנשלח בדוא\"ל.",
+	"emailauth-email-subject": "קוד אימות הכניסה שלך ל־$1",
+	"emailauth-email-body": "קוד אימות הכניסה שלך ל־$1 הוא $2",
+	"emailauth-login-message": "יש לאמת את הכניסה שלך. קוד אימות נשלח לכתובת הדוא\"ל שלך ($1), נא להזין את הקוד הזה כאן.",
+	"emailauth-login-failure": "קוד אימות שגוי!",
+	"emailauth-login-retry-limit": "יותר מדי כישלונות!"
 }
