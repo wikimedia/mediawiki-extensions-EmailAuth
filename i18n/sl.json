@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"emailauth-desc": "Preverjanje sumljive prijave po e-pošti",
+	"emailauth-token-label": "Koda za preverjanje",
+	"emailauth-token-help": "Enkratni žeton 2FA, poslan po e-pošti.",
+	"emailauth-email-subject": "Vaša koda za preverjanje prijave v $1",
+	"emailauth-email-body": "Vaša koda za preverjanje prijave v $1 je $2",
+	"emailauth-login-message": "Morate potrditi svojo prijavo. Koda za preverjanje je bila poslana na vaš e-poštni naslov ($1); prosimo, vnesite to kodo tukaj.",
+	"emailauth-login-failure": "Neveljavna koda za preverjanje!",
+	"emailauth-login-retry-limit": "Preveč neuspehov!"
+}
