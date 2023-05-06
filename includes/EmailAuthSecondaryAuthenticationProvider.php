@@ -2,11 +2,11 @@
 
 namespace MediaWiki\Extension\EmailAuth;
 
-use Hooks;
 use MediaWiki\Auth\AbstractSecondaryAuthenticationProvider;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MediaWikiServices;
 use Message;
 use MWCryptRand;
 use User;
@@ -94,8 +94,8 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		$subjectMessage = wfMessage( 'emailauth-email-subject', $wgSitename );
 		$bodyMessage = wfMessage( 'emailauth-email-body', $wgSitename );
 
-		Hooks::run( 'EmailAuthRequireToken', [ $user, &$verificationRequired, &$formMessage,
-			&$subjectMessage, &$bodyMessage ] );
+		MediaWikiServices::getInstance()->getHookContainer()->run( 'EmailAuthRequireToken',
+			[ $user, &$verificationRequired, &$formMessage, &$subjectMessage, &$bodyMessage ] );
 		$bodyMessage->params( $token );
 
 		return $verificationRequired ? [ $formMessage, $subjectMessage, $bodyMessage ] :
