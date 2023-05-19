@@ -12,7 +12,7 @@ class EmailAuthAuthenticationRequestTest extends AuthenticationRequestTestCase {
 		return new EmailAuthAuthenticationRequest();
 	}
 
-	public function provideLoadFromSubmission() {
+	public static function provideLoadFromSubmission() {
 		return [
 			[ [], [], false ],
 			[ [], [ 'token' => 'foo' ], [ 'token' => 'foo' ] ],
