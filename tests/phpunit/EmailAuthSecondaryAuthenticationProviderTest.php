@@ -16,6 +16,7 @@ use Wikimedia\TestingAccessWrapper;
 
 /**
  * @covers \MediaWiki\Extension\EmailAuth\EmailAuthSecondaryAuthenticationProvider
+ * @group Database
  */
 class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationTestCase {
 	/** @var EmailAuthSecondaryAuthenticationProvider|MockObject */
