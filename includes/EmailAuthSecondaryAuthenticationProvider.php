@@ -28,7 +28,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		/** @var Message $formMessage */
 		/** @var Message $subjectMessage */
 		/** @var Message $bodyMessage */
-		list( $formMessage, $subjectMessage, $bodyMessage ) = $messages;
+		[ $formMessage, $subjectMessage, $bodyMessage ] = $messages;
 
 		LoggerFactory::getInstance( 'EmailAuth' )->info( 'Verification requested for {user}', [
 			'user' => $user->getName(),
