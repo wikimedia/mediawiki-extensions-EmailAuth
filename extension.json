@@ -11,18 +11,21 @@
 	"requires": {
 		"MediaWiki": ">= 1.41.0"
 	},
-	"AutoloadClasses": {
-		"MediaWiki\\Extension\\EmailAuth\\EmailAuthAuthenticationRequest": "includes/EmailAuthAuthenticationRequest.php",
-		"MediaWiki\\Extension\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider": "includes/EmailAuthSecondaryAuthenticationProvider.php",
-		"MediaWiki\\Extension\\EmailAuth\\Hooks": "includes/Hooks.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\EmailAuth\\": "includes/"
 	},
 	"MessagesDirs": {
 		"EmailAuth": [
 			"i18n"
 		]
 	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\EmailAuth\\Hooks"
+		}
+	},
 	"Hooks": {
-		"AuthChangeFormFields": "MediaWiki\\Extension\\EmailAuth\\Hooks::onAuthChangeFormFields"
+		"AuthChangeFormFields": "main"
 	},
 	"AuthManagerAutoConfig": {
 		"secondaryauth": {

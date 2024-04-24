@@ -13,12 +13,14 @@ use User;
 
 class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenticationProvider {
 	/** Fail the login attempt after this many retries */
-	const RETRIES = 3;
+	private const RETRIES = 3;
 
+	/** @inheritDoc */
 	public function getAuthenticationRequests( $action, array $options ) {
 		return [];
 	}
 
+	/** @inheritDoc */
 	public function beginSecondaryAuthentication( $user, array $reqs ) {
 		$token = MWCryptRand::generateHex( 6 );
 		$messages = $this->runEmailAuthRequireToken( $user, $token );
@@ -44,6 +46,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		return AuthenticationResponse::newUI( [ new EmailAuthAuthenticationRequest() ], $formMessage );
 	}
 
+	/** @inheritDoc */
 	public function continueSecondaryAuthentication( $user, array $reqs ) {
 		$token = $this->manager->getAuthenticationSessionData( 'EmailAuthToken' );
 		/** @var EmailAuthAuthenticationRequest $req */
@@ -71,6 +74,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 			wfMessage( 'emailauth-login-failure' ), 'error' );
 	}
 
+	/** @inheritDoc */
 	public function beginSecondaryAccountCreation( $user, $creator, array $reqs ) {
 		return AuthenticationResponse::newAbstain();
 	}

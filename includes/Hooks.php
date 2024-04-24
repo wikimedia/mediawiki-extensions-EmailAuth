@@ -3,10 +3,13 @@
 namespace MediaWiki\Extension\EmailAuth;
 
 use MediaWiki\Auth\AuthenticationRequest;
+use MediaWiki\SpecialPage\Hook\AuthChangeFormFieldsHook;
 
-class Hooks {
-	public static function onAuthChangeFormFields(
-		array $requests, array $fieldInfo, array &$formDescriptor, $action
+class Hooks implements AuthChangeFormFieldsHook {
+
+	/** @inheritDoc */
+	public function onAuthChangeFormFields(
+		$requests, $fieldInfo, &$formDescriptor, $action
 	) {
 		if ( AuthenticationRequest::getRequestByClass( $requests,
 			EmailAuthAuthenticationRequest::class )
