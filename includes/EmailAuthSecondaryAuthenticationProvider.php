@@ -94,11 +94,15 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		$subjectMessage = wfMessage( 'emailauth-email-subject', $wgSitename );
 		$bodyMessage = wfMessage( 'emailauth-email-body', $wgSitename );
 
-		MediaWikiServices::getInstance()->getHookContainer()->run( 'EmailAuthRequireToken',
-			[ $user, &$verificationRequired, &$formMessage, &$subjectMessage, &$bodyMessage ] );
+		MediaWikiServices::getInstance()->getHookContainer()->run(
+			'EmailAuthRequireToken',
+			[ $user, &$verificationRequired, &$formMessage, &$subjectMessage, &$bodyMessage ]
+		);
 		$bodyMessage->params( $token );
 
-		return $verificationRequired ? [ $formMessage, $subjectMessage, $bodyMessage ] :
-			false;
+		// @phan-suppress-next-line PhanImpossibleCondition
+		return $verificationRequired
+			? [ $formMessage, $subjectMessage, $bodyMessage ]
+			: false;
 	}
 }
