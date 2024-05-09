@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Chadyka",
 			"Mechanizatar"
 		]
 	},
 	"emailauth-token-label": "Код праверкі",
-	"emailauth-login-failure": "Няправільны код пацверджання!"
+	"emailauth-login-failure": "Няправільны код пацвярджэння!"
 }
