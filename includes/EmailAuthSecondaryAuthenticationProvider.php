@@ -35,6 +35,8 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		LoggerFactory::getInstance( 'EmailAuth' )->info( 'Verification requested for {user}', [
 			'user' => $user->getName(),
 			'ip' => $user->getRequest()->getIP(),
+			'eventType' => 'emailauth-login-verification-requested',
+			'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
 			'formMessageKey' => $formMessage->getKey(),
 			'subjectMessageKey' => $subjectMessage->getKey(),
 			'bodyMessageKey' => $bodyMessage->getKey(),
@@ -54,6 +56,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		if ( $req && hash_equals( $token, $req->token ) ) {
 			LoggerFactory::getInstance( 'EmailAuth' )->info( 'Successful verification for {user}', [
 				'user' => $user->getName(),
+				'eventType' => 'emailauth-login-successful-verification',
 				'ip' => $user->getRequest()->getIP(),
 			] );
 			return AuthenticationResponse::newPass();
@@ -62,11 +65,19 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 			LoggerFactory::getInstance( 'EmailAuth' )->info( 'Failed verification for {user}', [
 				'user' => $user->getName(),
 				'ip' => $user->getRequest()->getIP(),
+				'eventType' => 'emailauth-login-failed-verification',
+				'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
 			] );
 		}
 
 		$failures = $this->manager->getAuthenticationSessionData( 'EmailAuthFailures' );
 		if ( $failures >= self::RETRIES ) {
+				LoggerFactory::getInstance( 'EmailAuth' )->info( 'Failed verification for {user} over retry limit', [
+					'user' => $user->getName(),
+					'ip' => $user->getRequest()->getIP(),
+					'eventType' => 'emailauth-login-retry-limit',
+					'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
+				] );
 				return AuthenticationResponse::newFail( wfMessage( 'emailauth-login-retry-limit' ) );
 		}
 		$this->manager->setAuthenticationSessionData( 'EmailAuthFailures', $failures + 1 );
