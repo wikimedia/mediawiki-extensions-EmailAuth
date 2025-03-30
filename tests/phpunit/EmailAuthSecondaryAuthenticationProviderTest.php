@@ -41,11 +41,11 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		$this->manager = $this->getMockBuilder( AuthManager::class )->disableOriginalConstructor()
 			->getMock();
 		$this->session = new HashBagOStuff();
-		$this->manager->expects( $this->any() )->method( 'setAuthenticationSessionData' )
+		$this->manager->method( 'setAuthenticationSessionData' )
 			->willReturnCallback( function ( $key, $value ) {
 				$this->session->set( $key, $value );
 			} );
-		$this->manager->expects( $this->any() )->method( 'getAuthenticationSessionData' )
+		$this->manager->method( 'getAuthenticationSessionData' )
 			->willReturnCallback( function ( $key ) {
 				return $this->session->get( $key );
 			} );
@@ -70,7 +70,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::PASS, $response->status );
 
-		// require token  when instructed by hook
+		// require token when instructed by hook
 		$this->setTemporaryHook( 'EmailAuthRequireToken', static function ( $user, &$verificationRequired ) {
 			$verificationRequired = true;
 		} );
@@ -150,7 +150,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 	protected function getMockUser( $isEmailConfirmed ) {
 		$user = $this->getMockBuilder( User::class )
 			->onlyMethods( [ 'isEmailConfirmed', 'sendMail' ] )->getMock();
-		$user->expects( $this->any() )->method( 'isEmailConfirmed' )->willReturn( $isEmailConfirmed );
+		$user->method( 'isEmailConfirmed' )->willReturn( $isEmailConfirmed );
 		/** @var User $user */
 		$user->mName = 'Foo';
 		$user->mFrom = 'name';

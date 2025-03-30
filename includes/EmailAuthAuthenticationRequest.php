@@ -5,12 +5,9 @@ namespace MediaWiki\Extension\EmailAuth;
 use MediaWiki\Auth\AuthenticationRequest;
 
 class EmailAuthAuthenticationRequest extends AuthenticationRequest {
-	/** @var string */
-	public $token;
+	public string $token;
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function getFieldInfo() {
 		return [
 			'token' => [
