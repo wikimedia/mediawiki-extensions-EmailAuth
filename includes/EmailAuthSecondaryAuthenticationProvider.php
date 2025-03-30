@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\EmailAuth;
 use MediaWiki\Auth\AbstractSecondaryAuthenticationProvider;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
+use MediaWiki\Deferred\DeferredUpdates;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
@@ -45,6 +46,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 		$this->manager->setAuthenticationSessionData( 'EmailAuthToken', $token );
 		$this->manager->setAuthenticationSessionData( 'EmailAuthFailures', 0 );
+		$this->manager->setAuthenticationSessionData( 'EmailAuthEmail', $user->getEmail() );
 		$user->sendMail( $subjectMessage, $bodyMessage );
 		return AuthenticationResponse::newUI( [ new EmailAuthAuthenticationRequest() ], $formMessage );
 	}
@@ -62,6 +64,32 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 				'ip' => $user->getRequest()->getIP(),
 				'emailVerified' => $user->isEmailConfirmed(),
 			] );
+			// Handle scenario where user may have set their email to a new unconfirmed address
+			// but is inputting a token associated with an old address. Make sure that the
+			// $user email matches what has been stashed in the session data before confirming
+			// the new email.
+			$stashedEmail = $this->manager->getAuthenticationSessionData( 'EmailAuthEmail' );
+			if ( $stashedEmail === $user->getEmail() && !$user->isEmailConfirmed() ) {
+				DeferredUpdates::addCallableUpdate( static function () use ( $user, $logger ) {
+					// Confirm the user's email, since inputting the token is proof that
+					// the user controls the email address on the account.
+					$user->confirmEmail();
+					$user->saveSettings();
+					$logger->info( 'Marked email as confirmed for for {user}', [
+						'user' => $user->getName(),
+						'eventType' => 'emailauth-mark-email-confirmed',
+						'ip' => $user->getRequest()->getIP(),
+						'emailVerified' => $user->isEmailConfirmed(),
+					] );
+				} );
+			} else {
+				$logger->info( 'Stashed email does not match user email for {user}', [
+					'user' => $user->getName(),
+					'eventType' => 'emailauth-login-email-mismatch',
+					'ip' => $user->getRequest()->getIP(),
+					'emailVerified' => $user->isEmailConfirmed(),
+				] );
+			}
 			return AuthenticationResponse::newPass();
 		}
 
