@@ -53,16 +53,19 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		$token = $this->manager->getAuthenticationSessionData( 'EmailAuthToken' );
 		/** @var EmailAuthAuthenticationRequest $req */
 		$req = AuthenticationRequest::getRequestByClass( $reqs, EmailAuthAuthenticationRequest::class );
+		$logger = LoggerFactory::getInstance( 'EmailAuth' );
 		if ( $req && hash_equals( $token, $req->token ) ) {
-			LoggerFactory::getInstance( 'EmailAuth' )->info( 'Successful verification for {user}', [
+			$logger->info( 'Successful verification for {user}', [
 				'user' => $user->getName(),
 				'eventType' => 'emailauth-login-successful-verification',
 				'ip' => $user->getRequest()->getIP(),
 			] );
 			return AuthenticationResponse::newPass();
-		} elseif ( $req && $req->token ) {
+		}
+
+		if ( $req && $req->token ) {
 			// do not log if the code is simply missing - accidental enter or confused bot
-			LoggerFactory::getInstance( 'EmailAuth' )->info( 'Failed verification for {user}', [
+			$logger->info( 'Failed verification for {user}', [
 				'user' => $user->getName(),
 				'ip' => $user->getRequest()->getIP(),
 				'eventType' => 'emailauth-login-failed-verification',
@@ -72,7 +75,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 		$failures = $this->manager->getAuthenticationSessionData( 'EmailAuthFailures' );
 		if ( $failures >= self::RETRIES ) {
-				LoggerFactory::getInstance( 'EmailAuth' )->info( 'Failed verification for {user} over retry limit', [
+			$logger->info( 'Failed verification for {user} over retry limit', [
 					'user' => $user->getName(),
 					'ip' => $user->getRequest()->getIP(),
 					'eventType' => 'emailauth-login-retry-limit',
@@ -94,7 +97,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 	 * @param User $user
 	 * @param string $token
 	 * @return Message[]|bool [ form message, email subject, email body ] or false if no
-	 *   verification should happen
+	 *  verification should happen
 	 */
 	protected function runEmailAuthRequireToken( User $user, $token ) {
 		global $wgSitename;
