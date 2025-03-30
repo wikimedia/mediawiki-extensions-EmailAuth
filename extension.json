@@ -29,7 +29,7 @@
 	},
 	"AuthManagerAutoConfig": {
 		"secondaryauth": {
-			"MediaWiki\\Extension\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider": {
+			"EmailAuthSecondaryAuthenticationProvider": {
 				"class": "MediaWiki\\Extension\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider",
 				"sort": 50
 			}
