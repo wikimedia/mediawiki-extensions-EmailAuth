@@ -7,9 +7,9 @@ use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
-use Message;
+use MediaWiki\Message\Message;
+use MediaWiki\User\User;
 use MWCryptRand;
-use User;
 
 class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenticationProvider {
 	/** Fail the login attempt after this many retries */
