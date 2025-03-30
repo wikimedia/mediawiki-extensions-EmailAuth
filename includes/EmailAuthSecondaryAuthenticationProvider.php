@@ -40,6 +40,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 			'formMessageKey' => $formMessage->getKey(),
 			'subjectMessageKey' => $subjectMessage->getKey(),
 			'bodyMessageKey' => $bodyMessage->getKey(),
+			'emailVerified' => $user->isEmailConfirmed(),
 		] );
 
 		$this->manager->setAuthenticationSessionData( 'EmailAuthToken', $token );
@@ -59,6 +60,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 				'user' => $user->getName(),
 				'eventType' => 'emailauth-login-successful-verification',
 				'ip' => $user->getRequest()->getIP(),
+				'emailVerified' => $user->isEmailConfirmed(),
 			] );
 			return AuthenticationResponse::newPass();
 		}
@@ -70,6 +72,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 				'ip' => $user->getRequest()->getIP(),
 				'eventType' => 'emailauth-login-failed-verification',
 				'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
+				'emailVerified' => $user->isEmailConfirmed(),
 			] );
 		}
 
@@ -80,8 +83,9 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 					'ip' => $user->getRequest()->getIP(),
 					'eventType' => 'emailauth-login-retry-limit',
 					'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
+					'emailVerified' => $user->isEmailConfirmed(),
 				] );
-				return AuthenticationResponse::newFail( wfMessage( 'emailauth-login-retry-limit' ) );
+			return AuthenticationResponse::newFail( wfMessage( 'emailauth-login-retry-limit' ) );
 		}
 		$this->manager->setAuthenticationSessionData( 'EmailAuthFailures', $failures + 1 );
 		return AuthenticationResponse::newUI( [ new EmailAuthAuthenticationRequest() ],
@@ -102,8 +106,14 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 	protected function runEmailAuthRequireToken( User $user, $token ) {
 		global $wgSitename;
 
-		if ( !$user->isEmailConfirmed() ) {
-			// nothing we can do
+		// We need an email (confirmed or unconfirmed) to do something.
+		if ( !$user->getEmail() ) {
+			LoggerFactory::getInstance( 'EmailAuth' )->info( '{user} without email logging in', [
+				'user' => $user->getName(),
+				'ip' => $user->getRequest()->getIP(),
+				'eventType' => 'emailauth-login-no-email',
+				'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
+			] );
 			return false;
 		}
 

@@ -110,9 +110,15 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 				[ 'token' => 'false' ] ) );
 		$this->assertSame( AuthenticationResponse::FAIL, $response->status );
 
-		// ignore users with no email address
+		// allows users with no confirmed email address
 		$this->session->clear();
 		$user = $this->getMockUser( false );
+		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
+		$this->assertSame( AuthenticationResponse::UI, $response->status );
+
+		// ignores users with no email address
+		$this->session->clear();
+		$user = $this->getMockUserNoEmail();
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::PASS, $response->status );
 
@@ -149,8 +155,21 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 
 	protected function getMockUser( $isEmailConfirmed ) {
 		$user = $this->getMockBuilder( User::class )
-			->onlyMethods( [ 'isEmailConfirmed', 'sendMail' ] )->getMock();
-		$user->method( 'isEmailConfirmed' )->willReturn( $isEmailConfirmed );
+			->onlyMethods( [ 'isEmailConfirmed', 'sendMail', 'getEmail' ] )->getMock();
+		$user->expects( $this->any() )->method( 'isEmailConfirmed' )->willReturn( $isEmailConfirmed );
+		$user->expects( $this->any() )->method( 'getEmail' )->willReturn( 'a@b.com' );
+		/** @var User $user */
+		$user->mName = 'Foo';
+		$user->mFrom = 'name';
+		TestingAccessWrapper::newFromObject( $user )->setItemLoaded( 'name' );
+		return $user;
+	}
+
+	private function getMockUserNoEmail() {
+		$user = $this->getMockBuilder( User::class )
+			->onlyMethods( [ 'getEmail', 'isEmailConfirmed', 'sendMail' ] )->getMock();
+		$user->expects( $this->any() )->method( 'isEmailConfirmed' )->willReturn( false );
+		$user->expects( $this->any() )->method( 'getEmail' )->willReturn( '' );
 		/** @var User $user */
 		$user->mName = 'Foo';
 		$user->mFrom = 'name';
