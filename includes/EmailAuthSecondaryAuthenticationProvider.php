@@ -118,7 +118,10 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		}
 
 		$verificationRequired = false;
-		$formMessage = wfMessage( 'emailauth-login-message', $user->getEmail() );
+		// TODO: emailauth-login-message is currently unused. We may reintroduce
+		// it later, when we figure out how we want to mask the email address
+		// (T390780)
+		$formMessage = wfMessage( 'emailauth-login-message-no-email' );
 		$subjectMessage = wfMessage( 'emailauth-email-subject', $wgSitename );
 		$bodyMessage = wfMessage( 'emailauth-email-body', $wgSitename );
 
