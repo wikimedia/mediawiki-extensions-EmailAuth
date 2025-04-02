@@ -18,6 +18,7 @@ class Hooks implements AuthChangeFormFieldsHook {
 				'persistent' => false,
 				'autocomplete' => false,
 				'spellcheck' => false,
+				'help' => wfMessage( 'emailauth-login-help' )
 			];
 		}
 	}

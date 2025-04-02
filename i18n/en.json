@@ -9,6 +9,7 @@
 	"emailauth-email-body": "Your login verification code to $1 is $2",
 	"emailauth-login-message": "You need to verify your login. A verification code has been sent to your email address ($1), please enter that code here.",
 	"emailauth-login-message-no-email": "You need to verify your login. A verification code has been sent to your email address, please enter that code here.",
+	"emailauth-login-help": "Contact the [[{{int:grouppage-sysop}}|site administrators]] if you no longer have access to your account's email address",
 	"emailauth-login-failure": "Invalid verification code!",
 	"emailauth-login-retry-limit": "Too many failures!"
 }
