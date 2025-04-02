@@ -9,6 +9,7 @@
 	"emailauth-email-body": "Body of the email containing the verification code. $1 is the site name, $2 is the code.",
 	"emailauth-login-message": "Message telling the user that a verification email has been sent. $1 is the email address.",
 	"emailauth-login-message-no-email": "Message telling the user that a verification email has been sent. Email address is not included in the message.",
+	"emailauth-login-help": "Help message for the token input field. Useful in case the user cannot access to the token by email.",
 	"emailauth-login-failure": "Error message when the entered verification code was wrong.",
 	"emailauth-login-retry-limit": "Error message when the verification code was entered incorrectly too many times. (The user will be forced to restart the login process.)"
 }
