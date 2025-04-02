@@ -6,7 +6,10 @@ use MediaWiki\Auth\AbstractSecondaryAuthenticationProvider;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Deferred\DeferredUpdates;
+use MediaWiki\Html\Html;
+use MediaWiki\Html\TemplateParser;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\User\User;
@@ -29,25 +32,33 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 			return AuthenticationResponse::newPass();
 		}
 		/** @var Message $formMessage */
-		/** @var Message $subjectMessage */
-		/** @var Message $bodyMessage */
-		[ $formMessage, $subjectMessage, $bodyMessage ] = $messages;
+		/** @var string $subject */
+		/** @var string $body */
+		/** @var string $bodyHtml */
+		[ $formMessage, $subject, $body, $bodyHtml ] = $messages;
 
 		LoggerFactory::getInstance( 'EmailAuth' )->info( 'Verification requested for {user}', [
 			'user' => $user->getName(),
 			'ip' => $user->getRequest()->getIP(),
 			'eventType' => 'emailauth-login-verification-requested',
 			'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
-			'formMessageKey' => $formMessage->getKey(),
-			'subjectMessageKey' => $subjectMessage->getKey(),
-			'bodyMessageKey' => $bodyMessage->getKey(),
+			'formMessageKey' => $formMessage,
+			'subjectMessageKey' => $subject,
+			'bodyMessageKey' => $body,
+			'bodyMessageHtmlKey' => $bodyHtml,
 			'emailVerified' => $user->isEmailConfirmed(),
 		] );
 
 		$this->manager->setAuthenticationSessionData( 'EmailAuthToken', $token );
 		$this->manager->setAuthenticationSessionData( 'EmailAuthFailures', 0 );
 		$this->manager->setAuthenticationSessionData( 'EmailAuthEmail', $user->getEmail() );
-		$user->sendMail( $subjectMessage, $bodyMessage );
+		// Do not use on-wiki message overrides which can be used to exfiltrate the code.
+		// Extensions replacing the message with a complex one, e.g. using parameters that are
+		// themselves messages, are responsible for disabling on-wiki overrides for the replacement.
+		$user->sendMail( $subject, [
+			'text' => $body,
+			'html' => $bodyHtml,
+		] );
 		return AuthenticationResponse::newUI( [ new EmailAuthAuthenticationRequest() ], $formMessage );
 	}
 
@@ -128,8 +139,9 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 	/**
 	 * @param User $user
 	 * @param string $token
-	 * @return Message[]|bool [ form message, email subject, email body ] or false if no
-	 *  verification should happen
+	 * @return array{0:Message,1:string,2:string,3:string}|bool
+	 *   [ form message, email subject, email body text, email body HTML ] or false if
+	 *   no verification should happen
 	 */
 	protected function runEmailAuthRequireToken( User $user, $token ) {
 		global $wgSitename;
@@ -146,22 +158,48 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		}
 
 		$verificationRequired = false;
+
 		// TODO: emailauth-login-message is currently unused. We may reintroduce
 		// it later, when we figure out how we want to mask the email address
 		// (T390780)
 		$formMessage = wfMessage( 'emailauth-login-message-no-email' );
-		$subjectMessage = wfMessage( 'emailauth-email-subject', $wgSitename );
-		$bodyMessage = wfMessage( 'emailauth-email-body', $wgSitename );
+
+		$helpUrl = wfMessage( 'emailauth-email-help-url' )->text();
+		// Do not allow on-wiki modification of these messages (except the help URL above).
+		// A malicious email text could trick the user into sending the code to the attacker.
+		$subject = wfMessage( 'emailauth-email-subject', $wgSitename )->useDatabase( false )->text();
+		$introMessage = wfMessage( 'emailauth-email-body-intro', $user->getName(), $wgSitename );
+		$codeTextMessage = wfMessage( 'emailauth-email-body-code-text' );
+		$warningMessage = wfMessage( 'emailauth-email-body-warning',
+			Message::durationParam( $this->config->get( MainConfigNames::ObjectCacheSessionExpiry ) ) );
+		$attackHeadingMessage = wfMessage( 'emailauth-email-body-attack-heading' );
+		$attackP1Message = wfMessage( 'emailauth-email-body-attack-p1' );
+		$attackP2Message = wfMessage( 'emailauth-email-body-attack-p2' );
+		$helpTextMessage = wfMessage( 'emailauth-email-body-help-text', $helpUrl );
+		$helpHtmlMessage = wfMessage( 'emailauth-email-body-help-text',
+			Html::element( 'a', [ 'href' => $helpUrl ], $helpUrl ) );
+		$templateData = [
+			'code' => $token,
+			'subject' => $subject,
+			'intro' => $introMessage->useDatabase( false )->text(),
+			'code-text' => $codeTextMessage->useDatabase( false )->text(),
+			'warning' => $warningMessage->useDatabase( false )->text(),
+			'attack-heading' => $attackHeadingMessage->useDatabase( false )->text(),
+			'attack-p1' => $attackP1Message->useDatabase( false )->text(),
+			'attack-p2' => $attackP2Message->useDatabase( false )->text(),
+			'help-text' => $helpTextMessage->useDatabase( false )->text(),
+			'help-html' => $helpHtmlMessage->useDatabase( false )->text(),
+		];
+		$templateParser = new TemplateParser( __DIR__ . '/../templates' );
+		$body = $templateParser->processTemplate( 'email-text', $templateData );
+		$bodyHtml = $templateParser->processTemplate( 'email-html', $templateData );
 
 		MediaWikiServices::getInstance()->getHookContainer()->run(
 			'EmailAuthRequireToken',
-			[ $user, &$verificationRequired, &$formMessage, &$subjectMessage, &$bodyMessage ]
+			[ $user, &$verificationRequired, &$formMessage, &$subject, &$body, &$bodyHtml ]
 		);
-		$bodyMessage->params( $token );
 
 		// @phan-suppress-next-line PhanImpossibleCondition
-		return $verificationRequired
-			? [ $formMessage, $subjectMessage, $bodyMessage ]
-			: false;
+		return $verificationRequired ? [ $formMessage, $subject, $body, $bodyHtml ] : false;
 	}
 }

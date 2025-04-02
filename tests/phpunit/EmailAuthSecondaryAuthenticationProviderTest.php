@@ -5,7 +5,8 @@ namespace MediaWiki\Extension\EmailAuth;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\AuthManager;
-use MediaWiki\Config\Config;
+use MediaWiki\Config\HashConfig;
+use MediaWiki\MainConfigNames;
 use MediaWiki\User\User;
 use MediaWiki\User\UserNameUtils;
 use MediaWikiIntegrationTestCase;
@@ -53,7 +54,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 			$this->logger,
 			$this->manager,
 			$this->createHookContainer(),
-			$this->createNoOpAbstractMock( Config::class ),
+			new HashConfig( [ MainConfigNames::ObjectCacheSessionExpiry => 3600 ] ),
 			$this->createNoOpMock( UserNameUtils::class )
 		);
 	}
@@ -76,10 +77,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		} );
 		$this->session->clear();
 		$user = $this->getMockUser( true );
-		$user->expects( $this->once() )->method( 'sendMail' )
-			->willReturnCallback( static function ( $s, $b ) use ( &$body ) {
-				$body = $b;
-			} );
+		$user->expects( $this->once() )->method( 'sendMail' );
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
 		$response = $this->provider->continueSecondaryAuthentication( $user,
@@ -89,7 +87,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		$this->assertSame( 'error', $response->messageType );
 		$response = $this->provider->continueSecondaryAuthentication( $user,
 			AuthenticationRequest::loadRequestsFromSubmission( $response->neededRequests,
-				[ 'token' => $body->getParams()[1] ] ) );
+				[ 'token' => $this->manager->getAuthenticationSessionData( 'EmailAuthToken' ) ] ) );
 		$this->assertSame( AuthenticationResponse::PASS, $response->status );
 
 		// abort after 4 failed attempts
@@ -134,26 +132,28 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 
 		// messages can be changed
 		$this->setTemporaryHook( 'EmailAuthRequireToken', static function ( $user, &$verificationRequired,
-			&$formMessage, &$subjectMessage, &$bodyMessage
+			&$formMessage, &$subjectMessage, &$bodyMessage, &$bodyMessageHtml
 		) {
 			$verificationRequired = true;
 			$formMessage = wfMessage( 'form' );
-			$subjectMessage = wfMessage( 'subject' );
-			$bodyMessage = wfMessage( 'body' );
+			$subjectMessage = 'subject';
+			$bodyMessage = 'body';
+			$bodyMessageHtml = 'body-html';
 		} );
 		$this->session->clear();
 		$user = $this->getMockUser( true );
 		$user->expects( $this->once() )->method( 'sendMail' )
-			->willReturnCallback( static function ( $s, $b ) use ( &$subject2, &$body2 ) {
+			->willReturnCallback( static function ( $s, $b ) use ( &$subject2, &$bodyText2, &$bodyHtml2 ) {
 				$subject2 = $s;
-				$body2 = $b;
+				$bodyText2 = $b['text'];
+				$bodyHtml2 = $b['html'];
 			} );
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
 		$this->assertSame( 'form', $response->message->getKey() );
-		$this->assertSame( 'subject', $subject2->getKey() );
-		$this->assertSame( 'body', $body2->getKey() );
-		$this->assertCount( 1, $body2->getParams() );
+		$this->assertSame( 'subject', $subject2 );
+		$this->assertSame( 'body', $bodyText2 );
+		$this->assertSame( 'body-html', $bodyHtml2 );
 	}
 
 	public function testBeginSecondaryAccountCreation() {
