@@ -11,6 +11,8 @@
 	"emailauth-email-subject": "Der Verifizierungscode für die Anmeldung auf $1",
 	"emailauth-email-body": "Der Verifizierungscode für die Anmeldung auf $1 lautet $2",
 	"emailauth-login-message": "Du musst deinen Anmeldeversuch verifizieren. Ein Verifizierungscode wurde an deine E-Mail-Adresse ($1) versandt. Bitte gib hier diesen Code ein.",
+	"emailauth-login-message-no-email": "Du musst deinen Anmeldeversuch verifizieren. Ein Verifizierungscode wurde an deine E-Mail-Adresse versandt; bitte gib hier diesen Code ein.",
+	"emailauth-login-help": "Kontaktiere die [[{{int:grouppage-sysop}}|Administratoren der Webseite]], wenn du keinen Zugriff mehr auf die E-Mail-Adresse deines Kontos hast",
 	"emailauth-login-failure": "Der Verifizierungscode ist ungültig!",
 	"emailauth-login-retry-limit": "Es gab zu viele Fehlversuche!"
 }
