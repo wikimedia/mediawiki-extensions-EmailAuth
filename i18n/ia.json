@@ -10,6 +10,8 @@
 	"emailauth-email-subject": "Tu codice de verification de session sur $1",
 	"emailauth-email-body": "Tu codice de verification de session sur $1 es $2",
 	"emailauth-login-message": "Tu debe verificar tu session. Un codice de verification ha essite inviate a tu adresse de e-mail ($1). Per favor insere iste codice hic.",
+	"emailauth-login-message-no-email": "Tu debe verificar tu session. Un codice de verification ha essite inviate a tu adresse de e-mail. Per favor insere iste codice hic.",
+	"emailauth-login-help": "Contacta le [[{{int:grouppage-sysop}}|administratores del sito]] si tu non plus ha accesso al adresse de e-mail de tu conto",
 	"emailauth-login-failure": "Codice de verification invalide!",
 	"emailauth-login-retry-limit": "Troppo de fallimentos!"
 }

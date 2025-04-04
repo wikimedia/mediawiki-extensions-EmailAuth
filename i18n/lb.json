@@ -11,6 +11,7 @@
 	"emailauth-token-help": "Eemol gültegen 2FA-Token, dee per E-Mail geschéckt gouf.",
 	"emailauth-email-subject": "Ären Iwwerpréifings-Code fir $1 fir Iech anzeloggen",
 	"emailauth-login-message": "Dir musst Äert Alogge confirméieren. E Kontroll-Code gouf op Är E-Mail-Adress ($1) geschéckt, gitt wgl. dee Code hei an.",
+	"emailauth-login-help": "Kontaktéiert d'[[{{int:grouppage-sysop}}|Administrateure vun der Säit]], wann Dir keen Zougrëff méi op d'E-Mail-Adress vun Ärem Kont hutt",
 	"emailauth-login-failure": "Net valabelen Iwwerpréiwungs-Code!",
 	"emailauth-login-retry-limit": "Ze vill dacks e falsche Code aginn!"
 }

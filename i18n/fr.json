@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
+			"JLTRY",
 			"Thibaut120094",
 			"Verdy p"
 		]
@@ -12,6 +13,8 @@
 	"emailauth-email-subject": "Votre code de vérification de connexion à $1",
 	"emailauth-email-body": "Votre code de vérification de connexion à $1 est $2",
 	"emailauth-login-message": "Vous devez vérifier votre connexion. Un code de vérification a été envoyé à votre adresse de messagerie ($1), veuillez saisir ce code ici.",
+	"emailauth-login-message-no-email": "Vous devez vérifier votre connexion. Un code de vérification a été envoyé à votre adresse de messagerie, veuillez saisir ce code ici.",
+	"emailauth-login-help": "Contactez les [[{{int:grouppage-sysop}}|administrateurs du site]] si vous n'avez plus accès à l'adresse e-mail de votre compte",
 	"emailauth-login-failure": "Code de vérification non valide !",
 	"emailauth-login-retry-limit": "Trop d’échecs !"
 }
