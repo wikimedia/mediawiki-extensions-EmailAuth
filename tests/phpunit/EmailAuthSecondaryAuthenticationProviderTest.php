@@ -2,16 +2,16 @@
 
 namespace MediaWiki\Extension\EmailAuth;
 
-use Config;
-use HashBagOStuff;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\AuthManager;
+use MediaWiki\Config\Config;
+use MediaWiki\User\User;
 use MediaWiki\User\UserNameUtils;
 use MediaWikiIntegrationTestCase;
 use PHPUnit\Framework\MockObject\MockObject;
 use Psr\Log\LoggerInterface;
-use User;
+use Wikimedia\ObjectCache\HashBagOStuff;
 use Wikimedia\TestingAccessWrapper;
 
 /**

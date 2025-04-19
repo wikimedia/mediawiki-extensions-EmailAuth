@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\EmailAuth;
 
-use MediaWiki\Auth\AuthenticationRequestTestCase;
+use MediaWiki\Tests\Auth\AuthenticationRequestTestCase;
 
 /**
  * @covers \MediaWiki\Extension\EmailAuth\EmailAuthAuthenticationRequest
