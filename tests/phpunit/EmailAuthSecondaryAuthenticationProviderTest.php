@@ -110,11 +110,21 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 				[ 'token' => 'false' ] ) );
 		$this->assertSame( AuthenticationResponse::FAIL, $response->status );
 
-		// allows users with no confirmed email address
+		// allows users with no confirmed email address, and confirm their email on success
 		$this->session->clear();
 		$user = $this->getMockUser( false );
+		$user->expects( $this->once() )->method( 'sendMail' )
+			->willReturnCallback( static function ( $s, $b ) use ( &$body ) {
+				$body = $b;
+			} );
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
+
+		$token = $this->session->get( 'EmailAuthToken' );
+		$response = $this->provider->continueSecondaryAuthentication( $user,
+			AuthenticationRequest::loadRequestsFromSubmission( $response->neededRequests,
+				[ 'token' => $token ] ) );
+		$this->assertSame( AuthenticationResponse::PASS, $response->status );
 
 		// ignores users with no email address
 		$this->session->clear();
@@ -155,9 +165,18 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 
 	protected function getMockUser( $isEmailConfirmed ) {
 		$user = $this->getMockBuilder( User::class )
-			->onlyMethods( [ 'isEmailConfirmed', 'sendMail', 'getEmail' ] )->getMock();
+			->onlyMethods( [
+				'isEmailConfirmed', 'sendMail', 'getEmail', 'confirmEmail', 'saveSettings'
+			] )->getMock();
 		$user->expects( $this->any() )->method( 'isEmailConfirmed' )->willReturn( $isEmailConfirmed );
 		$user->expects( $this->any() )->method( 'getEmail' )->willReturn( 'a@b.com' );
+		if ( !$isEmailConfirmed ) {
+			$user->expects( $this->once() )->method( 'confirmEmail' );
+			$user->expects( $this->once() )->method( 'saveSettings' );
+		} else {
+			$user->expects( $this->never() )->method( 'confirmEmail' );
+			$user->expects( $this->never() )->method( 'saveSettings' );
+		}
 		/** @var User $user */
 		$user->mName = 'Foo';
 		$user->mFrom = 'name';
