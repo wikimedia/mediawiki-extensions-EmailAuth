@@ -31,6 +31,9 @@
 		"secondaryauth": {
 			"EmailAuthSecondaryAuthenticationProvider": {
 				"class": "MediaWiki\\Extension\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider",
+				"services": [
+					"FormatterFactory"
+				],
 				"sort": 50
 			}
 		}

@@ -7,6 +7,7 @@ use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\Config\HashConfig;
 use MediaWiki\MainConfigNames;
+use MediaWiki\Status\Status;
 use MediaWiki\User\User;
 use MediaWiki\User\UserNameUtils;
 use MediaWikiIntegrationTestCase;
@@ -35,7 +36,9 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		$this->setTemporaryHook( 'EmailAuthRequireToken', static function () {
 		} );
 
-		$this->provider = new EmailAuthSecondaryAuthenticationProvider();
+		$this->provider = new EmailAuthSecondaryAuthenticationProvider(
+			$this->getServiceContainer()->getFormatterFactory()
+		);
 
 		$this->logger = $this->getMockBuilder( LoggerInterface::class )->getMockForAbstractClass();
 
@@ -77,7 +80,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		} );
 		$this->session->clear();
 		$user = $this->getMockUser( true );
-		$user->expects( $this->once() )->method( 'sendMail' );
+		$user->expects( $this->once() )->method( 'sendMail' )->willReturn( Status::newGood() );
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
 		$response = $this->provider->continueSecondaryAuthentication( $user,
@@ -93,6 +96,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		// abort after 4 failed attempts
 		$this->session->clear();
 		$user = $this->getMockUser( true );
+		$user->expects( $this->once() )->method( 'sendMail' )->willReturn( Status::newGood() );
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
 		$this->assertSame( 'warning', $response->messageType );
@@ -114,6 +118,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		$user->expects( $this->once() )->method( 'sendMail' )
 			->willReturnCallback( static function ( $s, $b ) use ( &$body ) {
 				$body = $b;
+				return Status::newGood();
 			} );
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
@@ -147,6 +152,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 				$subject2 = $s;
 				$bodyText2 = $b['text'];
 				$bodyHtml2 = $b['html'];
+				return Status::newGood();
 			} );
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
