@@ -120,6 +120,8 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 				$body = $b;
 				return Status::newGood();
 			} );
+		$user->expects( $this->once() )->method( 'confirmEmail' );
+
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
 
