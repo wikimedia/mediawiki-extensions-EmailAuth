@@ -5,9 +5,11 @@ namespace MediaWiki\Extension\EmailAuth;
 use MediaWiki\Auth\AbstractSecondaryAuthenticationProvider;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Deferred\DeferredUpdates;
 use MediaWiki\Html\Html;
 use MediaWiki\Html\TemplateParser;
+use MediaWiki\Language\FormatterFactory;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
@@ -18,6 +20,14 @@ use MWCryptRand;
 class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenticationProvider {
 	/** Fail the login attempt after this many retries */
 	private const RETRIES = 3;
+
+	private FormatterFactory $formatterFactory;
+
+	public function __construct(
+		FormatterFactory $formatterFactory
+	) {
+		$this->formatterFactory = $formatterFactory;
+	}
 
 	/** @inheritDoc */
 	public function getAuthenticationRequests( $action, array $options ) {
@@ -55,10 +65,18 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		// Do not use on-wiki message overrides which can be used to exfiltrate the code.
 		// Extensions replacing the message with a complex one, e.g. using parameters that are
 		// themselves messages, are responsible for disabling on-wiki overrides for the replacement.
-		$user->sendMail( $subject, [
+		$status = $user->sendMail( $subject, [
 			'text' => $body,
 			'html' => $bodyHtml,
 		] );
+		if ( !$status->isOK() ) {
+			LoggerFactory::getInstance( 'EmailAuth' )->error( 'Could not email {user}', [
+				'user' => $user->getName(),
+				'eventType' => 'emailauth-login-email-error',
+				'errorMessage' => $this->formatterFactory->getStatusFormatter( RequestContext::getMain() )
+					->getWikiText( $status, [ 'lang' => 'en' ] ),
+			] );
+		}
 		return AuthenticationResponse::newUI( [ new EmailAuthAuthenticationRequest() ], $formMessage );
 	}
 
