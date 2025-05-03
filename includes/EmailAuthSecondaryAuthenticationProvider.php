@@ -15,7 +15,6 @@ use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\User\User;
-use MWCryptRand;
 
 class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenticationProvider {
 	/** Fail the login attempt after this many retries */
@@ -36,7 +35,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 	/** @inheritDoc */
 	public function beginSecondaryAuthentication( $user, array $reqs ) {
-		$token = MWCryptRand::generateHex( 6 );
+		$token = $this->generateToken();
 		$messages = $this->runEmailAuthRequireToken( $user, $token );
 		if ( !$messages ) {
 			return AuthenticationResponse::newPass();
@@ -219,5 +218,9 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 		// @phan-suppress-next-line PhanImpossibleCondition
 		return $verificationRequired ? [ $formMessage, $subject, $body, $bodyHtml ] : false;
+	}
+
+	protected function generateToken(): string {
+		return str_pad( (string)random_int( 0, 999999 ), 6, '0', STR_PAD_LEFT );
 	}
 }
