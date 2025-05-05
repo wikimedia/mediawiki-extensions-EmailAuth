@@ -9,9 +9,14 @@
 	"emailauth-desc": "Verifizéiert verdächtegt Alogge per E-Mail.",
 	"emailauth-token-label": "Iwwerpréiwungs-Code",
 	"emailauth-token-help": "Eemol gültegen 2FA-Token, dee per E-Mail geschéckt gouf.",
-	"emailauth-email-subject": "Ären Iwwerpréifings-Code fir $1 fir Iech anzeloggen",
+	"emailauth-email-subject": "Ären Verifizéierungscode fir Iech op $1 anzeloggen",
+	"emailauth-email-body-intro": "$1, et schéngt, wéi wann Dir probéiert Iech vun engem neien Apparat aus op $2 anzeloggen.",
+	"emailauth-email-body-code-text": "Äre Verifizéierungscode ass:",
+	"emailauth-email-body-attack-heading": "Wann Dir dat net waart:",
+	"emailauth-email-body-attack-p2": "Wann Dir dat net waart, sollt Dir elo Äert Passwuert änneren.",
+	"emailauth-email-body-help-text": "Fir méi Informatiounen, kuckt $1",
 	"emailauth-login-message": "Dir musst Äert Alogge confirméieren. E Kontroll-Code gouf op Är E-Mail-Adress ($1) geschéckt, gitt wgl. dee Code hei an.",
-	"emailauth-login-help": "Kontaktéiert d'[[{{int:grouppage-sysop}}|Administrateure vun der Säit]], wann Dir keen Zougrëff méi op d'E-Mail-Adress vun Ärem Kont hutt",
+	"emailauth-login-help": "Kontaktéiert d'[[{{int:grouppage-sysop}}|Administrateure vun der Säit]], wann Dir keen Zougrëff méi op d'E-Mail-Adress vun Ärem Kont hutt. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|Méi Informatiounen]])",
 	"emailauth-login-failure": "Net valabelen Iwwerpréiwungs-Code!",
 	"emailauth-login-retry-limit": "Ze vill dacks e falsche Code aginn!"
 }

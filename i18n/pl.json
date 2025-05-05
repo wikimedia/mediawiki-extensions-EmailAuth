@@ -6,11 +6,20 @@
 			"Railfail536"
 		]
 	},
-	"emailauth-desc": "Sprawdza podejrzane logowania przez e-mail.",
+	"emailauth-desc": "Sprawdza podejrzane logowania przez e-mail",
 	"emailauth-token-label": "Kod weryfikacyjny",
-	"emailauth-email-subject": "Twój kod weryfikacyjny logowania do $1",
-	"emailauth-email-body": "Twój kod weryfikacyjny logowania do $1 to $2",
+	"emailauth-token-help": "Jednorazowy kod 2FA wysłany na e-mail.",
+	"emailauth-email-subject": "Twój kod weryfikacji logowania do {{GRAMMAR:D.lp|$1}}",
+	"emailauth-email-body-intro": "$1, wygląda na to, że próbujesz się zalogować do {{GRAMMAR:D.lp|$2}} z nowego urządzenia.",
+	"emailauth-email-body-code-text": "Twój kod weryfikacyjny to:",
+	"emailauth-email-body-warning": "Ten kod jest wymagany, aby uzyskać dostęp do konta. Kod wygaśnie w ciągu $1. Nie udostępniaj go nikomu.",
+	"emailauth-email-body-attack-heading": "Jeśli to nie ty:",
+	"emailauth-email-body-attack-p1": "Ta wiadomość została wysłana, ponieważ ktoś próbował zalogować się na twoje konto. Próba logowania uwzględniała poprawną nazwę użytkownika oraz hasło.",
+	"emailauth-email-body-attack-p2": "Jeśli to nie ty, bezzwłocznie zmień hasło.",
+	"emailauth-email-body-help-text": "Aby dowiedzieć się więcej, zobacz $1",
 	"emailauth-login-message": "Musisz zweryfikować swoje logowanie. Kod weryfikacyjny został wysłany na twój adres e-mail ($1), wprowadź ten kod tutaj.",
+	"emailauth-login-message-no-email": "Musisz zweryfikować swoje logowanie. Kod weryfikacyjny został wysłany na twój adres e-mail, wprowadź ten kod tutaj.",
+	"emailauth-login-help": "Jeśli nie masz dostępu do adresu e-mail przypisanego do swojego konta, skontaktuj się [[{{int:grouppage-sysop}}|administratorami strony]] ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|dowiedz się więcej]]).",
 	"emailauth-login-failure": "Nieprawidłowy kod weryfikacyjny!",
 	"emailauth-login-retry-limit": "Zbyt wiele błędów!"
 }

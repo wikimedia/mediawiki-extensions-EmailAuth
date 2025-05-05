@@ -8,7 +8,6 @@
 	"emailauth-token-label": "Kinnituskood",
 	"emailauth-token-help": "E-kirjatsi saadetud ühekordne 2FA-luba.",
 	"emailauth-email-subject": "Sinu kinnituskood {{GRAMMAR:illative|$1}} sisselogimiseks",
-	"emailauth-email-body": "Sinu kinnituskood {{GRAMMAR:illative|$1}} sisselogimiseks on $2.",
 	"emailauth-login-message": "Pead sisselogimise kinnitama. Kinnituskood on saadetud sinu e-posti aadressile ($1). Palun sisesta see kood siia.",
 	"emailauth-login-message-no-email": "Pead sisselogimise kinnitama. Kinnituskood on saadetud sinu e-posti aadressile. Palun sisesta see kood siia.",
 	"emailauth-login-help": "Kirjuta [[{{int:grouppage-sysop}}|saidi administraatoritele]], kui sul pole enam juurdepääsu enda konto e-posti aadressile.",

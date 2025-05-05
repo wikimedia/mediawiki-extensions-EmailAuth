@@ -10,7 +10,6 @@
 	"emailauth-token-label": "Doğrulama kodu",
 	"emailauth-token-help": "Bir defalık 2FA anahtarı e-posta ile gönderilir.",
 	"emailauth-email-subject": "$1 için giriş doğrulama kodunuz",
-	"emailauth-email-body": "$1 için giriş doğrulama kodunuz $2",
 	"emailauth-login-message": "Giriş bilgilerinizi doğrulamanız gerekli. E-posta adresinize bir doğrulama kodu gönderildi ($1). Lütfen bu kodu buraya girin.",
 	"emailauth-login-message-no-email": "Giriş bilgilerinizi doğrulamanız gerekli. E-posta adresinize bir doğrulama kodu gönderildi. Lütfen bu kodu buraya girin.",
 	"emailauth-login-help": "Hesabınızın e-posta adresine artık erişiminiz yoksa [[{{int:grouppage-sysop}}|site yöneticileriyle]] iletişime geçin",

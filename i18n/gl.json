@@ -9,10 +9,16 @@
 	"emailauth-token-label": "Código de verificación",
 	"emailauth-token-help": "Identificador de dous factores de uso único enviado por correo electrónico.",
 	"emailauth-email-subject": "O teu código de verificación de conexión a $1",
-	"emailauth-email-body": "O teu código de verificación de conexión a $1 é $2",
+	"emailauth-email-body-intro": "$1, semella que intentas iniciar sesión desde un dispositivo novo en $2.",
+	"emailauth-email-body-code-text": "O teu código de verificación é:",
+	"emailauth-email-body-warning": "Este código é necesario para acceder á túa conta. Caducará en $1. Pola túa seguridade, non o compartas con ninguén.",
+	"emailauth-email-body-attack-heading": "Se non fuches ti:",
+	"emailauth-email-body-attack-p1": "Este correo electrónico enviouse porque alguén intentou iniciar sesión na túa conta. O intento de inicio de sesión incluía o nome de conta e o contrasinal e estes eran correctos.",
+	"emailauth-email-body-attack-p2": "Se non fuches ti, deberías cambiar o teu contrasinal agora.",
+	"emailauth-email-body-help-text": "Para obter máis información, consulta $1",
 	"emailauth-login-message": "Tes que verificar a túa conexión. Enviouse un código de verificación ó teu enderezo de correo electrónico ($1). Indica aquí ese código.",
 	"emailauth-login-message-no-email": "Tes que verificar a túa conexión. Enviouse un código de verificación ó teu enderezo de correo electrónico. Indica aquí ese código.",
-	"emailauth-login-help": "Contacta coa [[{{int:grouppage-sysop}}|administración do sitio]] se xa non tes acceso ao enderezo de correo electrónico da túa conta",
+	"emailauth-login-help": "Contacta coa [[{{int:grouppage-sysop}}|administración do sitio]] se xa non tes acceso ao enderezo de correo electrónico da túa conta ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|máis información]]).",
 	"emailauth-login-failure": "Código de verificación incorrecto!",
 	"emailauth-login-retry-limit": "Demasiados intentos fallidos!"
 }

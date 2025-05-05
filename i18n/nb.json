@@ -8,7 +8,6 @@
 	"emailauth-token-label": "Bekreftelseskode",
 	"emailauth-token-help": "Engangs 2FA-nøkkel sendt via e-post.",
 	"emailauth-email-subject": "Bekreftelseskoden din for å logge inn på $1",
-	"emailauth-email-body": "Bekreftelseskoden din for å logge inn på $1 er $2",
 	"emailauth-login-message": "Du må bekrefte innloggingen din. Skriv inn bekreftelseskoden som har blitt sendt til e-postadressen din ($1) her.",
 	"emailauth-login-message-no-email": "Du må bekrefte innloggingen din. Skriv inn bekreftelseskoden som har blitt sendt til e-postadressen din her.",
 	"emailauth-login-help": "Kontakt [[{{int:grouppage-sysop}}|administratorene på nettstedet]] hvis du ikke lenger har tilgang til e-postadressen som er tilknyttet kontoen din",

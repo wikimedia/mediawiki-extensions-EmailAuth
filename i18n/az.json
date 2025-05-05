@@ -8,7 +8,6 @@
 	"emailauth-token-label": "Təsdiqləmə kodu",
 	"emailauth-token-help": "E-poçt vasitəsilə göndərilən birdəfəlik 2FA kodu.",
 	"emailauth-email-subject": "$1 üçün giriş təsdiqləmə kodunuz",
-	"emailauth-email-body": "$1 üçün giriş doğrulama kodunuz: $2",
 	"emailauth-login-message": "Girişinizi doğrulamalısınız. E-poçt ünvanınıza ($1) doğrulama kodu göndərilib, zəhmət olmasa, o kodu buraya daxil edin.",
 	"emailauth-login-message-no-email": "Girişinizi doğrulamalısınız. E-poçt ünvanınıza doğrulama kodu göndərilib, zəhmət olmasa, o kodu buraya daxil edin.",
 	"emailauth-login-help": "Hesabınızın e-poçt ünvanına artıq girə bilmirsinizsə, [[{{int:grouppage-sysop}}|sayt inzibatçıları]] ilə əlaqə saxlayın",
