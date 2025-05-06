@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"emailauth-desc": "Kinnitab kahtlased sisselogimised e-kirja teel.",
+	"emailauth-token-label": "Kinnituskood",
+	"emailauth-token-help": "E-kirjatsi saadetud ühekordne 2FA-luba.",
+	"emailauth-login-message": "Pead sisselogimise kinnitama. Kinnituskood on saadetud sinu e-posti aadressile ($1). Palun sisesta see kood siia.",
+	"emailauth-login-failure": "Vigane kinnituskood!",
+	"emailauth-login-retry-limit": "Liiga palju nurjumisi!"
+}
