@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"McDutchie"
+			"McDutchie",
+			"Siebrand"
 		]
 	},
 	"emailauth-desc": "Verifieert verdachte aanmeldpogingen via e-mails",
@@ -11,7 +12,7 @@
 	"emailauth-email-subject": "Uw aanmeldingsverificatiecode voor $1",
 	"emailauth-login-message": "U moet uw aanmeldingspoging verifiëren. Er is een verificatiecode naar uw e-mailadres ($1) verstuurd. Vul die code hier in.",
 	"emailauth-login-message-no-email": "U moet uw aanmeldingspoging verifiëren. Er is een verificatiecode naar uw e-mailadres verstuurd. Vul die code hier in.",
-	"emailauth-login-help": "Neem contact op met de [[{{int:grouppage-sysop}}|sitebeheerders]] als u geen toegang meer hebt tot het e-mailadres van uw account",
+	"emailauth-login-help": "Neem contact op met de [[{{int:grouppage-sysop}}|site administrators]] als u geen toegang meer hebt tot het e-mailadres van uw account; [[mw:Special:MyLanguage/Help:Extension:EmailAuth|meer informatie]].",
 	"emailauth-login-failure": "Onjuiste verificatie code!",
 	"emailauth-login-retry-limit": "Te veel fouten!"
 }
