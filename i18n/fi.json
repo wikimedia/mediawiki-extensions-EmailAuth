@@ -8,7 +8,7 @@
 	},
 	"emailauth-desc": "Vahvistaa epäilyttävät kirjautumiset sähköpostitse",
 	"emailauth-token-label": "Vahvistuskoodi",
-	"emailauth-token-help": "Kertaluonteinen 2FA-avain lähetetään sähköpostitse.",
+	"emailauth-token-help": "Sähköpostitse lähetetty kertaluonteinen 2FA-avain.",
 	"emailauth-email-subject": "Vahvistuskoodisi on $1",
 	"emailauth-email-body": "Vahvistuskoodisi sivustolle $1 on $2",
 	"emailauth-login-message": "Sinun on vahvistettava kirjautumisesi. Vahvistuskoodi on lähetetty sähköpostiosoitteeseesi ($1), syötä koodi tähän.",
