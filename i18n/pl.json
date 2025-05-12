@@ -6,8 +6,9 @@
 			"Railfail536"
 		]
 	},
-	"emailauth-desc": "Sprawdza podejrzane logowania przez e-mail.",
+	"emailauth-desc": "Sprawdza podejrzane logowania przez e-mail",
 	"emailauth-token-label": "Kod weryfikacyjny",
+	"emailauth-token-help": "Jednorazowy kod 2FA wysłany na e-mail.",
 	"emailauth-email-subject": "Twój kod weryfikacyjny logowania do $1",
 	"emailauth-email-body": "Twój kod weryfikacyjny logowania do $1 to $2",
 	"emailauth-login-message": "Musisz zweryfikować swoje logowanie. Kod weryfikacyjny został wysłany na twój adres e-mail ($1), wprowadź ten kod tutaj.",
