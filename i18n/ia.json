@@ -8,9 +8,16 @@
 	"emailauth-token-label": "Codice de verification",
 	"emailauth-token-help": "Token 2FA a uso unic inviate per e-mail.",
 	"emailauth-email-subject": "Tu codice de verification de session sur $1",
+	"emailauth-email-body-intro": "$1, pare que tu tenta aperir session sur $2 a partir de un nove apparato.",
+	"emailauth-email-body-code-text": "Tu codice de verification es:",
+	"emailauth-email-body-warning": "Iste codice es necessari pro acceder a tu conto. Illo expirara in $1. Pro tu securitate, non condivide lo jammais con alcuno.",
+	"emailauth-email-body-attack-heading": "Si isto non esseva tu:",
+	"emailauth-email-body-attack-p1": "Iste message ha essite inviate perque alcuno ha tentate acceder a tu conto. Tu nomine de conto e contrasigno correcte ha essite fornite in iste tentativa.",
+	"emailauth-email-body-attack-p2": "Si isto non esseva tu, tu deberea cambiar tu contrasigno ora.",
+	"emailauth-email-body-help-text": "Pro plus information, vide $1",
 	"emailauth-login-message": "Tu debe verificar tu session. Un codice de verification ha essite inviate a tu adresse de e-mail ($1). Per favor insere iste codice hic.",
 	"emailauth-login-message-no-email": "Tu debe verificar tu session. Un codice de verification ha essite inviate a tu adresse de e-mail. Per favor insere iste codice hic.",
-	"emailauth-login-help": "Contacta le [[{{int:grouppage-sysop}}|administratores del sito]] si tu non plus ha accesso al adresse de e-mail de tu conto",
+	"emailauth-login-help": "Contacta le [[{{int:grouppage-sysop}}|administratores del sito]] si tu non plus ha accesso al adresse de e-mail de tu conto. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|plus information]])",
 	"emailauth-login-failure": "Codice de verification invalide!",
 	"emailauth-login-retry-limit": "Troppo de fallimentos!"
 }
