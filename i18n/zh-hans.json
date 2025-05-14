@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Diskdance",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"GuoPC"
 		]
 	},
 	"emailauth-desc": "使用电子邮件验证可疑登录",
@@ -11,7 +12,7 @@
 	"emailauth-email-subject": "您登录$1所需的验证码",
 	"emailauth-login-message": "您需要验证您的登录。验证码已发送到您的电子邮件地址（$1），请在此输入该代码。",
 	"emailauth-login-message-no-email": "您需要验证您的登录。验证码已发送到您的电子邮件地址，请在此输入该代码。",
-	"emailauth-login-help": "如果您无法访问您的账号电子邮件地址，请联系[[{{int:grouppage-sysop}}|网站管理员]]。",
+	"emailauth-login-help": "如果您无法访问您的账号电子邮件地址，请联系[[{{int:grouppage-sysop}}|网站管理员]]。（[[mw:Special:MyLanguage/Help:Extension:EmailAuth|更多信息]]）",
 	"emailauth-login-failure": "验证码无效！",
 	"emailauth-login-retry-limit": "失败次数过多！"
 }
