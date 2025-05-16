@@ -14,6 +14,8 @@ class Hooks implements AuthChangeFormFieldsHook {
 		if ( AuthenticationRequest::getRequestByClass( $requests, EmailAuthAuthenticationRequest::class ) ) {
 			$formDescriptor['token'] += [
 				'size' => 6,
+				'inputmode' => 'numeric',
+				'pattern' => '[0-9]*',
 				'autofocus' => true,
 				'persistent' => false,
 				'autocomplete' => false,
