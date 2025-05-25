@@ -51,10 +51,6 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 			'ip' => $user->getRequest()->getIP(),
 			'eventType' => 'emailauth-login-verification-requested',
 			'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
-			'formMessageKey' => $formMessage,
-			'subjectMessageKey' => $subject,
-			'bodyMessageKey' => $body,
-			'bodyMessageHtmlKey' => $bodyHtml,
 			'emailVerified' => $user->isEmailConfirmed(),
 		] );
 
