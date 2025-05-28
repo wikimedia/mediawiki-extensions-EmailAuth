@@ -11,6 +11,8 @@
 	"emailauth-token-label": "Code de vérification",
 	"emailauth-token-help": "Jeton pour l’authentification à facteurs multiple et à utilisation unique envoyé par courriel.",
 	"emailauth-email-subject": "Votre code de vérification de connexion à $1",
+	"emailauth-email-body-intro": "$1 , il semble que vous essayez de vous connecter à partir d'un nouvel appareil sur $2 .",
+	"emailauth-email-body-code-text": "Votre code de vérification est :",
 	"emailauth-email-body-attack-heading": "Si ce n'était pas vous :",
 	"emailauth-email-body-attack-p2": "Si ce n’était pas vous, vous devriez changer votre mot de passe maintenant.",
 	"emailauth-login-message": "Vous devez vérifier votre connexion. Un code de vérification a été envoyé à votre adresse de messagerie ($1), veuillez saisir ce code ici.",
