@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Derugon",
 			"Gomoko",
 			"JLTRY",
 			"Thibaut120094",
@@ -13,11 +14,14 @@
 	"emailauth-email-subject": "Votre code de vérification de connexion à $1",
 	"emailauth-email-body-intro": "$1 , il semble que vous essayez de vous connecter à partir d'un nouvel appareil sur $2 .",
 	"emailauth-email-body-code-text": "Votre code de vérification est :",
+	"emailauth-email-body-warning": "Ce code est nécessaire pour accéder à votre compte. Il expirera dans $1. Pour votre sécurité, ne le communiquez à personne.",
 	"emailauth-email-body-attack-heading": "Si ce n'était pas vous :",
+	"emailauth-email-body-attack-p1": "Ce courriel a été envoyé suite à une tentative de connexion à votre compte. Celle-ci incluait votre nom de compte et votre bon mot de passe.",
 	"emailauth-email-body-attack-p2": "Si ce n’était pas vous, vous devriez changer votre mot de passe maintenant.",
+	"emailauth-email-body-help-text": "Pour plus d’informations, consultez $1",
 	"emailauth-login-message": "Vous devez vérifier votre connexion. Un code de vérification a été envoyé à votre adresse de messagerie ($1), veuillez saisir ce code ici.",
 	"emailauth-login-message-no-email": "Vous devez vérifier votre connexion. Un code de vérification a été envoyé à votre adresse de messagerie, veuillez saisir ce code ici.",
-	"emailauth-login-help": "Contactez les [[{{int:grouppage-sysop}}|administrateurs du site]] si vous n'avez plus accès à l'adresse e-mail de votre compte",
+	"emailauth-login-help": "Contactez les [[{{int:grouppage-sysop}}|administrateurs du site]] si vous n’avez plus accès à l’adresse courriel de votre compte. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|plus d’informations]])",
 	"emailauth-login-failure": "Code de vérification non valide !",
 	"emailauth-login-retry-limit": "Trop d’échecs !"
 }
