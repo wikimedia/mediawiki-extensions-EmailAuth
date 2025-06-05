@@ -121,10 +121,31 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 				return Status::newGood();
 			} );
 		$user->expects( $this->once() )->method( 'confirmEmail' );
+		$user->expects( $this->once() )->method( 'saveSettings' );
 
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
 
+		$token = $this->session->get( 'EmailAuthToken' );
+		$response = $this->provider->continueSecondaryAuthentication( $user,
+			AuthenticationRequest::loadRequestsFromSubmission( $response->neededRequests,
+				[ 'token' => $token ] ) );
+		$this->assertSame( AuthenticationResponse::PASS, $response->status );
+
+		// do not confirm email address if it's not the same one the code was sent to
+		$this->session->clear();
+		$user = $this->getMockUser( false );
+		$user->expects( $this->once() )->method( 'sendMail' )
+			->willReturnCallback( static function ( $s, $b ) use ( &$body ) {
+				$body = $b;
+				return Status::newGood();
+			} );
+		$user->expects( $this->never() )->method( 'confirmEmail' );
+
+		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
+		$this->assertSame( AuthenticationResponse::UI, $response->status );
+
+		$user = $this->getMockUser( false, 'a@c.com' );
 		$token = $this->session->get( 'EmailAuthToken' );
 		$response = $this->provider->continueSecondaryAuthentication( $user,
 			AuthenticationRequest::loadRequestsFromSubmission( $response->neededRequests,
@@ -171,17 +192,14 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 			AuthenticationResponse::PASS ), $this->identicalTo( AuthenticationResponse::ABSTAIN ) ) );
 	}
 
-	protected function getMockUser( $isEmailConfirmed ) {
+	protected function getMockUser( $isEmailConfirmed, $email = 'a@b.com' ) {
 		$user = $this->getMockBuilder( User::class )
 			->onlyMethods( [
 				'isEmailConfirmed', 'sendMail', 'getEmail', 'confirmEmail', 'saveSettings'
 			] )->getMock();
 		$user->expects( $this->any() )->method( 'isEmailConfirmed' )->willReturn( $isEmailConfirmed );
 		$user->expects( $this->any() )->method( 'getEmail' )->willReturn( 'a@b.com' );
-		if ( !$isEmailConfirmed ) {
-			$user->expects( $this->once() )->method( 'confirmEmail' );
-			$user->expects( $this->once() )->method( 'saveSettings' );
-		} else {
+		if ( $isEmailConfirmed ) {
 			$user->expects( $this->never() )->method( 'confirmEmail' );
 			$user->expects( $this->never() )->method( 'saveSettings' );
 		}

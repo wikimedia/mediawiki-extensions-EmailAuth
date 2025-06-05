@@ -56,7 +56,11 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 		$this->manager->setAuthenticationSessionData( 'EmailAuthToken', $token );
 		$this->manager->setAuthenticationSessionData( 'EmailAuthFailures', 0 );
-		$this->manager->setAuthenticationSessionData( 'EmailAuthEmail', $user->getEmail() );
+		if ( !$user->isEmailConfirmed() ) {
+			// If they manage to enter the verification code, that confirms they own the address.
+			$this->manager->setAuthenticationSessionData( 'EmailAuthConfirmEmail', $user->getEmail() );
+		}
+
 		// Do not use on-wiki message overrides which can be used to exfiltrate the code.
 		// Extensions replacing the message with a complex one, e.g. using parameters that are
 		// themselves messages, are responsible for disabling on-wiki overrides for the replacement.
@@ -88,31 +92,37 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 				'ip' => $user->getRequest()->getIP(),
 				'emailVerified' => $user->isEmailConfirmed(),
 			] );
-			// Handle scenario where user may have set their email to a new unconfirmed address
-			// but is inputting a token associated with an old address. Make sure that the
-			// $user email matches what has been stashed in the session data before confirming
-			// the new email.
-			$stashedEmail = $this->manager->getAuthenticationSessionData( 'EmailAuthEmail' );
-			if ( $stashedEmail === $user->getEmail() && !$user->isEmailConfirmed() ) {
-				DeferredUpdates::addCallableUpdate( static function () use ( $user, $logger ) {
-					// Confirm the user's email, since inputting the token is proof that
-					// the user controls the email address on the account.
-					$user->confirmEmail();
-					$user->saveSettings();
-					$logger->info( 'Marked email as confirmed for for {user}', [
-						'user' => $user->getName(),
-						'eventType' => 'emailauth-mark-email-confirmed',
-						'ip' => $user->getRequest()->getIP(),
-						'emailVerified' => $user->isEmailConfirmed(),
-					] );
+
+			$stashedEmail = $this->manager->getAuthenticationSessionData( 'EmailAuthConfirmEmail' );
+			if ( $stashedEmail ) {
+				DeferredUpdates::addCallableUpdate( static function () use ( $user, $logger, $stashedEmail ) {
+					if ( $user->isEmailConfirmed() ) {
+						// Maybe confirmed in parallel on a different device? Either way, nothing to do.
+						return;
+					} elseif ( $stashedEmail === $user->getEmail() ) {
+						// Confirm the user's email, since inputting the token is proof that
+						// the user controls the email address on the account.
+						$user->confirmEmail();
+						$user->saveSettings();
+						$logger->info( 'Marked email as confirmed for {user}', [
+							'user' => $user->getName(),
+							'eventType' => 'emailauth-mark-email-confirmed',
+							'ip' => $user->getRequest()->getIP(),
+						] );
+					} else {
+						// A bug or a race condition or an attack - a smart attacker could log in on
+						// a different device and change their email address between receiving and
+						// entering the confirmation code.
+						$logger->info( 'Stashed email does not match user email for {user}', [
+							'user' => $user->getName(),
+							'eventType' => 'emailauth-login-email-mismatch',
+							'ip' => $user->getRequest()->getIP(),
+							'stashedEmail' => $stashedEmail,
+							'actualEmail' => $user->getEmail(),
+							'actualEmailTimestamp' => $user->getEmailAuthenticationTimestamp() ?? '',
+						] );
+					}
 				} );
-			} else {
-				$logger->info( 'Stashed email does not match user email for {user}', [
-					'user' => $user->getName(),
-					'eventType' => 'emailauth-login-email-mismatch',
-					'ip' => $user->getRequest()->getIP(),
-					'emailVerified' => $user->isEmailConfirmed(),
-				] );
 			}
 			return AuthenticationResponse::newPass();
 		}
