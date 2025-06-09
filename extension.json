@@ -14,6 +14,20 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\EmailAuth\\": "includes/"
 	},
+	"ConfigRegistry": {
+		"emailauth": "GlobalVarConfig::newInstance"
+	},
+	"config": {
+		"UnmaskedDomains": {
+			"description": "Email domains that are unmasked during their display in EmailAuth UI components",
+			"value": [
+				"gmail.com",
+				"googlemail.com",
+				"hotmail.com",
+				"yahoo.com"
+			]
+		}
+	},
 	"MessagesDirs": {
 		"EmailAuth": [
 			"i18n"

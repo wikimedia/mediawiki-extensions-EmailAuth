@@ -221,4 +221,50 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		TestingAccessWrapper::newFromObject( $user )->setItemLoaded( 'name' );
 		return $user;
 	}
+
+	public function provideMaskDomainData() {
+		return [
+			[ '***.***', '✅' ],
+			[ '***.***', 'ⷘ⸴⿶Ⲛ⩩⬪➸⟇※ⓑ⌿✁⦲⇖' ],
+			[ '***.***', 'junk' ],
+			[ '***.***', 'example.com' ],
+			[ '***.***', 'net.asdfasdfasdf.1' ],
+			[ 'gmail.com', 'gmail.com' ],
+			[ 'googlemail.com', 'googlemail.com' ],
+			[ 'yahoo.com', 'yahoo.com' ],
+			[ 'hotmail.com', 'hotmail.com' ]
+		];
+	}
+
+	/**
+	 * @dataProvider provideMaskDomainData
+	 */
+	public function testMaskDomain( $maskedDomain, $origDomain ) {
+		$wrappedProvider = TestingAccessWrapper::newFromObject( $this->provider );
+		$this->assertSame( $maskedDomain, $wrappedProvider->maskDomain( $origDomain ) );
+	}
+
+	public function provideMaskEmailData() {
+		return [
+			[ 't***@***.***', 'tester@example.com' ],
+			[ '*@***.***', 'a@domain.com' ],
+			[ '***@***.***', 'invalidemail' ],
+			[ 'f***@***.***', 'foo@@bar.com' ],
+			[ '***@***.***', '@bar.com' ],
+			[ '***@***.***', 'foo@' ],
+			[ '***@***.***', 'foo@' ],
+			[ '***@***.***', '' ],
+			[ 't***@gmail.com', 'tester@gmail.com' ],
+			[ '*@gmail.com', 'a@gmail.com' ],
+			[ '***@***.***', 'gmail.com' ]
+		];
+	}
+
+	/**
+	 * @dataProvider provideMaskEmailData
+	 */
+	public function testMaskEmail( $emailMasked, $email ) {
+		$wrappedProvider = TestingAccessWrapper::newFromObject( $this->provider );
+		$this->assertSame( $emailMasked, $wrappedProvider->maskEmail( $email ) );
+	}
 }

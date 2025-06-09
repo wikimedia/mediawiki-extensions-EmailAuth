@@ -182,10 +182,8 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 		$verificationRequired = false;
 
-		// TODO: emailauth-login-message is currently unused. We may reintroduce
-		// it later, when we figure out how we want to mask the email address
-		// (T390780)
-		$formMessage = wfMessage( 'emailauth-login-message-no-email' );
+		$maskedEmail = $this->maskEmail( $user->getEmail() );
+		$formMessage = wfMessage( 'emailauth-login-message', wfEscapeWikiText( $maskedEmail ) );
 
 		$helpUrl = wfMessage( 'emailauth-email-help-url' )->text();
 		// Do not allow on-wiki modification of these messages (except the help URL above).
@@ -226,7 +224,76 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		return $verificationRequired ? [ $formMessage, $subject, $body, $bodyHtml ] : false;
 	}
 
+	/**
+	 * Generate a random token
+	 *
+	 * Returns a 6-digit integer with leading zeros, if necessary
+	 *
+	 * @return string 6-digit random integer with padding
+	 */
 	protected function generateToken(): string {
 		return str_pad( (string)random_int( 0, 999999 ), 6, '0', STR_PAD_LEFT );
+	}
+
+	/**
+	 * Fully masks a domain unless found in unmaskedDomains.json
+	 *
+	 * Returns a masked domain string, if necessary
+	 *
+	 * @param string $domain the full domain, SLD + TLD
+	 * @return string Masked domain
+	 */
+	private function maskDomain( string $domain ): string {
+		$fallback_domain_mask = '***.***';
+
+		if ( preg_match( "/^((?!-)[A-Za-z0-9-]{1, 63}(?<!-)\\.)+[A-Za-z]{2, 6}$/", $domain ) ) {
+			// error on the side of caution if invalid domain
+			return $fallback_domain_mask;
+		}
+
+		$cfg = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'emailauth' );
+		$unmaskedDomains = $cfg->get( 'UnmaskedDomains' );
+
+		if ( is_array( $unmaskedDomains ) && in_array( $domain, $unmaskedDomains ) ) {
+			return $domain;
+		} else {
+			return $fallback_domain_mask;
+		}
+	}
+
+	/**
+	 * Mask the local-part of an email address for privacy.  Also mask the SLD
+	 * of the domain if it does not appear in unmaskedDomains.json.
+	 *
+	 * Returns a masked version of the email (e.g. "j***@domain.com") with only the first
+	 * character of the local part visible. If the email is invalid or empty, a fallback
+	 * placeholder address is returned instead.
+	 *
+	 * @param string $email Email address to mask
+	 * @return string Masked email or fallback placeholder
+	 */
+	private function maskEmail( string $email ): string {
+		$fallback = '***@***.***';
+
+		$atPos = strrpos( $email, '@' );
+		if ( $atPos === false || $atPos === 0 || $atPos === strlen( $email ) - 1 ) {
+			return $fallback;
+		}
+
+		// @phan-suppress-next-line PhanSuspiciousBinaryAddLists
+		[ $local, $domain ] = explode( '@', $email, 2 ) + [ '', '' ];
+		if ( $local === '' || $domain === '' ) {
+			return $fallback;
+		}
+
+		$domain = $this->maskDomain( $domain );
+
+		if ( strlen( $local ) <= 1 ) {
+			$maskedLocal = '*';
+		} else {
+			$maskedLocal = substr( $local, 0, 1 ) . '***';
+		}
+
+		return $maskedLocal . '@' . $domain;
 	}
 }
