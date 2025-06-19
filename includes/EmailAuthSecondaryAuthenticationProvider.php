@@ -48,7 +48,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 	/** @inheritDoc */
 	public function continueSecondaryAuthentication( $user, array $reqs ) {
-		$token = $this->manager->getAuthenticationSessionData( 'EmailAuthToken' );
+		$token = $this->manager->getAuthenticationSessionData( 'EmailAuthToken', '' );
 		/** @var EmailAuthAuthenticationRequest $req */
 		$req = AuthenticationRequest::getRequestByClass( $reqs, EmailAuthAuthenticationRequest::class );
 		if ( $req && hash_equals( $token, $req->token ) ) {
