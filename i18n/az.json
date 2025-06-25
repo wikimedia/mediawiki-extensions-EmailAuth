@@ -4,7 +4,7 @@
 			"Nemoralis"
 		]
 	},
-	"emailauth-desc": "E-poçt vasitəsilə şübhəli girişləri yoxlayır",
+	"emailauth-desc": "E-poçt vasitəsilə şübhəli girişləri təsdiqləyir",
 	"emailauth-token-label": "Təsdiqləmə kodu",
 	"emailauth-token-help": "E-poçt vasitəsilə göndərilən birdəfəlik 2FA kodu.",
 	"emailauth-email-subject": "Sizin $1 giriş təsdiqləmə kodunuz",
