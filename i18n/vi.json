@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Doraemonluonbentoi"
+		]
+	},
+	"emailauth-desc": "Xác minh các lần đăng nhập đáng ngờ qua email",
+	"emailauth-token-label": "Mã xác nhận",
+	"emailauth-token-help": "Mã 2FA một lần được gửi qua email.",
+	"emailauth-login-message": "Chúng tôi cần xác minh phiên đăng nhập của  bạn. Một mã xác minh đã được gửi đến địa chỉ email của bạn ($1), vui lòng nhập mã đó vào đây.",
+	"emailauth-login-failure": "Mã xác minh không hợp lệ!",
+	"emailauth-login-retry-limit": "Bạn đã nhập sai mã quá nhiều lần!"
+}
