@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Doraemonluonbentoi"
+			"Doraemonluonbentoi",
+			"Nvdtn19"
 		]
 	},
 	"emailauth-desc": "Xác minh các lần đăng nhập đáng ngờ qua email",
