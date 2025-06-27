@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nemoralis"
+			"Nemoralis",
+			"Əkrəm"
 		]
 	},
 	"emailauth-desc": "E-poçt vasitəsilə şübhəli girişləri təsdiqləyir",
 	"emailauth-token-label": "Təsdiqləmə kodu",
 	"emailauth-token-help": "E-poçt vasitəsilə göndərilən birdəfəlik 2FA kodu.",
 	"emailauth-email-subject": "Sizin $1 giriş təsdiqləmə kodunuz",
-	"emailauth-email-body-intro": "$1, deyəsən $2 saytına yeni cihazdan daxil olmağa çalışırsınız.",
+	"emailauth-email-body-intro": "$1, görünür, $2 saytına yeni cihazdan daxil olmağa çalışırsınız.",
 	"emailauth-email-body-code-text": "Doğrulama kodunuz:",
 	"emailauth-email-body-warning": "Bu kod hesabınıza daxil olmaq üçün tələb olunur. Onun müddəti $1 sonra bitəcək. Təhlükəsizliyiniz üçün onu heç kimlə paylaşmayın.",
 	"emailauth-email-body-attack-heading": "Əgər bu siz deyilsinizsə:",
