@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjarki S"
+		]
+	},
+	"emailauth-login-message": "Þú þarft að staðfesta innskráningu þína. Staðfestingarkóði hefur verið sendur á netfangið þitt ($1). Vinsamlegast sláðu inn kóðann hér."
+}
