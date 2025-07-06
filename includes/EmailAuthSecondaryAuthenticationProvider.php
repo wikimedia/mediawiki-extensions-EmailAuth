@@ -236,7 +236,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 	}
 
 	/**
-	 * Fully masks a domain unless found in unmaskedDomains.json
+	 * Fully masks a domain unless found in $wgEmailAuthUnmaskedDomains
 	 *
 	 * Returns a masked domain string, if necessary
 	 *
@@ -252,7 +252,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		}
 
 		$cfg = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'emailauth' );
-		$unmaskedDomains = $cfg->get( 'UnmaskedDomains' );
+		$unmaskedDomains = $cfg->get( 'EmailAuthUnmaskedDomains' );
 
 		if ( is_array( $unmaskedDomains ) && in_array( $domain, $unmaskedDomains ) ) {
 			return $domain;
@@ -263,7 +263,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 	/**
 	 * Mask the local-part of an email address for privacy.  Also mask the SLD
-	 * of the domain if it does not appear in unmaskedDomains.json.
+	 * of the domain if it does not appear in $wgEmailAuthUnmaskedDomains.
 	 *
 	 * Returns a masked version of the email (e.g. "j***@domain.com") with only the first
 	 * character of the local part visible. If the email is invalid or empty, a fallback

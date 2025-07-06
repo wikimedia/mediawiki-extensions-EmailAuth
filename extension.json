@@ -18,7 +18,7 @@
 		"emailauth": "GlobalVarConfig::newInstance"
 	},
 	"config": {
-		"UnmaskedDomains": {
+		"EmailAuthUnmaskedDomains": {
 			"description": "Email domains that are unmasked during their display in EmailAuth UI components",
 			"value": [
 				"gmail.com",
