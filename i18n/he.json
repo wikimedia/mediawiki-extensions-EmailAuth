@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"Neriah",
 			"המקיסט"
 		]
 	},
-	"emailauth-desc": "אמת הרשמות חשודות באמצעות אימייל",
+	"emailauth-desc": "מאמת כניסות חשודות באמצעות אימייל",
 	"emailauth-token-label": "קוד אימות",
 	"emailauth-token-help": "אסימון 2FA חד־פעמי שנשלח בדוא\"ל.",
 	"emailauth-email-subject": "קוד אימות הכניסה שלך לאתר $1",
