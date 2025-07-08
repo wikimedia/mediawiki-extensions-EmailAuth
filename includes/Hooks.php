@@ -18,7 +18,7 @@ class Hooks implements AuthChangeFormFieldsHook {
 				'pattern' => '[0-9]*',
 				'autofocus' => true,
 				'persistent' => false,
-				'autocomplete' => false,
+				'autocomplete' => 'one-time-code',
 				'spellcheck' => false,
 				'help' => wfMessage( 'emailauth-login-help' )
 			];
