@@ -16,6 +16,8 @@ class EmailAuthAuthenticationRequestTest extends AuthenticationRequestTestCase {
 		return [
 			[ [], [], false ],
 			[ [], [ 'token' => 'foo' ], [ 'token' => 'foo' ] ],
+			[ [], [ 'token' => ' foo ' ], [ 'token' => 'foo' ] ],
+			[ [], [ 'token' => "foo\n" ], [ 'token' => 'foo' ] ],
 		];
 	}
 }

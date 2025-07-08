@@ -17,4 +17,14 @@ class EmailAuthAuthenticationRequest extends AuthenticationRequest {
 			],
 		];
 	}
+
+	/** @inheritDoc */
+	public function loadFromSubmission( array $data ) {
+		$loaded = parent::loadFromSubmission( $data );
+		if ( $loaded ) {
+			$this->token = trim( $this->token );
+		}
+		return $loaded;
+	}
+
 }
