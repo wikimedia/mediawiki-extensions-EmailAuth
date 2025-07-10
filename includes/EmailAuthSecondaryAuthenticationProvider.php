@@ -2,10 +2,12 @@
 
 namespace MediaWiki\Extension\EmailAuth;
 
+use MediaWiki\Api\ApiMessage;
 use MediaWiki\Auth\AbstractSecondaryAuthenticationProvider;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MWCryptRand;
@@ -27,6 +29,31 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		if ( !$messages ) {
 			return AuthenticationResponse::newPass();
 		}
+
+		// T399102 - prevent a deluge of verification emails
+		if ( $user->pingLimiter( 'emailauthemails' ) ) {
+			$throttlePeriod = $this->getEmailThrottlePeriod();
+			LoggerFactory::getInstance( 'EmailAuth' )->info(
+				'Email verification throttled for {user}', [
+					'user' => $user->getName(),
+					'ip' => $user->getRequest()->getIP(),
+					'eventType' => 'emailauth-login-throttled',
+					'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
+					'emailVerified' => $user->isEmailConfirmed(),
+					'throttlePeriod' => $throttlePeriod,
+				]
+			);
+			return AuthenticationResponse::newUI(
+				[ new EmailAuthAuthenticationRequest() ],
+				new ApiMessage(
+					wfMessage( 'emailauth-throttled', Message::durationParam( $throttlePeriod ) ),
+					'ratelimited',
+					[ 'retryafter' => $throttlePeriod ]
+				),
+				'error'
+			);
+		}
+
 		/** @var Message $formMessage */
 		/** @var Message $subjectMessage */
 		/** @var Message $bodyMessage */
@@ -108,5 +135,29 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		return $verificationRequired
 			? [ $formMessage, $subjectMessage, $bodyMessage ]
 			: false;
+	}
+
+	/**
+	 * Get longest throttle period for the 'emailauthemails' rate limit
+	 *
+	 * @return int seconds
+	 */
+	private function getEmailThrottlePeriod(): int {
+		if ( !$this->config->has( MainConfigNames::RateLimits ) ) {
+			return 0;
+		}
+		$rateLimits = $this->config->get( MainConfigNames::RateLimits );
+		$conds = $rateLimits['emailauthemails'] ?? [];
+		$period = 0;
+		foreach ( $conds as $key => $limit ) {
+			// skip '&can-bypass' etc
+			if ( is_string( $key ) && str_starts_with( $key, '&' ) ) {
+				continue;
+			}
+			if ( is_array( $limit ) && isset( $limit[1] ) ) {
+				$period = max( $period, (int)$limit[1] );
+			}
+		}
+		return $period;
 	}
 }
