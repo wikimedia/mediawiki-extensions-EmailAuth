@@ -18,5 +18,6 @@
 	"emailauth-login-message-no-email": "You need to verify your login. A verification code has been sent to your email address, please enter that code here.",
 	"emailauth-login-help": "Contact the [[{{int:grouppage-sysop}}|site administrators]] if you no longer have access to your account's email address. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|more information]])",
 	"emailauth-login-failure": "Invalid verification code!",
-	"emailauth-login-retry-limit": "Too many failures!"
+	"emailauth-login-retry-limit": "Too many failures!",
+	"emailauth-throttled": "Too many emails requested! Please wait $1 before requesting another code."
 }

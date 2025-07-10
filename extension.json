@@ -52,5 +52,14 @@
 			}
 		}
 	},
+	"RateLimits": {
+		"emailauthemails": {
+			"&can-bypass": false,
+			"user-global": [
+				10,
+				3600
+			]
+		}
+	},
 	"manifest_version": 2
 }

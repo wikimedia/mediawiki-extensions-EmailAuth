@@ -57,7 +57,12 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 			$this->logger,
 			$this->manager,
 			$this->createHookContainer(),
-			new HashConfig( [ MainConfigNames::ObjectCacheSessionExpiry => 3600 ] ),
+			new HashConfig( [
+				MainConfigNames::ObjectCacheSessionExpiry => 3600,
+				MainConfigNames::RateLimits => [
+					'emailauthemails' => [ '&can-bypass' => false, 'user-global' => [ 10, 3600 ] ],
+				],
+			] ),
 			$this->createNoOpMock( UserNameUtils::class )
 		);
 	}
@@ -185,6 +190,31 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		$this->assertSame( 'body-html', $bodyHtml2 );
 	}
 
+	public function testPingLimiterThrottling() {
+		$this->setTemporaryHook( 'EmailAuthRequireToken', static function ( $user, &$verificationRequired ) {
+			$verificationRequired = true;
+		} );
+
+		// under the limit - pingLimiter returns false, an email is sent
+		$user = $this->getMockUser( true );
+		$user->expects( $this->exactly( 2 ) )->method( 'sendMail' )->willReturn( Status::newGood() );
+		$user->method( 'pingLimiter' )->willReturn( false );
+		for ( $i = 0; $i < 2; $i++ ) {
+			$response = $this->provider->beginSecondaryAuthentication( $user, [] );
+			$this->assertSame( AuthenticationResponse::UI, $response->status );
+			$this->assertNotSame( 'emailauth-throttled', $response->message->getKey() );
+		}
+
+		// over the limit - pingLimiter returns true, do not send email
+		$user = $this->getMockUser( true );
+		$user->expects( $this->never() )->method( 'sendMail' );
+		$user->method( 'pingLimiter' )->willReturn( true );
+		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
+		$this->assertSame( AuthenticationResponse::UI, $response->status );
+		$this->assertSame( 'error', $response->messageType );
+		$this->assertSame( 'emailauth-throttled', $response->message->getKey() );
+	}
+
 	public function testBeginSecondaryAccountCreation() {
 		$response = $this->provider->beginSecondaryAccountCreation( User::newFromName( 'Foo' ),
 			User::newFromName( 'Bar' ), [] );
@@ -195,7 +225,12 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 	protected function getMockUser( $isEmailConfirmed, $email = 'a@b.com' ) {
 		$user = $this->getMockBuilder( User::class )
 			->onlyMethods( [
-				'isEmailConfirmed', 'sendMail', 'getEmail', 'confirmEmail', 'saveSettings'
+				'isEmailConfirmed',
+				'sendMail',
+				'getEmail',
+				'confirmEmail',
+				'saveSettings',
+				'pingLimiter'
 			] )->getMock();
 		$user->expects( $this->any() )->method( 'isEmailConfirmed' )->willReturn( $isEmailConfirmed );
 		$user->expects( $this->any() )->method( 'getEmail' )->willReturn( 'a@b.com' );
