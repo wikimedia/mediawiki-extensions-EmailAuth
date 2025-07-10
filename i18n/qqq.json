@@ -45,5 +45,6 @@
 	"logentry-emailauth-verify-failure": "Log entry for a failed email authentication verification attempt, shown in CheckUser.\n\nParameters:\n* $4 - Username, as a link",
 	"logentry-emailauth-verify-success": "Log entry for a successful email authentication verification attempt, shown in CheckUser",
 	"logentry-emailauth-recovery-submit": "Log entry for an account recovery request submission, shown in CheckUser.\n\nThis message is only used for older log entries, new log entries use {{msg-mw|logentry-emailauth-account-recovery-submit}}.\n\nParameters:\n* $1 - Username, as a link",
-	"logentry-emailauth-account-recovery-submit": "Log entry for an account recovery request submission, shown in CheckUser.\n\nParameters:\n* $4 - Username, as a link"
+	"logentry-emailauth-account-recovery-submit": "Log entry for an account recovery request submission, shown in CheckUser.\n\nParameters:\n* $4 - Username, as a link",
+	"emailauth-throttled": "Error message shown when too many EmailAuth verification emails have been requested by a user.\n\nParameters:\n* $1 - the throttle period as a human-readable duration (e.g. \"1 hour\")"
 }

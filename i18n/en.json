@@ -45,5 +45,6 @@
 	"logentry-emailauth-verify-failure": "Failed email authentication verification attempt for $4",
 	"logentry-emailauth-verify-success": "Successful email authentication verification attempt",
 	"logentry-emailauth-recovery-submit": "An account recovery request was submitted for $1",
-	"logentry-emailauth-account-recovery-submit": "An account recovery request was submitted for $4"
+	"logentry-emailauth-account-recovery-submit": "An account recovery request was submitted for $4",
+	"emailauth-throttled": "Too many emails requested! Please wait $1 before requesting another code."
 }
