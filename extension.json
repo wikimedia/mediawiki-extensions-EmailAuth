@@ -110,5 +110,14 @@
 			}
 		}
 	},
+	"ResourceModules": {
+		"ext.emailauth": {
+			"packageFiles": [
+				"index.js"
+			],
+			"localBasePath": "modules/ext.emailauth",
+			"remoteExtPath": "EmailAuth/modules/ext.emailauth"
+		}
+	},
 	"manifest_version": 2
 }

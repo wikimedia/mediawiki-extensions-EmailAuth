@@ -13,14 +13,10 @@ class Hooks implements AuthChangeFormFieldsHook {
 	) {
 		if ( AuthenticationRequest::getRequestByClass( $requests, EmailAuthAuthenticationRequest::class ) ) {
 			$formDescriptor['token'] += [
-				'size' => 6,
-				'inputmode' => 'numeric',
-				'pattern' => '[0-9]*',
-				'autofocus' => true,
-				'persistent' => false,
-				'autocomplete' => 'one-time-code',
-				'spellcheck' => false,
-				'help' => wfMessage( 'emailauth-login-help' )
+				'id' => 'mw-emailauth-verification-code',
+				'class' => HTMLVerificationCodeField::class,
+				'code-length' => 6,
+				'help' => wfMessage( 'emailauth-login-help' ),
 			];
 		}
 	}
