@@ -52,6 +52,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 			'eventType' => 'emailauth-login-verification-requested',
 			'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
 			'emailVerified' => $user->isEmailConfirmed(),
+			'code' => substr( $token, 0, 2 ) . '...',
 		] );
 
 		$this->manager->setAuthenticationSessionData( 'EmailAuthToken', $token );
@@ -135,6 +136,8 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 				'eventType' => 'emailauth-login-failed-verification',
 				'ua' => $user->getRequest()->getHeader( 'User-Agent' ),
 				'emailVerified' => $user->isEmailConfirmed(),
+				'code_expected' => substr( $token, 0, 2 ) . '...',
+				'code_actual' => substr( $req->token, 0, 2 ) . '...',
 			] );
 		}
 
