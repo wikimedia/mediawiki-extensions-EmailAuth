@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guherto"
+		]
+	},
+	"emailauth-email-body-intro": "$1, xuya dike ku tu ji cihazeke nû dikeve $2.",
+	"emailauth-email-body-warning": "Ev qod mecûrî ye ji bo ko tu bikevî hesabê xwe. Piştî $1 wê wextê wê derbas be. Ji bo emniyeta xwe, vê bi kesî re parve neke.",
+	"emailauth-email-body-attack-heading": "Heke ev ne tu bûyî:",
+	"emailauth-email-body-attack-p1": "Ev e-poste hate şandin ji ber ku kesek ceriband ku bikeve hesabê te. Di ceribandinê de navê hesab û şîfreya te ya rast hatin şuxulandin.",
+	"emailauth-email-body-attack-p2": "Heke ev ne tu bûyî, baş e heke tu şifreya xwe nehakê biguherî."
+}
