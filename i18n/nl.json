@@ -8,7 +8,7 @@
 	},
 	"emailauth-desc": "Verifieert verdachte aanmeldpogingen via e-mails",
 	"emailauth-token-label": "Verificatie code",
-	"emailauth-token-help": "Eenmalig 2FA token dat per e-mail is verstuurd.",
+	"emailauth-token-help": "Eenmalig tweetrapsauthenticatie-token dat per e-mail is verstuurd.",
 	"emailauth-email-subject": "Uw aanmeldingsverificatiecode voor $1",
 	"emailauth-email-body-intro": "Hallo $1, het lijkt erop dat u probeert zich aan te melden vanaf een nieuw apparaat op $2.",
 	"emailauth-email-body-code-text": "Uw verificatiecode is:",
