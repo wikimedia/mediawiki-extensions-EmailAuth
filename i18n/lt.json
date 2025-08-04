@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Eitvys200",
-			"Nokeoo"
+			"Nokeoo",
+			"Tomasdd"
 		]
 	},
 	"emailauth-desc": "Patvirtina įtvirtinimus prisijungimus el. paštu.",
 	"emailauth-token-label": "Patvirtinimo kodas",
-	"emailauth-email-subject": "Jūsų $1 patvirtinimo kodas",
+	"emailauth-email-subject": "$1 patvirtinimo kodas",
 	"emailauth-login-message": "Turite patvirtinti savo prisijungimą. Patvirtinimo kodas buvo išsiųstas į jūsų el. pašto adresą ($1), prašome įvesti kodą čia.",
 	"emailauth-login-failure": "Neteisingas patvirtinimo kodas!",
 	"emailauth-login-retry-limit": "Per daug nesėkmių!"
