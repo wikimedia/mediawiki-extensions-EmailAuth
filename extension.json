@@ -15,7 +15,7 @@
 		"MediaWiki\\Extension\\EmailAuth\\": "includes/"
 	},
 	"ConfigRegistry": {
-		"emailauth": "GlobalVarConfig::newInstance"
+		"emailauth": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
 	},
 	"config": {
 		"EmailAuthUnmaskedDomains": {
