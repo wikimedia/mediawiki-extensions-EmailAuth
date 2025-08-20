@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yueman"
+		]
+	},
+	"emailauth-desc": "用電郵核實可疑嘅簽到",
+	"emailauth-email-subject": "你喺$1嘅簽到認證碼",
+	"emailauth-login-failure": "錯嘅認證碼！",
+	"emailauth-login-retry-limit": "太多次失敗！"
+}
