@@ -20,12 +20,9 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 	/** Fail the login attempt after this many retries */
 	private const RETRIES = 3;
 
-	private FormatterFactory $formatterFactory;
-
 	public function __construct(
-		FormatterFactory $formatterFactory
+		private readonly FormatterFactory $formatterFactory,
 	) {
-		$this->formatterFactory = $formatterFactory;
 	}
 
 	/** @inheritDoc */
