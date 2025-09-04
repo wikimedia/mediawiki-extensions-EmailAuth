@@ -8,9 +8,16 @@
 	"emailauth-token-label": "Bekreftelseskode",
 	"emailauth-token-help": "Engangs 2FA-nøkkel sendt via e-post.",
 	"emailauth-email-subject": "Bekreftelseskoden din for å logge inn på $1",
+	"emailauth-email-body-intro": "$1, det ser ut som om du prøver å logge inn på $2 med en ny enhet.",
+	"emailauth-email-body-code-text": "Bekreftelseskoden din er:",
+	"emailauth-email-body-warning": "Denne koden trengs for å få tilgang til kontoen din. Det utløper om $1. Av sikkerhetshensyn bør du ikke dele den med andre.",
+	"emailauth-email-body-attack-heading": "Hvis det ikke var du som logget inn:",
+	"emailauth-email-body-attack-p1": "Denne e-posten ble sendt fordi noen prøvde å logge inn på kontoen din med riktig brukernavn og passord.",
+	"emailauth-email-body-attack-p2": "Hvis det ikke var du som gjorde dette bør du bytte passord nå.",
+	"emailauth-email-body-help-text": "Se $1 for mer informasjon.",
 	"emailauth-login-message": "Du må bekrefte innloggingen din. Skriv inn bekreftelseskoden som har blitt sendt til e-postadressen din ($1) her.",
 	"emailauth-login-message-no-email": "Du må bekrefte innloggingen din. Skriv inn bekreftelseskoden som har blitt sendt til e-postadressen din her.",
-	"emailauth-login-help": "Kontakt [[{{int:grouppage-sysop}}|administratorene på nettstedet]] hvis du ikke lenger har tilgang til e-postadressen som er tilknyttet kontoen din",
+	"emailauth-login-help": "Kontakt [[{{int:grouppage-sysop}}|administratorene på nettstedet]] hvis du ikke lenger har tilgang til e-postadressen som er tilknyttet kontoen din ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|mer informasjon]]).",
 	"emailauth-login-failure": "Ugyldig bekreftelseskode!",
 	"emailauth-login-retry-limit": "For mange feil!"
 }
