@@ -7,8 +7,17 @@
 	"emailauth-desc": "透過電子郵件驗證可疑的登入",
 	"emailauth-token-label": "驗證碼",
 	"emailauth-token-help": "透過電子郵件寄出的一次性雙重身分驗證令牌。",
-	"emailauth-email-subject": "您要登入至 $1 的驗證碼",
+	"emailauth-email-subject": "您的$1登入驗證碼",
+	"emailauth-email-body-intro": "$1，看起來您正在嘗試從$2上的新裝置登入。",
+	"emailauth-email-body-code-text": "您的驗證碼是：",
+	"emailauth-email-body-warning": "您需要此代碼才能存取您的帳號。代碼將於$1後失效。為了您的安全，請勿與任何人分享該代碼。",
+	"emailauth-email-body-attack-heading": "如果這不是您本人：",
+	"emailauth-email-body-attack-p1": "發送此電子郵件是因為有人嘗試登入您的帳號。該登入有嘗試使用到您正確的帳號名稱和密碼。",
+	"emailauth-email-body-attack-p2": "如果這不是您本人，您應該立刻更改密碼。",
+	"emailauth-email-body-help-text": "更多資訊請參閱$1",
 	"emailauth-login-message": "您需要驗證您的登入。驗證碼已寄出到您的電子郵件地址（$1），請在此輸入該驗證碼。",
+	"emailauth-login-message-no-email": "您需要驗證您的登入。驗證碼已寄出到您的電子郵件地址，請在此輸入該驗證碼。",
+	"emailauth-login-help": "如果您無法再存取您帳戶的電子郵件地址，請聯絡[[{{int:grouppage-sysop}}|網站管理員]]。（[[mw:Special:MyLanguage/Help:Extension:EmailAuth|更多資訊]]）",
 	"emailauth-login-failure": "無效的驗證碼！",
 	"emailauth-login-retry-limit": "失敗過多！"
 }
