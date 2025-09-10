@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"emailauth-desc": "د برېښليک له لارې شکمن ننوتل تاييدوي",
+	"emailauth-token-label": "تاييد کوډ:",
+	"emailauth-token-help": "د برېښليک له لارې يو ځل د دوه‌گوني پټنوم تاييد لېږل‌شوی.",
+	"emailauth-email-subject": "ستاسو د $1 ننوتلو تاييد کوډ"
+}
