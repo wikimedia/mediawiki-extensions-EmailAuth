@@ -18,5 +18,19 @@
 	"emailauth-login-message-no-email": "You need to verify your login. A verification code has been sent to your email address, please enter that code here.",
 	"emailauth-login-help": "Contact the [[{{int:grouppage-sysop}}|site administrators]] if you no longer have access to your account's email address. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|more information]])",
 	"emailauth-login-failure": "Invalid verification code!",
-	"emailauth-login-retry-limit": "Too many failures!"
+	"emailauth-login-retry-limit": "Too many failures!",
+	"emailauth-accountrecovery-intro": "Recover your Wikimedia account",
+	"emailauth-accountrecovery-username-label": "Username",
+	"emailauth-accountrecovery-contactemail-label": "Reachable contact email",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Confirm contact email",
+	"emailauth-accountrecovery-registeredemail-label": "Email registered with your Wikimedia account",
+	"emailauth-accountrecovery-description-label": "Additional comments",
+	"emailauth-accountrecovery-success": "Your account recovery request has been submitted successfully. Our Trust & Safety team will review your request and contact you at the email address you provided.",
+	"emailauth-accountrecovery-email-mismatch": "The email addresses you entered do not match. Please check and try again.",
+	"emailauth-accountrecovery-invalid-email": "Please enter a valid email address.",
+	"emailauth-accountrecovery-rate-limited": "You have submitted too many account recovery requests. Please wait before trying again.",
+	"emailauth-accountrecovery-error-generic": "An error occurred while processing your request. Please try again later.",
+	"emailauth-accountrecovery-error-invalid-data": "The information you provided could not be processed. Please check your entries and try again.",
+	"emailauth-accountrecovery-error-service-unavailable": "The account recovery service is temporarily unavailable. Please try again later.",
+	"emailauth-accountrecovery-disabled": "Account recovery is not available on this wiki. Please contact the site administrators for assistance."
 }

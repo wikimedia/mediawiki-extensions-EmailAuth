@@ -18,5 +18,19 @@
 	"emailauth-login-message-no-email": "Message telling the user that a verification email has been sent. Email address is not included in the message.",
 	"emailauth-login-help": "Help message for the token input field. Useful in case the user cannot access to the token by email.",
 	"emailauth-login-failure": "Error message when the entered verification code was wrong.",
-	"emailauth-login-retry-limit": "Error message when the verification code was entered incorrectly too many times. (The user will be forced to restart the login process.)"
+	"emailauth-login-retry-limit": "Error message when the verification code was entered incorrectly too many times. (The user will be forced to restart the login process.)",
+	"emailauth-accountrecovery-intro": "Title and description for the account recovery special page",
+	"emailauth-accountrecovery-username-label": "Label for the username input field on the account recovery form",
+	"emailauth-accountrecovery-contactemail-label": "Label for the contact email input field on the account recovery form",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Label for the contact email confirmation input field on the account recovery form",
+	"emailauth-accountrecovery-registeredemail-label": "Label for the registered email input field on the account recovery form",
+	"emailauth-accountrecovery-description-label": "Label for the additional comments textarea on the account recovery form",
+	"emailauth-accountrecovery-success": "Success message shown after submitting an account recovery request",
+	"emailauth-accountrecovery-email-mismatch": "Error message when the two email addresses entered do not match",
+	"emailauth-accountrecovery-invalid-email": "Error message when an invalid email address is entered",
+	"emailauth-accountrecovery-rate-limited": "Error message when too many account recovery requests have been submitted",
+	"emailauth-accountrecovery-error-generic": "Generic error message when the account recovery request fails",
+	"emailauth-accountrecovery-error-invalid-data": "Error message when the submitted data could not be processed by the service",
+	"emailauth-accountrecovery-error-service-unavailable": "Error message when the account recovery service is temporarily unavailable",
+	"emailauth-accountrecovery-disabled": "Error message shown when the account recovery feature is not enabled on the wiki (when $wgEmailAuthEnableAccountRecovery is false)"
 }

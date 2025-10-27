@@ -14,6 +14,20 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\EmailAuth\\": "includes/"
 	},
+	"SpecialPages": {
+		"AccountRecovery": {
+			"class": "MediaWiki\\Extension\\EmailAuth\\AccountRecovery\\Special\\SpecialAccountRecovery",
+			"services": [
+				"EmailAuth.ZendeskClient"
+			]
+		}
+	},
+	"ExtensionMessagesFiles": {
+		"EmailAuthAlias": "EmailAuth.alias.php"
+	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
 	"ConfigRegistry": {
 		"emailauth": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
 	},
@@ -26,6 +40,42 @@
 				"hotmail.com",
 				"yahoo.com"
 			]
+		},
+		"EmailAuthZendeskUrl": {
+			"value": null,
+			"description": "Base URL for Zendesk API (must be configured in LocalSettings.php)"
+		},
+		"EmailAuthZendeskHTTPProxy": {
+			"value": null,
+			"description": "HTTP proxy for Zendesk requests"
+		},
+		"EmailAuthZendeskEmail": {
+			"value": null,
+			"description": "Email address for Zendesk API authentication (must be configured in LocalSettings.php)"
+		},
+		"EmailAuthZendeskToken": {
+			"value": null,
+			"description": "API token for Zendesk authentication (must be configured in LocalSettings.php)"
+		},
+		"EmailAuthZendeskSubjectLine": {
+			"value": null,
+			"description": "Default subject line for account recovery tickets (must be configured in LocalSettings.php)"
+		},
+		"EmailAuthZendeskTicketFormId": {
+			"value": null,
+			"description": "Zendesk ticket form ID for account recovery requests (must be configured in LocalSettings.php)"
+		},
+		"EmailAuthZendeskCustomFields": {
+			"value": null,
+			"description": "Custom fields to include in Zendesk tickets (array of ['id' => field_id, 'value' => field_value]). Supports placeholders: {username} (requester_name), {registered_email} (registered_email). Fields with empty values after placeholder replacement are excluded."
+		},
+		"EmailAuthZendeskTags": {
+			"value": null,
+			"description": "Tags to apply to Zendesk tickets (array of strings)"
+		},
+		"EmailAuthEnableAccountRecovery": {
+			"value": false,
+			"description": "Enable the Special:AccountRecovery page for account recovery requests via Zendesk. Must be enabled and Zendesk must be configured for the feature to work."
 		}
 	},
 	"MessagesDirs": {
