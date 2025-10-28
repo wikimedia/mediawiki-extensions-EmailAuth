@@ -18,7 +18,11 @@
 		"AccountRecovery": {
 			"class": "MediaWiki\\Extension\\EmailAuth\\AccountRecovery\\Special\\SpecialAccountRecovery",
 			"services": [
-				"EmailAuth.ZendeskClient"
+				"EmailAuth.ZendeskClient",
+				"Emailer",
+				"MicroStash",
+				"FormatterFactory",
+				"EmailAuth.AuthenticationLogger"
 			]
 		}
 	},
@@ -76,6 +80,10 @@
 		"EmailAuthEnableAccountRecovery": {
 			"value": false,
 			"description": "Enable the Special:AccountRecovery page for account recovery requests via Zendesk. Must be enabled and Zendesk must be configured for the feature to work."
+		},
+		"EmailAuthAccountRecoveryTokenExpiry": {
+			"value": 900,
+			"description": "Number of seconds that an email confirmation link sent by Special:AccountRecovery should be valid for"
 		}
 	},
 	"MessagesDirs": {

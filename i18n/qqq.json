@@ -26,11 +26,16 @@
 	"emailauth-accountrecovery-registeredemail-label": "Label for the registered email input field on the account recovery form",
 	"emailauth-accountrecovery-description-label": "Label for the additional comments textarea on the account recovery form",
 	"emailauth-accountrecovery-success": "Success message shown after submitting an account recovery request",
+	"emailauth-accountrecovery-confirmation-needed": "Message shown on Special:AccountRecovery after submitting the form, instructing the user to click the link in the confirmation email.",
+	"emailauth-accountrecovery-confirmation-subject": "Subject line of the confirmation email for Special:AccountRecovery",
+	"emailauth-accountrecovery-confirmation-body": "Text of the confirmation email for Special:AccountRecovery.\n\nParameters:\n* $1 - Username\n* $2 - Amount of time until the confirmation link expires\n* $3 - Confirmation link URL",
+	"emailauth-accountrecovery-confirmation-resent": "Message shown on Special:AccountRecovery when the confirmation link has expired and a new confirmation email has been sent.",
 	"emailauth-accountrecovery-email-mismatch": "Error message when the two email addresses entered do not match",
 	"emailauth-accountrecovery-invalid-email": "Error message when an invalid email address is entered",
 	"emailauth-accountrecovery-rate-limited": "Error message when too many account recovery requests have been submitted",
 	"emailauth-accountrecovery-error-generic": "Generic error message when the account recovery request fails",
 	"emailauth-accountrecovery-error-invalid-data": "Error message when the submitted data could not be processed by the service",
 	"emailauth-accountrecovery-error-service-unavailable": "Error message when the account recovery service is temporarily unavailable",
+	"emailauth-accountrecovery-error-badtoken": "Message shown on Special:AccountRecovery when an invalid confirmation code is used.",
 	"emailauth-accountrecovery-disabled": "Error message shown when the account recovery feature is not enabled on the wiki (when $wgEmailAuthEnableAccountRecovery is false)"
 }

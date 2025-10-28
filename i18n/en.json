@@ -26,11 +26,16 @@
 	"emailauth-accountrecovery-registeredemail-label": "Email registered with your Wikimedia account",
 	"emailauth-accountrecovery-description-label": "Additional comments",
 	"emailauth-accountrecovery-success": "Your account recovery request has been submitted successfully. Our Trust & Safety team will review your request and contact you at the email address you provided.",
+	"emailauth-accountrecovery-confirmation-needed": "A confirmation email has been sent to the contact email address you provided. To complete your account recovery request, you must click the link in the email.",
+	"emailauth-accountrecovery-confirmation-subject": "Confirm your request to recover your account",
+	"emailauth-accountrecovery-confirmation-body": "We have received a request to recover the account named \"$1\" on {{SITENAME}}.\n\nTo continue with this process, click the link below to verify your email address. The link will expire in $2.\n\n$3\n\nIf this wasn't you, you can safely ignore this email, and no changes will be made to your account.",
+	"emailauth-accountrecovery-confirmation-resent": "This confirmation link has expired. A new confirmation link has been sent to the contact email address you provided. Please click this new link to complete your account recovery request.",
 	"emailauth-accountrecovery-email-mismatch": "The email addresses you entered do not match. Please check and try again.",
 	"emailauth-accountrecovery-invalid-email": "Please enter a valid email address.",
 	"emailauth-accountrecovery-rate-limited": "You have submitted too many account recovery requests. Please wait before trying again.",
 	"emailauth-accountrecovery-error-generic": "An error occurred while processing your request. Please try again later.",
 	"emailauth-accountrecovery-error-invalid-data": "The information you provided could not be processed. Please check your entries and try again.",
 	"emailauth-accountrecovery-error-service-unavailable": "The account recovery service is temporarily unavailable. Please try again later.",
+	"emailauth-accountrecovery-error-badtoken": "Invalid confirmation link.\nThe link may have expired.",
 	"emailauth-accountrecovery-disabled": "Account recovery is not available on this wiki. Please contact the site administrators for assistance."
 }

@@ -4,16 +4,47 @@ namespace MediaWiki\Extension\EmailAuth\AccountRecovery\Special;
 
 use FormSpecialPage;
 use MediaWiki\Extension\EmailAuth\AccountRecovery\Zendesk\ZendeskClient;
+use MediaWiki\Language\FormatterFactory;
+use MediaWiki\Language\RawMessage;
+use MediaWiki\Mail\IEmailer;
+use MediaWiki\Mail\MailAddress;
+use MediaWiki\MainConfigNames;
+use MediaWiki\Message\Message;
 use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Status\Status;
+use MWCryptRand;
+use Psr\Log\LoggerInterface;
+use Wikimedia\Message\MessageSpecifier;
+use Wikimedia\ObjectCache\BagOStuff;
 
 class SpecialAccountRecovery extends FormSpecialPage {
 
-	private ZendeskClient $zendeskClient;
-
-	public function __construct( ZendeskClient $zendeskClient ) {
+	public function __construct(
+		private readonly ZendeskClient $zendeskClient,
+		private readonly IEmailer $emailer,
+		private readonly BagOStuff $microStash,
+		private readonly FormatterFactory $formatterFactory,
+		private readonly LoggerInterface $logger
+	) {
 		parent::__construct( 'AccountRecovery' );
-		$this->zendeskClient = $zendeskClient;
+	}
+
+	/** @inheritDoc */
+	public function execute( $par ) {
+		if ( !$this->getConfig()->get( 'EmailAuthEnableAccountRecovery' ) ) {
+			$this->setHeaders();
+			$this->getOutput()->addWikiMsg( 'emailauth-accountrecovery-disabled' );
+			return;
+		}
+
+		$matches = null;
+		if ( $par && preg_match( '/^confirm\/([0-9a-fA-F]+)$/', $par, $matches ) ) {
+			$this->setHeaders();
+			$this->outputHeader();
+			$this->handleConfirmationLink( $matches[1] );
+		} else {
+			parent::execute( $par );
+		}
 	}
 
 	/**
@@ -34,21 +65,6 @@ class SpecialAccountRecovery extends FormSpecialPage {
 	 */
 	public function userCanExecute( \User $user ) {
 		return !$user->isRegistered();
-	}
-
-	/**
-	 * Override execute to check if account recovery is enabled.
-	 *
-	 * @param string|null $par
-	 */
-	public function execute( $par ) {
-		if ( !$this->getConfig()->get( 'EmailAuthEnableAccountRecovery' ) ) {
-			$this->setHeaders();
-			$this->getOutput()->addWikiMsg( 'emailauth-accountrecovery-disabled' );
-			return;
-		}
-
-		parent::execute( $par );
 	}
 
 	/**
@@ -178,52 +194,138 @@ class SpecialAccountRecovery extends FormSpecialPage {
 	 * Handle form submission.
 	 *
 	 * @param array $data Form data submitted by the user
-	 * @return true|Status True on success, Status object on failure
+	 * @return Status
 	 */
 	public function onSubmit( array $data ) {
 		if ( $this->getUser()->pingLimiter( 'accountrecovery-submit' ) ) {
 			return Status::newFatal( 'emailauth-accountrecovery-rate-limited' );
 		}
 
-		try {
-			// Defense-in-depth: Trim and validate server-side (independent of field validation)
-			$contactEmail = trim( $data['contact_email'] );
-			if ( !$this->validateStrictEmail( $contactEmail ) ) {
+		// Defense-in-depth: Trim and validate server-side (independent of field validation)
+		$contactEmail = trim( $data['contact_email'] );
+		if ( !$this->validateStrictEmail( $contactEmail ) ) {
+			return Status::newFatal( 'emailauth-accountrecovery-invalid-email' );
+		}
+
+		// Validate registered email if provided
+		$registeredEmail = null;
+		if ( !empty( $data['registered_email'] ) ) {
+			$registeredEmail = trim( $data['registered_email'] );
+			if ( !Sanitizer::validateEmail( $registeredEmail ) ) {
 				return Status::newFatal( 'emailauth-accountrecovery-invalid-email' );
 			}
-
-			// Validate registered email if provided
-			$registeredEmail = null;
-			if ( !empty( $data['registered_email'] ) ) {
-				$registeredEmail = trim( $data['registered_email'] );
-				if ( !Sanitizer::validateEmail( $registeredEmail ) ) {
-					return Status::newFatal( 'emailauth-accountrecovery-invalid-email' );
-				}
-			}
-
-			// Build clean ticket payload from validated and trimmed data
-			$ticketData = [
-				'requester_email' => $contactEmail,
-				'requester_name' => trim( $data['username'] ),
-				'registered_email' => $registeredEmail,
-				'description' => isset( $data['description'] ) ? trim( $data['description'] ) : null,
-			];
-
-			$result = $this->zendeskClient->createTicket( $ticketData );
-
-			if ( $result->isOK() ) {
-				return true;
-			}
-
-			return Status::wrap( $result );
-		} catch ( \Throwable $e ) {
-			wfDebugLog( 'EmailAuth', 'AccountRecovery exception: ' . $e->getMessage() );
-			return Status::newFatal( 'emailauth-accountrecovery-error-generic' );
 		}
+
+		// Build clean ticket payload from validated and trimmed data
+		$ticketData = [
+			'requester_email' => $contactEmail,
+			'requester_name' => trim( $data['username'] ),
+			'registered_email' => $registeredEmail,
+			'description' => isset( $data['description'] ) ? trim( $data['description'] ) : null,
+		];
+
+		return $this->sendConfirmationEmail( $ticketData );
 	}
 
 	public function onSuccess() {
-		$this->getOutput()->addWikiMsg( 'emailauth-accountrecovery-success' );
+		$this->getOutput()->addWikiMsg( 'emailauth-accountrecovery-confirmation-needed' );
+	}
+
+	/**
+	 * Generate a token, stash the ticket data, and send a confirmation email to the user.
+	 * @phpcs:ignore Generic.Files.LineLength.TooLong
+	 * @param array{requester_email:string,requester_name:string,registered_email:?string,description:?string} $ticketData
+	 * @return Status
+	 */
+	private function sendConfirmationEmail( $ticketData ): Status {
+		// Generate a validation token
+		$token = MWCryptRand::generateHex( 32 );
+		// Stash the ticket data in MicroStash, using the token as a key
+		$stashData = [
+			'ticketData' => $ticketData,
+			'generated' => time()
+		];
+		$this->microStash->set(
+			$this->microStash->makeKey( 'accountrecovery', $token ),
+			$stashData,
+			// We require the user to confirm their email within a short time
+			// ($wgEmailAuthAccountRecoveryTokenExpiry), but we also want to allow them to
+			// gracefully retry, so we have to store the data for a little longer
+			$this->microStash::TTL_DAY
+		);
+
+		$this->logger->info(
+			'Account recovery request submitted for {username}',
+			[
+				'username' => $ticketData['requester_name'],
+				...$this->getRequest()->getSecurityLogContext()
+			]
+		);
+
+		// Send the email
+		return Status::wrap( $this->emailer->send(
+			new MailAddress( $ticketData['requester_email'] ),
+			new MailAddress(
+				$this->getConfig()->get( MainConfigNames::PasswordSender ),
+				$this->msg( 'emailsender' )->text()
+			),
+			$this->msg( 'emailauth-accountrecovery-confirmation-subject' )->text(),
+			$this->msg( 'emailauth-accountrecovery-confirmation-body' )
+				->params(
+					$ticketData['requester_name'],
+					Message::durationParam( $this->getConfig()->get( 'EmailAuthAccountRecoveryTokenExpiry' ) ),
+					$this->getPageTitle( "confirm/$token" )->getFullURL()
+				)
+				->text()
+		) );
+	}
+
+	private function handleConfirmationLink( string $token ) {
+		$statusFormatter = $this->formatterFactory->getStatusFormatter( $this );
+		$stashKey = $this->microStash->makeKey( 'accountrecovery', $token );
+		$stashedData = $this->microStash->get( $stashKey );
+		if ( !$stashedData ) {
+			$this->showError( 'emailauth-accountrecovery-error-badtoken' );
+			return;
+		}
+
+		if ( time() - $stashedData['generated'] > $this->getConfig()->get( 'EmailAuthAccountRecoveryTokenExpiry' ) ) {
+			// If the token is too old, generate and send a new token
+			$emailResult = $this->sendConfirmationEmail( $stashedData['ticketData'] );
+			if ( $emailResult->isOK() ) {
+				// Delete the entry for the old token
+				$this->microStash->delete( $stashKey );
+				$this->getOutput()->addWikiMsg( 'emailauth-accountrecovery-confirmation-resent' );
+			} else {
+				$this->showError( ( new RawMessage( '$1' ) )->rawParams( $statusFormatter->getHTML( $emailResult ) ) );
+			}
+			return;
+		}
+
+		// Submit the ticket data to Zendesk
+		try {
+			$result = $this->zendeskClient->createTicket( $stashedData['ticketData'] );
+		} catch ( \Throwable $e ) {
+			wfDebugLog( 'EmailAuth', 'AccountRecovery exception: ' . $e->getMessage() );
+			$result = Status::newFatal( 'emailauth-accountrecovery-error-generic' );
+		}
+		if ( $result->isOK() ) {
+			// Delete the stash entry
+			$this->microStash->delete( $stashKey );
+			$this->getOutput()->addWikiMsg( 'emailauth-accountrecovery-success' );
+		} else {
+			// Don't delete the stash entry on error, so the user can retry
+			$this->showError( ( new RawMessage( '$1' ) )->rawParams( $statusFormatter->getHTML( $result ) ) );
+		}
+	}
+
+	private function showError( string|MessageSpecifier $message ) {
+		$this->getOutput()->showErrorPage(
+			$this->getDescription(),
+			$message,
+			[],
+			$this->getPageTitle()
+		);
 	}
 
 	/**
