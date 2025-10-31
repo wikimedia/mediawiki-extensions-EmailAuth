@@ -20,5 +20,6 @@
 	"emailauth-login-message-no-email": "Du musst deinen Anmeldeversuch verifizieren. Ein Verifizierungscode wurde an deine E-Mail-Adresse versandt; bitte gib hier diesen Code ein.",
 	"emailauth-login-help": "Kontaktiere die [[{{int:grouppage-sysop}}|Administratoren der Webseite]], wenn du keinen Zugriff mehr auf die E-Mail-Adresse deines Kontos hast. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|Weitere informationen]])",
 	"emailauth-login-failure": "Der Verifizierungscode ist ungültig!",
-	"emailauth-login-retry-limit": "Es gab zu viele Fehlversuche!"
+	"emailauth-login-retry-limit": "Es gab zu viele Fehlversuche!",
+	"emailauth-accountrecovery-intro": "Stelle dein Wikimedia-Konto wieder her"
 }
