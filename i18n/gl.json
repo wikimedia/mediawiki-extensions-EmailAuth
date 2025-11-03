@@ -20,5 +20,19 @@
 	"emailauth-login-message-no-email": "Tes que verificar a túa conexión. Enviouse un código de verificación ó teu enderezo de correo electrónico. Indica aquí ese código.",
 	"emailauth-login-help": "Contacta coa [[{{int:grouppage-sysop}}|administración do sitio]] se xa non tes acceso ao enderezo de correo electrónico da túa conta ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|máis información]]).",
 	"emailauth-login-failure": "Código de verificación incorrecto!",
-	"emailauth-login-retry-limit": "Demasiados intentos fallidos!"
+	"emailauth-login-retry-limit": "Demasiados intentos fallidos!",
+	"emailauth-accountrecovery-intro": "Recuperar a túa conta da Wikimedia",
+	"emailauth-accountrecovery-username-label": "Nome de usuario",
+	"emailauth-accountrecovery-contactemail-label": "Correo electrónico de contacto ao que teñas acceso",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Confirma o correo electrónico de contacto",
+	"emailauth-accountrecovery-registeredemail-label": "Correo electrónico rexistrado na túa conta da Wikimedia",
+	"emailauth-accountrecovery-description-label": "Comentarios adicionais",
+	"emailauth-accountrecovery-success": "A túa solicitude de recuperación de conta enviouse correctamente. O noso equipo de confianza e seguranza revisará a túa solicitude e poñerase en contacto contigo no enderezo de correo electrónico que indicaches.",
+	"emailauth-accountrecovery-email-mismatch": "Os enderezos de correo electrónico que introduciches non coinciden. Compróbaos e inténtao de novo.",
+	"emailauth-accountrecovery-invalid-email": "Escribe un enderezo de correo electrónico válido.",
+	"emailauth-accountrecovery-rate-limited": "Enviaches demasiadas solicitudes de recuperación de conta. Agarda antes de intentalo de novo.",
+	"emailauth-accountrecovery-error-generic": "Produciuse un erro ao procesar a túa solicitude. Inténtao de novo máis tarde.",
+	"emailauth-accountrecovery-error-invalid-data": "Non se puido procesar a información que proporcionaches. Revisa as túas entradas e inténtao de novo.",
+	"emailauth-accountrecovery-error-service-unavailable": "O servizo de recuperación de contas non está dispoñible temporalmente. Inténtao de novo máis tarde.",
+	"emailauth-accountrecovery-disabled": "A recuperación de contas non está dispoñible neste wiki. Ponte en contacto coa administración do sitio para obter axuda."
 }

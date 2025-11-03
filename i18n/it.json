@@ -13,5 +13,14 @@
 	"emailauth-login-message": "Devi verificare il tuo accesso. Un codice di verifica è stato inviato al tuo indirizzo di posta elettronica ($1), inserisci il codice qui.",
 	"emailauth-login-message-no-email": "Devi verificare il tuo accesso. Un codice di verifica è stato inviato al tuo indirizzo di posta elettronica, inserisci il codice qui.",
 	"emailauth-login-failure": "Codice di verifica non valido!",
-	"emailauth-login-retry-limit": "Troppi tentativi falliti!"
+	"emailauth-login-retry-limit": "Troppi tentativi falliti!",
+	"emailauth-accountrecovery-username-label": "Nome utente",
+	"emailauth-accountrecovery-contactemail-label": "Email di contatto raggiungibile",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Conferma l'email di contatto",
+	"emailauth-accountrecovery-description-label": "Commenti aggiuntivi",
+	"emailauth-accountrecovery-email-mismatch": "Gli indirizzi email inseriti non corrispondono. Controlla e riprova.",
+	"emailauth-accountrecovery-invalid-email": "Inserisci un indirizzo email valido.",
+	"emailauth-accountrecovery-rate-limited": "Hai inviato troppe richieste di recupero dell'utenza. Attendi prima di riprovare.",
+	"emailauth-accountrecovery-error-generic": "Si è verificato un errore durante l'elaborazione della richiesta. Riprova più tardi.",
+	"emailauth-accountrecovery-error-invalid-data": "Le informazioni fornite non possono essere elaborate. Controlla i dati inseriti e riprova."
 }

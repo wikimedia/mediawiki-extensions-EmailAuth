@@ -20,5 +20,19 @@
 	"emailauth-login-message-no-email": "يجب عليك تأكيد تسجيل الدخول. تم إرسال رمز تحقق إلى بريدك الإلكتروني، يُرجى إدخاله هنا.",
 	"emailauth-login-help": "تواصل مع [[{{int:grouppage-sysop}}|مسؤولي الموقع]] إذا لم يعد بإمكانك الوصول إلى عنوان البريد الإلكتروني لحسابك. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|مزيد من المعلومات]])",
 	"emailauth-login-failure": "رمز التحقق غير صالح!",
-	"emailauth-login-retry-limit": "الكثير من الفشل!"
+	"emailauth-login-retry-limit": "الكثير من الفشل!",
+	"emailauth-accountrecovery-intro": "استعادة حساب ويكيميديا الخاص بك",
+	"emailauth-accountrecovery-username-label": "اسم المستخدم",
+	"emailauth-accountrecovery-contactemail-label": "بريد إلكتروني للتواصل يمكن الوصول إليه",
+	"emailauth-accountrecovery-contactemail-confirm-label": "تأكيد البريد الإلكتروني للاتصال",
+	"emailauth-accountrecovery-registeredemail-label": "البريد الإلكتروني المسجل بحساب ويكيميديا الخاص بك",
+	"emailauth-accountrecovery-description-label": "تعليقات إضافية",
+	"emailauth-accountrecovery-success": "تم تقديم طلب استرداد حسابك بنجاح. سيراجع فريق الثقة والأمان طلبك ويتواصل معك على عنوان البريد الإلكتروني الذي قدمته.",
+	"emailauth-accountrecovery-email-mismatch": "عناوين البريد الإلكتروني التي أدخلتها غير متطابقة. يُرجى التحقق والمحاولة مرة أخرى.",
+	"emailauth-accountrecovery-invalid-email": "يرجى إدخال عنوان بريد إلكتروني صالح.",
+	"emailauth-accountrecovery-rate-limited": "لقد أرسلتَ عددًا كبيرًا جدًا من طلبات استرداد الحساب. يُرجى الانتظار قبل المحاولة مجددًا.",
+	"emailauth-accountrecovery-error-generic": "حدث خطأ أثناء معالجة طلبك. يُرجى المحاولة لاحقًا.",
+	"emailauth-accountrecovery-error-invalid-data": "تعذّرت معالجة المعلومات التي أدخلتها. يُرجى مراجعة إدخالاتك والمحاولة مجددًا.",
+	"emailauth-accountrecovery-error-service-unavailable": "خدمة استرداد الحساب غير متاحة مؤقتًا. يُرجى المحاولة لاحقًا.",
+	"emailauth-accountrecovery-disabled": "استعادة الحساب غير متاحة على هذا الويكي. يُرجى التواصل مع إدارة الموقع للمساعدة."
 }

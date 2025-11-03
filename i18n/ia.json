@@ -19,5 +19,19 @@
 	"emailauth-login-message-no-email": "Tu debe verificar tu session. Un codice de verification ha essite inviate a tu adresse de e-mail. Per favor insere iste codice hic.",
 	"emailauth-login-help": "Contacta le [[{{int:grouppage-sysop}}|administratores del sito]] si tu non plus ha accesso al adresse de e-mail de tu conto. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|plus information]])",
 	"emailauth-login-failure": "Codice de verification invalide!",
-	"emailauth-login-retry-limit": "Troppo de fallimentos!"
+	"emailauth-login-retry-limit": "Troppo de fallimentos!",
+	"emailauth-accountrecovery-intro": "Recuperar tu conto de Wikimedia",
+	"emailauth-accountrecovery-username-label": "Nomine de usator",
+	"emailauth-accountrecovery-contactemail-label": "Adresse de e-mail attingibile",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Confirma adresse de e-mail",
+	"emailauth-accountrecovery-registeredemail-label": "Adresse de e-mail registrate in tu conto de Wikimedia",
+	"emailauth-accountrecovery-description-label": "Commentos supplementari",
+	"emailauth-accountrecovery-success": "Le requesta de recuperation de tu conto ha essite correctemente inviate. Nostre equipa Fiducia e Securitate ora revidera tu requesta e te contactara al adresse de e-mail fornite.",
+	"emailauth-accountrecovery-email-mismatch": "Le adresses de e-mail inserite non es identic. Per favor verifica e tenta lo de novo.",
+	"emailauth-accountrecovery-invalid-email": "Per favor insere un adresse de e-mail valide.",
+	"emailauth-accountrecovery-rate-limited": "Tu ha inviate troppo de requestas de recuperation de conto. Per favor attende ante de tentar lo de novo.",
+	"emailauth-accountrecovery-error-generic": "Un error ha occurrite durante le tractamento de tu requesta. Per favor tenta lo de novo plus tarde.",
+	"emailauth-accountrecovery-error-invalid-data": "Le information fornite non poteva esser tractate. Per favor verifica tu entratas e tenta lo de novo.",
+	"emailauth-accountrecovery-error-service-unavailable": "Le servicio de recuperation de contos es temporarimente indisponibile. Per favor tenta lo de novo plus tarde.",
+	"emailauth-accountrecovery-disabled": "Le recuperation de contos non es disponibile sur iste wiki. Per favor contacta le administratores del sito pro assistentia."
 }

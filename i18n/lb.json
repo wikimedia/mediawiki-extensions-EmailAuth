@@ -19,5 +19,7 @@
 	"emailauth-login-message-no-email": "Dir musst Är Umeldung verifizéieren. Et gouf e Verifizéierungscode op Är E-Mail-Adress geschéckt; gitt dee Code wgl. hei an.",
 	"emailauth-login-help": "Kontaktéiert d'[[{{int:grouppage-sysop}}|Administrateure vun der Säit]], wann Dir keen Zougrëff méi op d'E-Mail-Adress vun Ärem Kont hutt. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|Méi Informatiounen]])",
 	"emailauth-login-failure": "Net valabelen Iwwerpréiwungs-Code!",
-	"emailauth-login-retry-limit": "Ze vill dacks e falsche Code aginn!"
+	"emailauth-login-retry-limit": "Ze vill dacks e falsche Code aginn!",
+	"emailauth-accountrecovery-username-label": "Benotzernumm",
+	"emailauth-accountrecovery-invalid-email": "Gitt wgl. eng gülteg E-Mail-Adress an."
 }

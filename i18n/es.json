@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"MarcoAurelio"
 		]
 	},
 	"emailauth-desc": "Verifica accesos sospechosos a través del correo electrónico.",
@@ -10,5 +11,8 @@
 	"emailauth-email-subject": "Tu código de verificación de acceso para $1",
 	"emailauth-login-message": "Es necesario que verifiques tu acceso. Te hemos enviado a tu correo electrónico ($1) un código de verificación que deberás copiar aquí.",
 	"emailauth-login-failure": "El código de verificación no es válido.",
-	"emailauth-login-retry-limit": "¡Demasiados errores!"
+	"emailauth-login-retry-limit": "¡Demasiados errores!",
+	"emailauth-accountrecovery-intro": "Recupera tu cuenta de Wikimedia",
+	"emailauth-accountrecovery-username-label": "Nombre de usuario",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Confirmar correo electrónico de contacto"
 }

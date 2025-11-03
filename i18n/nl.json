@@ -21,5 +21,19 @@
 	"emailauth-login-message-no-email": "U moet uw aanmeldingspoging verifiëren. Er is een verificatiecode naar uw e-mailadres verstuurd. Vul die code hier in.",
 	"emailauth-login-help": "Neem contact op met de [[{{int:grouppage-sysop}}|site administrators]] als u geen toegang meer hebt tot het e-mailadres van uw account; [[mw:Special:MyLanguage/Help:Extension:EmailAuth|meer informatie]].",
 	"emailauth-login-failure": "Onjuiste verificatie code!",
-	"emailauth-login-retry-limit": "Te veel fouten!"
+	"emailauth-login-retry-limit": "Te veel fouten!",
+	"emailauth-accountrecovery-intro": "Wikimedia-account herstellen",
+	"emailauth-accountrecovery-username-label": "Gebruikersnaam",
+	"emailauth-accountrecovery-contactemail-label": "Bereikbaar e-mailadres voor contact",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Bevestig e-mailadres voor contact",
+	"emailauth-accountrecovery-registeredemail-label": "E-mailadres geregistreerd bij uw Wikimedia-account",
+	"emailauth-accountrecovery-description-label": "Overige opmerkingen",
+	"emailauth-accountrecovery-success": "Uw verzoek tot accountherstel is succesvol ingediend. Ons Trust & Safety-team beoordeelt uw verzoek en meent contact met u op via het door u opgegeven e-mailadres.",
+	"emailauth-accountrecovery-email-mismatch": "De ingevoerde e-mailadressen komen niet overeen. Controleer ze en probeer het opnieuw.",
+	"emailauth-accountrecovery-invalid-email": "Voer een geldig e-mailadres in.",
+	"emailauth-accountrecovery-rate-limited": "U heeft te veel verzoeken voor accountherstel ingediend. Wacht even voordat u het opnieuw probeert.",
+	"emailauth-accountrecovery-error-generic": "Er is een fout opgetreden bij het verwerken van uw verzoek. Probeer het later opnieuw.",
+	"emailauth-accountrecovery-error-invalid-data": "De door u verstrekte informatie kon niet worden verwerkt. Controleer uw invoer en probeer het opnieuw.",
+	"emailauth-accountrecovery-error-service-unavailable": "Accountherstel is tijdelijk niet beschikbaar. Probeer het later opnieuw.",
+	"emailauth-accountrecovery-disabled": "Accountherstel is niet beschikbaar op deze wiki. Neem contact op met de sitebeheerders voor hulp."
 }

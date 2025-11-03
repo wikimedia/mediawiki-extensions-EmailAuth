@@ -21,5 +21,19 @@
 	"emailauth-login-message-no-email": "Sinun on vahvistettava kirjautumisesi. Vahvistuskoodi on lähetetty sähköpostiosoitteeseesi, syötä koodi tähän.",
 	"emailauth-login-help": "Ota yhteyttä [[{{int:grouppage-sysop}}|sivuston ylläpitäjiin]], jos sinulla ei ole enää pääsyä tunnuksesi sähköpostiosoitteeseen. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|lisätietoja]])",
 	"emailauth-login-failure": "Väärä vahvistuskoodi!",
-	"emailauth-login-retry-limit": "Liian monta epäonnistumista!"
+	"emailauth-login-retry-limit": "Liian monta epäonnistumista!",
+	"emailauth-accountrecovery-intro": "Palauta Wikimedia-tunnuksesi",
+	"emailauth-accountrecovery-username-label": "Käyttäjänimi",
+	"emailauth-accountrecovery-contactemail-label": "Sähköpostiosoite, josta sinut tavoittaa",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Vahvista sähköpostiosoite, josta sinut tavoittaa",
+	"emailauth-accountrecovery-registeredemail-label": "Wikimedia-tunnukseesi liitetty sähköpostiosoite",
+	"emailauth-accountrecovery-description-label": "Lisäkommentit",
+	"emailauth-accountrecovery-success": "Tunnuksen palautuspyyntö on lähetetty. Trust & Safety -tiimimme tarkistaa pyyntösi ja ottaa sinuun yhteyttä antamaasi sähköpostiosoitteeseen.",
+	"emailauth-accountrecovery-email-mismatch": "Antamasi sähköpostiosoitteet eivät täsmää. Tarkista ne ja yritä uudelleen.",
+	"emailauth-accountrecovery-invalid-email": "Anna kelvollinen sähköpostiosoite.",
+	"emailauth-accountrecovery-rate-limited": "Olet lähettänyt liian monta tunnuksen palautuspyyntöä. Odota ennen kuin yrität uudelleen.",
+	"emailauth-accountrecovery-error-generic": "Pyyntöäsi käsiteltäessä tapahtui virhe. Yritä myöhemmin uudelleen.",
+	"emailauth-accountrecovery-error-invalid-data": "Antamiasi tietoja ei voitu käsitellä. Tarkista syötteet ja yritä uudelleen.",
+	"emailauth-accountrecovery-error-service-unavailable": "Tunnuksen palautuspalvelu on tilapäisesti poissa käytöstä. Yritä myöhemmin uudelleen.",
+	"emailauth-accountrecovery-disabled": "Tilin palautus ei ole saatavilla tässä wikissä. Ota yhteyttä sivuston ylläpitäjiin saadaksesi apua."
 }

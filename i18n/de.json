@@ -21,5 +21,18 @@
 	"emailauth-login-help": "Kontaktiere die [[{{int:grouppage-sysop}}|Administratoren der Webseite]], wenn du keinen Zugriff mehr auf die E-Mail-Adresse deines Kontos hast. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|Weitere informationen]])",
 	"emailauth-login-failure": "Der Verifizierungscode ist ungültig!",
 	"emailauth-login-retry-limit": "Es gab zu viele Fehlversuche!",
-	"emailauth-accountrecovery-intro": "Stelle dein Wikimedia-Konto wieder her"
+	"emailauth-accountrecovery-intro": "Stelle dein Wikimedia-Konto wieder her",
+	"emailauth-accountrecovery-username-label": "Benutzername",
+	"emailauth-accountrecovery-contactemail-label": "Erreichbare Kontakt-E-Mail-Adresse",
+	"emailauth-accountrecovery-contactemail-confirm-label": "E-Mail-Adresse bestätigen",
+	"emailauth-accountrecovery-registeredemail-label": "Die mit deinem Wikimedia-Konto verknüpfte E-Mail-Adresse",
+	"emailauth-accountrecovery-description-label": "Zusätzliche Kommentare",
+	"emailauth-accountrecovery-success": "Dein Antrag auf Kontowiederherstellung wurde erfolgreich übermittelt. Unser Trust & Safety-Team wird deinen Antrag prüfen und dich unter der von dir angegebenen E-Mail-Adresse kontaktieren.",
+	"emailauth-accountrecovery-email-mismatch": "Die eingegebenen E-Mail-Adressen stimmen nicht überein. Bitte überprüfen deine Angaben und versuche es erneut.",
+	"emailauth-accountrecovery-invalid-email": "Bitte gib eine gültige E-Mail-Adresse ein",
+	"emailauth-accountrecovery-rate-limited": "Du hast zu viele Anträge auf Kontowiederherstellung gestellt. Bitte warte, bevor du es erneut versuchst.",
+	"emailauth-accountrecovery-error-generic": "Bei der Bearbeitung deiner Anfrage ist ein Fehler aufgetreten. Bitte versuche es später erneut.",
+	"emailauth-accountrecovery-error-invalid-data": "Die von dir angegebenen Informationen konnten nicht verarbeitet werden. Bitte überprüfe deine Eingaben und versuche es erneut.",
+	"emailauth-accountrecovery-error-service-unavailable": "Der Kontowiederherstellungsdienst ist vorübergehend nicht verfügbar. Bitte versuche es später erneut.",
+	"emailauth-accountrecovery-disabled": "Die Kontowiederherstellung ist in diesem Wiki nicht möglich. Bitte wende dich an die Website-Administratoren, um Hilfe zu erhalten."
 }

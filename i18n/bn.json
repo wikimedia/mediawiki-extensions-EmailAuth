@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Aftabuzzaman",
+			"আজিজ",
 			"আফতাবুজ্জামান"
 		]
 	},
@@ -11,5 +12,12 @@
 	"emailauth-email-subject": "আপনার $1 প্রবেশের যাচাইকরণ কোড",
 	"emailauth-login-message": "আপনাকে আপনার প্রবেশ যাচাই করতে হবে। আপনার ইমেইল ঠিকানায় ($1) একটি যাচাইকরণ কোড পাঠানো হয়েছে, দয়া করে সেই কোডটি এখানে লিখুন।",
 	"emailauth-login-failure": "অবৈধ যাচাইকরণ কোড!",
-	"emailauth-login-retry-limit": "অত্যধিক ব্যর্থতা!"
+	"emailauth-login-retry-limit": "অত্যধিক ব্যর্থতা!",
+	"emailauth-accountrecovery-intro": "আপনার উইকিমিডিয়া অ্যাকাউন্ট পুনরুদ্ধার করুন",
+	"emailauth-accountrecovery-username-label": "ব্যবহারকারী নাম",
+	"emailauth-accountrecovery-contactemail-confirm-label": "যোগাযোগের ইমেল নিশ্চিত করুন",
+	"emailauth-accountrecovery-description-label": "অতিরিক্ত মন্তব্য",
+	"emailauth-accountrecovery-invalid-email": "দয়া করে একটি বৈধ ইমেল ঠিকানা লিখুন।",
+	"emailauth-accountrecovery-rate-limited": "আপনি অনেক বেশি অ্যাকাউন্ট পুনরুদ্ধারের অনুরোধ জমা দিয়েছেন। আবার চেষ্টা করার আগে দয়া করে অপেক্ষা করুন।",
+	"emailauth-accountrecovery-error-service-unavailable": "অ্যাকাউন্ট পুনরুদ্ধার পরিসেবাটি অস্থায়ীভাবে অনুপলভ্য। দয়া করে পরে আবার চেষ্টা করুন।"
 }

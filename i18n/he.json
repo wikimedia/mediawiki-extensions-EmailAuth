@@ -21,5 +21,19 @@
 	"emailauth-login-message-no-email": "יש לאמת את הכניסה שלך. קוד אימות נשלח לכתובת הדוא\"ל שלך, נא להזין את הקוד הזה כאן.",
 	"emailauth-login-help": "נא ליצור קשר עם [[{{int:grouppage-sysop}}|מפעילי האתר]] אם אין לך עוד גישה לכתובת הדוא\"ל של חשבונך. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|למידע נוסף]])",
 	"emailauth-login-failure": "קוד אימות שגוי!",
-	"emailauth-login-retry-limit": "יותר מדי כישלונות!"
+	"emailauth-login-retry-limit": "יותר מדי כישלונות!",
+	"emailauth-accountrecovery-intro": "שחזור חשבון הוויקימדיה שלך",
+	"emailauth-accountrecovery-username-label": "שם משתמש",
+	"emailauth-accountrecovery-contactemail-label": "דוא\"ל שבו אפשר להשיג אותך",
+	"emailauth-accountrecovery-contactemail-confirm-label": "אישור כתובת דוא\"ל ליצירת קשר",
+	"emailauth-accountrecovery-registeredemail-label": "כתובת הדוא\"ל שרשומה בחשבון הוויקימדיה שלך",
+	"emailauth-accountrecovery-description-label": "הערות נוספות",
+	"emailauth-accountrecovery-success": "בקשת שחזור החשבון שלך נשלחה בהצלחה. צוות האמון והבטיחות שלנו יבחן את בקשתך וייצור איתך קשר בכתובת הדוא\"ל שסיפקת.",
+	"emailauth-accountrecovery-email-mismatch": "כתובות הדוא\"ל שהזנת אינן תואמות. נא לבדוק ולנסות שוב.",
+	"emailauth-accountrecovery-invalid-email": "נא להזין כתובת דוא\"ל תקינה.",
+	"emailauth-accountrecovery-rate-limited": "שלחת יותר מדי בקשות לשחזור חשבון. נא להמתין לפני ניסיון נוסף.",
+	"emailauth-accountrecovery-error-generic": "אירעה שגיאה בעת עיבוד הבקשה שלך. נא לנסות שוב מאוחר יותר.",
+	"emailauth-accountrecovery-error-invalid-data": "לא היה אפשר לעבד את המידע שסיפקת. נא לבדוק את מה שכתבת ולנסות שוב.",
+	"emailauth-accountrecovery-error-service-unavailable": "שירות שחזור החשבון אינו זמין באופן זמני. נא לנסות שוב מאוחר יותר.",
+	"emailauth-accountrecovery-disabled": "שחזור חשבון אינו זמין בוויקי הזה. נא ליצור קשר עם מפעילי האתר לקבלת סיוע."
 }

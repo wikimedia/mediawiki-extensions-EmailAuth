@@ -19,5 +19,19 @@
 	"emailauth-login-message-no-email": "Ќе треба да ја потврдите најавата. Ви испративме потврден код по е-пошта. Тука внесете го тој код.",
 	"emailauth-login-help": "Обратете се кај [[{{int:grouppage-sysop}}|администраторите]] ако повеќе немате пристап до е-поштата на вашата сметка. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|повеќе информации]])",
 	"emailauth-login-failure": "Неважечки потврден код!",
-	"emailauth-login-retry-limit": "Премногу неуспешни обиди!"
+	"emailauth-login-retry-limit": "Премногу неуспешни обиди!",
+	"emailauth-accountrecovery-intro": "Повратете си ја сметката на Викимедија",
+	"emailauth-accountrecovery-username-label": "Корисничко име",
+	"emailauth-accountrecovery-contactemail-label": "Достапна е-пошта за контакт",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Потврдете ја е-поштата за контакт",
+	"emailauth-accountrecovery-registeredemail-label": "Е-пошта регистрирана со вашата сметка на Викимедија",
+	"emailauth-accountrecovery-description-label": "Дополнителни коментари",
+	"emailauth-accountrecovery-success": "Вашето барање за повраток на сметка е успешно поднесено. Нашата Екипа за доверба и безбедност ќе го разгледа и ќе ве контактира на е-поштата што ја внесовте.",
+	"emailauth-accountrecovery-email-mismatch": "Внесените е-пошти не се совпаѓаат. Направете исправка и обидете се повторно.",
+	"emailauth-accountrecovery-invalid-email": "Внесете важечка е-пошта.",
+	"emailauth-accountrecovery-rate-limited": "Поднесовте премногу барања за повраток на сметка. Почекајте пред да пробате повторно.",
+	"emailauth-accountrecovery-error-generic": "Се појави грешка при обработката на вашето барање. Обидете се подоцна.",
+	"emailauth-accountrecovery-error-invalid-data": "Внесените информации не можат да се обработат. Проверете го внесеното и обидете се повторно.",
+	"emailauth-accountrecovery-error-service-unavailable": "Повратокот на сметки е привремено недостапен. Обидете се подоцна.",
+	"emailauth-accountrecovery-disabled": "Повратокот на сметки не е достапен на ова вики. Обратете се кај администраторите за помош."
 }
