@@ -28,11 +28,16 @@
 	"emailauth-accountrecovery-registeredemail-label": "Vikimedia hesabınızda qeyd olunan e-poçt ünvanı",
 	"emailauth-accountrecovery-description-label": "Əlavə şərh",
 	"emailauth-accountrecovery-success": "Hesabın bərpası sorğunuz uğurla təqdim edildi. Təhlükəsizlik komandamız sorğunuzu nəzərdən keçirəcək və qeyd etdiyiniz e-poçt ünvanı vasitəsilə sizinlə əlaqə saxlayacaq.",
+	"emailauth-accountrecovery-confirmation-needed": "Təsdiq e-poçtu təqdim etdiyiniz e-poçt ünvanına göndərildi. Hesabın bərpası sorğusunu tamamlamaq üçün e-poçtdakı linkə klikləməlisiniz.",
+	"emailauth-accountrecovery-confirmation-subject": "Hesabınızı bərpa etmək üçün sorğunuzu təsdiqləyin",
+	"emailauth-accountrecovery-confirmation-body": "{{SITENAME}} saytında \"$1\" adlı hesabı bərpa etmək sorğusu almışıq.\n\nBu prosesi davam etdirmək üçün aşağıdakı linkə klikləyin və e-poçt ünvanınızı təsdiqləyin. Link $2 tarixindən sonra işləməyəcək.\n\n$3\n\nBu, siz deyilsinizsə, bu e-poçta məhəl qoymaya bilərsiniz, hesabınızda heç bir dəyişiklik edilməyəcək.",
+	"emailauth-accountrecovery-confirmation-resent": "Bu təsdiq linkinin müddəti bitib. Təqdim etdiyiniz e-poçt ünvanına yeni təsdiq linki göndərilib. Hesab bərpa sorğunuzu tamamlamaq üçün bu yeni linkə klikləyin.",
 	"emailauth-accountrecovery-email-mismatch": "Daxil etdiyiniz e-poçt ünvanları uyğun gəlmir. Zəhmət olmasa, yoxlayın və yenidən cəhd edin.",
 	"emailauth-accountrecovery-invalid-email": "Etibarlı e-poçt ünvanı daxil edin.",
 	"emailauth-accountrecovery-rate-limited": "Siz həddən çox hesab bərpa sorğusu göndərmisiniz. Zəhmət olmasa, yenidən cəhd etməzdən əvvəl gözləyin.",
 	"emailauth-accountrecovery-error-generic": "Sorğunuzu emal edərkən xəta baş verdi. Zəhmət olmasa, daha sonra yenidən cəhd edin.",
 	"emailauth-accountrecovery-error-invalid-data": "Təqdim etdiyiniz məlumatı emal etmək mümkün olmadı. Zəhmət olmasa, məlumat yoxlayın və yenidən cəhd edin.",
 	"emailauth-accountrecovery-error-service-unavailable": "Hesabın bərpası xidməti müvəqqəti olaraq əlçatan deyil. Zəhmət olmasa, sonra yenidən cəhd edin.",
+	"emailauth-accountrecovery-error-badtoken": "Yanlış təsdiq linki.\nLinkin müddəti bitmiş ola bilər.",
 	"emailauth-accountrecovery-disabled": "Hesabın bərpası bu vikidə mövcud deyil. Kömək üçün sayt administratorları ilə əlaqə saxlayın."
 }

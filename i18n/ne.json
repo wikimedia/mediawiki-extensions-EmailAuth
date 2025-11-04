@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"बडा काजी"
+		]
+	},
+	"emailauth-accountrecovery-username-label": "प्रयोगकर्ता नाम",
+	"emailauth-accountrecovery-contactemail-confirm-label": "सम्पर्क इमेल पुष्टि गर्नुहोस्",
+	"emailauth-accountrecovery-description-label": "थप टिप्पणीहरू",
+	"emailauth-accountrecovery-rate-limited": "तपाईंले धेरै खाता पुनःप्राप्ति अनुरोधहरू पेश गर्नुभएको छ। कृपया फेरि प्रयास गर्नु अघि पर्खनुहोस्।"
+}

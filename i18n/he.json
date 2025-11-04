@@ -29,11 +29,16 @@
 	"emailauth-accountrecovery-registeredemail-label": "כתובת הדוא\"ל שרשומה בחשבון הוויקימדיה שלך",
 	"emailauth-accountrecovery-description-label": "הערות נוספות",
 	"emailauth-accountrecovery-success": "בקשת שחזור החשבון שלך נשלחה בהצלחה. צוות האמון והבטיחות שלנו יבחן את בקשתך וייצור איתך קשר בכתובת הדוא\"ל שסיפקת.",
+	"emailauth-accountrecovery-confirmation-needed": "דואר אלקטרוני לאימות נשלח לכתובת שסיפקת. כדי להשלים את בקשת שחזור החשבון, יש ללחוץ על הקישור בדואר האלקטרוני.",
+	"emailauth-accountrecovery-confirmation-subject": "נא לאשר את בקשתך לשחזר את החשבון",
+	"emailauth-accountrecovery-confirmation-body": "קיבלנו בקשה לשחזר את את החשבון בשם \"$1\" באתר {{SITENAME}}.\n\nכדי להמשיך בתהליך הזה, נא ללחוץ על הקישור למטה כדי לאמת את כתובת הדוא\"ל שלך. הקישור לפוג בעוד $2.\n\n$3\n\nאם לא ביקשת את זה, אפשר להתעלם מהדוא\"ל הזה ולא ייעשו שינויים לחשבון שלך.",
+	"emailauth-accountrecovery-confirmation-resent": "קישור האימות הזה פג. קישור אימות חדש נשלח לכתובת הדואר האלקטרוני שהספקת. נא ללחוץ על הקישור החדש כדי להשלים את בקשת שחזור החשבון שלך.",
 	"emailauth-accountrecovery-email-mismatch": "כתובות הדוא\"ל שהזנת אינן תואמות. נא לבדוק ולנסות שוב.",
 	"emailauth-accountrecovery-invalid-email": "נא להזין כתובת דוא\"ל תקינה.",
 	"emailauth-accountrecovery-rate-limited": "שלחת יותר מדי בקשות לשחזור חשבון. נא להמתין לפני ניסיון נוסף.",
 	"emailauth-accountrecovery-error-generic": "אירעה שגיאה בעת עיבוד הבקשה שלך. נא לנסות שוב מאוחר יותר.",
 	"emailauth-accountrecovery-error-invalid-data": "לא היה אפשר לעבד את המידע שסיפקת. נא לבדוק את מה שכתבת ולנסות שוב.",
 	"emailauth-accountrecovery-error-service-unavailable": "שירות שחזור החשבון אינו זמין באופן זמני. נא לנסות שוב מאוחר יותר.",
+	"emailauth-accountrecovery-error-badtoken": "קישור האימות בלתי־תקין.\nייתכן שתוקף הקישור פג.",
 	"emailauth-accountrecovery-disabled": "שחזור חשבון אינו זמין בוויקי הזה. נא ליצור קשר עם מפעילי האתר לקבלת סיוע."
 }

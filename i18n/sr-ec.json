@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Milicevic01"
+		]
+	},
+	"emailauth-accountrecovery-intro": "Опоравак Вашег Викимедијиног налога",
+	"emailauth-accountrecovery-username-label": "Корисничко име",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Потврдите контакт имејл",
+	"emailauth-accountrecovery-invalid-email": "Молимо унесите ваљану имејл адресу.",
+	"emailauth-accountrecovery-error-invalid-data": "Наведене информације није било могуће обрадити. Молимо проверите уносе па покушајте поново.",
+	"emailauth-accountrecovery-error-service-unavailable": "Сервис за опоравак налога тренутно није доступан. Молимо покушајте касније."
+}

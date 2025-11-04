@@ -29,11 +29,16 @@
 	"emailauth-accountrecovery-registeredemail-label": "E-mailadres geregistreerd bij uw Wikimedia-account",
 	"emailauth-accountrecovery-description-label": "Overige opmerkingen",
 	"emailauth-accountrecovery-success": "Uw verzoek tot accountherstel is succesvol ingediend. Ons Trust & Safety-team beoordeelt uw verzoek en meent contact met u op via het door u opgegeven e-mailadres.",
+	"emailauth-accountrecovery-confirmation-needed": "Er is een bevestiging gestuurd naar het e-mailadres dat u hebt verstrekt. Om uw accountherstelverzoek af te ronden moet u op de koppeling in dat e-mailbericht klikken.",
+	"emailauth-accountrecovery-confirmation-subject": "Bevestig uw verzoek om uw account te herstellen",
+	"emailauth-accountrecovery-confirmation-body": "We hebben een aanvraag ontvangen tot herstel van het account “$1” op {{SITENAME}}.\n\nOm hiermee door te gaan klikt u hieronder op de koppeling ter bevestiging van uw e-mailadres. De koppeling verloopt in $2.\n\n$3\n\nAls u dit niet was kunt u dit bericht gerust negeren. Er verandert dan niets aan uw account.",
+	"emailauth-accountrecovery-confirmation-resent": "Deze bevestigingskoppeling is verlopen. Er is een nieuwe bevestigingskoppeling gestuurd naar het e-mailadres dat u hebt verstrekt. Klik op deze nieuwe koppeling om uw accountherstelaanvraag te voltooien.",
 	"emailauth-accountrecovery-email-mismatch": "De ingevoerde e-mailadressen komen niet overeen. Controleer ze en probeer het opnieuw.",
 	"emailauth-accountrecovery-invalid-email": "Voer een geldig e-mailadres in.",
 	"emailauth-accountrecovery-rate-limited": "U heeft te veel verzoeken voor accountherstel ingediend. Wacht even voordat u het opnieuw probeert.",
 	"emailauth-accountrecovery-error-generic": "Er is een fout opgetreden bij het verwerken van uw verzoek. Probeer het later opnieuw.",
 	"emailauth-accountrecovery-error-invalid-data": "De door u verstrekte informatie kon niet worden verwerkt. Controleer uw invoer en probeer het opnieuw.",
 	"emailauth-accountrecovery-error-service-unavailable": "Accountherstel is tijdelijk niet beschikbaar. Probeer het later opnieuw.",
+	"emailauth-accountrecovery-error-badtoken": "Ongeldige bevestigingskoppeling.\nMogelijk is de koppeling verlopen.",
 	"emailauth-accountrecovery-disabled": "Accountherstel is niet beschikbaar op deze wiki. Neem contact op met de sitebeheerders voor hulp."
 }
