@@ -28,11 +28,16 @@
 	"emailauth-accountrecovery-registeredemail-label": "Correo electrónico rexistrado na túa conta da Wikimedia",
 	"emailauth-accountrecovery-description-label": "Comentarios adicionais",
 	"emailauth-accountrecovery-success": "A túa solicitude de recuperación de conta enviouse correctamente. O noso equipo de confianza e seguranza revisará a túa solicitude e poñerase en contacto contigo no enderezo de correo electrónico que indicaches.",
+	"emailauth-accountrecovery-confirmation-needed": "Enviámosche un correo electrónico de confirmación ao enderezo de contacto que proporcionaches. Para completares a solicitude de recuperación da túa conta, fai clic na ligazón do correo electrónico.",
+	"emailauth-accountrecovery-confirmation-subject": "Confirma a solicitude para recuperar a túa conta",
+	"emailauth-accountrecovery-confirmation-body": "Recibimos unha solicitude para recuperar a conta chamada «$1» en {{SITENAME}}.\n\nPara continuar con este proceso, fai clic na ligazón de embaixo para verificar o teu enderezo de correo electrónico. A ligazón caducará en $2.\n\n$3\n\nSe non fuches ti, podes ignorar este correo electrónico e non se farán cambios na túa conta.",
+	"emailauth-accountrecovery-confirmation-resent": "Esta ligazón de confirmación caducou. Enviámosche unha nova ligazón de confirmación ao enderezo de contacto que proporcionaches. Fai clic nesa nova ligazón para completares a solicitude de recuperación da túa conta.",
 	"emailauth-accountrecovery-email-mismatch": "Os enderezos de correo electrónico que introduciches non coinciden. Compróbaos e inténtao de novo.",
 	"emailauth-accountrecovery-invalid-email": "Escribe un enderezo de correo electrónico válido.",
 	"emailauth-accountrecovery-rate-limited": "Enviaches demasiadas solicitudes de recuperación de conta. Agarda antes de intentalo de novo.",
 	"emailauth-accountrecovery-error-generic": "Produciuse un erro ao procesar a túa solicitude. Inténtao de novo máis tarde.",
 	"emailauth-accountrecovery-error-invalid-data": "Non se puido procesar a información que proporcionaches. Revisa as túas entradas e inténtao de novo.",
 	"emailauth-accountrecovery-error-service-unavailable": "O servizo de recuperación de contas non está dispoñible temporalmente. Inténtao de novo máis tarde.",
+	"emailauth-accountrecovery-error-badtoken": "A ligazón de confirmación non é válida.\nSe cadra caducou.",
 	"emailauth-accountrecovery-disabled": "A recuperación de contas non está dispoñible neste wiki. Ponte en contacto coa administración do sitio para obter axuda."
 }

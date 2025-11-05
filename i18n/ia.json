@@ -27,11 +27,16 @@
 	"emailauth-accountrecovery-registeredemail-label": "Adresse de e-mail registrate in tu conto de Wikimedia",
 	"emailauth-accountrecovery-description-label": "Commentos supplementari",
 	"emailauth-accountrecovery-success": "Le requesta de recuperation de tu conto ha essite correctemente inviate. Nostre equipa Fiducia e Securitate ora revidera tu requesta e te contactara al adresse de e-mail fornite.",
+	"emailauth-accountrecovery-confirmation-needed": "Un message de confirmation ha essite inviate al adresse de e-mail fornite. Pro terminar tu requesta de recuperation de conto, clicca primo sur le ligamine in le message de e-mail.",
+	"emailauth-accountrecovery-confirmation-subject": "Confirmar tu requesta de recuperar tu conto",
+	"emailauth-accountrecovery-confirmation-body": "Nos ha recipite un requesta de recuperar le conto con le nomine “$1” sur {{SITENAME}}.\n\nPro continuar con iste processo, clicca sur le ligamine infra pro verificar tu adresse de e-mail. Le ligamine expirara in $2.\n\n$3\n\nSi isto non esseva tu, per favor ignora iste message; nihil cambiara in tu conto.",
+	"emailauth-accountrecovery-confirmation-resent": "Iste ligamine de confirmation ha expirate. Un nove ligamine de confirmation ha essite inviate al adresse de e-mail fornite. Per favor clicca sur iste nove ligamine pro terminar tu requesta de recuperation de conto.",
 	"emailauth-accountrecovery-email-mismatch": "Le adresses de e-mail inserite non es identic. Per favor verifica e tenta lo de novo.",
 	"emailauth-accountrecovery-invalid-email": "Per favor insere un adresse de e-mail valide.",
 	"emailauth-accountrecovery-rate-limited": "Tu ha inviate troppo de requestas de recuperation de conto. Per favor attende ante de tentar lo de novo.",
 	"emailauth-accountrecovery-error-generic": "Un error ha occurrite durante le tractamento de tu requesta. Per favor tenta lo de novo plus tarde.",
 	"emailauth-accountrecovery-error-invalid-data": "Le information fornite non poteva esser tractate. Per favor verifica tu entratas e tenta lo de novo.",
 	"emailauth-accountrecovery-error-service-unavailable": "Le servicio de recuperation de contos es temporarimente indisponibile. Per favor tenta lo de novo plus tarde.",
+	"emailauth-accountrecovery-error-badtoken": "Ligamine de confirmation invalide.\nEs possibile que le ligamine ha expirate.",
 	"emailauth-accountrecovery-disabled": "Le recuperation de contos non es disponibile sur iste wiki. Per favor contacta le administratores del sito pro assistentia."
 }

@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeeputer"
+		]
+	},
+	"emailauth-accountrecovery-intro": "حساب ویکی‌مدیایی خود را بازیابی کنید",
+	"emailauth-accountrecovery-username-label": "نام کاربری",
+	"emailauth-accountrecovery-contactemail-confirm-label": "تأیید ایمیل تماس",
+	"emailauth-accountrecovery-registeredemail-label": "نشانی ایمیل ثبت‌شده به‌همراه حساب ویکی‌مدیایی شما",
+	"emailauth-accountrecovery-description-label": "توضیحات بیشتر",
+	"emailauth-accountrecovery-success": "درخواست شما برای بازیابی حساب با موفقیت ثبت شد. تیم اعتماد و امنیت ما درخواست شما را بازبینی خواهند کرد و از طریق نشانی ایمیلی که ارائه داده‌اید با شما تماس خواهند گرفت.",
+	"emailauth-accountrecovery-confirmation-needed": "یک ایمیل تأییدیه به نشانی ایمیلی که ارائه داده‌اید، ارسال شده است. برای تکمیل درخواست بازیابی حساب خود، باید روی پیوند موجود در ایمیل مذکور کلیک کنید.",
+	"emailauth-accountrecovery-confirmation-subject": "برای بازیابی حساب خود، درخواست خود را تأیید کنید",
+	"emailauth-accountrecovery-confirmation-body": "ما یک درخواست برای بازیابی حساب «$1» در {{SITENAME}} دریافت کرده‌ایم.\n\nبرای ادامه دادن به این فرایند، با کلیک بر روی پیوند زیر نشانی ایمیل خود را تأیید کنید. این پیوند تا $2 دیگر منقضی می‌شود.\n\n$3\n\nاگر این درخواست از سوی شما نبوده، می‌توانید با اطمینان این ایمیل را نادیده بگیرید و هیچ تغییری در حساب کاربری شما اعمال نخواهد شد.",
+	"emailauth-accountrecovery-confirmation-resent": "این پیوند تأییدیه منقضی شده است. یک پیوند تأییدیهٔ جدید به نشانی ایمیلی که ارائه دادید، ارسال شده است. برای تکمیل درخواست بازیابی حساب خوب روی این پیوند جدید کلیک کنید.",
+	"emailauth-accountrecovery-email-mismatch": "نشانی ایمیلی که وارد کرده‌اید منطبق نیست. لطفاً پس از بررسی، دوباره تلاش کنید.",
+	"emailauth-accountrecovery-invalid-email": "لطفاً یک مشانی ایمیل معتبر وارد کنید.",
+	"emailauth-accountrecovery-rate-limited": "شما درخواست‌های زیادی برای بازیابی حساب ثبت کرده‌اید. لطفاً پیش از تلاش مجدد کمی صبر کنید.",
+	"emailauth-accountrecovery-error-generic": "هنگام پردازش درخواست شما خطایی رخ داد. لطفاً بعداً دوباره تلاش کنید.",
+	"emailauth-accountrecovery-error-invalid-data": "پردازش اطلاعاتی که ارائه کرده‌اید امکان‌پذیر نیست. لطفاً پس از بررسی ورودی‌های خود دوباره تلاش کنید.",
+	"emailauth-accountrecovery-error-service-unavailable": "سرویس بازیابی حساب موقتاً از دسترس خارج است. لطفاً بعداً دوباره تلاش کنید.",
+	"emailauth-accountrecovery-error-badtoken": "پیوند تأییدیه نامعتبر.\nممکن است پیوند منقضی شده باشد.",
+	"emailauth-accountrecovery-disabled": "بازیابی حساب در این ویکی در دسترس نیست. برای کمک با مدیران وبگاه تماس بگیرید."
+}
