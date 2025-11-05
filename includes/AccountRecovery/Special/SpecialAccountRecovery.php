@@ -274,7 +274,7 @@ class SpecialAccountRecovery extends FormSpecialPage {
 				->params(
 					$ticketData['requester_name'],
 					Message::durationParam( $this->getConfig()->get( 'EmailAuthAccountRecoveryTokenExpiry' ) ),
-					$this->getPageTitle( "confirm/$token" )->getFullURL()
+					$this->getPageTitle( "confirm/$token" )->getFullURL( '', false, PROTO_CANONICAL )
 				)
 				->text()
 		) );
