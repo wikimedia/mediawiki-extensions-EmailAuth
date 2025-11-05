@@ -42,7 +42,7 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 			'EmailAuthEnableAccountRecovery' => true,
 			'EmailAuthAccountRecoveryTokenExpiry' => 900,
 			MainConfigNames::PasswordSender => 'admin@wiki.example',
-			MainConfigNames::Server => 'https://example.org',
+			MainConfigNames::CanonicalServer => 'https://example.org',
 			MainConfigNames::ArticlePath => '/wiki/$1'
 		] );
 	}
