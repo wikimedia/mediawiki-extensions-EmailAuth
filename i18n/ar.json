@@ -28,11 +28,16 @@
 	"emailauth-accountrecovery-registeredemail-label": "البريد الإلكتروني المسجل بحساب ويكيميديا الخاص بك",
 	"emailauth-accountrecovery-description-label": "تعليقات إضافية",
 	"emailauth-accountrecovery-success": "تم تقديم طلب استرداد حسابك بنجاح. سيراجع فريق الثقة والأمان طلبك ويتواصل معك على عنوان البريد الإلكتروني الذي قدمته.",
+	"emailauth-accountrecovery-confirmation-needed": "تم إرسال رسالة تأكيد إلى عنوان البريد الإلكتروني الذي أدخلته. لإكمال طلب استرداد حسابك، يُرجى النقر على الرابط الموجود في الرسالة.",
+	"emailauth-accountrecovery-confirmation-subject": "تأكيد طلبك لاستعادة حسابك",
+	"emailauth-accountrecovery-confirmation-body": "لقد تلقينا طلبًا لاستعادة الحساب المسمى \" $1 \" على {{SITENAME}}.\n\n لمتابعة هذه العملية، انقر على الرابط أدناه للتحقق من عنوان بريدك الإلكتروني. سينتهي صلاحية الرابط خلال $2 .\n\n $3 \n\n إذا لم تكن أنت من أرسل هذه الرسالة، يمكنك تجاهل هذه الرسالة بأمان، ولن يتم إجراء أي تغييرات على حسابك.",
+	"emailauth-accountrecovery-confirmation-resent": "انتهت صلاحية رابط التأكيد هذا. تم إرسال رابط تأكيد جديد إلى عنوان البريد الإلكتروني الذي أدخلته. يُرجى النقر على هذا الرابط الجديد لإكمال طلب استرداد حسابك.",
 	"emailauth-accountrecovery-email-mismatch": "عناوين البريد الإلكتروني التي أدخلتها غير متطابقة. يُرجى التحقق والمحاولة مرة أخرى.",
 	"emailauth-accountrecovery-invalid-email": "يرجى إدخال عنوان بريد إلكتروني صالح.",
 	"emailauth-accountrecovery-rate-limited": "لقد أرسلتَ عددًا كبيرًا جدًا من طلبات استرداد الحساب. يُرجى الانتظار قبل المحاولة مجددًا.",
 	"emailauth-accountrecovery-error-generic": "حدث خطأ أثناء معالجة طلبك. يُرجى المحاولة لاحقًا.",
 	"emailauth-accountrecovery-error-invalid-data": "تعذّرت معالجة المعلومات التي أدخلتها. يُرجى مراجعة إدخالاتك والمحاولة مجددًا.",
 	"emailauth-accountrecovery-error-service-unavailable": "خدمة استرداد الحساب غير متاحة مؤقتًا. يُرجى المحاولة لاحقًا.",
+	"emailauth-accountrecovery-error-badtoken": "رابط التأكيد غير صالح.\nقد يكون الرابط منتهي الصلاحية.",
 	"emailauth-accountrecovery-disabled": "استعادة الحساب غير متاحة على هذا الويكي. يُرجى التواصل مع إدارة الموقع للمساعدة."
 }
