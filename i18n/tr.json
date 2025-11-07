@@ -3,6 +3,7 @@
 		"authors": [
 			"BaRaN6161 TURK",
 			"MuratTheTurkish",
+			"Sakblue",
 			"ToprakM"
 		]
 	},
@@ -21,5 +22,22 @@
 	"emailauth-login-message-no-email": "Giriş bilgilerinizi doğrulamanız gerekli. E-posta adresinize bir doğrulama kodu gönderildi. Lütfen bu kodu buraya girin.",
 	"emailauth-login-help": "Hesabınızın e-posta adresine artık erişiminiz yoksa [[{{int:grouppage-sysop}}|site yöneticileriyle]] iletişime geçin. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|daha fazla bilgi]])",
 	"emailauth-login-failure": "Geçersiz doğrulama kodu!",
-	"emailauth-login-retry-limit": "Çok fazla hatalı giriş!"
+	"emailauth-login-retry-limit": "Çok fazla hatalı giriş!",
+	"emailauth-accountrecovery-intro": "Wikimedia hesabınızı kurtarın",
+	"emailauth-accountrecovery-username-label": "Kullanıcı adı",
+	"emailauth-accountrecovery-contactemail-label": "Ulaşılabilir iletişim e-postası",
+	"emailauth-accountrecovery-contactemail-confirm-label": "İletişim e-postasını onaylayın",
+	"emailauth-accountrecovery-registeredemail-label": "Wikimedia hesabınıza kayıtlı e-posta adresi",
+	"emailauth-accountrecovery-description-label": "Ek yorumlar:",
+	"emailauth-accountrecovery-confirmation-needed": "Verdiğiniz iletişim e-posta adresine bir onay e-posta gönderildi. Hesap kurtarma talebinizi tamamlamak için e-posta'daki bağlantıyı tıklamalısınız.",
+	"emailauth-accountrecovery-confirmation-subject": "Hesabınızı kurtarma isteğinizi onaylayın",
+	"emailauth-accountrecovery-confirmation-resent": "Bu onay bağlantısı sona erdi. Verdiğiniz e-posta adresine yeni bir onay bağlantısı gönderildi. Lütfen hesabınızı kurtarma talebinizi tamamlamak için bu yeni bağlantıyı tıklayın.",
+	"emailauth-accountrecovery-email-mismatch": "Girdiğiniz e-posta adresleri eşleşmiyor. Lütfen kontrol edip tekrar deneyin.",
+	"emailauth-accountrecovery-invalid-email": "Lütfen geçerli bir e-posta adresini girin.",
+	"emailauth-accountrecovery-rate-limited": "Çok fazla hesap kurtarma isteği gönderdiniz. Lütfen tekrar denemeden önce bekleyin.",
+	"emailauth-accountrecovery-error-generic": "Talebiniz işlenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+	"emailauth-accountrecovery-error-invalid-data": "Verdiğiniz bilgiler işlenemedi. Lütfen girişlerinizi kontrol edip tekrar deneyin.",
+	"emailauth-accountrecovery-error-service-unavailable": "Hesap kurtarma hizmeti geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
+	"emailauth-accountrecovery-error-badtoken": "Geçersiz onay bağlantısı.\nBağlantının süresi dolmuş olabilir.",
+	"emailauth-accountrecovery-disabled": "Bu wiki'de hesap kurtarma özelliği mevcut değildir. Yardım için lütfen site yöneticileriyle iletişime geçin."
 }
