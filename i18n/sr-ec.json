@@ -10,10 +10,11 @@
 	"emailauth-login-message": "Морате верификиовати Вашу пријаву. Верификациони код је послат на Вашу имејл адресу ($1), молимо унесите тај код овде.",
 	"emailauth-login-message-no-email": "Морате верификиовати Вашу пријаву. Верификациони код је послат на Вашу имејл адресу, молимо унесите тај код овде.",
 	"emailauth-login-failure": "Неважећи верификациони код!",
-	"emailauth-accountrecovery-intro": "Опоравак Вашег Викимедијиног налога",
+	"emailauth-accountrecovery-intro": "Опоравак Вашег {{SITENAME}} налога",
 	"emailauth-accountrecovery-username-label": "Корисничко име",
 	"emailauth-accountrecovery-contactemail-confirm-label": "Потврдите контакт имејл",
-	"emailauth-accountrecovery-registeredemail-label": "Имејл регистрован са Вашим Викимедијиним налогом",
+	"emailauth-accountrecovery-registeredemail-label": "Имејл регистрован са Вашим {{SITENAME}} налогом",
+	"emailauth-accountrecovery-confirmation-subject": "Потврдите Ваш захтев за опоравком налога",
 	"emailauth-accountrecovery-invalid-email": "Молимо унесите ваљану имејл адресу.",
 	"emailauth-accountrecovery-error-invalid-data": "Наведене информације није било могуће обрадити. Молимо проверите уносе па покушајте поново.",
 	"emailauth-accountrecovery-error-service-unavailable": "Сервис за опоравак налога тренутно није доступан. Молимо покушајте касније."
