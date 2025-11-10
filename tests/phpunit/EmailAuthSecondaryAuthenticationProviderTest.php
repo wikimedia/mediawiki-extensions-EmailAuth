@@ -1,11 +1,12 @@
 <?php
 
-namespace MediaWiki\Extension\EmailAuth;
+namespace MediaWiki\Extension\EmailAuth\Tests;
 
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\Config\HashConfig;
+use MediaWiki\Extension\EmailAuth\EmailAuthSecondaryAuthenticationProvider;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Status\Status;
 use MediaWiki\User\User;
@@ -132,7 +133,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 				[ 'token' => $token ] ) );
 		$this->assertSame( AuthenticationResponse::PASS, $response->status );
 
-		// do not confirm email address if it's not the same one the code was sent to
+		// do not confirm an email address if it's not the same one the code was sent to
 		$this->session->clear();
 		$user = $this->getMockUser( false );
 		$user->expects( $this->once() )->method( 'sendMail' )
@@ -197,8 +198,8 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 			->onlyMethods( [
 				'isEmailConfirmed', 'sendMail', 'getEmail', 'confirmEmail', 'saveSettings'
 			] )->getMock();
-		$user->expects( $this->any() )->method( 'isEmailConfirmed' )->willReturn( $isEmailConfirmed );
-		$user->expects( $this->any() )->method( 'getEmail' )->willReturn( 'a@b.com' );
+		$user->method( 'isEmailConfirmed' )->willReturn( $isEmailConfirmed );
+		$user->method( 'getEmail' )->willReturn( 'a@b.com' );
 		if ( $isEmailConfirmed ) {
 			$user->expects( $this->never() )->method( 'confirmEmail' );
 			$user->expects( $this->never() )->method( 'saveSettings' );
@@ -213,8 +214,8 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 	private function getMockUserNoEmail() {
 		$user = $this->getMockBuilder( User::class )
 			->onlyMethods( [ 'getEmail', 'isEmailConfirmed', 'sendMail' ] )->getMock();
-		$user->expects( $this->any() )->method( 'isEmailConfirmed' )->willReturn( false );
-		$user->expects( $this->any() )->method( 'getEmail' )->willReturn( '' );
+		$user->method( 'isEmailConfirmed' )->willReturn( false );
+		$user->method( 'getEmail' )->willReturn( '' );
 		/** @var User $user */
 		$user->mName = 'Foo';
 		$user->mFrom = 'name';

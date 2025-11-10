@@ -1,7 +1,8 @@
 <?php
 
-namespace MediaWiki\Extension\EmailAuth;
+namespace MediaWiki\Extension\EmailAuth\Tests;
 
+use MediaWiki\Extension\EmailAuth\EmailAuthAuthenticationRequest;
 use MediaWiki\Tests\Auth\AuthenticationRequestTestCase;
 
 /**
