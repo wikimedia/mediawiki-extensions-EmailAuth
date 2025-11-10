@@ -14,8 +14,6 @@ use Status;
  */
 class ZendeskClientTest extends MediaWikiUnitTestCase {
 
-	private ServiceOptions $serviceOptions;
-	private LoggerInterface $logger;
 	private HttpRequestFactory $httpRequestFactory;
 	private object $request;
 
@@ -31,16 +29,16 @@ class ZendeskClientTest extends MediaWikiUnitTestCase {
 			'EmailAuthZendeskTags' => $overrides['tags'] ?? [],
 		];
 
-		$this->serviceOptions = $this->createMock( ServiceOptions::class );
-		$this->serviceOptions->expects( $this->once() )
+		$serviceOptions = $this->createMock( ServiceOptions::class );
+		$serviceOptions->expects( $this->once() )
 			->method( 'assertRequiredOptions' )
 			->with( ZendeskClient::CONSTRUCTOR_OPTIONS );
 
-		$this->serviceOptions->method( 'get' )->willReturnCallback(
+		$serviceOptions->method( 'get' )->willReturnCallback(
 			static fn ( string $k ) => $defaults[$k]
 		);
 
-		$this->logger = $this->createMock( LoggerInterface::class );
+		$logger = $this->createMock( LoggerInterface::class );
 		$this->httpRequestFactory = $this->createMock( HttpRequestFactory::class );
 
 		// Build a lightweight request mock with the exact methods we call
@@ -49,9 +47,7 @@ class ZendeskClientTest extends MediaWikiUnitTestCase {
 			->getMock();
 
 		return new ZendeskClient(
-			$this->httpRequestFactory,
-			$this->logger,
-			$this->serviceOptions
+			$this->httpRequestFactory, $logger, $serviceOptions
 		);
 	}
 

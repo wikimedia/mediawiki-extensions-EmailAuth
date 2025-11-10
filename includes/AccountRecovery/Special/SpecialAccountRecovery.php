@@ -13,8 +13,10 @@ use MediaWiki\MainConfigNames;
 use MediaWiki\Message\Message;
 use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Status\Status;
+use MediaWiki\User\User;
 use MWCryptRand;
 use Psr\Log\LoggerInterface;
+use Throwable;
 use Wikimedia\Message\MessageSpecifier;
 use Wikimedia\ObjectCache\BagOStuff;
 
@@ -63,7 +65,7 @@ class SpecialAccountRecovery extends FormSpecialPage {
 	/**
 	 * Do not list this special page on Special:SpecialPages.
 	 *
-	 * @return bool
+	 * @inheritDoc
 	 */
 	public function isListed() {
 		return false;
@@ -73,10 +75,9 @@ class SpecialAccountRecovery extends FormSpecialPage {
 	 * Restrict this page to logged-out users only.
 	 * Logged-in users don't need account recovery.
 	 *
-	 * @param \User $user
-	 * @return bool
+	 * @inheritDoc
 	 */
-	public function userCanExecute( \User $user ) {
+	public function userCanExecute( User $user ) {
 		return !$user->isNamed();
 	}
 
@@ -88,34 +89,27 @@ class SpecialAccountRecovery extends FormSpecialPage {
 	 * @return bool True if email is valid and acceptable by Zendesk
 	 */
 	private function validateStrictEmail( string $email ): bool {
-		// First check with MediaWiki's validator
-		if ( !Sanitizer::validateEmail( $email ) ) {
-			return false;
-		}
-
-		// Ensure email has proper structure: localpart@domain.tld
-		// Must have a domain with at least one dot (TLD)
-		if ( !preg_match( '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/', $email ) ) {
+		if (
+			// First check with MediaWiki's validator
+			!Sanitizer::validateEmail( $email ) ||
+			// Ensure email has the proper structure: localpart@domain.tld
+			// Must have a domain with at least one dot (TLD)
+			!preg_match( '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/', $email )
+		) {
 			return false;
 		}
 
 		// Reject emails with multiple consecutive dots or dots at start/end of local part
 		[ $local, $domain ] = explode( '@', $email, 2 );
-		if ( $local === '' || $domain === '' ) {
-			return false;
-		}
-		if ( str_contains( $local, '..' ) || $local[0] === '.' || substr( $local, -1 ) === '.' ) {
-			return false;
-		}
 
-		return true;
+		return $local !== '' &&
+			$domain !== '' &&
+			!str_contains( $local, '..' ) &&
+			$local[0] !== '.' &&
+			!str_ends_with( $local, '.' );
 	}
 
-	/**
-	 * Specify form field definitions for the account recovery form.
-	 *
-	 * @return array Form field configuration array
-	 */
+	/** @inheritDoc */
 	protected function getFormFields() {
 		return [
 			'username' => [
@@ -124,18 +118,14 @@ class SpecialAccountRecovery extends FormSpecialPage {
 				'exists' => true,
 				'required' => true,
 				'maxlength' => 255,
-				'filter-callback' => static function ( $value ) {
-					return is_string( $value ) ? trim( $value ) : $value;
-				},
+				'filter-callback' => [ $this, 'trimValueIfString' ],
 			],
 			'contact_email' => [
 				'type' => 'email',
 				'label-message' => 'emailauth-accountrecovery-contactemail-label',
 				'required' => true,
 				'maxlength' => 254,
-				'filter-callback' => static function ( $value ) {
-					return is_string( $value ) ? trim( $value ) : $value;
-				},
+				'filter-callback' => [ $this, 'trimValueIfString' ],
 				'validation-callback' => function ( $value ) {
 					if ( !$this->validateStrictEmail( $value ) ) {
 						return $this->msg( 'emailauth-accountrecovery-invalid-email' )->text();
@@ -148,11 +138,9 @@ class SpecialAccountRecovery extends FormSpecialPage {
 				'label-message' => 'emailauth-accountrecovery-contactemail-confirm-label',
 				'required' => true,
 				'maxlength' => 254,
-				'filter-callback' => static function ( $value ) {
-					return is_string( $value ) ? trim( $value ) : $value;
-				},
+				'filter-callback' => [ $this, 'trimValueIfString' ],
 				'validation-callback' => function ( $value, $alldata ) {
-					// Validate email format with strict rules
+					// Validate the email format with strict rules
 					if ( !$this->validateStrictEmail( $value ) ) {
 						return $this->msg( 'emailauth-accountrecovery-invalid-email' )->text();
 					}
@@ -170,9 +158,7 @@ class SpecialAccountRecovery extends FormSpecialPage {
 				'label-message' => 'emailauth-accountrecovery-registeredemail-label',
 				'required' => false,
 				'maxlength' => 254,
-				'filter-callback' => static function ( $value ) {
-					return is_string( $value ) ? trim( $value ) : $value;
-				},
+				'filter-callback' => [ $this, 'trimValueIfString' ],
 				'validation-callback' => function ( $value ) {
 					// Only validate if provided (optional field)
 					if ( $value !== '' && !Sanitizer::validateEmail( $value ) ) {
@@ -186,29 +172,26 @@ class SpecialAccountRecovery extends FormSpecialPage {
 				'label-message' => 'emailauth-accountrecovery-description-label',
 				'required' => false,
 				'maxlength' => 5000,
-				'filter-callback' => static function ( $value ) {
-					return is_string( $value ) ? trim( $value ) : $value;
-				},
+				'filter-callback' => [ $this, 'trimValueIfString' ],
 				'rows' => 4,
 			]
 		];
 	}
 
 	/**
-	 * Get the description for this special page.
-	 *
-	 * @return \Message Page description message
+	 * @param mixed|string $value
+	 * @return mixed|string
 	 */
+	public function trimValueIfString( $value ) {
+		return is_string( $value ) ? trim( $value ) : $value;
+	}
+
+	/** @inheritDoc */
 	public function getDescription() {
 		return $this->msg( 'emailauth-accountrecovery-intro' );
 	}
 
-	/**
-	 * Handle form submission.
-	 *
-	 * @param array $data Form data submitted by the user
-	 * @return Status
-	 */
+	/** @inheritDoc */
 	public function onSubmit( array $data ) {
 		if ( $this->getUser()->pingLimiter( 'accountrecovery-submit' ) ) {
 			return Status::newFatal( 'emailauth-accountrecovery-rate-limited' );
@@ -229,7 +212,7 @@ class SpecialAccountRecovery extends FormSpecialPage {
 			}
 		}
 
-		// Build clean ticket payload from validated and trimmed data
+		// Build a clean ticket payload from validated and trimmed data
 		$ticketData = [
 			'requester_email' => $contactEmail,
 			'requester_name' => trim( $data['username'] ),
@@ -296,7 +279,6 @@ class SpecialAccountRecovery extends FormSpecialPage {
 	}
 
 	private function handleConfirmationLink( string $token ) {
-		$statusFormatter = $this->formatterFactory->getStatusFormatter( $this );
 		$stashKey = $this->microStash->makeKey( 'accountrecovery', $token );
 		$stashedData = $this->microStash->get( $stashKey );
 		if ( !$stashedData ) {
@@ -312,7 +294,11 @@ class SpecialAccountRecovery extends FormSpecialPage {
 				$this->microStash->delete( $stashKey );
 				$this->getOutput()->addWikiMsg( 'emailauth-accountrecovery-confirmation-resent' );
 			} else {
-				$this->showError( ( new RawMessage( '$1' ) )->rawParams( $statusFormatter->getHTML( $emailResult ) ) );
+				$this->showError(
+					( new RawMessage( '$1' ) )->rawParams(
+						$this->formatterFactory->getStatusFormatter( $this )->getHTML( $emailResult )
+					)
+				);
 			}
 			return;
 		}
@@ -320,7 +306,7 @@ class SpecialAccountRecovery extends FormSpecialPage {
 		// Submit the ticket data to Zendesk
 		try {
 			$result = $this->zendeskClient->createTicket( $stashedData['ticketData'] );
-		} catch ( \Throwable $e ) {
+		} catch ( Throwable $e ) {
 			wfDebugLog( 'EmailAuth', 'AccountRecovery exception: ' . $e->getMessage() );
 			$result = Status::newFatal( 'emailauth-accountrecovery-error-generic' );
 		}
@@ -329,8 +315,12 @@ class SpecialAccountRecovery extends FormSpecialPage {
 			$this->microStash->delete( $stashKey );
 			$this->getOutput()->addWikiMsg( 'emailauth-accountrecovery-success' );
 		} else {
-			// Don't delete the stash entry on error, so the user can retry
-			$this->showError( ( new RawMessage( '$1' ) )->rawParams( $statusFormatter->getHTML( $result ) ) );
+			// Don't delete the stash entry upon error, so the user can retry
+			$this->showError(
+				( new RawMessage( '$1' ) )->rawParams(
+					$this->formatterFactory->getStatusFormatter( $this )->getHTML( $result )
+				)
+			);
 		}
 	}
 
@@ -343,20 +333,12 @@ class SpecialAccountRecovery extends FormSpecialPage {
 		);
 	}
 
-	/**
-	 * Specify the display format for the form.
-	 *
-	 * @return string Display format ('ooui' or 'vform')
-	 */
+	/** @inheritDoc */
 	protected function getDisplayFormat() {
 		return 'ooui';
 	}
 
-	/**
-	 * Specify the group name for this special page.
-	 *
-	 * @return string Group name for categorization on Special:SpecialPages
-	 */
+	/** @inheritDoc */
 	protected function getGroupName() {
 		return 'login';
 	}

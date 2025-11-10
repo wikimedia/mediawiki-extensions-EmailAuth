@@ -7,17 +7,20 @@ use MediaWiki\Mail\IEmailer;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\Status\Status;
+use PHPUnit\Framework\MockObject\MockObject;
 use SpecialPageTestBase;
 use StatusValue;
 
 /**
+ * @covers \MediaWiki\Extension\EmailAuth\AccountRecovery\Special\SpecialAccountRecovery
+ *
  * @group Database
  */
 class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 
-	/** @var \PHPUnit\Framework\MockObject\MockObject&ZendeskClient */
+	/** @var MockObject&ZendeskClient */
 	private $zendeskMock;
-	/** @var \PHPUnit\Framework\MockObject\MockObject&IEmailer */
+	/** @var MockObject&IEmailer */
 	private $emailerMock;
 
 	protected function setUp(): void {
@@ -48,14 +51,9 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 	}
 
 	protected function newSpecialPage() {
-		$factory = $this->getServiceContainer()->getSpecialPageFactory();
-		return $factory->getPage( 'AccountRecovery' );
+		return $this->getServiceContainer()->getSpecialPageFactory()->getPage( 'AccountRecovery' );
 	}
 
-	/**
-	 * @covers \MediaWiki\Extension\EmailAuth\AccountRecovery\Special\SpecialAccountRecovery::onSubmit
-	 * @covers \MediaWiki\Extension\EmailAuth\AccountRecovery\Special\SpecialAccountRecovery::handleConfirmationLink
-	 */
 	public function testSuccessfulFormSubmission(): void {
 		$user = $this->getTestUser()->getUser();
 
@@ -118,9 +116,6 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 		$this->assertStringContainsString( '(emailauth-accountrecovery-success)', $html );
 	}
 
-	/**
-	 * @covers \MediaWiki\Extension\EmailAuth\AccountRecovery\Special\SpecialAccountRecovery::handleConfirmationLink
-	 */
 	public function testConfirmBadToken() {
 		$this->zendeskMock->expects( $this->never() )->method( 'createTicket' );
 
