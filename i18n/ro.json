@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dimitrie569"
+		]
+	},
+	"emailauth-desc": "Verifică autentificările suspecte prin e-mail",
+	"emailauth-token-label": "Cod de verificare",
+	"emailauth-token-help": "S-a trimis prin e-mail un token 2FA care poate fi folosit o singură dată.",
+	"emailauth-email-subject": "Codul de verificare a autentificării pe $1",
+	"emailauth-email-body-intro": "$1, se pare că încercați să vă autentificați de pe un dispozitiv nou pe $2.",
+	"emailauth-email-body-code-text": "Codul dumneavoastră de verificare este:",
+	"emailauth-email-body-warning": "Acest cont este necesar pentru a vă accesa contul. Va expira în $1. Pentru securitatea dumneavoastră, să nu partajați acest cod cu nimeni.",
+	"emailauth-email-body-attack-heading": "Dacă nu ați fost dumneavoastră:",
+	"emailauth-email-body-attack-p1": "Acest e-mail v-a fost trimis deoarece cineva a încercat să se autentifice la contul dumneavoastră. Încercarea de autentificare a inclus numele dumneavoastră de utilizator și parola corectă.",
+	"emailauth-email-body-attack-p2": "Dacă nu ați fost dumneavoastră, ar trebui să vă schimbați parola acum.",
+	"emailauth-email-body-help-text": "Pentru mai multe informații, vedeți $1",
+	"emailauth-login-message": "Este necesar să vă verificați autentificarea. Un cont de verificare a fost trimis la adresa dumneavoastră de e-mail ($1). Vă rugăm să introduceți aici codul primit.",
+	"emailauth-login-message-no-email": "Este necesar să vă verificați autentificarea. Un cont de verificare a fost trimis la adresa dumneavoastră de e-mail. Vă rugăm să introduceți aici codul primit.",
+	"emailauth-login-help": "Contactați [[{{int:grouppage-sysop}}|administratorii site-ului]] dacă nu mai aveți acces la adresa de e-mail a contului dumneavoastră. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|mai multe informații]])",
+	"emailauth-login-failure": "Cod de verificare invalid!",
+	"emailauth-login-retry-limit": "Prea multe încercări greșite!",
+	"emailauth-accountrecovery-intro": "Recuperați-vă contul {{SITENAME}}",
+	"emailauth-accountrecovery-username-label": "Nume de utilizator",
+	"emailauth-accountrecovery-contactemail-label": "Adresă de e-mail pe care o puteți accesa (pentru contactare)",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Confirmă adresa de e-mail pentru contactare",
+	"emailauth-accountrecovery-registeredemail-label": "Adresă de e-mail înregistrată în contul dumneavoastră {{SITENAME}}",
+	"emailauth-accountrecovery-description-label": "Comentarii suplimentare",
+	"emailauth-accountrecovery-success": "Solicitarea de recuperare a contului dumneavoastră a fost trimisă cu succes. Echipa noastră de Încredere & Siguranță vă va revizui solicitarea și vă va contacta la adresa de e-mail pe care ați furnizat-o.",
+	"emailauth-accountrecovery-confirmation-needed": "A fost trimis un e-mail de confirmarea la adresa de e-mail de contact pe care ați furnizat-o. Pentru a vă finaliza solicitarea de recuperare a contului, trebuie să dați clic pe link-ul din e-mailul trimis.",
+	"emailauth-accountrecovery-confirmation-subject": "Confirmați-vă solicitarea de recuperare a contului",
+	"emailauth-accountrecovery-confirmation-body": "Am primis o solicitare de a vă recupera contul numit \"$1\" pe {{SITENAME}}.\n\nPentru a continua cu acest proces, dați clic pe link-ul de mai jos pentru a vă verifica adresa de e-mail. Link-ul va expira în $2.\n\n$3\n\nDacă nu ați fost dumneavoastră, puteți ignora acest e-mail în siguranță, și nu se va face nicio modificare contului dumneavoastră.",
+	"emailauth-accountrecovery-confirmation-resent": "Link-ul de confirmare a expirat. Un link nou de confirmare a fost trimis la adresa de e-mail de contact pe care ați furnizat-o. Vă rugăm să dați clic pe acest link nou pentru a vă finaliza solicitarea de recuperare a contului.",
+	"emailauth-accountrecovery-email-mismatch": "Adresele de e-mail pe care le-ați introdus nu sunt aceleași. Vă rugăm să verificați și să încercați din nou.",
+	"emailauth-accountrecovery-invalid-email": "Vă rugăm să introduceți o adresă de e-mail validă.",
+	"emailauth-accountrecovery-rate-limited": "Ați trimis prea multe solicitări de recuperare a contului. Vă rugăm să așteptați înainte de a încerca din nou.",
+	"emailauth-accountrecovery-error-generic": "A apărut o eroare la procesarea solicitării dumneavoastră. Vă rugăm să încercați mai târziu.",
+	"emailauth-accountrecovery-error-invalid-data": "Informațiile pe care le-ați furnizat nu au putut fi procesate. Vă rugăm să verificați informațiile introduse și să încercați din nou.",
+	"emailauth-accountrecovery-error-service-unavailable": "Serviciul de recuperare a contului nu este disponibil momentan. Vă rugăm să încercați din nou mai târziu.",
+	"emailauth-accountrecovery-error-badtoken": "Link de confirmare invalid. Este posibil ca link-ul introdus să fie expirat.",
+	"emailauth-accountrecovery-disabled": "Recuperarea contului nu este disponibilă pe acest wiki. Vă rugăm să contactați administratorii site-ului pentru asistență."
+}

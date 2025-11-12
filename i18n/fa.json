@@ -4,10 +4,10 @@
 			"Jeeputer"
 		]
 	},
-	"emailauth-accountrecovery-intro": "حساب ویکی‌مدیایی خود را بازیابی کنید",
+	"emailauth-accountrecovery-intro": "حساب خود در {{SITENAME}} را بازیابی کنید",
 	"emailauth-accountrecovery-username-label": "نام کاربری",
 	"emailauth-accountrecovery-contactemail-confirm-label": "تأیید ایمیل تماس",
-	"emailauth-accountrecovery-registeredemail-label": "نشانی ایمیل ثبت‌شده به‌همراه حساب ویکی‌مدیایی شما",
+	"emailauth-accountrecovery-registeredemail-label": "نشانی ایمیل ثبت‌شده به‌همراه حساب شما در {{SITENAME}}",
 	"emailauth-accountrecovery-description-label": "توضیحات بیشتر",
 	"emailauth-accountrecovery-success": "درخواست شما برای بازیابی حساب با موفقیت ثبت شد. تیم اعتماد و امنیت ما درخواست شما را بازبینی خواهند کرد و از طریق نشانی ایمیلی که ارائه داده‌اید با شما تماس خواهند گرفت.",
 	"emailauth-accountrecovery-confirmation-needed": "یک ایمیل تأییدیه به نشانی ایمیلی که ارائه داده‌اید، ارسال شده است. برای تکمیل درخواست بازیابی حساب خود، باید روی پیوند موجود در ایمیل مذکور کلیک کنید.",
