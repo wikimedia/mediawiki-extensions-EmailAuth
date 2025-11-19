@@ -12,3 +12,8 @@ $specialPageAliases = [];
 $specialPageAliases['en'] = [
 	'AccountRecovery' => [ 'AccountRecovery' ],
 ];
+
+/** Hebrew (he) */
+$specialPageAliases['he'] = [
+	'AccountRecovery' => [ 'שחזור_חשבון' ],
+];
