@@ -3,7 +3,8 @@
 		"authors": [
 			"Kareyac",
 			"Okras",
-			"Семён"
+			"Семён",
+			"EneshTranslates"
 		]
 	},
 	"emailauth-desc": "Проверяет подозрительные логины по электронной почте.",

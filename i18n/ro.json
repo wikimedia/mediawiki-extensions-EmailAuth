@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dimitrie569"
+		]
+	},
+	"emailauth-desc": "Verifică autentificările suspecte prin e-mail",
+	"emailauth-token-label": "Cod de verificare",
+	"emailauth-token-help": "S-a trimis prin e-mail un token 2FA care poate fi folosit o singură dată.",
+	"emailauth-email-subject": "Codul de verificare a autentificării pe $1",
+	"emailauth-email-body-intro": "$1, se pare că încercați să vă autentificați de pe un dispozitiv nou pe $2.",
+	"emailauth-email-body-code-text": "Codul dumneavoastră de verificare este:",
+	"emailauth-email-body-warning": "Acest cont este necesar pentru a vă accesa contul. Va expira în $1. Pentru securitatea dumneavoastră, să nu partajați acest cod cu nimeni.",
+	"emailauth-email-body-attack-heading": "Dacă nu ați fost dumneavoastră:",
+	"emailauth-email-body-attack-p1": "Acest e-mail v-a fost trimis deoarece cineva a încercat să se autentifice la contul dumneavoastră. Încercarea de autentificare a inclus numele dumneavoastră de utilizator și parola corectă.",
+	"emailauth-email-body-attack-p2": "Dacă nu ați fost dumneavoastră, ar trebui să vă schimbați parola acum.",
+	"emailauth-email-body-help-text": "Pentru mai multe informații, vedeți $1",
+	"emailauth-login-message": "Este necesar să vă verificați autentificarea. Un cont de verificare a fost trimis la adresa dumneavoastră de e-mail ($1). Vă rugăm să introduceți aici codul primit.",
+	"emailauth-login-message-no-email": "Este necesar să vă verificați autentificarea. Un cont de verificare a fost trimis la adresa dumneavoastră de e-mail. Vă rugăm să introduceți aici codul primit.",
+	"emailauth-login-help": "Contactați [[{{int:grouppage-sysop}}|administratorii site-ului]] dacă nu mai aveți acces la adresa de e-mail a contului dumneavoastră. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|mai multe informații]])",
+	"emailauth-login-failure": "Cod de verificare invalid!",
+	"emailauth-login-retry-limit": "Prea multe încercări greșite!"
+}
