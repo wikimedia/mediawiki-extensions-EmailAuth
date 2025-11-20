@@ -258,6 +258,8 @@ class SpecialAccountRecovery extends FormSpecialPage {
 			'Account recovery request submitted for {username}',
 			[
 				'username' => $ticketData['requester_name'],
+				'email' => $ticketData['requester_email'],
+				'token' => $token,
 				...$this->getRequest()->getSecurityLogContext()
 			]
 		);
