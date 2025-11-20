@@ -22,7 +22,7 @@
 				"Emailer",
 				"MicroStash",
 				"FormatterFactory",
-				"EmailAuth.AuthenticationLogger"
+				"EmailAuth.Logger"
 			]
 		}
 	},

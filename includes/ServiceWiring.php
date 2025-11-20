@@ -11,8 +11,8 @@ use Psr\Log\LoggerInterface;
  * @phpcs-require-sorted-array
  */
 return [
-	'EmailAuth.AuthenticationLogger' => static function ( MediaWikiServices $services ): LoggerInterface {
-		return LoggerFactory::getInstance( 'authentication' );
+	'EmailAuth.Logger' => static function ( MediaWikiServices $services ): LoggerInterface {
+		return LoggerFactory::getInstance( 'EmailAuth' );
 	},
 	'EmailAuth.ZendeskClient' => static function ( MediaWikiServices $services ): ZendeskClient {
 		return new ZendeskClient(
