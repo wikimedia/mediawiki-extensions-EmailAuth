@@ -20,6 +20,7 @@
 	"emailauth-login-failure": "Invalid verification code!",
 	"emailauth-login-retry-limit": "Too many failures!",
 	"emailauth-accountrecovery-intro": "Recover your {{SITENAME}} account",
+	"emailauth-accountrecovery-logged-in": "This page is not available for logged-in users. If you need to recover an account, please log out first.",
 	"emailauth-accountrecovery-username-label": "Username",
 	"emailauth-accountrecovery-contactemail-label": "Reachable contact email",
 	"emailauth-accountrecovery-contactemail-confirm-label": "Confirm contact email",

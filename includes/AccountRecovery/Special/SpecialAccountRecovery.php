@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\EmailAuth\AccountRecovery\Special;
 
 use FormSpecialPage;
+use MediaWiki\Exception\PermissionsError;
 use MediaWiki\Extension\EmailAuth\AccountRecovery\Zendesk\ZendeskClient;
 use MediaWiki\Language\FormatterFactory;
 use MediaWiki\Language\RawMessage;
@@ -45,6 +46,18 @@ class SpecialAccountRecovery extends FormSpecialPage {
 		} else {
 			parent::execute( $par );
 		}
+	}
+
+	/**
+	 * Display a custom error message when a logged-in user tries to access this page.
+	 *
+	 * @inheritDoc
+	 */
+	public function displayRestrictionError() {
+		throw new PermissionsError(
+			null,
+			[ 'emailauth-accountrecovery-logged-in' ]
+		);
 	}
 
 	/**
