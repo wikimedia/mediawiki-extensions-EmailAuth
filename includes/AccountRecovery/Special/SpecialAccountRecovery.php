@@ -64,7 +64,7 @@ class SpecialAccountRecovery extends FormSpecialPage {
 	 * @return bool
 	 */
 	public function userCanExecute( \User $user ) {
-		return !$user->isRegistered();
+		return !$user->isNamed();
 	}
 
 	/**
