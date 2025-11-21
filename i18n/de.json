@@ -22,6 +22,7 @@
 	"emailauth-login-failure": "Der Verifizierungscode ist ungültig!",
 	"emailauth-login-retry-limit": "Es gab zu viele Fehlversuche!",
 	"emailauth-accountrecovery-intro": "Stelle dein {{SITENAME}}-Konto wieder her",
+	"emailauth-accountrecovery-logged-in": "Diese Seite ist für angemeldete Benutzer nicht verfügbar. Wenn du ein Konto wiederherstellen musst, melde dich bitte zuerst ab.",
 	"emailauth-accountrecovery-username-label": "Benutzername",
 	"emailauth-accountrecovery-contactemail-label": "Erreichbare Kontakt-E-Mail-Adresse",
 	"emailauth-accountrecovery-contactemail-confirm-label": "E-Mail-Adresse bestätigen",
