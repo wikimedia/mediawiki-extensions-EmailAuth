@@ -21,6 +21,7 @@
 	"emailauth-login-failure": "Codice de verification invalide!",
 	"emailauth-login-retry-limit": "Troppo de fallimentos!",
 	"emailauth-accountrecovery-intro": "Recuperar tu conto de {{SITENAME}}",
+	"emailauth-accountrecovery-logged-in": "Iste pagina non es disponibile post aperir session. Si tu vole recuperar un conto, per favor claude session primo.",
 	"emailauth-accountrecovery-username-label": "Nomine de usator",
 	"emailauth-accountrecovery-contactemail-label": "Adresse de e-mail attingibile",
 	"emailauth-accountrecovery-contactemail-confirm-label": "Confirma adresse de e-mail",

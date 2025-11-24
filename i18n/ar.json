@@ -22,6 +22,7 @@
 	"emailauth-login-failure": "رمز التحقق غير صالح!",
 	"emailauth-login-retry-limit": "الكثير من الفشل!",
 	"emailauth-accountrecovery-intro": "استعادة حساب {{SITENAME}} الخاص بك",
+	"emailauth-accountrecovery-logged-in": "هذه الصفحة غير متاحة للمستخدمين المشاركين. إذا كنت بحاجة لاسترداد الحساب، يرجى تسجيل الدخول أولا.",
 	"emailauth-accountrecovery-username-label": "اسم المستخدم",
 	"emailauth-accountrecovery-contactemail-label": "بريد إلكتروني للتواصل يمكن الوصول إليه",
 	"emailauth-accountrecovery-contactemail-confirm-label": "تأكيد البريد الإلكتروني للاتصال",

@@ -5,6 +5,7 @@
 		]
 	},
 	"emailauth-accountrecovery-intro": "حساب خود در {{SITENAME}} را بازیابی کنید",
+	"emailauth-accountrecovery-logged-in": "این صفحه برای کاربران وارد شده به سامانه در دسترس نیست. اگر به بازیابی حساب نیاز دارید، لطفاً ابتدا از سامانه خارج شوید.",
 	"emailauth-accountrecovery-username-label": "نام کاربری",
 	"emailauth-accountrecovery-contactemail-confirm-label": "تأیید ایمیل تماس",
 	"emailauth-accountrecovery-registeredemail-label": "نشانی ایمیل ثبت‌شده به‌همراه حساب شما در {{SITENAME}}",

@@ -22,6 +22,7 @@
 	"emailauth-login-failure": "Yanlış doğrulama kodu!",
 	"emailauth-login-retry-limit": "Çox sayda səhv!",
 	"emailauth-accountrecovery-intro": "{{SITENAME}} hesabınızı bərpa edin",
+	"emailauth-accountrecovery-logged-in": "Bu səhifə sayta daxil olmuş istifadəçilər üçün əlçatan deyil. Hesabı bərpa etmək lazımdırsa, əvvəlcə hesabdan çıxış edin.",
 	"emailauth-accountrecovery-username-label": "İstifadəçi adı",
 	"emailauth-accountrecovery-contactemail-label": "Əlaqə e-poçtu",
 	"emailauth-accountrecovery-contactemail-confirm-label": "Əlaqə e-poçtunu təsdiqlə",

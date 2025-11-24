@@ -21,6 +21,7 @@
 	"emailauth-login-failure": "Неважечки потврден код!",
 	"emailauth-login-retry-limit": "Премногу неуспешни обиди!",
 	"emailauth-accountrecovery-intro": "Повратете си ја сметката на {{SITENAME}}",
+	"emailauth-accountrecovery-logged-in": "Оваа страница е недостапна за најавени корисници. Ако сакате да повратите сметка, најпрвин одјавете се.",
 	"emailauth-accountrecovery-username-label": "Корисничко име",
 	"emailauth-accountrecovery-contactemail-label": "Достапна е-пошта за контакт",
 	"emailauth-accountrecovery-contactemail-confirm-label": "Потврдете ја е-поштата за контакт",

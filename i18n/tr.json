@@ -4,6 +4,7 @@
 			"BaRaN6161 TURK",
 			"MuratTheTurkish",
 			"Sakblue",
+			"SaldırganSincap",
 			"ToprakM"
 		]
 	},
@@ -23,11 +24,11 @@
 	"emailauth-login-help": "Hesabınızın e-posta adresine artık erişiminiz yoksa [[{{int:grouppage-sysop}}|site yöneticileriyle]] iletişime geçin. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|daha fazla bilgi]])",
 	"emailauth-login-failure": "Geçersiz doğrulama kodu!",
 	"emailauth-login-retry-limit": "Çok fazla hatalı giriş!",
-	"emailauth-accountrecovery-intro": "Wikimedia hesabınızı kurtarın",
+	"emailauth-accountrecovery-intro": "{{SITENAME}} hesabınızı kurtarın",
 	"emailauth-accountrecovery-username-label": "Kullanıcı adı",
 	"emailauth-accountrecovery-contactemail-label": "Ulaşılabilir iletişim e-postası",
 	"emailauth-accountrecovery-contactemail-confirm-label": "İletişim e-postasını onaylayın",
-	"emailauth-accountrecovery-registeredemail-label": "Wikimedia hesabınıza kayıtlı e-posta adresi",
+	"emailauth-accountrecovery-registeredemail-label": "{{SITENAME}} hesabınıza kayıtlı e-posta adresi",
 	"emailauth-accountrecovery-description-label": "Ek yorumlar:",
 	"emailauth-accountrecovery-confirmation-needed": "Verdiğiniz iletişim e-posta adresine bir onay e-posta gönderildi. Hesap kurtarma talebinizi tamamlamak için e-posta'daki bağlantıyı tıklamalısınız.",
 	"emailauth-accountrecovery-confirmation-subject": "Hesabınızı kurtarma isteğinizi onaylayın",

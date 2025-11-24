@@ -23,6 +23,7 @@
 	"emailauth-login-failure": "Väärä vahvistuskoodi!",
 	"emailauth-login-retry-limit": "Liian monta epäonnistumista!",
 	"emailauth-accountrecovery-intro": "Palauta {{SITENAME}}-tunnuksesi",
+	"emailauth-accountrecovery-logged-in": "Tämä sivu ei ole sisäänkirjautuneiden käyttäjien käytettävissä. Jos haluat palauttaa tunnuksen, kirjaudu ensin ulos.",
 	"emailauth-accountrecovery-username-label": "Käyttäjänimi",
 	"emailauth-accountrecovery-contactemail-label": "Sähköpostiosoite, josta sinut tavoittaa",
 	"emailauth-accountrecovery-contactemail-confirm-label": "Vahvista sähköpostiosoite, josta sinut tavoittaa",

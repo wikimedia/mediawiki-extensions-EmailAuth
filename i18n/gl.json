@@ -22,6 +22,7 @@
 	"emailauth-login-failure": "Código de verificación incorrecto!",
 	"emailauth-login-retry-limit": "Demasiados intentos fallidos!",
 	"emailauth-accountrecovery-intro": "Recuperar a túa conta de {{SITENAME}}",
+	"emailauth-accountrecovery-logged-in": "Esta páxina non está dispoñible para os usuarios que iniciaron sesión. Se necesitas recuperar unha conta, pecha a sesión primeiro.",
 	"emailauth-accountrecovery-username-label": "Nome de usuario",
 	"emailauth-accountrecovery-contactemail-label": "Correo electrónico de contacto ao que teñas acceso",
 	"emailauth-accountrecovery-contactemail-confirm-label": "Confirma o correo electrónico de contacto",
