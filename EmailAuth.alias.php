@@ -17,3 +17,8 @@ $specialPageAliases['en'] = [
 $specialPageAliases['he'] = [
 	'AccountRecovery' => [ 'שחזור_חשבון' ],
 ];
+
+/** Korean (ko) */
+$specialPageAliases['ko'] = [
+	'AccountRecovery' => [ '계정복구' ],
+];
