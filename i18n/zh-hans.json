@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Diskdance",
+			"ExoHyper2026",
 			"GuoPC",
 			"Key0121",
 			"Liuxinyu970226",
@@ -25,6 +26,7 @@
 	"emailauth-login-failure": "验证码无效！",
 	"emailauth-login-retry-limit": "失败次数过多！",
 	"emailauth-accountrecovery-intro": "恢复你的{{SITENAME}}账号",
+	"emailauth-accountrecovery-logged-in": "此页面仅对已登录用户可见。如果您需要找回帐户，请先退出登录。",
 	"emailauth-accountrecovery-username-label": "用户名",
 	"emailauth-accountrecovery-contactemail-label": "可访问的联系邮箱",
 	"emailauth-accountrecovery-contactemail-confirm-label": "确认联系邮箱",
