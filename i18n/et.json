@@ -19,5 +19,20 @@
 	"emailauth-login-message-no-email": "Pead sisselogimise kinnitama. Kinnituskood on saadetud sinu e-posti aadressile. Palun sisesta see kood siia.",
 	"emailauth-login-help": "Kirjuta [[{{int:grouppage-sysop}}|saidi administraatoritele]], kui sul pole enam juurdepääsu enda konto e-posti aadressile. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|lisateave]])",
 	"emailauth-login-failure": "Vigane kinnituskood!",
-	"emailauth-login-retry-limit": "Liiga palju nurjumisi!"
+	"emailauth-login-retry-limit": "Liiga palju nurjumisi!",
+	"emailauth-accountrecovery-intro": "{{GRAMMAR:genitive|{{SITENAME}}}} konto tagasinõudmine",
+	"emailauth-accountrecovery-logged-in": "See lehekülg ei ole sisselogitud kasutajate jaoks saadaval. Kui sul on vaja kontot tagasi nõuda, siis palun logi kõigepealt välja.",
+	"emailauth-accountrecovery-username-label": "Kasutajanimi",
+	"emailauth-accountrecovery-contactemail-label": "E-posti aadress, mille kaudu saab sinuga ühendust võtta",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Kinnita ühendust võtmise e-posti aadress",
+	"emailauth-accountrecovery-registeredemail-label": "Sinu {{GRAMMAR:genitive|{{SITENAME}}}} kontoga seotud e-posti aadress",
+	"emailauth-accountrecovery-description-label": "Täiendavad kommentaarid",
+	"emailauth-accountrecovery-success": "Sinu konto tagasinõudmise taotlus on saadetud. Meie usaldus- ja turvalisusmeeskond vaatab sinu taotluse üle ja võtab sinuga ühendust kasutades e-posti aadressi, mille ära tõid.",
+	"emailauth-accountrecovery-confirmation-needed": "Kinnitamise e-kiri saadeti ühendust võtmise e-posti aadressile, mille ära tõid. Et konto tagasinõudmise taotlus esitada, pead klõpsama linki e-kirjas.",
+	"emailauth-accountrecovery-confirmation-subject": "Kinnita taotlus, et kontot tagasi nõuda",
+	"emailauth-accountrecovery-confirmation-body": "Saime taotluse {{GRAMMAR:genitive|{{SITENAME}}}} konto \"$1\" tagasinõudmise kohta.\n\nEt selle protseduuriga jätkata, klõpsa allolevat linki, et enda e-posti aadress kinnitada. Lingi aegumistähtaeg on $2.\n\n$3\n\nKui see ei olnud sina, siis võid seda e-kirja julgesti eirata ja sinu kontoga ei juhtu midagi.",
+	"emailauth-accountrecovery-confirmation-resent": "See kinnitamislink on aegunud. Uus kinnitamislink on saadetud e-posti aadressile, mille ära tõid. Palun klõpsa seda uut linki, et konto tagasinõudmise taotlus esitada.",
+	"emailauth-accountrecovery-email-mismatch": "Sisestatud e-posti aadressid ei kattu. Palun vaata üle ja proovi uuesti.",
+	"emailauth-accountrecovery-invalid-email": "Palun sisesta kehtiv e-posti aadress.",
+	"emailauth-accountrecovery-rate-limited": "Oled saatnud liiga palju konto tagasinõudmise taotlusi. Palun oota, enne kui uuesti proovid."
 }

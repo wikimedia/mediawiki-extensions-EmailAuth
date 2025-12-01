@@ -23,7 +23,7 @@
 	"emailauth-login-failure": "קוד אימות שגוי!",
 	"emailauth-login-retry-limit": "יותר מדי כישלונות!",
 	"emailauth-accountrecovery-intro": "שחזור החשבון שלך באתר {{SITENAME}}",
-	"emailauth-accountrecovery-logged-in": "דף זה אינו זמין למשתמשים המחוברים לחשבון. אם ברצונך לשחזר חשבון, יש להתנתק תחילה.",
+	"emailauth-accountrecovery-logged-in": "הדף הזה אינו זמין למשתמשים שמחוברים לחשבון. אם ברצונך לשחזר חשבון, יש להתנתק תחילה.",
 	"emailauth-accountrecovery-username-label": "שם משתמש",
 	"emailauth-accountrecovery-contactemail-label": "דוא\"ל שבו אפשר להשיג אותך",
 	"emailauth-accountrecovery-contactemail-confirm-label": "אישור כתובת דוא\"ל ליצירת קשר",

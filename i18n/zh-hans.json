@@ -31,5 +31,18 @@
 	"emailauth-accountrecovery-contactemail-label": "可访问的联系邮箱",
 	"emailauth-accountrecovery-contactemail-confirm-label": "确认联系邮箱",
 	"emailauth-accountrecovery-registeredemail-label": "你的{{SITENAME}}账号注册的邮箱",
-	"emailauth-accountrecovery-description-label": "附加备注"
+	"emailauth-accountrecovery-description-label": "附加备注",
+	"emailauth-accountrecovery-success": "您的账户恢复申请已成功提交。我们的信任与安全团队将审核您的申请，并通过您提供的电子邮件地址与您联系。",
+	"emailauth-accountrecovery-confirmation-needed": "我们已向您提供的联系邮箱发送了一封确认邮件。要完成您的账户恢复请求，您必须点击邮件中的链接。",
+	"emailauth-accountrecovery-confirmation-subject": "确认您的账户恢复请求。",
+	"emailauth-accountrecovery-confirmation-body": "我们收到请求，需恢复{{SITENAME}}网站上名为“$1”的账户。\n\n请点击下方链接验证您的电子邮箱地址以继续操作。该链接将在$2后失效。\n\n$3\n\n若非您本人操作，可安全忽略此邮件，您的账户不会发生任何变更。",
+	"emailauth-accountrecovery-confirmation-resent": "此确认链接已过期。我们已向您提供的联系邮箱发送新的确认链接。请点击此新链接完成您的账户恢复请求。",
+	"emailauth-accountrecovery-email-mismatch": "您输入的电子邮件地址不匹配。请检查并重试。",
+	"emailauth-accountrecovery-invalid-email": "请输入有效的电子邮件地址。",
+	"emailauth-accountrecovery-rate-limited": "您提交的账号恢复请求次数过多，请稍候后再试。",
+	"emailauth-accountrecovery-error-generic": "处理您的请求时发生错误。请稍后再试。",
+	"emailauth-accountrecovery-error-invalid-data": "您提供的信息无法处理。请检查您输入的信息并重试。",
+	"emailauth-accountrecovery-error-service-unavailable": "账号恢复服务暂不可用，请稍后再试。",
+	"emailauth-accountrecovery-error-badtoken": "无效的确认链接。该链接可能已过期。",
+	"emailauth-accountrecovery-disabled": "本wiki不提供账号恢复服务。请联系网站管理员寻求帮助。"
 }
