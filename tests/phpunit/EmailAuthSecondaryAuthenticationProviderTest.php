@@ -115,14 +115,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 
 		// allows users with no confirmed email address, and confirm their email on success
 		$this->session->clear();
-		$user = $this->getMockUser( false );
-		$user->expects( $this->once() )->method( 'sendMail' )
-			->willReturnCallback( static function ( $s, $b ) use ( &$body ) {
-				$body = $b;
-				return Status::newGood();
-			} );
-		$user->expects( $this->once() )->method( 'confirmEmail' );
-		$user->expects( $this->once() )->method( 'saveSettings' );
+		$user = $this->createDbUserWithUnconfirmedEmail( 'FooBar' );
 
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
@@ -135,13 +128,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 
 		// do not confirm an email address if it's not the same one the code was sent to
 		$this->session->clear();
-		$user = $this->getMockUser( false );
-		$user->expects( $this->once() )->method( 'sendMail' )
-			->willReturnCallback( static function ( $s, $b ) use ( &$body ) {
-				$body = $b;
-				return Status::newGood();
-			} );
-		$user->expects( $this->never() )->method( 'confirmEmail' );
+		$user = $this->createDbUserWithUnconfirmedEmail( 'FooBar' );
 
 		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
@@ -184,6 +171,30 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		$this->assertSame( 'subject', $subject2 );
 		$this->assertSame( 'body', $bodyText2 );
 		$this->assertSame( 'body-html', $bodyHtml2 );
+	}
+
+	private function createDbUserWithUnconfirmedEmail( string $name ) {
+		$userFactory = $this->getServiceContainer()->getUserFactory();
+
+		$user = $userFactory->newFromName( $name );
+		if ( !$user ) {
+			$user = $userFactory->newAnonymous( $name );
+		} elseif ( !$user->getId() ) {
+			$user->setEmail( $name . '@example.com' );
+			$user->addToDatabase();
+		}
+
+		$this->setTemporaryHook( 'EmailAuthRequireToken', static function (
+			$user, &$verificationRequired, &$formMessage, &$subjectMessage, &$bodyMessage, &$bodyMessageHtml
+		) {
+			$verificationRequired = true;
+			$formMessage = wfMessage( 'form' );
+			$subjectMessage = 'subject';
+			$bodyMessage = 'body';
+			$bodyMessageHtml = 'body-html';
+		} );
+
+		return $user;
 	}
 
 	public function testBeginSecondaryAccountCreation() {
