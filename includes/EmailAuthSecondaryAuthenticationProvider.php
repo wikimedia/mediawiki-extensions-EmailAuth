@@ -15,6 +15,7 @@ use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\User\User;
+use RuntimeException;
 
 class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenticationProvider {
 	/** Fail the login attempt after this many retries */
@@ -94,6 +95,11 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 			$stashedEmail = $this->manager->getAuthenticationSessionData( 'EmailAuthConfirmEmail' );
 			if ( $stashedEmail ) {
 				DeferredUpdates::addCallableUpdate( static function () use ( $user, $logger, $stashedEmail ) {
+					// The user should already exist because it has been created, and this flow confirms the
+					// account via email. Something should have gone wrong if we couldn't find it in the
+					// primary DB.
+					$user = $user->getInstanceFromPrimary() ??
+						throw new RuntimeException( 'Can not confirm email of non-existing user' );
 					if ( $user->isEmailConfirmed() ) {
 						// Maybe confirmed in parallel on a different device? Either way, nothing to do.
 						return;
