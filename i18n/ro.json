@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dimitrie569"
+		]
+	},
+	"emailauth-desc": "Verifică autentificările suspecte prin e-mail",
+	"emailauth-token-label": "Cod de verificare",
+	"emailauth-token-help": "S-a trimis prin e-mail un token 2FA care poate fi folosit o singură dată.",
+	"emailauth-login-message": "Este necesar să vă verificați autentificarea. Un cont de verificare a fost trimis la adresa dumneavoastră de e-mail ($1). Vă rugăm să introduceți aici codul primit.",
+	"emailauth-login-failure": "Cod de verificare invalid!",
+	"emailauth-login-retry-limit": "Prea multe încercări greșite!"
+}
