@@ -4,7 +4,29 @@
 			"WikiPhoenix"
 		]
 	},
+	"emailauth-desc": "Verifierar misstänksamma inloggningar via e-post",
 	"emailauth-token-label": "Verifieringskod",
+	"emailauth-email-subject": "Din verifieringskod för att logga in på $1",
+	"emailauth-email-body-intro": "$1, det verkar som att du försöker logga in på $2 från en ny enhet.",
+	"emailauth-email-body-code-text": "Din verifieringskod är:",
+	"emailauth-email-body-warning": "Denna kod krävs för att komma åt ditt konto. Den upphör att gälla om $1. Dela den inte med någon för din egen säkerhet.",
+	"emailauth-email-body-attack-heading": "Om det inte var du:",
+	"emailauth-email-body-attack-p1": "Detta e-postmeddelande skickades eftersom någon försökte logga in på ditt konto. Inloggningsförsöket använde korrekt kontonamn och lösenord.",
+	"emailauth-email-body-attack-p2": "Du bör ändra ditt lösenord nu om det inte var du.",
+	"emailauth-email-body-help-text": "För mer information kan du besöka $1",
+	"emailauth-login-message": "Du måste verifiera din inloggning. En verifieringskod har skickats till din e-postadress ($1). Var god ange koden här.",
+	"emailauth-login-message-no-email": "Du måste verifiera din inloggning. En verifieringskod har skickats till din e-postadress. Var god ange koden här.",
+	"emailauth-login-help": "Kontakta [[{{int:grouppage-sysop}}|webbplatsadministratörerna]] om du inte längre har tillgång till e-postadressen för ditt konto. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|mer information]])",
 	"emailauth-login-failure": "Ogiltig verifieringskod!",
-	"emailauth-login-retry-limit": "För många misslyckanden!"
+	"emailauth-login-retry-limit": "För många misslyckanden!",
+	"emailauth-accountrecovery-intro": "Återställ ditt konto på {{SITENAME}}",
+	"emailauth-accountrecovery-logged-in": "Denna sida är inte tillgänglig för inloggade användare. Var god logga ut först om du behöver återställa ett konto.",
+	"emailauth-accountrecovery-username-label": "Användarnamn",
+	"emailauth-accountrecovery-registeredemail-label": "E-postadressen som registrerades med ditt konto på {{SITENAME}}",
+	"emailauth-accountrecovery-description-label": "Ytterligare kommentarer",
+	"emailauth-accountrecovery-success": "Din begäran om kontoåterställning har skickats in. Vårt förtroende- och säkerhetsansvariga team kommer att granska din begäran och kontakta dig på e-postadressen du angav.",
+	"emailauth-accountrecovery-confirmation-needed": "Ett bekräftelsemeddelande har skickats till e-postadressen du angav. För att slutföra din begäran om kontoåterställning måste du klicka på länken i e-postmeddelandet.",
+	"emailauth-accountrecovery-confirmation-subject": "Bekräfta din begäran om att återställa ditt konto",
+	"emailauth-accountrecovery-invalid-email": "Ange en giltig e-postadress.",
+	"emailauth-accountrecovery-error-badtoken": "Ogiltig bekräftelselänk.\nLänken kan ha upphört att gälla."
 }
