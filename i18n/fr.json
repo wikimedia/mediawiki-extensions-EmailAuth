@@ -23,5 +23,18 @@
 	"emailauth-login-message-no-email": "Vous devez vérifier votre connexion. Un code de vérification a été envoyé à votre adresse de messagerie, veuillez saisir ce code ici.",
 	"emailauth-login-help": "Contactez les [[{{int:grouppage-sysop}}|administrateurs du site]] si vous n’avez plus accès à l’adresse courriel de votre compte. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|plus d’informations]])",
 	"emailauth-login-failure": "Code de vérification non valide !",
-	"emailauth-login-retry-limit": "Trop d’échecs !"
+	"emailauth-login-retry-limit": "Trop d’échecs !",
+	"emailauth-accountrecovery-intro": "Récupérez votre compte {{SITENAME}}",
+	"emailauth-accountrecovery-logged-in": "Cette page n'est pas accessible aux utilisateurs connectés. Si vous devez récupérer un compte, veuillez vous déconnecter au préalable.",
+	"emailauth-accountrecovery-username-label": "Nom d’utilisateur",
+	"emailauth-accountrecovery-contactemail-label": "Adresse de courriel de contact accessible",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Confirmer l'adresse de courriel de contact",
+	"emailauth-accountrecovery-registeredemail-label": "Adresse de courriel enregistrée avec votre compte {{SITENAME}}",
+	"emailauth-accountrecovery-description-label": "Commentaires supplémentaires",
+	"emailauth-accountrecovery-confirmation-needed": "Un courriel de confirmation a été envoyé à l'adresse courriel que vous avez fournie. Pour finaliser votre demande de récupération de compte, veuillez cliquer sur le lien contenu dans ce courriel.",
+	"emailauth-accountrecovery-confirmation-subject": "Confirmez votre demande de récupération de compte",
+	"emailauth-accountrecovery-invalid-email": "S'il vous plaît, mettez une adresse de courriel valide.",
+	"emailauth-accountrecovery-rate-limited": "Vous avez soumis trop de demandes de récupération de compte. Veuillez patienter avant de réessayer.",
+	"emailauth-accountrecovery-error-generic": "Une erreur s'est produite lors du traitement de votre demande. Veuillez réessayer plus tard.",
+	"emailauth-accountrecovery-error-badtoken": "Lien de confirmation invalide. Le lien a peut-être expiré."
 }
