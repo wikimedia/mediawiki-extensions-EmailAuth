@@ -4,7 +4,19 @@
 			"WikiPhoenix"
 		]
 	},
+	"emailauth-desc": "Verifierar misstänksamma inloggningar via e-post",
 	"emailauth-token-label": "Verifieringskod",
+	"emailauth-email-subject": "Din verifieringskod för att logga in på $1",
+	"emailauth-email-body-intro": "$1, det verkar som att du försöker logga in på $2 från en ny enhet.",
+	"emailauth-email-body-code-text": "Din verifieringskod är:",
+	"emailauth-email-body-warning": "Denna kod krävs för att komma åt ditt konto. Den upphör att gälla om $1. Dela den inte med någon för din egen säkerhet.",
+	"emailauth-email-body-attack-heading": "Om det inte var du:",
+	"emailauth-email-body-attack-p1": "Detta e-postmeddelande skickades eftersom någon försökte logga in på ditt konto. Inloggningsförsöket använde korrekt kontonamn och lösenord.",
+	"emailauth-email-body-attack-p2": "Du bör ändra ditt lösenord nu om det inte var du.",
+	"emailauth-email-body-help-text": "För mer information kan du besöka $1",
+	"emailauth-login-message": "Du måste verifiera din inloggning. En verifieringskod har skickats till din e-postadress ($1). Var god ange koden här.",
+	"emailauth-login-message-no-email": "Du måste verifiera din inloggning. En verifieringskod har skickats till din e-postadress. Var god ange koden här.",
+	"emailauth-login-help": "Kontakta [[{{int:grouppage-sysop}}|webbplatsadministratörerna]] om du inte längre har tillgång till e-postadressen för ditt konto. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|mer information]])",
 	"emailauth-login-failure": "Ogiltig verifieringskod!",
 	"emailauth-login-retry-limit": "För många misslyckanden!"
 }
