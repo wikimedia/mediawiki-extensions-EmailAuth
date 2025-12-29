@@ -19,5 +19,6 @@
 	"emailauth-login-message-no-email": "Ахьа хьайн логин тӀечӀагӀйан йеза. Талламан код йаийтина хьан электронан поштан адресе, дехар до, и код кхуза йазйе.",
 	"emailauth-login-help": "[[{{int:grouppage-sysop}}|Сайтан администраторшка]] йазде, нагахь санна хьан аккаунтан электронан поштан адрес кхин дӀа ца кхачахь. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|кхин а хаамаш]])",
 	"emailauth-login-failure": "Нийса йац тӀечӀагӀйаран код!",
-	"emailauth-login-retry-limit": "ТӀех дукха гӀалаташ ду!"
+	"emailauth-login-retry-limit": "ТӀех дукха гӀалаташ ду!",
+	"emailauth-accountrecovery-username-label": "Декъашхочун цӀе"
 }
