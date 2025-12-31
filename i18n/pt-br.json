@@ -3,14 +3,24 @@
 		"authors": [
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
-			"Sixaxis"
+			"Sixaxis",
+			"Fúlvio"
 		]
 	},
 	"emailauth-desc": "Verifica autenticações suspeitas por e-mail",
 	"emailauth-token-label": "Código de verificação",
 	"emailauth-token-help": "Chave 2FA de utilização única enviada por e-mail.",
-	"emailauth-email-subject": "O seu código de verificação para autenticação na wiki $1",
+	"emailauth-email-subject": "O seu código de verificação para autenticação na $1",
+	"emailauth-email-body-intro": "$1, parece que você está tentando entrar em sua conta da $2 a partir de um novo dispositivo.",
+	"emailauth-email-body-code-text": "Seu código de verificação é:",
+	"emailauth-email-body-warning": "Este código é necessário para acessar sua conta. Ele expirará em $1. Para sua segurança, não o compartilhe com ninguém.",
+	"emailauth-email-body-attack-heading": "Se não foi você:",
+	"emailauth-email-body-attack-p1": "Este e-mail foi enviado porque alguém tentou entrar em sua conta. A tentativa de entrada incluiu o nome e senha corretos de sua conta.",
+	"emailauth-email-body-attack-p2": "Se não foi você, altere sua senha agora.",
+	"emailauth-email-body-help-text": "Para mais informações, veja $1",
 	"emailauth-login-message": "Precisa de verificar a sua autenticação. Foi enviado para o seu e-mail ($1) um código de verificação. Introduza esse código aqui, por favor.",
+	"emailauth-login-message-no-email": "Você precisa verificar seu acesso. Um código de verificação foi enviado para o seu endereço de e-mail. Insira esse código aqui.",
+	"emailauth-login-help": "Entre em contato com os [[{{int:grouppage-sysop}}|administradores do site]] se você não tiver mais acesso ao endereço de e-mail da sua conta. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|mais informações]])",
 	"emailauth-login-failure": "Código de verificação inválido!",
 	"emailauth-login-retry-limit": "Muitas falhas!"
 }
