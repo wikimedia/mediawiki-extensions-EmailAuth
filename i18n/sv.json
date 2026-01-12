@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Stefan2255",
 			"WikiPhoenix"
 		]
 	},
 	"emailauth-desc": "Verifierar misstänksamma inloggningar via e-post",
 	"emailauth-token-label": "Verifieringskod",
+	"emailauth-token-help": "Engångs 2FA-token skickad via e-post.",
 	"emailauth-email-subject": "Din verifieringskod för att logga in på $1",
 	"emailauth-email-body-intro": "$1, det verkar som att du försöker logga in på $2 från en ny enhet.",
 	"emailauth-email-body-code-text": "Din verifieringskod är:",
@@ -22,11 +24,21 @@
 	"emailauth-accountrecovery-intro": "Återställ ditt konto på {{SITENAME}}",
 	"emailauth-accountrecovery-logged-in": "Denna sida är inte tillgänglig för inloggade användare. Var god logga ut först om du behöver återställa ett konto.",
 	"emailauth-accountrecovery-username-label": "Användarnamn",
+	"emailauth-accountrecovery-contactemail-label": "Nåbar kontakt-e-postadress",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Bekräfta kontakt-e-postadress",
 	"emailauth-accountrecovery-registeredemail-label": "E-postadressen som registrerades med ditt konto på {{SITENAME}}",
 	"emailauth-accountrecovery-description-label": "Ytterligare kommentarer",
 	"emailauth-accountrecovery-success": "Din begäran om kontoåterställning har skickats in. Vårt förtroende- och säkerhetsansvariga team kommer att granska din begäran och kontakta dig på e-postadressen du angav.",
 	"emailauth-accountrecovery-confirmation-needed": "Ett bekräftelsemeddelande har skickats till e-postadressen du angav. För att slutföra din begäran om kontoåterställning måste du klicka på länken i e-postmeddelandet.",
 	"emailauth-accountrecovery-confirmation-subject": "Bekräfta din begäran om att återställa ditt konto",
+	"emailauth-accountrecovery-confirmation-body": "Vi har mottagit en begäran om att återställa kontot med namnet \"$1\" på {{SITENAME}}.\n\nFör att fortsätta med den här processen, klicka på länken nedan för att verifiera din e-postadress. Länken upphör att gälla om $2.\n\n$3 \n\nOm det inte var du kan du ignorera det här e-postmeddelandet, och inga ändringar kommer att göras i ditt konto.",
+	"emailauth-accountrecovery-confirmation-resent": "Den här bekräftelselänken har gått ut. En ny bekräftelselänk har skickats till den e-postadress du angav. Klicka på den här nya länken för att slutföra din begäran om kontoåterställning.",
+	"emailauth-accountrecovery-email-mismatch": "E-postadresserna du angav matchar inte. Kontrollera och försök igen.",
 	"emailauth-accountrecovery-invalid-email": "Ange en giltig e-postadress.",
-	"emailauth-accountrecovery-error-badtoken": "Ogiltig bekräftelselänk.\nLänken kan ha upphört att gälla."
+	"emailauth-accountrecovery-rate-limited": "Du har skickat in för många förfrågningar om kontoåterställning. Vänta innan du försöker igen.",
+	"emailauth-accountrecovery-error-generic": "Ett fel uppstod när din begäran bearbetades. Försök igen senare.",
+	"emailauth-accountrecovery-error-invalid-data": "Informationen du angav kunde inte bearbetas. Kontrollera dina uppgifter och försök igen.",
+	"emailauth-accountrecovery-error-service-unavailable": "Kontoåterställningstjänsten är tillfälligt otillgänglig. Försök igen senare.",
+	"emailauth-accountrecovery-error-badtoken": "Ogiltig bekräftelselänk.\nLänken kan ha upphört att gälla.",
+	"emailauth-accountrecovery-disabled": "Kontoåterställning är inte tillgängligt på denna wiki. Kontakta webbplatsens administratörer för hjälp."
 }
