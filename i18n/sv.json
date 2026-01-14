@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Stefan2255"
 		]
 	},
 	"emailauth-desc": "Verifierar misstänksamma inloggningar via e-post",
 	"emailauth-token-label": "Verifieringskod",
+	"emailauth-token-help": "Engångs 2FA-token skickad via e-post.",
 	"emailauth-email-subject": "Din verifieringskod för att logga in på $1",
 	"emailauth-email-body-intro": "$1, det verkar som att du försöker logga in på $2 från en ny enhet.",
 	"emailauth-email-body-code-text": "Din verifieringskod är:",
