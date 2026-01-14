@@ -23,6 +23,7 @@
 	"emailauth-login-failure": "Onjuiste verificatie code!",
 	"emailauth-login-retry-limit": "Te veel fouten!",
 	"emailauth-accountrecovery-intro": "{{SITENAME}}-account herstellen",
+	"emailauth-accountrecovery-logged-in": "Deze pagina is niet beschikbaar voor aangemelde gebruikers. Om een account te herstellen meldt u zich eerst af.",
 	"emailauth-accountrecovery-username-label": "Gebruikersnaam",
 	"emailauth-accountrecovery-contactemail-label": "Bereikbaar e-mailadres voor contact",
 	"emailauth-accountrecovery-contactemail-confirm-label": "Bevestig e-mailadres voor contact",
