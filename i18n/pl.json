@@ -3,7 +3,8 @@
 		"authors": [
 			"Chrumps",
 			"Rail",
-			"Railfail536"
+			"Railfail536",
+			"Woytecr"
 		]
 	},
 	"emailauth-desc": "Sprawdza podejrzane logowania przez e-mail",
@@ -21,5 +22,25 @@
 	"emailauth-login-message-no-email": "Musisz zweryfikować swoje logowanie. Kod weryfikacyjny został wysłany na twój adres e-mail, wprowadź ten kod tutaj.",
 	"emailauth-login-help": "Jeśli nie masz dostępu do adresu e-mail przypisanego do swojego konta, skontaktuj się [[{{int:grouppage-sysop}}|administratorami strony]] ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|dowiedz się więcej]]).",
 	"emailauth-login-failure": "Nieprawidłowy kod weryfikacyjny!",
-	"emailauth-login-retry-limit": "Zbyt wiele błędów!"
+	"emailauth-login-retry-limit": "Zbyt wiele błędów!",
+	"emailauth-accountrecovery-intro": "Odzyskaj swoje konto w {{GRAMMAR:D.lp|{{SITENAME}}}}",
+	"emailauth-accountrecovery-logged-in": "Ta strona nie jest dostępna dla zalogowanych użytkowników. Jeśli chcesz odzyskać konto, najpierw się wyloguj.",
+	"emailauth-accountrecovery-username-label": "Nazwa użytkownika",
+	"emailauth-accountrecovery-contactemail-label": "Dostępny kontaktowy adres e-mail",
+	"emailauth-accountrecovery-contactemail-confirm-label": "Potwierdź kontaktowy adres e-mail",
+	"emailauth-accountrecovery-registeredemail-label": "Adres e-mail zarejestrowany wraz z Twoim kontem w {{GRAMMAR:MS.lp|{{SITENAME}}}}",
+	"emailauth-accountrecovery-description-label": "Dodatkowe uwagi",
+	"emailauth-accountrecovery-success": "Twoja prośba o odzyskanie konta została pomyślnie wysłana. Nasz zespół ds. zaufania i bezpieczeństwa rozpatrzy Twoją prośbę i skontaktuje się z Tobą pod podanym przez Ciebie adresem e-mail.",
+	"emailauth-accountrecovery-confirmation-needed": "Wiadomość e-mail z potwierdzeniem została wysłana na podany przez Ciebie kontaktowy adres e-mail. Aby dokończyć prośbę o odzyskanie konta, kliknij link w wiadomości e-mail.",
+	"emailauth-accountrecovery-confirmation-subject": "Potwierdź swoją prośbę o odzyskanie konta",
+	"emailauth-accountrecovery-confirmation-body": "Otrzymaliśmy prośbę o odzyskanie konta o nazwie „$1” na {{GRAMMAR:MS.lp|{{SITENAME}}}}.\n\nAby kontynuować ten proces, kliknij poniższy link, aby zweryfikować swój adres e-mail. Link wygaśnie za $2.\n\n$3 \n\nJeśli to nie byłeś Ty, możesz bezpiecznie zignorować tę wiadomość e-mail, a na Twoim koncie nie zostaną wprowadzone żadne zmiany.",
+	"emailauth-accountrecovery-confirmation-resent": "Ten link potwierdzający wygasł. Nowy link potwierdzający został wysłany na podany przez Ciebie kontaktowy adres e-mail. Kliknij nowy link, aby dokończyć prośbę o odzyskanie konta.",
+	"emailauth-accountrecovery-email-mismatch": "Podane adresy e-mail nie są takie same. Sprawdź i spróbuj ponownie.",
+	"emailauth-accountrecovery-invalid-email": "Proszę podać prawidłowy adres e-mail.",
+	"emailauth-accountrecovery-rate-limited": "Wysłano zbyt wiele próśb o odzyskanie konta. Poczekaj, zanim spróbujesz ponownie.",
+	"emailauth-accountrecovery-error-generic": "Wystąpił błąd podczas przetwarzania Twojej prośby. Spróbuj ponownie później.",
+	"emailauth-accountrecovery-error-invalid-data": "Podane przez Ciebie informacje nie mogły zostać przetworzone. Sprawdź swoje dane i spróbuj ponownie.",
+	"emailauth-accountrecovery-error-service-unavailable": "Usługa odzyskiwania konta jest tymczasowo niedostępna. Spróbuj ponownie później.",
+	"emailauth-accountrecovery-error-badtoken": "Nieprawidłowy link potwierdzający.\nLink mógł wygasnąć.",
+	"emailauth-accountrecovery-disabled": "Odzyskiwanie konta nie jest dostępne na tej wiki. Aby uzyskać pomoc, skontaktuj się z administratorami witryny."
 }
