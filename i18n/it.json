@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
+			"Freediman",
 			"Superpes15"
 		]
 	},
@@ -18,16 +19,27 @@
 	"emailauth-email-body-help-text": "Per ulteriori informazioni, vedi $1",
 	"emailauth-login-message": "Devi verificare il tuo accesso. Un codice di verifica è stato inviato al tuo indirizzo di posta elettronica ($1), inserisci il codice qui.",
 	"emailauth-login-message-no-email": "Devi verificare il tuo accesso. Un codice di verifica è stato inviato al tuo indirizzo di posta elettronica, inserisci il codice qui.",
+	"emailauth-login-help": "Contatta gli [[{{int:grouppage-sysop}}|amministratori del sito]] se non hai più accesso all’indirizzo email associato al tuo account. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|ulteriori informazioni]])",
 	"emailauth-login-failure": "Codice di verifica non valido!",
 	"emailauth-login-retry-limit": "Troppi tentativi falliti!",
+	"emailauth-accountrecovery-intro": "Recupera il tuo account {{SITENAME}}",
+	"emailauth-accountrecovery-logged-in": "Questa pagina non è disponibile per gli utenti che hanno effettuato l’accesso. Se devi recuperare un account, effettua il logout prima.",
 	"emailauth-accountrecovery-username-label": "Nome utente",
 	"emailauth-accountrecovery-contactemail-label": "Email di contatto raggiungibile",
 	"emailauth-accountrecovery-contactemail-confirm-label": "Conferma l'email di contatto",
+	"emailauth-accountrecovery-registeredemail-label": "Indirizzo email associato al tuo account {{SITENAME}}",
 	"emailauth-accountrecovery-description-label": "Commenti aggiuntivi",
+	"emailauth-accountrecovery-success": "La richiesta di recupero dell’account è stata inviata correttamente. Il nostro team Trust & Safety esaminerà la richiesta e ti contatterà all’indirizzo email che hai fornito.",
+	"emailauth-accountrecovery-confirmation-needed": "È stata inviata un’email di conferma all’indirizzo email che hai fornito. Per completare la richiesta di recupero dell’account, devi cliccare sul link contenuto nell’email.",
 	"emailauth-accountrecovery-confirmation-subject": "Conferma la tua richiesta di recupero della tua utenza",
+	"emailauth-accountrecovery-confirmation-body": "Abbiamo ricevuto una richiesta di recupero per l’account denominato “$1” su {{SITENAME}}.\n\nPer continuare la procedura, clicca sul link sottostante per verificare il tuo indirizzo email. Il link scadrà tra $2.\n\n$3\n\nSe non sei stato tu, puoi ignorare tranquillamente questa email e non verrà apportata alcuna modifica al tuo account.",
+	"emailauth-accountrecovery-confirmation-resent": "Questo link di conferma è scaduto. Un nuovo link di conferma è stato inviato all’indirizzo email che hai fornito. Fai clic su questo nuovo link per completare la richiesta di recupero dell’account.",
 	"emailauth-accountrecovery-email-mismatch": "Gli indirizzi email inseriti non corrispondono. Controlla e riprova.",
 	"emailauth-accountrecovery-invalid-email": "Inserisci un indirizzo email valido.",
 	"emailauth-accountrecovery-rate-limited": "Hai inviato troppe richieste di recupero dell'utenza. Attendi prima di riprovare.",
 	"emailauth-accountrecovery-error-generic": "Si è verificato un errore durante l'elaborazione della richiesta. Riprova più tardi.",
-	"emailauth-accountrecovery-error-invalid-data": "Le informazioni fornite non possono essere elaborate. Controlla i dati inseriti e riprova."
+	"emailauth-accountrecovery-error-invalid-data": "Le informazioni fornite non possono essere elaborate. Controlla i dati inseriti e riprova.",
+	"emailauth-accountrecovery-error-service-unavailable": "Il servizio di recupero dell’account non è temporaneamente disponibile. Riprova più tardi.",
+	"emailauth-accountrecovery-error-badtoken": "Link di conferma non valido.\nIl link potrebbe essere scaduto.",
+	"emailauth-accountrecovery-disabled": "Il recupero dell’account non è disponibile su questa wiki. Contatta gli amministratori del sito per ricevere assistenza."
 }
