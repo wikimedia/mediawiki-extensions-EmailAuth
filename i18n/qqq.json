@@ -15,7 +15,6 @@
 	"emailauth-email-body-help-text": "Part of the body of the email containing the verification code.\n\nParameters:\n* $1 - the URL of the help page ({{msg-mw|emailauth-email-help-url|notext=1}})\n{{format|text}}",
 	"emailauth-email-help-url": "https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:EmailAuth",
 	"emailauth-login-message": "Message telling the user that a verification email has been sent. $1 is the email address.",
-	"emailauth-login-message-no-email": "Message telling the user that a verification email has been sent. Email address is not included in the message.",
 	"emailauth-login-help": "Help message for the token input field. Useful in case the user cannot access to the token by email.",
 	"emailauth-login-failure": "Error message when the entered verification code was wrong.",
 	"emailauth-login-retry-limit": "Error message when the verification code was entered incorrectly too many times. (The user will be forced to restart the login process.)",

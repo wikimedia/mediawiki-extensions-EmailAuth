@@ -15,7 +15,6 @@
 	"emailauth-email-body-help-text": "For more information, see $1",
 	"emailauth-email-help-url": "https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:EmailAuth",
 	"emailauth-login-message": "You need to verify your login. A verification code has been sent to your email address ($1), please enter that code here.",
-	"emailauth-login-message-no-email": "You need to verify your login. A verification code has been sent to your email address, please enter that code here.",
 	"emailauth-login-help": "Contact the [[{{int:grouppage-sysop}}|site administrators]] if you no longer have access to your account's email address. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|more information]])",
 	"emailauth-login-failure": "Invalid verification code!",
 	"emailauth-login-retry-limit": "Too many failures!",
