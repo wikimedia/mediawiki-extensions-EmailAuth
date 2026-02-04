@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
+			"Dream Indigo",
 			"Freediman",
 			"Superpes15"
 		]
@@ -32,8 +33,8 @@
 	"emailauth-accountrecovery-success": "La richiesta di recupero dell'utenza è stata inviata correttamente. Il nostro team Trust & Safety esaminerà la richiesta e ti contatterà all'indirizzo email che hai fornito.",
 	"emailauth-accountrecovery-confirmation-needed": "È stata inviata un'email di conferma all'indirizzo di posta elettronica che hai fornito. Per completare la richiesta di recupero dell'utenza, devi cliccare sul collegamento contenuto nell'email.",
 	"emailauth-accountrecovery-confirmation-subject": "Conferma la tua richiesta di recupero della tua utenza",
-	"emailauth-accountrecovery-confirmation-body": "Abbiamo ricevuto una richiesta di recupero per l'utenza denominata “$1” su {{SITENAME}}.\n\nPer continuare la procedura, clicca sul collegamento sottostante per verificare il tuo indirizzo email. Il link scadrà tra $2.\n\n$3\n\nSe non sei stato tu, puoi ignorare tranquillamente questa email e non verrà apportata alcuna modifica alla tua utenza.",
-	"emailauth-accountrecovery-confirmation-resent": "Questo link di conferma è scaduto. Un nuovo link di conferma è stato inviato all’indirizzo email che hai fornito. Fai clic su questo nuovo link per completare la richiesta di recupero dell’account.",
+	"emailauth-accountrecovery-confirmation-body": "Abbiamo ricevuto una richiesta di recupero per l'utenza denominata \"$1\" su {{SITENAME}}.\n\nPer continuare la procedura, clicca sul collegamento sottostante per verificare il tuo indirizzo email. Il link scadrà tra $2.\n\n$3\n\nSe non sei stata/o tu, puoi ignorare tranquillamente questa email e non verrà apportata alcuna modifica alla tua utenza.",
+	"emailauth-accountrecovery-confirmation-resent": "Questo link di conferma è scaduto. Un nuovo link di conferma è stato inviato all'indirizzo email che hai fornito. Fai clic su questo nuovo link per completare la richiesta di recupero dell’account.",
 	"emailauth-accountrecovery-email-mismatch": "Gli indirizzi email inseriti non corrispondono. Controlla e riprova.",
 	"emailauth-accountrecovery-invalid-email": "Inserisci un indirizzo email valido.",
 	"emailauth-accountrecovery-rate-limited": "Hai inviato troppe richieste di recupero dell'utenza. Attendi prima di riprovare.",
