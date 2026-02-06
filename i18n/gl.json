@@ -17,7 +17,6 @@
 	"emailauth-email-body-attack-p2": "Se non fuches ti, deberías cambiar o teu contrasinal agora.",
 	"emailauth-email-body-help-text": "Para obter máis información, consulta $1",
 	"emailauth-login-message": "Tes que verificar a túa conexión. Enviouse un código de verificación ó teu enderezo de correo electrónico ($1). Indica aquí ese código.",
-	"emailauth-login-message-no-email": "Tes que verificar a túa conexión. Enviouse un código de verificación ó teu enderezo de correo electrónico. Indica aquí ese código.",
 	"emailauth-login-help": "Contacta coa [[{{int:grouppage-sysop}}|administración do sitio]] se xa non tes acceso ao enderezo de correo electrónico da túa conta ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|máis información]]).",
 	"emailauth-login-failure": "Código de verificación incorrecto!",
 	"emailauth-login-retry-limit": "Demasiados intentos fallidos!",

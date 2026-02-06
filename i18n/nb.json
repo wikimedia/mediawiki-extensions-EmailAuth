@@ -16,7 +16,6 @@
 	"emailauth-email-body-attack-p2": "Hvis det ikke var du som gjorde dette bør du bytte passord nå.",
 	"emailauth-email-body-help-text": "Se $1 for mer informasjon.",
 	"emailauth-login-message": "Du må bekrefte innloggingen din. Skriv inn bekreftelseskoden som har blitt sendt til e-postadressen din ($1) her.",
-	"emailauth-login-message-no-email": "Du må bekrefte innloggingen din. Skriv inn bekreftelseskoden som har blitt sendt til e-postadressen din her.",
 	"emailauth-login-help": "Kontakt [[{{int:grouppage-sysop}}|administratorene på nettstedet]] hvis du ikke lenger har tilgang til e-postadressen som er tilknyttet kontoen din ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|mer informasjon]]).",
 	"emailauth-login-failure": "Ugyldig bekreftelseskode!",
 	"emailauth-login-retry-limit": "For mange feil!"

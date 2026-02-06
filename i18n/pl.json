@@ -19,7 +19,6 @@
 	"emailauth-email-body-attack-p2": "Jeśli to nie ty, bezzwłocznie zmień hasło.",
 	"emailauth-email-body-help-text": "Aby dowiedzieć się więcej, zobacz $1",
 	"emailauth-login-message": "Musisz zweryfikować swoje logowanie. Kod weryfikacyjny został wysłany na twój adres e-mail ($1), wprowadź ten kod tutaj.",
-	"emailauth-login-message-no-email": "Musisz zweryfikować swoje logowanie. Kod weryfikacyjny został wysłany na twój adres e-mail, wprowadź ten kod tutaj.",
 	"emailauth-login-help": "Jeśli nie masz dostępu do adresu e-mail przypisanego do swojego konta, skontaktuj się [[{{int:grouppage-sysop}}|administratorami strony]] ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|dowiedz się więcej]]).",
 	"emailauth-login-failure": "Nieprawidłowy kod weryfikacyjny!",
 	"emailauth-login-retry-limit": "Zbyt wiele błędów!",

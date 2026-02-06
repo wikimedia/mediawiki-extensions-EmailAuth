@@ -18,7 +18,6 @@
 	"emailauth-email-body-attack-p2": "Jos se et ollut sinä, sinun kannattaa vaihtaa salasanasi heti.",
 	"emailauth-email-body-help-text": "Lisätietoja löytyy sivulta $1",
 	"emailauth-login-message": "Sinun on vahvistettava kirjautumisesi. Vahvistuskoodi on lähetetty sähköpostiosoitteeseesi ($1), syötä koodi tähän.",
-	"emailauth-login-message-no-email": "Sinun on vahvistettava kirjautumisesi. Vahvistuskoodi on lähetetty sähköpostiosoitteeseesi, syötä koodi tähän.",
 	"emailauth-login-help": "Ota yhteyttä [[{{int:grouppage-sysop}}|sivuston ylläpitäjiin]], jos sinulla ei ole enää pääsyä tunnuksesi sähköpostiosoitteeseen. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|lisätietoja]])",
 	"emailauth-login-failure": "Väärä vahvistuskoodi!",
 	"emailauth-login-retry-limit": "Liian monta epäonnistumista!",

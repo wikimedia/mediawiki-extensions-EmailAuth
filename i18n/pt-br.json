@@ -19,7 +19,6 @@
 	"emailauth-email-body-attack-p2": "Se não foi você, altere sua senha agora.",
 	"emailauth-email-body-help-text": "Para mais informações, veja $1",
 	"emailauth-login-message": "Precisa de verificar a sua autenticação. Foi enviado para o seu e-mail ($1) um código de verificação. Introduza esse código aqui, por favor.",
-	"emailauth-login-message-no-email": "Você precisa verificar seu acesso. Um código de verificação foi enviado para o seu endereço de e-mail. Insira esse código aqui.",
 	"emailauth-login-help": "Entre em contato com os [[{{int:grouppage-sysop}}|administradores do site]] se você não tiver mais acesso ao endereço de e-mail da sua conta. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|mais informações]])",
 	"emailauth-login-failure": "Código de verificação inválido!",
 	"emailauth-login-retry-limit": "Muitas falhas!",

@@ -18,7 +18,6 @@
 	"emailauth-email-body-attack-p2": "אם לא עשית את זה, יש לשנות את הסיסמה שלך עכשיו.",
 	"emailauth-email-body-help-text": "למידע נוסף, ר' $1",
 	"emailauth-login-message": "יש לאמת את הכניסה שלך. קוד אימות נשלח לכתובת הדוא\"ל שלך ($1), נא להזין את הקוד הזה כאן.",
-	"emailauth-login-message-no-email": "יש לאמת את הכניסה שלך. קוד אימות נשלח לכתובת הדוא\"ל שלך, נא להזין את הקוד הזה כאן.",
 	"emailauth-login-help": "נא ליצור קשר עם [[{{int:grouppage-sysop}}|מפעילי האתר]] אם אין לך עוד גישה לכתובת הדוא\"ל של חשבונך. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|למידע נוסף]])",
 	"emailauth-login-failure": "קוד אימות שגוי!",
 	"emailauth-login-retry-limit": "יותר מדי כישלונות!",

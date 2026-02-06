@@ -16,7 +16,6 @@
 	"emailauth-email-body-attack-p2": "Ако тоа не бевте вие, ќе треба веднаш да ја смените лозинката.",
 	"emailauth-email-body-help-text": "Повеќе информации ќе најдете на $1",
 	"emailauth-login-message": "Ќе треба да ја потврдите најавата. Ви испративме потврден код по е-пошта ($1). Тука внесете го тој код.",
-	"emailauth-login-message-no-email": "Ќе треба да ја потврдите најавата. Ви испративме потврден код по е-пошта. Тука внесете го тој код.",
 	"emailauth-login-help": "Обратете се кај [[{{int:grouppage-sysop}}|администраторите]] ако повеќе немате пристап до е-поштата на вашата сметка. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|повеќе информации]])",
 	"emailauth-login-failure": "Неважечки потврден код!",
 	"emailauth-login-retry-limit": "Премногу неуспешни обиди!",

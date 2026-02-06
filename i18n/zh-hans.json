@@ -21,7 +21,6 @@
 	"emailauth-email-body-attack-p2": "如果这不是您本人，您应该立刻更改密码。",
 	"emailauth-email-body-help-text": "有关更多信息，请参阅$1",
 	"emailauth-login-message": "您需要验证您的登录。验证码已发送到您的电子邮件地址（$1），请在此输入该代码。",
-	"emailauth-login-message-no-email": "您需要验证您的登录。验证码已发送到您的电子邮件地址，请在此输入该代码。",
 	"emailauth-login-help": "如果您无法访问您的账号电子邮件地址，请联系[[{{int:grouppage-sysop}}|网站管理员]]。（[[mw:Special:MyLanguage/Help:Extension:EmailAuth|更多信息]]）",
 	"emailauth-login-failure": "验证码无效！",
 	"emailauth-login-retry-limit": "失败次数过多！",

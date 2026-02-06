@@ -16,7 +16,6 @@
 	"emailauth-email-body-attack-p2": "Kui see ei olnud sina, siis peaksid enda parooli kohe muutma.",
 	"emailauth-email-body-help-text": "Lisateavet leiad aadressilt $1",
 	"emailauth-login-message": "Pead sisselogimise kinnitama. Kinnituskood on saadetud sinu e-posti aadressile ($1). Palun sisesta see kood siia.",
-	"emailauth-login-message-no-email": "Pead sisselogimise kinnitama. Kinnituskood on saadetud sinu e-posti aadressile. Palun sisesta see kood siia.",
 	"emailauth-login-help": "Kirjuta [[{{int:grouppage-sysop}}|saidi administraatoritele]], kui sul pole enam juurdepääsu enda konto e-posti aadressile. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|lisateave]])",
 	"emailauth-login-failure": "Vigane kinnituskood!",
 	"emailauth-login-retry-limit": "Liiga palju nurjumisi!",

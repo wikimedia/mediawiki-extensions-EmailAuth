@@ -16,7 +16,6 @@
 	"emailauth-email-body-attack-p2": "如果這不是您本人，您應該立刻更改密碼。",
 	"emailauth-email-body-help-text": "更多資訊請參閱$1",
 	"emailauth-login-message": "您需要驗證您的登入。驗證碼已寄出到您的電子郵件地址（$1），請在此輸入該驗證碼。",
-	"emailauth-login-message-no-email": "您需要驗證您的登入。驗證碼已寄出到您的電子郵件地址，請在此輸入該驗證碼。",
 	"emailauth-login-help": "如果您無法再存取您帳戶的電子郵件地址，請聯絡[[{{int:grouppage-sysop}}|網站管理員]]。（[[mw:Special:MyLanguage/Help:Extension:EmailAuth|更多資訊]]）",
 	"emailauth-login-failure": "無效的驗證碼！",
 	"emailauth-login-retry-limit": "失敗過多！",

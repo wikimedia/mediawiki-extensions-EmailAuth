@@ -16,7 +16,6 @@
 	"emailauth-email-body-attack-p2": "Dacă nu ați fost dumneavoastră, ar trebui să vă schimbați parola acum.",
 	"emailauth-email-body-help-text": "Pentru mai multe informații, vedeți $1",
 	"emailauth-login-message": "Este necesar să vă verificați autentificarea. Un cont de verificare a fost trimis la adresa dumneavoastră de e-mail ($1). Vă rugăm să introduceți aici codul primit.",
-	"emailauth-login-message-no-email": "Este necesar să vă verificați autentificarea. Un cont de verificare a fost trimis la adresa dumneavoastră de e-mail. Vă rugăm să introduceți aici codul primit.",
 	"emailauth-login-help": "Contactați [[{{int:grouppage-sysop}}|administratorii site-ului]] dacă nu mai aveți acces la adresa de e-mail a contului dumneavoastră. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|mai multe informații]])",
 	"emailauth-login-failure": "Cod de verificare invalid!",
 	"emailauth-login-retry-limit": "Prea multe încercări greșite!",

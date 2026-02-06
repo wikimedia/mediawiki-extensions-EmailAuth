@@ -20,7 +20,6 @@
 	"emailauth-email-body-attack-p2": "Eğer bunu yapan siz değilseniz hemen parolanızı değiştirmelisiniz.",
 	"emailauth-email-body-help-text": "Daha fazla bilgi için: $1",
 	"emailauth-login-message": "Giriş bilgilerinizi doğrulamanız gerekli. E-posta adresinize bir doğrulama kodu gönderildi ($1). Lütfen bu kodu buraya girin.",
-	"emailauth-login-message-no-email": "Giriş bilgilerinizi doğrulamanız gerekli. E-posta adresinize bir doğrulama kodu gönderildi. Lütfen bu kodu buraya girin.",
 	"emailauth-login-help": "Hesabınızın e-posta adresine artık erişiminiz yoksa [[{{int:grouppage-sysop}}|site yöneticileriyle]] iletişime geçin. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|daha fazla bilgi]])",
 	"emailauth-login-failure": "Geçersiz doğrulama kodu!",
 	"emailauth-login-retry-limit": "Çok fazla hatalı giriş!",

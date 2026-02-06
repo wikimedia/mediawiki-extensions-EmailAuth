@@ -17,7 +17,6 @@
 	"emailauth-email-body-attack-p2": "Du bör ändra ditt lösenord nu om det inte var du.",
 	"emailauth-email-body-help-text": "För mer information kan du besöka $1",
 	"emailauth-login-message": "Du måste verifiera din inloggning. En verifieringskod har skickats till din e-postadress ($1). Var god ange koden här.",
-	"emailauth-login-message-no-email": "Du måste verifiera din inloggning. En verifieringskod har skickats till din e-postadress. Var god ange koden här.",
 	"emailauth-login-help": "Kontakta [[{{int:grouppage-sysop}}|webbplatsadministratörerna]] om du inte längre har tillgång till e-postadressen för ditt konto. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|mer information]])",
 	"emailauth-login-failure": "Ogiltig verifieringskod!",
 	"emailauth-login-retry-limit": "För många misslyckanden!",

@@ -18,7 +18,6 @@
 	"emailauth-email-body-attack-p2": "Als u dit niet was, moet u nu uw wachtwoord wijzigen.",
 	"emailauth-email-body-help-text": "Zie $1 voor meer informatie",
 	"emailauth-login-message": "U moet uw aanmeldingspoging verifiëren. Er is een verificatiecode naar uw e-mailadres ($1) verstuurd. Vul die code hier in.",
-	"emailauth-login-message-no-email": "U moet uw aanmeldingspoging verifiëren. Er is een verificatiecode naar uw e-mailadres verstuurd. Vul die code hier in.",
 	"emailauth-login-help": "Neem contact op met de [[{{int:grouppage-sysop}}|site administrators]] als u geen toegang meer hebt tot het e-mailadres van uw account; [[mw:Special:MyLanguage/Help:Extension:EmailAuth|meer informatie]].",
 	"emailauth-login-failure": "Onjuiste verificatie code!",
 	"emailauth-login-retry-limit": "Te veel fouten!",
