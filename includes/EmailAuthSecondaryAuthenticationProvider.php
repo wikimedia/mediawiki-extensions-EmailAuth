@@ -23,6 +23,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 	public function __construct(
 		private readonly FormatterFactory $formatterFactory,
+		private readonly EmailAuthCheckUserLogger $checkUserLogger,
 	) {
 	}
 
@@ -142,6 +143,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 				'code_expected' => substr( $token, 0, 2 ) . '...',
 				'code_actual' => substr( $req->token, 0, 2 ) . '...',
 			] );
+			$this->checkUserLogger->logFailedVerification( $user );
 		}
 
 		$failures = $this->manager->getAuthenticationSessionData( 'EmailAuthFailures' );

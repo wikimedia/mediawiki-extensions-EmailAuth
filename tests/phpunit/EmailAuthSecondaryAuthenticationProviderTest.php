@@ -6,6 +6,7 @@ use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\Config\HashConfig;
+use MediaWiki\Extension\EmailAuth\EmailAuthCheckUserLogger;
 use MediaWiki\Extension\EmailAuth\EmailAuthSecondaryAuthenticationProvider;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Status\Status;
@@ -38,7 +39,8 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		} );
 
 		$this->provider = new EmailAuthSecondaryAuthenticationProvider(
-			$this->getServiceContainer()->getFormatterFactory()
+			$this->getServiceContainer()->getFormatterFactory(),
+			$this->createNoOpMock( EmailAuthCheckUserLogger::class, [ 'logFailedVerification' ] )
 		);
 
 		$this->logger = $this->getMockBuilder( LoggerInterface::class )->getMockForAbstractClass();
@@ -195,6 +197,38 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		} );
 
 		return $user;
+	}
+
+	public function testFailedVerificationLogsToCheckUser() {
+		$this->setTemporaryHook( 'EmailAuthRequireToken', static function ( $user, &$verificationRequired ) {
+			$verificationRequired = true;
+		} );
+
+		$checkUserLogger = $this->createMock( EmailAuthCheckUserLogger::class );
+		$checkUserLogger->expects( $this->once() )->method( 'logFailedVerification' );
+
+		$provider = new EmailAuthSecondaryAuthenticationProvider(
+			$this->getServiceContainer()->getFormatterFactory(),
+			$checkUserLogger
+		);
+		$provider->init(
+			$this->logger,
+			$this->manager,
+			$this->createHookContainer(),
+			new HashConfig( [ MainConfigNames::ObjectCacheSessionExpiry => 3600 ] ),
+			$this->createNoOpMock( UserNameUtils::class )
+		);
+
+		$this->session->clear();
+		$user = $this->getMockUser( true );
+		$user->expects( $this->once() )->method( 'sendMail' )->willReturn( Status::newGood() );
+		$begin = $provider->beginSecondaryAuthentication( $user, [] );
+		$response = $provider->continueSecondaryAuthentication( $user,
+			AuthenticationRequest::loadRequestsFromSubmission(
+				$begin->neededRequests,
+				[ 'token' => 'wrong1' ]
+			) );
+		$this->assertSame( AuthenticationResponse::UI, $response->status );
 	}
 
 	public function testBeginSecondaryAccountCreation() {

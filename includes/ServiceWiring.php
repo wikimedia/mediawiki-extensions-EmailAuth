@@ -2,6 +2,7 @@
 
 use MediaWiki\Config\ServiceOptions;
 use MediaWiki\Extension\EmailAuth\AccountRecovery\Zendesk\ZendeskClient;
+use MediaWiki\Extension\EmailAuth\EmailAuthCheckUserLogger;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use Psr\Log\LoggerInterface;
@@ -11,6 +12,11 @@ use Psr\Log\LoggerInterface;
  * @phpcs-require-sorted-array
  */
 return [
+	'EmailAuth.CheckUserLogger' => static function ( MediaWikiServices $services ): EmailAuthCheckUserLogger {
+		return new EmailAuthCheckUserLogger(
+			$services->getExtensionRegistry(),
+		);
+	},
 	'EmailAuth.Logger' => static function ( MediaWikiServices $services ): LoggerInterface {
 		return LoggerFactory::getInstance( 'EmailAuth' );
 	},

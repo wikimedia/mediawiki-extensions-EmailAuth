@@ -37,5 +37,6 @@
 	"emailauth-accountrecovery-error-invalid-data": "The information you provided could not be processed. Please check your entries and try again.",
 	"emailauth-accountrecovery-error-service-unavailable": "The account recovery service is temporarily unavailable. Please try again later.",
 	"emailauth-accountrecovery-error-badtoken": "Invalid confirmation link.\nThe link may have expired.",
-	"emailauth-accountrecovery-disabled": "Account recovery is not available on this wiki. Please contact the site administrators for assistance."
+	"emailauth-accountrecovery-disabled": "Account recovery is not available on this wiki. Please contact the site administrators for assistance.",
+	"logentry-emailauth-verify-failed": "Failed email authentication verification attempt"
 }

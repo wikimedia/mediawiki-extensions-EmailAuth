@@ -86,6 +86,12 @@
 			"description": "Number of seconds that an email confirmation link sent by Special:AccountRecovery should be valid for"
 		}
 	},
+	"LogTypes": [
+		"emailauth"
+	],
+	"LogActionsHandlers": {
+		"emailauth/*": "LogFormatter"
+	},
 	"MessagesDirs": {
 		"EmailAuth": [
 			"i18n"
@@ -104,7 +110,8 @@
 			"EmailAuthSecondaryAuthenticationProvider": {
 				"class": "MediaWiki\\Extension\\EmailAuth\\EmailAuthSecondaryAuthenticationProvider",
 				"services": [
-					"FormatterFactory"
+					"FormatterFactory",
+					"EmailAuth.CheckUserLogger"
 				],
 				"sort": 50
 			}

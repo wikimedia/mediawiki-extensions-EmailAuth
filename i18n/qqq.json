@@ -37,5 +37,6 @@
 	"emailauth-accountrecovery-error-invalid-data": "Error message when the submitted data could not be processed by the service",
 	"emailauth-accountrecovery-error-service-unavailable": "Error message when the account recovery service is temporarily unavailable",
 	"emailauth-accountrecovery-error-badtoken": "Message shown on Special:AccountRecovery when an invalid confirmation code is used.",
-	"emailauth-accountrecovery-disabled": "Error message shown when the account recovery feature is not enabled on the wiki (when $wgEmailAuthEnableAccountRecovery is false)"
+	"emailauth-accountrecovery-disabled": "Error message shown when the account recovery feature is not enabled on the wiki (when $wgEmailAuthEnableAccountRecovery is false)",
+	"logentry-emailauth-verify-failed": "Log entry for a failed email authentication verification attempt, shown in CheckUser"
 }
