@@ -40,7 +40,10 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 
 		$this->provider = new EmailAuthSecondaryAuthenticationProvider(
 			$this->getServiceContainer()->getFormatterFactory(),
-			$this->createNoOpMock( EmailAuthCheckUserLogger::class, [ 'logFailedVerification' ] )
+			$this->createNoOpMock(
+				EmailAuthCheckUserLogger::class,
+				[ 'logFailedVerification', 'logSuccessfulVerification' ]
+			)
 		);
 
 		$this->logger = $this->getMockBuilder( LoggerInterface::class )->getMockForAbstractClass();
@@ -229,6 +232,38 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 				[ 'token' => 'wrong1' ]
 			) );
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
+	}
+
+	public function testSuccessfulVerificationLogsToCheckUser() {
+		$this->setTemporaryHook( 'EmailAuthRequireToken', static function ( $user, &$verificationRequired ) {
+			$verificationRequired = true;
+		} );
+
+		$checkUserLogger = $this->createMock( EmailAuthCheckUserLogger::class );
+		$checkUserLogger->expects( $this->once() )->method( 'logSuccessfulVerification' );
+
+		$provider = new EmailAuthSecondaryAuthenticationProvider(
+			$this->getServiceContainer()->getFormatterFactory(),
+			$checkUserLogger
+		);
+		$provider->init(
+			$this->logger,
+			$this->manager,
+			$this->createHookContainer(),
+			new HashConfig( [ MainConfigNames::ObjectCacheSessionExpiry => 3600 ] ),
+			$this->createNoOpMock( UserNameUtils::class )
+		);
+
+		$this->session->clear();
+		$user = $this->getMockUser( true );
+		$user->expects( $this->once() )->method( 'sendMail' )->willReturn( Status::newGood() );
+		$begin = $provider->beginSecondaryAuthentication( $user, [] );
+		$response = $provider->continueSecondaryAuthentication( $user,
+			AuthenticationRequest::loadRequestsFromSubmission(
+				$begin->neededRequests,
+				[ 'token' => $this->manager->getAuthenticationSessionData( 'EmailAuthToken' ) ]
+			) );
+		$this->assertSame( AuthenticationResponse::PASS, $response->status );
 	}
 
 	public function testBeginSecondaryAccountCreation() {

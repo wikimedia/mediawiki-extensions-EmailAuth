@@ -92,6 +92,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 				'ip' => $user->getRequest()->getIP(),
 				'emailVerified' => $user->isEmailConfirmed(),
 			] );
+			$this->checkUserLogger->logSuccessfulVerification( $user );
 
 			$stashedEmail = $this->manager->getAuthenticationSessionData( 'EmailAuthConfirmEmail' );
 			if ( $stashedEmail ) {
