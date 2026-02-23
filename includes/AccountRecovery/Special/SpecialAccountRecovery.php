@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\EmailAuth\AccountRecovery\Special;
 use FormSpecialPage;
 use MediaWiki\Exception\PermissionsError;
 use MediaWiki\Extension\EmailAuth\AccountRecovery\Zendesk\ZendeskClient;
+use MediaWiki\Extension\EmailAuth\EmailAuthCheckUserLogger;
 use MediaWiki\Language\FormatterFactory;
 use MediaWiki\Language\RawMessage;
 use MediaWiki\Mail\IEmailer;
@@ -14,6 +15,7 @@ use MediaWiki\Message\Message;
 use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Status\Status;
 use MediaWiki\User\User;
+use MediaWiki\User\UserIdentityLookup;
 use MWCryptRand;
 use Psr\Log\LoggerInterface;
 use Throwable;
@@ -27,7 +29,9 @@ class SpecialAccountRecovery extends FormSpecialPage {
 		private readonly IEmailer $emailer,
 		private readonly BagOStuff $microStash,
 		private readonly FormatterFactory $formatterFactory,
-		private readonly LoggerInterface $logger
+		private readonly LoggerInterface $logger,
+		private readonly EmailAuthCheckUserLogger $checkUserLogger,
+		private readonly UserIdentityLookup $userIdentityLookup
 	) {
 		parent::__construct( 'AccountRecovery' );
 	}
@@ -219,6 +223,11 @@ class SpecialAccountRecovery extends FormSpecialPage {
 			'registered_email' => $registeredEmail,
 			'description' => isset( $data['description'] ) ? trim( $data['description'] ) : null,
 		];
+
+		$targetUser = $this->userIdentityLookup->getUserIdentityByName( $ticketData['requester_name'] );
+		if ( $targetUser && $targetUser->isRegistered() ) {
+			$this->checkUserLogger->logAccountRecoverySubmission( $targetUser );
+		}
 
 		return $this->sendConfirmationEmail( $ticketData );
 	}

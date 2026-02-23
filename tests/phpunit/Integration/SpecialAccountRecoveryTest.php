@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\EmailAuth\Tests\Integration;
 
 use MediaWiki\Extension\EmailAuth\AccountRecovery\Zendesk\ZendeskClient;
+use MediaWiki\Extension\EmailAuth\EmailAuthCheckUserLogger;
 use MediaWiki\Mail\IEmailer;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Request\FauxRequest;
@@ -114,6 +115,30 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 
 		[ $html ] = $this->executeSpecialPage( "confirm/$capturedToken" );
 		$this->assertStringContainsString( '(emailauth-accountrecovery-success)', $html );
+	}
+
+	public function testFormSubmissionLogsToCheckUser(): void {
+		$user = $this->getTestUser()->getUser();
+
+		$checkUserLogger = $this->createMock( EmailAuthCheckUserLogger::class );
+		$checkUserLogger->expects( $this->once() )
+			->method( 'logAccountRecoverySubmission' )
+			->with(
+				$this->callback( function ( $identity ) use ( $user ) {
+					$this->assertSame( $user->getName(), $identity->getName() );
+					return true;
+				} )
+			);
+		$this->setService( 'EmailAuth.CheckUserLogger', $checkUserLogger );
+
+		[ $html ] = $this->executeSpecialPage( '', new FauxRequest( [
+			'wpusername' => $user->getName(),
+			'wpcontact_email' => $user->getEmail(),
+			'wpcontact_email_confirm' => $user->getEmail(),
+			'wpregistered_email' => '',
+		], true ) );
+
+		$this->assertStringContainsString( '(emailauth-accountrecovery-confirmation-needed)', $html );
 	}
 
 	public function testConfirmBadToken() {

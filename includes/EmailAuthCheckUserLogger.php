@@ -36,6 +36,16 @@ class EmailAuthCheckUserLogger {
 		$this->log( $user, 'verify-failed' );
 	}
 
+	/**
+	 * Creates a CheckUser-only log entry for an account recovery request submission.
+	 *
+	 * This method performs database writes. It should only be called in a POST
+	 * request context to avoid TransactionProfiler warnings (see T417629).
+	 */
+	public function logAccountRecoverySubmission( UserIdentity $user ): void {
+		$this->log( $user, 'recovery-submit' );
+	}
+
 	private function log( UserIdentity $user, string $action ): void {
 		if ( !$this->extensionRegistry->isLoaded( 'CheckUser' ) ) {
 			return;

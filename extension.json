@@ -22,7 +22,9 @@
 				"Emailer",
 				"MicroStash",
 				"FormatterFactory",
-				"EmailAuth.Logger"
+				"EmailAuth.Logger",
+				"EmailAuth.CheckUserLogger",
+				"UserIdentityLookup"
 			]
 		}
 	},
