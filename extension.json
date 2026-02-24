@@ -88,9 +88,6 @@
 			"description": "Number of seconds that an email confirmation link sent by Special:AccountRecovery should be valid for"
 		}
 	},
-	"LogTypes": [
-		"emailauth"
-	],
 	"LogActionsHandlers": {
 		"emailauth/*": "LogFormatter"
 	},
