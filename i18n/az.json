@@ -39,5 +39,8 @@
 	"emailauth-accountrecovery-error-invalid-data": "Təqdim etdiyiniz məlumatı emal etmək mümkün olmadı. Zəhmət olmasa, məlumat yoxlayın və yenidən cəhd edin.",
 	"emailauth-accountrecovery-error-service-unavailable": "Hesabın bərpası xidməti müvəqqəti olaraq əlçatan deyil. Zəhmət olmasa, sonra yenidən cəhd edin.",
 	"emailauth-accountrecovery-error-badtoken": "Yanlış təsdiq linki.\nLinkin müddəti bitmiş ola bilər.",
-	"emailauth-accountrecovery-disabled": "Hesabın bərpası bu vikidə mövcud deyil. Kömək üçün sayt administratorları ilə əlaqə saxlayın."
+	"emailauth-accountrecovery-disabled": "Hesabın bərpası bu vikidə mövcud deyil. Kömək üçün sayt administratorları ilə əlaqə saxlayın.",
+	"logentry-emailauth-verify-failed": "Uğursuz e-poçt identifikasiyası doğrulama cəhdi",
+	"logentry-emailauth-verify-success": "Uğurlu e-poçt identifikasiyası doğrulama cəhdi",
+	"logentry-emailauth-recovery-submit": "Hesabın bərpası sorğusu göndərildi"
 }

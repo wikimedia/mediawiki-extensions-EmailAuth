@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Narazeni"
+		]
+	},
+	"emailauth-desc": "ამორსენს სათაკილო მიშულებს ელექტრონულ ფოსტათ.",
+	"emailauth-token-label": "დოდასურებაშ კოდი",
+	"emailauth-token-help": "ართშაიან ჟირფაქტორიან ავტორიზაციაშ მარკერ ჯღონილ რე თქვან ელექტრონულ ფოსტაშა.",
+	"emailauth-email-subject": "ანგარიშშა $1 მიშულაშ დჷმადასურებელ კოდი",
+	"emailauth-email-body-intro": "$1, მუჭოთ ჩქჷ, თქვა ოცადუთ $2-შა მიშულას ახალ მონწყილობაშე.",
+	"emailauth-email-body-code-text": "თქვან დოდასურებაშ კოდ რე:",
+	"emailauth-email-body-warning": "ათე კოდ ოხვილურ რე თქვან ანგარიშშა მიშაულარო. ათე კოდის ბორჯ გჷთმურს $1-შა. თქვან უშქურინჯობაშოთ მითინს ვეგნოჩათ.",
+	"emailauth-email-body-attack-heading": "დო თქვა ვარდით-და:",
+	"emailauth-email-body-attack-p1": "ათე ელექტრონულ ფოსტაქ თიშენ იჯღონჷ თქვანდა, ანდანე თქვან ანგარიშშა მიშულას მიდგაინ ოცადუდჷ. თქვან ანგარიშშა მიშულაშ ცადებაშის გჷმორინაფილქ იჸუ თქვან თინ მახვარებუშ ჯოხოქ დო პაროლქ.",
+	"emailauth-email-body-attack-p2": "დო თენა თქვა ვაიქიმინნა-და, გოთირეთ თქვან პაროლ ასე.",
+	"emailauth-email-body-help-text": "კილიშკილ ინფორმაციაშ გეშა ქძ. $1",
+	"emailauth-login-message": "თქვა დადასურათ ოკო თქვან ლოგინი. დოდასურებაშ კოდ ჯღონილ რე თქვან ელექტრონულ ფოსტაშა ($1), ქორთხინთ, გენშეჸონით თე კოდ ათაქ.",
+	"emailauth-login-help": "მუკართით [[{{int:grouppage-sysop}}|ვებ-ხასჷლაშ ადმინისტრატორეფს]] ვაიღჷნა თქვან ანგარიშშა მებუნაფილ ელექტრონულ ფოსტაშა ჭირინაფა-და. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|კილიშკილ ინფორმაცია]])",
+	"emailauth-login-failure": "ჩილათერ დოდასურებაშ კოდი!",
+	"emailauth-login-retry-limit": "ძალამ ბრელ ჩილათა!",
+	"emailauth-accountrecovery-intro": "კჷნე აკანწყით თქვან {{SITENAME}}შ ანგარიში",
+	"emailauth-accountrecovery-logged-in": "ათე ხასჷლა ვა რე ხემიოლუ ანგარიშშა მიშლირ მახვარებუეფშო. ქახვილუთ ანგარიშიშ კჷნე აკონწყუალას-და, ქორთხინთ დიო გეგშართათ ანგარიშშენ.",
+	"emailauth-accountrecovery-username-label": "მახვარებუშ ჯოხო",
+	"emailauth-accountrecovery-contactemail-label": "აქტიურ საკონტაქტო ელექტრონულ ფოსტა",
+	"emailauth-accountrecovery-contactemail-confirm-label": "დადასურით საკონტაქტო ელექტრონულ ფოსტა",
+	"emailauth-accountrecovery-registeredemail-label": "ელექტრონულ ფოსტა რეგისტრირებულ რე თქვან {{SITENAME}}-შ ანგარიშის",
+	"emailauth-accountrecovery-description-label": "გეძინელ კომენტარეფი",
+	"emailauth-accountrecovery-invalid-email": "ქორთხინთ გენშეჸონათ აქტიურ ელექტრონულ ფოსტაშ მიოწურაფუ.",
+	"emailauth-accountrecovery-error-badtoken": "დოდასურებაშ ჩილათერ რსხილი.\nშილებე რსხილს ბორჯიქ გურთუკონ.",
+	"emailauth-accountrecovery-disabled": "ანგარიშიშ კჷნე აკონწყუალა ათე ვიკის ვა რე ხემიოლუ. მოხვარაშოთ მიკართით ვებ-ხასჷლაშ ადმინისტრატორეფს."
+}

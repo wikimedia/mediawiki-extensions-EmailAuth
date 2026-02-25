@@ -39,5 +39,8 @@
 	"emailauth-accountrecovery-error-invalid-data": "Die von dir angegebenen Informationen konnten nicht verarbeitet werden. Bitte überprüfe deine Eingaben und versuche es erneut.",
 	"emailauth-accountrecovery-error-service-unavailable": "Der Kontowiederherstellungsdienst ist vorübergehend nicht verfügbar. Bitte versuche es später erneut.",
 	"emailauth-accountrecovery-error-badtoken": "Ungültiger Bestätigungslink.\nDer Link ist möglicherweise abgelaufen.",
-	"emailauth-accountrecovery-disabled": "Die Kontowiederherstellung ist in diesem Wiki nicht möglich. Bitte wende dich an die Website-Administratoren, um Hilfe zu erhalten."
+	"emailauth-accountrecovery-disabled": "Die Kontowiederherstellung ist in diesem Wiki nicht möglich. Bitte wende dich an die Website-Administratoren, um Hilfe zu erhalten.",
+	"logentry-emailauth-verify-failed": "Fehlgeschlagener Versuch der E-Mail-Authentifizierung",
+	"logentry-emailauth-verify-success": "Erfolgreicher Versuch der E-Mail-Authentifizierung",
+	"logentry-emailauth-recovery-submit": "Antrag auf Kontowiederherstellung eingereicht"
 }

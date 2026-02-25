@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Geraki",
 			"NikosLikomitros",
 			"Nikosgranturismogt"
 		]
 	},
-	"emailauth-login-retry-limit": "Πάρα πολλές αποτυχίες!"
+	"emailauth-login-retry-limit": "Πάρα πολλές αποτυχίες!",
+	"logentry-emailauth-recovery-submit": "Υποβλήθηκε αίτημα ανάκτησης λογαριασμού"
 }

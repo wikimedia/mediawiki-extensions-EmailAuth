@@ -40,5 +40,8 @@
 	"emailauth-accountrecovery-error-invalid-data": "Antamiasi tietoja ei voitu käsitellä. Tarkista syötteet ja yritä uudelleen.",
 	"emailauth-accountrecovery-error-service-unavailable": "Tunnuksen palautuspalvelu on tilapäisesti poissa käytöstä. Yritä myöhemmin uudelleen.",
 	"emailauth-accountrecovery-error-badtoken": "Virheellinen vahvistuslinkki.\nLinkki on voinut vanhentua.",
-	"emailauth-accountrecovery-disabled": "Tilin palautus ei ole saatavilla tässä wikissä. Ota yhteyttä sivuston ylläpitäjiin saadaksesi apua."
+	"emailauth-accountrecovery-disabled": "Tilin palautus ei ole saatavilla tässä wikissä. Ota yhteyttä sivuston ylläpitäjiin saadaksesi apua.",
+	"logentry-emailauth-verify-failed": "Epäonnistunut sähköpostitunnistautumisyritys",
+	"logentry-emailauth-verify-success": "Onnistunut sähköpostitunnistautumisyritys",
+	"logentry-emailauth-recovery-submit": "Tunnuksen palautuspyyntö lähetetty"
 }

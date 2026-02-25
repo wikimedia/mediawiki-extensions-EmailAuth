@@ -38,5 +38,8 @@
 	"emailauth-accountrecovery-error-invalid-data": "Внесените информации не можат да се обработат. Проверете го внесеното и обидете се повторно.",
 	"emailauth-accountrecovery-error-service-unavailable": "Повратокот на сметки е привремено недостапен. Обидете се подоцна.",
 	"emailauth-accountrecovery-error-badtoken": "Неважечка потврдна врска.\nВрската може да е истечена.",
-	"emailauth-accountrecovery-disabled": "Повратокот на сметки не е достапен на ова вики. Обратете се кај администраторите за помош."
+	"emailauth-accountrecovery-disabled": "Повратокот на сметки не е достапен на ова вики. Обратете се кај администраторите за помош.",
+	"logentry-emailauth-verify-failed": "Неуспешен обид за заверка на е-пошта",
+	"logentry-emailauth-verify-success": "Успешен обид за заверка на е-пошта",
+	"logentry-emailauth-recovery-submit": "Поднесено барање за повраток на сметка"
 }
