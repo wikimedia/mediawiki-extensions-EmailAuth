@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saurmandal"
+		]
+	},
+	"emailauth-desc": "ईमेल के माध्यम से संदिग्ध लॉग-इन्स की जाँच करता है",
+	"emailauth-token-label": "सत्यापन कोड",
+	"emailauth-token-help": "ईमेल से भेजा गया एकल-उपयोग 2FA टोकन।",
+	"emailauth-email-subject": "$1 के लिए आपका सत्यापन कोड",
+	"emailauth-email-body-intro": "$1, ऐसा लगता है कि आप $2 पर एक नए डिवाइस पर से लॉग-इन करने का प्रयास कर रहे हैं।",
+	"emailauth-email-body-code-text": "आपका सत्यापन कोड है:",
+	"emailauth-email-body-warning": "आपके खाते तक पहुँच प्राप्त करने के लिए यह कोड आवश्यक है। यह $1 में समाप्त हो जाएगा। अपनी सुरक्षा के लिए इसे किसी के भी साथ साझा न करें।",
+	"emailauth-email-body-attack-heading": "अगर यह आप नहीं थे तो:",
+	"emailauth-email-body-attack-p1": "यह ईमेल इसलिए भेजा गया है क्योंकि किसी ने आपके खाते में लॉग-इन करने का प्रयास किया है। लॉग-इन के प्रयास में आपके खाते का सही नाम और पासवर्ड शामिल थे।",
+	"emailauth-email-body-attack-p2": "अगर यह आप नहीं थे तो आपको अभी अपना पासवर्ड बदल लेना चाहिए।",
+	"emailauth-email-body-help-text": "अधिक जानकारी के लिए $1 देखें",
+	"emailauth-login-message": "आपको अपना लॉग-इन सत्यापित करना होगा। आपके ईमेल पते ($1) पर एक सत्यापन कोड भेजा गया है। कृपया वह कोड यहाँ दर्ज करें।",
+	"emailauth-login-help": "अगर आपको अब अपने खाते के ईमेल पते तक पहुँच नहीं है तो [[{{int:grouppage-sysop}}|साइट के प्रबंधकों]] से संपर्क करें। ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|अधिक जानकारी]])",
+	"emailauth-login-failure": "अमान्य सत्यापन कोड!",
+	"emailauth-login-retry-limit": "आप बहुत बार असफल हुए हैं!"
+}
