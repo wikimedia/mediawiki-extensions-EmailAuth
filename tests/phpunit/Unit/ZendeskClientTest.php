@@ -121,8 +121,7 @@ class ZendeskClientTest extends MediaWikiUnitTestCase {
 		// Tags should be configured
 		$this->assertSame( [ 'test_tag' ], $payload['request']['tags'] );
 
-		// Success StatusValue
-		$this->assertTrue( $status->isOK() );
+		$this->assertStatusOK( $status );
 	}
 
 	/**
@@ -190,11 +189,8 @@ class ZendeskClientTest extends MediaWikiUnitTestCase {
 			'requester_name' => 'TestUser',
 		] );
 
-		$this->assertFalse( $status->isOK() );
-
-		$errors = $status->getErrors();
-		$this->assertCount( 1, $errors );
-		$this->assertSame( $expectedMessageKey, $errors[0]['message'] );
+		$this->assertStatusNotOK( $status );
+		$this->assertStatusMessage( $expectedMessageKey, $status );
 	}
 
 }
