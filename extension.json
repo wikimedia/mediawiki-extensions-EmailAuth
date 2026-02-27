@@ -89,7 +89,7 @@
 		}
 	},
 	"LogActionsHandlers": {
-		"emailauth/*": "LogFormatter"
+		"emailauth/*": "MediaWiki\\Logging\\LogFormatter"
 	},
 	"MessagesDirs": {
 		"EmailAuth": [
