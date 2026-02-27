@@ -40,5 +40,8 @@
 	"emailauth-accountrecovery-error-invalid-data": "Không thể xử lý thông tin mà bạn đã cung cấp. Vui lòng kiểm tra thông tin đã nhập và thử lại.",
 	"emailauth-accountrecovery-error-service-unavailable": "Dịch vụ khôi phục tài khoản hiện đang tạm thời không khả dụng. Vui lòng thử lại sau.",
 	"emailauth-accountrecovery-error-badtoken": "Liên kết xác nhận không hợp lệ! Liên kết này có thể đã hết hạn.",
-	"emailauth-accountrecovery-disabled": "Tính năng khôi phục tài khoản hiện không khả dụng trên wiki này. Vui lòng liên hệ với bảo quản viên trang web để được hỗ trợ."
+	"emailauth-accountrecovery-disabled": "Tính năng khôi phục tài khoản hiện không khả dụng trên wiki này. Vui lòng liên hệ với bảo quản viên trang web để được hỗ trợ.",
+	"logentry-emailauth-verify-failed": "Không thể xác thực bằng thư điện tử",
+	"logentry-emailauth-verify-success": "Đã hoàn tất việc xác thực bằng thư điện tử",
+	"logentry-emailauth-recovery-submit": "Đã gửi yêu cầu khôi phục tài khoản"
 }

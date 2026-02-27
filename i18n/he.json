@@ -40,5 +40,8 @@
 	"emailauth-accountrecovery-error-invalid-data": "לא היה אפשר לעבד את המידע שסיפקת. נא לבדוק את מה שכתבת ולנסות שוב.",
 	"emailauth-accountrecovery-error-service-unavailable": "שירות שחזור החשבון אינו זמין באופן זמני. נא לנסות שוב מאוחר יותר.",
 	"emailauth-accountrecovery-error-badtoken": "קישור האימות בלתי־תקין.\nייתכן שתוקף הקישור פג.",
-	"emailauth-accountrecovery-disabled": "שחזור חשבון אינו זמין בוויקי הזה. נא ליצור קשר עם מפעילי האתר לקבלת סיוע."
+	"emailauth-accountrecovery-disabled": "שחזור חשבון אינו זמין בוויקי הזה. נא ליצור קשר עם מפעילי האתר לקבלת סיוע.",
+	"logentry-emailauth-verify-failed": "ניסיון אימות דוא\"ל כושל",
+	"logentry-emailauth-verify-success": "ניסיון אימות דוא\"ל מוצלח",
+	"logentry-emailauth-recovery-submit": "הוגשה בקשה לשחזור חשבון"
 }
