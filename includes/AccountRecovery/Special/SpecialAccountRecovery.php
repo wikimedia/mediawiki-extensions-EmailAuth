@@ -351,4 +351,12 @@ class SpecialAccountRecovery extends FormSpecialPage {
 	protected function getGroupName() {
 		return 'login';
 	}
+
+	/**
+	 * @inheritDoc
+	 * @codeCoverageIgnore Merely declarative
+	 */
+	public function doesWrites() {
+		return true;
+	}
 }
