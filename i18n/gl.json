@@ -19,7 +19,7 @@
 	"emailauth-login-message": "Tes que verificar a túa conexión. Enviouse un código de verificación ó teu enderezo de correo electrónico ($1). Indica aquí ese código.",
 	"emailauth-login-help": "Contacta coa [[{{int:grouppage-sysop}}|administración do sitio]] se xa non tes acceso ao enderezo de correo electrónico da túa conta ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|máis información]]).",
 	"emailauth-login-failure": "Código de verificación incorrecto!",
-	"emailauth-login-retry-limit": "Demasiados intentos fallidos!",
+	"emailauth-login-retry-limit": "Demasiados intentos erróneos!",
 	"emailauth-accountrecovery-intro": "Recuperar a túa conta de {{SITENAME}}",
 	"emailauth-accountrecovery-logged-in": "Esta páxina non está dispoñible para os usuarios que iniciaron sesión. Se necesitas recuperar unha conta, pecha a sesión primeiro.",
 	"emailauth-accountrecovery-username-label": "Nome de usuario",
@@ -39,5 +39,8 @@
 	"emailauth-accountrecovery-error-invalid-data": "Non se puido procesar a información que proporcionaches. Revisa as túas entradas e inténtao de novo.",
 	"emailauth-accountrecovery-error-service-unavailable": "O servizo de recuperación de contas non está dispoñible temporalmente. Inténtao de novo máis tarde.",
 	"emailauth-accountrecovery-error-badtoken": "A ligazón de confirmación non é válida.\nSe cadra caducou.",
-	"emailauth-accountrecovery-disabled": "A recuperación de contas non está dispoñible neste wiki. Ponte en contacto coa administración do sitio para obter axuda."
+	"emailauth-accountrecovery-disabled": "A recuperación de contas non está dispoñible neste wiki. Ponte en contacto coa administración do sitio para obter axuda.",
+	"logentry-emailauth-verify-failed": "Intento erróneo de verificación da autenticación do correo electrónico",
+	"logentry-emailauth-verify-success": "Intento correcto de verificación da autenticación do correo electrónico",
+	"logentry-emailauth-recovery-submit": "Envío dunha solicitude de recuperación de conta"
 }
