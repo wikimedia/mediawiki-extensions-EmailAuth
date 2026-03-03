@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saurmandal"
+		]
+	},
+	"emailauth-desc": "ईमेल के माध्यम से संदिग्ध लॉग-इन्स की जाँच करता है",
+	"emailauth-token-label": "सत्यापन कोड",
+	"emailauth-token-help": "ईमेल से भेजा गया एकल-उपयोग 2FA टोकन।",
+	"emailauth-login-message": "आपको अपना लॉग-इन सत्यापित करना होगा। आपके ईमेल पते ($1) पर एक सत्यापन कोड भेजा गया है। कृपया वह कोड यहाँ दर्ज करें।",
+	"emailauth-login-failure": "अमान्य सत्यापन कोड!",
+	"emailauth-login-retry-limit": "आप बहुत बार असफल हुए हैं!"
+}

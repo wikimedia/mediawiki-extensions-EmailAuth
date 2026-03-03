@@ -12,5 +12,5 @@
 	"emailauth-email-body": "O teu código de verificación de conexión a $1 é $2",
 	"emailauth-login-message": "Tes que verificar a túa conexión. Enviouse un código de verificación ó teu enderezo de correo electrónico ($1). Indica aquí ese código.",
 	"emailauth-login-failure": "Código de verificación incorrecto!",
-	"emailauth-login-retry-limit": "Demasiados intentos fallidos!"
+	"emailauth-login-retry-limit": "Demasiados intentos erróneos!"
 }
