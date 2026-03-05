@@ -20,5 +20,5 @@
 	"emailauth-login-message-no-email": "Tes que verificar a túa conexión. Enviouse un código de verificación ó teu enderezo de correo electrónico. Indica aquí ese código.",
 	"emailauth-login-help": "Contacta coa [[{{int:grouppage-sysop}}|administración do sitio]] se xa non tes acceso ao enderezo de correo electrónico da túa conta ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|máis información]]).",
 	"emailauth-login-failure": "Código de verificación incorrecto!",
-	"emailauth-login-retry-limit": "Demasiados intentos fallidos!"
+	"emailauth-login-retry-limit": "Demasiados intentos erróneos!"
 }
