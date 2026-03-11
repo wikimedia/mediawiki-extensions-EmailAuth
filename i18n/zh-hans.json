@@ -43,5 +43,8 @@
 	"emailauth-accountrecovery-error-invalid-data": "您提供的信息无法处理。请检查您输入的信息并重试。",
 	"emailauth-accountrecovery-error-service-unavailable": "账号恢复服务暂不可用，请稍后再试。",
 	"emailauth-accountrecovery-error-badtoken": "无效的确认链接。该链接可能已过期。",
-	"emailauth-accountrecovery-disabled": "本wiki不提供账号恢复服务。请联系网站管理员寻求帮助。"
+	"emailauth-accountrecovery-disabled": "本wiki不提供账号恢复服务。请联系网站管理员寻求帮助。",
+	"logentry-emailauth-verify-failed": "失败的电子邮件身份验证尝试",
+	"logentry-emailauth-verify-success": "成功的电子邮件身份验证尝试",
+	"logentry-emailauth-recovery-submit": "账户恢复请求已提交"
 }
