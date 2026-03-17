@@ -6,5 +6,10 @@
 			"Geraki"
 		]
 	},
+	"emailauth-desc": "Επαληθεύει ύποπτες συνδέσεις μέσω email",
+	"emailauth-token-label": "Κωδικός επαλήθευσης",
+	"emailauth-token-help": "Ένα μόνο 2FA token που στέλνεται με email.",
+	"emailauth-login-message": "Πρέπει να επαληθεύσετε τα στοιχεία σύνδεσής σας. Ένας κωδικός επαλήθευσης έχει σταλεί στη διεύθυνση email σας ($1), εισαγάγετε αυτόν τον κωδικό εδώ.",
+	"emailauth-login-failure": "Μη έγκυρος κωδικός επαλήθευσης!",
 	"emailauth-login-retry-limit": "Πάρα πολλές αποτυχίες!"
 }
