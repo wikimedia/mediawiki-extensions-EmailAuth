@@ -40,5 +40,8 @@
 	"emailauth-accountrecovery-error-invalid-data": "De door u verstrekte informatie kon niet worden verwerkt. Controleer uw invoer en probeer het opnieuw.",
 	"emailauth-accountrecovery-error-service-unavailable": "Accountherstel is tijdelijk niet beschikbaar. Probeer het later opnieuw.",
 	"emailauth-accountrecovery-error-badtoken": "Ongeldige bevestigingskoppeling.\nMogelijk is de koppeling verlopen.",
-	"emailauth-accountrecovery-disabled": "Accountherstel is niet beschikbaar op deze wiki. Neem contact op met de sitebeheerders voor hulp."
+	"emailauth-accountrecovery-disabled": "Accountherstel is niet beschikbaar op deze wiki. Neem contact op met de sitebeheerders voor hulp.",
+	"logentry-emailauth-verify-failed": "E-mailverificatie mislukt",
+	"logentry-emailauth-verify-success": "Verificatie van e-mailauthenticatie geslaagd",
+	"logentry-emailauth-recovery-submit": "Accountherstelverzoek ingediend"
 }
