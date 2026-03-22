@@ -303,7 +303,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		return $user;
 	}
 
-	public function provideMaskDomainData() {
+	public static function provideMaskDomainData() {
 		return [
 			[ '***.***', '✅' ],
 			[ '***.***', 'ⷘ⸴⿶Ⲛ⩩⬪➸⟇※ⓑ⌿✁⦲⇖' ],
@@ -325,7 +325,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		$this->assertSame( $maskedDomain, $wrappedProvider->maskDomain( $origDomain ) );
 	}
 
-	public function provideMaskEmailData() {
+	public static function provideMaskEmailData() {
 		return [
 			[ 't***@***.***', 'tester@example.com' ],
 			[ '*@***.***', 'a@domain.com' ],
