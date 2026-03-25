@@ -23,7 +23,7 @@ class EmailAuthCheckUserLogger {
 	 * request context to avoid TransactionProfiler warnings (see T417629).
 	 */
 	public function logSuccessfulVerification( UserIdentity $user ): void {
-		$this->log( $user, 'verify-success' );
+		$this->log( $user, $user, 'verify-success' );
 	}
 
 	/**
@@ -32,8 +32,8 @@ class EmailAuthCheckUserLogger {
 	 * This method performs database writes. It should only be called in a POST
 	 * request context to avoid TransactionProfiler warnings (see T417629).
 	 */
-	public function logFailedVerification( UserIdentity $user ): void {
-		$this->log( $user, 'verify-failed' );
+	public function logFailedVerification( UserIdentity $user, UserIdentity $performer ): void {
+		$this->log( $user, $performer, 'verify-failure' );
 	}
 
 	/**
@@ -42,20 +42,21 @@ class EmailAuthCheckUserLogger {
 	 * This method performs database writes. It should only be called in a POST
 	 * request context to avoid TransactionProfiler warnings (see T417629).
 	 */
-	public function logAccountRecoverySubmission( UserIdentity $user ): void {
-		$this->log( $user, 'recovery-submit' );
+	public function logAccountRecoverySubmission( UserIdentity $user, UserIdentity $performer ): void {
+		$this->log( $user, $performer, 'account-recovery-submit' );
 	}
 
-	private function log( UserIdentity $user, string $action ): void {
+	private function log( UserIdentity $user, UserIdentity $performer, string $action ): void {
 		if ( !$this->extensionRegistry->isLoaded( 'CheckUser' ) ) {
 			return;
 		}
 
 		$logEntry = new ManualLogEntry( 'emailauth', $action );
-		$logEntry->setPerformer( $user );
+		$logEntry->setPerformer( $performer );
 		$logEntry->setTarget(
 			PageReferenceValue::localReference( NS_USER, $user->getName() )
 		);
+		$logEntry->setParameters( [ '4:user-link:user' => $user->getName() ] );
 
 		/** @var CheckUserInsert $checkUserInsert */
 		$checkUserInsert = MediaWikiServices::getInstance()->get( 'CheckUserInsert' );

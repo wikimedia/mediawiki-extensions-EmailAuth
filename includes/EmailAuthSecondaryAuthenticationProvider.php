@@ -15,6 +15,7 @@ use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\User\User;
+use MediaWiki\User\UserIdentityValue;
 use RuntimeException;
 
 class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenticationProvider {
@@ -144,7 +145,8 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 				'code_expected' => substr( $token, 0, 2 ) . '...',
 				'code_actual' => substr( $req->token, 0, 2 ) . '...',
 			] );
-			$this->checkUserLogger->logFailedVerification( $user );
+			$performer = UserIdentityValue::newAnonymous( $user->getRequest()->getIP() );
+			$this->checkUserLogger->logFailedVerification( $user, $performer );
 		}
 
 		$failures = $this->manager->getAuthenticationSessionData( 'EmailAuthFailures' );

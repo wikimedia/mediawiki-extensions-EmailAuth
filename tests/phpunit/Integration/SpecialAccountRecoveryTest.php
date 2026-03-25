@@ -127,6 +127,10 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 				$this->callback( function ( $identity ) use ( $user ) {
 					$this->assertSame( $user->getName(), $identity->getName() );
 					return true;
+				} ),
+				$this->callback( function ( $performer ) {
+					$this->assertTrue( $performer->isAnon() );
+					return true;
 				} )
 			);
 		$this->setService( 'EmailAuth.CheckUserLogger', $checkUserLogger );

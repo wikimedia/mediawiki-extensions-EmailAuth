@@ -226,7 +226,7 @@ class SpecialAccountRecovery extends FormSpecialPage {
 
 		$targetUser = $this->userIdentityLookup->getUserIdentityByName( $ticketData['requester_name'] );
 		if ( $targetUser && $targetUser->isRegistered() ) {
-			$this->checkUserLogger->logAccountRecoverySubmission( $targetUser );
+			$this->checkUserLogger->logAccountRecoverySubmission( $targetUser, $this->getUser() );
 		}
 
 		return $this->sendConfirmationEmail( $ticketData );

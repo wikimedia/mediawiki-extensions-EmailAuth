@@ -39,6 +39,8 @@
 	"emailauth-accountrecovery-error-badtoken": "Invalid confirmation link.\nThe link may have expired.",
 	"emailauth-accountrecovery-disabled": "Account recovery is not available on this wiki. Please contact the site administrators for assistance.",
 	"logentry-emailauth-verify-failed": "Failed email authentication verification attempt",
+	"logentry-emailauth-verify-failure": "Failed email authentication verification attempt for $4",
 	"logentry-emailauth-verify-success": "Successful email authentication verification attempt",
-	"logentry-emailauth-recovery-submit": "An account recovery request was submitted for $1"
+	"logentry-emailauth-recovery-submit": "An account recovery request was submitted for $1",
+	"logentry-emailauth-account-recovery-submit": "An account recovery request was submitted for $4"
 }
