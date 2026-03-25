@@ -43,5 +43,5 @@
 	"emailauth-accountrecovery-disabled": "Tilin palautus ei ole saatavilla tässä wikissä. Ota yhteyttä sivuston ylläpitäjiin saadaksesi apua.",
 	"logentry-emailauth-verify-failed": "Epäonnistunut sähköpostitunnistautumisyritys",
 	"logentry-emailauth-verify-success": "Onnistunut sähköpostitunnistautumisyritys",
-	"logentry-emailauth-recovery-submit": "Tunnuksen palautuspyyntö lähetetty"
+	"logentry-emailauth-recovery-submit": "Tunnuksen palautuspyyntö lähetetty käyttäjälle $1"
 }
