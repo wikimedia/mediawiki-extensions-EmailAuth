@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Luky001"
+		]
+	},
+	"emailauth-desc": "Overuje podozrivé prihlásenia e-mailom",
+	"emailauth-token-label": "Overovací kód",
+	"emailauth-token-help": "Jednorazový token dvojfaktorovej autentifikácie bol odoslaný e-mailom.",
+	"emailauth-email-subject": "Váš overovací kód z projektu $1",
+	"emailauth-email-body-intro": "$1, vyzerá to, že sa snažíte prihlásiť na projekte $2 z nového zariadenia.",
+	"emailauth-email-body-code-text": "Váš overovací kód je:",
+	"emailauth-email-body-warning": "Tento kód je potrebný na prihlásenie sa do vášho účtu. Jeho platnosť vyprší za $1. V záujme bezpečnosti ho s nikým nezdieľajte.",
+	"emailauth-email-body-attack-heading": "Ak ste túto akciu nevykonali vy:",
+	"emailauth-email-body-attack-p1": "Tento e-mail vám bol zaslaný, pretože sa niekto pokúsil prihlásiť do vášho účtu. Pri pokuse o prihlásenie boli použité vaše správne meno účtu a heslo.",
+	"emailauth-email-body-attack-p2": "Ak ste to neboli vy, mali by ste si ihneď zmeniť heslo.",
+	"emailauth-email-body-help-text": "Viac informácií nájdete na stránke $1",
+	"emailauth-login-message": "Je potrebné overiť vaše prihlásenie. Na vašu e-mailovú adresu ($1) bol zaslaný overovací kód. Zadajte ho sem, prosím.",
+	"emailauth-login-help": "Ak už nemáte prístup k e-mailovej adrese vášho účtu, kontaktujte [[{{int:grouppage-sysop}}|správcov]]. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|viac informácií]])",
+	"emailauth-login-failure": "Neplatný overovací kód!",
+	"emailauth-login-retry-limit": "Príliš veľa nesprávnych pokusov!"
+}
