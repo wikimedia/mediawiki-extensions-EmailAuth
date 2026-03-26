@@ -43,5 +43,5 @@
 	"emailauth-accountrecovery-disabled": "שחזור חשבון אינו זמין בוויקי הזה. נא ליצור קשר עם מפעילי האתר לקבלת סיוע.",
 	"logentry-emailauth-verify-failed": "ניסיון אימות דוא\"ל כושל",
 	"logentry-emailauth-verify-success": "ניסיון אימות דוא\"ל מוצלח",
-	"logentry-emailauth-recovery-submit": "הוגשה בקשה לשחזור חשבון"
+	"logentry-emailauth-recovery-submit": "הוגשה בקשה לשחזור חשבון עבור $1"
 }

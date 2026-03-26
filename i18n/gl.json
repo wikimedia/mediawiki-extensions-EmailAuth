@@ -42,5 +42,5 @@
 	"emailauth-accountrecovery-disabled": "A recuperación de contas non está dispoñible neste wiki. Ponte en contacto coa administración do sitio para obter axuda.",
 	"logentry-emailauth-verify-failed": "Intento erróneo de verificación da autenticación do correo electrónico",
 	"logentry-emailauth-verify-success": "Intento correcto de verificación da autenticación do correo electrónico",
-	"logentry-emailauth-recovery-submit": "Envío dunha solicitude de recuperación de conta"
+	"logentry-emailauth-recovery-submit": "Enviouse unha solicitude de recuperación de conta para $1"
 }
