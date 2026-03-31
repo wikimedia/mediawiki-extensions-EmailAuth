@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Luky001"
+		]
+	},
+	"emailauth-desc": "Overuje podozrivé prihlásenia e-mailom",
+	"emailauth-token-label": "Overovací kód",
+	"emailauth-token-help": "Jednorazový token dvojfaktorovej autentifikácie bol odoslaný e-mailom.",
+	"emailauth-login-message": "Je potrebné overiť vaše prihlásenie. Na vašu e-mailovú adresu ($1) bol zaslaný overovací kód. Zadajte ho sem, prosím.",
+	"emailauth-login-failure": "Neplatný overovací kód!",
+	"emailauth-login-retry-limit": "Príliš veľa nesprávnych pokusov!"
+}
