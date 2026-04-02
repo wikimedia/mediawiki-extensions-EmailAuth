@@ -264,7 +264,7 @@ class SpecialAccountRecovery extends FormSpecialPage {
 			[
 				'username' => $ticketData['requester_name'],
 				'email' => $ticketData['requester_email'],
-				'token' => $token,
+				'token' => substr( $token, 0, 4 ) . '...',
 				...$this->getRequest()->getSecurityLogContext()
 			]
 		);
