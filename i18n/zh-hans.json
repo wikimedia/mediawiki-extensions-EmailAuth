@@ -15,14 +15,14 @@
 	"emailauth-email-subject": "您登录$1所需的验证码",
 	"emailauth-email-body-intro": "$1，看起来您正在尝试从$2上的新设备登录。",
 	"emailauth-email-body-code-text": "您的验证码是：",
-	"emailauth-email-body-warning": "您需要此代码才能访问您的帐号。代码将于$1后失效。为了您的安全，请勿与任何人分享该代码。",
+	"emailauth-email-body-warning": "您需要此代码才能访问您的账号。代码将于$1后失效。为了您的安全，请勿与任何人分享该代码。",
 	"emailauth-email-body-attack-heading": "如果这不是您本人：",
-	"emailauth-email-body-attack-p1": "发送此电子邮件是因为有人尝试登录您的帐号。该登录有尝试使用到您正确的帐号名称和密码。",
+	"emailauth-email-body-attack-p1": "您收到此电子邮件是因为有人尝试登录您的账号。该登录尝试使用了您正确的账号名称和密码。",
 	"emailauth-email-body-attack-p2": "如果这不是您本人，您应该立刻更改密码。",
 	"emailauth-email-body-help-text": "有关更多信息，请参阅$1",
 	"emailauth-login-message": "您需要验证您的登录。验证码已发送到您的电子邮件地址（$1），请在此输入该代码。",
 	"emailauth-login-message-no-email": "您需要验证您的登录。验证码已发送到您的电子邮件地址，请在此输入该代码。",
-	"emailauth-login-help": "如果您无法访问您的账号电子邮件地址，请联系[[{{int:grouppage-sysop}}|网站管理员]]。（[[mw:Special:MyLanguage/Help:Extension:EmailAuth|更多信息]]）",
+	"emailauth-login-help": "如果您无法访问您账号的电子邮件地址，请联系[[{{int:grouppage-sysop}}|网站管理员]]。（[[mw:Special:MyLanguage/Help:Extension:EmailAuth|更多信息]]）",
 	"emailauth-login-failure": "验证码无效！",
 	"emailauth-login-retry-limit": "失败次数过多！"
 }
