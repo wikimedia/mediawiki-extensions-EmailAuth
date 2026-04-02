@@ -255,7 +255,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 	private function maskDomain( string $domain ): string {
 		$fallback_domain_mask = '***.***';
 
-		if ( preg_match( "/^((?!-)[A-Za-z0-9-]{1, 63}(?<!-)\\.)+[A-Za-z]{2, 6}$/", $domain ) ) {
+		if ( !preg_match( '/^((?!-)[A-Za-z0-9-]{1,63}(?<!-)\.)+[A-Za-z]{2,6}$/', $domain ) ) {
 			// error on the side of caution if invalid domain
 			return $fallback_domain_mask;
 		}
