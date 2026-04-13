@@ -43,5 +43,5 @@
 	"emailauth-accountrecovery-disabled": "Accountherstel is niet beschikbaar op deze wiki. Neem contact op met de sitebeheerders voor hulp.",
 	"logentry-emailauth-verify-failed": "E-mailverificatie mislukt",
 	"logentry-emailauth-verify-success": "Verificatie van e-mailauthenticatie geslaagd",
-	"logentry-emailauth-recovery-submit": "Accountherstelverzoek ingediend"
+	"logentry-emailauth-recovery-submit": "Er is een verzoek tot accountherstel ingediend voor $1"
 }
