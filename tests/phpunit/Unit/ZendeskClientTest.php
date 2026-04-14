@@ -5,9 +5,9 @@ namespace MediaWiki\Extension\EmailAuth\Tests\Unit;
 use MediaWiki\Config\ServiceOptions;
 use MediaWiki\Extension\EmailAuth\AccountRecovery\Zendesk\ZendeskClient;
 use MediaWiki\Http\HttpRequestFactory;
+use MediaWiki\Status\Status;
 use MediaWikiUnitTestCase;
 use Psr\Log\LoggerInterface;
-use Status;
 
 /**
  * @covers \MediaWiki\Extension\EmailAuth\AccountRecovery\Zendesk\ZendeskClient

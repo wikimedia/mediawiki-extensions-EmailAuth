@@ -2,7 +2,6 @@
 
 namespace MediaWiki\Extension\EmailAuth\AccountRecovery\Special;
 
-use FormSpecialPage;
 use MediaWiki\Exception\PermissionsError;
 use MediaWiki\Extension\EmailAuth\AccountRecovery\Zendesk\ZendeskClient;
 use MediaWiki\Extension\EmailAuth\EmailAuthCheckUserLogger;
@@ -13,10 +12,11 @@ use MediaWiki\Mail\MailAddress;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Message\Message;
 use MediaWiki\Parser\Sanitizer;
+use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Status\Status;
 use MediaWiki\User\User;
 use MediaWiki\User\UserIdentityLookup;
-use MWCryptRand;
+use MediaWiki\Utils\MWCryptRand;
 use Psr\Log\LoggerInterface;
 use Throwable;
 use Wikimedia\Message\MessageSpecifier;

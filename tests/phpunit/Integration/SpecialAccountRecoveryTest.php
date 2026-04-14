@@ -8,8 +8,8 @@ use MediaWiki\Mail\IEmailer;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\Status\Status;
+use MediaWiki\Tests\Specials\SpecialPageTestBase;
 use PHPUnit\Framework\MockObject\MockObject;
-use SpecialPageTestBase;
 use StatusValue;
 
 /**
