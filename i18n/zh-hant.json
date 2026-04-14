@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"魔琴"
 		]
 	},
 	"emailauth-desc": "透過電子郵件驗證可疑的登入",
@@ -20,7 +21,7 @@
 	"emailauth-login-failure": "無效的驗證碼！",
 	"emailauth-login-retry-limit": "失敗過多！",
 	"emailauth-accountrecovery-intro": "恢復您的{{SITENAME}}帳號",
-	"emailauth-accountrecovery-logged-in": "此頁面僅對已登入使用者可用。如果您需要恢復帳號，請先登出。",
+	"emailauth-accountrecovery-logged-in": "此頁面對已登入使用者不可用。如果您需要恢復帳號，請先登出。",
 	"emailauth-accountrecovery-username-label": "使用者名稱",
 	"emailauth-accountrecovery-contactemail-label": "可聯絡的電郵",
 	"emailauth-accountrecovery-contactemail-confirm-label": "確認聯絡電郵",

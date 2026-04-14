@@ -6,7 +6,8 @@
 			"GuoPC",
 			"Key0121",
 			"Liuxinyu970226",
-			"Peterxy12"
+			"Peterxy12",
+			"魔琴"
 		]
 	},
 	"emailauth-desc": "使用电子邮件验证可疑登录",
@@ -25,7 +26,7 @@
 	"emailauth-login-failure": "验证码无效！",
 	"emailauth-login-retry-limit": "失败次数过多！",
 	"emailauth-accountrecovery-intro": "恢复你的{{SITENAME}}账号",
-	"emailauth-accountrecovery-logged-in": "此页面仅对已登录用户可见。如果您需要恢复账号，请先退出登录。",
+	"emailauth-accountrecovery-logged-in": "此页面对已登录用户不可见。如果您需要恢复账号，请先退出登录。",
 	"emailauth-accountrecovery-username-label": "用户名",
 	"emailauth-accountrecovery-contactemail-label": "可联络的联系电子邮件",
 	"emailauth-accountrecovery-contactemail-confirm-label": "确认联系电子邮件",

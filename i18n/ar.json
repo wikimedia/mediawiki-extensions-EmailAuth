@@ -39,5 +39,8 @@
 	"emailauth-accountrecovery-error-invalid-data": "تعذّرت معالجة المعلومات التي أدخلتها. يُرجى مراجعة إدخالاتك والمحاولة مجددًا.",
 	"emailauth-accountrecovery-error-service-unavailable": "خدمة استرداد الحساب غير متاحة مؤقتًا. يُرجى المحاولة لاحقًا.",
 	"emailauth-accountrecovery-error-badtoken": "رابط التأكيد غير صالح.\nقد يكون الرابط منتهي الصلاحية.",
-	"emailauth-accountrecovery-disabled": "استعادة الحساب غير متاحة على هذا الويكي. يُرجى التواصل مع إدارة الموقع للمساعدة."
+	"emailauth-accountrecovery-disabled": "استعادة الحساب غير متاحة على هذا الويكي. يُرجى التواصل مع إدارة الموقع للمساعدة.",
+	"logentry-emailauth-verify-failed": "محاولة فاشلة للتحقق من صحة البريد الإلكتروني",
+	"logentry-emailauth-verify-success": "محاولة ناجحة للتحقق من صحة البريد الإلكتروني",
+	"logentry-emailauth-recovery-submit": "تم تقديم طلب استرداد حساب بقيمة $1"
 }
