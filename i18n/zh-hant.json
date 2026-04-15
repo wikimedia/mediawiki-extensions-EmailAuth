@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"魔琴"
 		]
 	},
 	"emailauth-desc": "透過電子郵件驗證可疑的登入",

@@ -3,7 +3,8 @@
 		"authors": [
 			"MITO",
 			"Pyscowicz",
-			"Samoasambia"
+			"Samoasambia",
+			"Alluk."
 		]
 	},
 	"emailauth-desc": "Vahvistaa epäilyttävät kirjautumiset sähköpostitse",
@@ -12,10 +13,10 @@
 	"emailauth-email-subject": "Vahvistuskoodisi sivustolle $1",
 	"emailauth-email-body-intro": "$1, näyttää siltä, että yrität kirjautua sisään uudelta laitteelta sivustolle $2.",
 	"emailauth-email-body-code-text": "Vahvistuskoodisi on:",
-	"emailauth-email-body-warning": "Tarvitset tätä koodia päästäksesi käyttämään tunnustasi. Koodin voimassaoloaika on: $1. Turvallisuutesi vuoksi älä jaa sitä kenenkään muun kanssa.",
+	"emailauth-email-body-warning": "Tarvitset koodia päästäksesi käyttämään tunnustasi. Koodin voimassaoloaika on $1. Älä jaa koodia kenellekään.",
 	"emailauth-email-body-attack-heading": "Jos se et ollut sinä:",
 	"emailauth-email-body-attack-p1": "Tämä sähköposti lähetettiin, koska joku yritti kirjautua tunnuksellesi. Kirjautumisyrityksessä käytettiin tunnuksesi oikeaa nimeä ja salasanaa.",
-	"emailauth-email-body-attack-p2": "Jos se et ollut sinä, sinun kannattaa vaihtaa salasanasi heti.",
+	"emailauth-email-body-attack-p2": "Jos se et ollut sinä, vaihda salasanasi heti.",
 	"emailauth-email-body-help-text": "Lisätietoja löytyy sivulta $1",
 	"emailauth-login-message": "Sinun on vahvistettava kirjautumisesi. Vahvistuskoodi on lähetetty sähköpostiosoitteeseesi ($1), syötä koodi tähän.",
 	"emailauth-login-message-no-email": "Sinun on vahvistettava kirjautumisesi. Vahvistuskoodi on lähetetty sähköpostiosoitteeseesi, syötä koodi tähän.",
