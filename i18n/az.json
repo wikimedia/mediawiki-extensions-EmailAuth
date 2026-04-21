@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Nemoralis",
+			"Toghrul Rahimli",
 			"Əkrəm"
 		]
 	},
@@ -10,7 +11,7 @@
 	"emailauth-token-help": "E-poçt vasitəsilə göndərilən birdəfəlik 2FA kodu.",
 	"emailauth-email-subject": "Sizin $1 giriş təsdiqləmə kodunuz",
 	"emailauth-email-body-intro": "$1, görünür, $2 saytına yeni cihazdan daxil olmağa çalışırsınız.",
-	"emailauth-email-body-code-text": "Doğrulama kodunuz:",
+	"emailauth-email-body-code-text": "Təsdiqləmə kodunuz:",
 	"emailauth-email-body-warning": "Bu kod hesabınıza daxil olmaq üçün tələb olunur. Onun müddəti $1 sonra bitəcək. Təhlükəsizliyiniz üçün onu heç kimlə paylaşmayın.",
 	"emailauth-email-body-attack-heading": "Əgər bu siz deyilsinizsə:",
 	"emailauth-email-body-attack-p1": "Kimsə hesabınıza daxil olmağa cəhd etdiyi üçün bu e-poçt göndərilib. Giriş cəhdinə düzgün hesab adı və parol daxil edilib.",
@@ -18,7 +19,7 @@
 	"emailauth-email-body-help-text": "Əlavə məlumat üçün $1 səhifəsinə baxın",
 	"emailauth-login-message": "Girişinizi doğrulamalısınız. E-poçt ünvanınıza ($1) doğrulama kodu göndərilib, zəhmət olmasa, o kodu buraya daxil edin.",
 	"emailauth-login-help": "Hesabınızın e-poçt ünvanına artıq girə bilmirsinizsə, [[{{int:grouppage-sysop}}|sayt inzibatçıları]] ilə əlaqə saxlayın. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|ətraflı məlumat]])",
-	"emailauth-login-failure": "Yanlış doğrulama kodu!",
+	"emailauth-login-failure": "Yanlış təsdiqləmə kodu!",
 	"emailauth-login-retry-limit": "Çox sayda səhv!",
 	"emailauth-accountrecovery-intro": "{{SITENAME}} hesabınızı bərpa edin",
 	"emailauth-accountrecovery-logged-in": "Bu səhifə sayta daxil olmuş istifadəçilər üçün əlçatan deyil. Hesabı bərpa etmək lazımdırsa, əvvəlcə hesabdan çıxış edin.",
@@ -40,7 +41,7 @@
 	"emailauth-accountrecovery-error-service-unavailable": "Hesabın bərpası xidməti müvəqqəti olaraq əlçatan deyil. Zəhmət olmasa, sonra yenidən cəhd edin.",
 	"emailauth-accountrecovery-error-badtoken": "Yanlış təsdiq linki.\nLinkin müddəti bitmiş ola bilər.",
 	"emailauth-accountrecovery-disabled": "Hesabın bərpası bu vikidə mövcud deyil. Kömək üçün sayt administratorları ilə əlaqə saxlayın.",
-	"logentry-emailauth-verify-failed": "Uğursuz e-poçt identifikasiyası doğrulama cəhdi",
-	"logentry-emailauth-verify-success": "Uğurlu e-poçt identifikasiyası doğrulama cəhdi",
+	"logentry-emailauth-verify-failed": "Uğursuz e-poçt təsdiqləmə cəhdi",
+	"logentry-emailauth-verify-success": "Uğurlu e-poçt təsdiqləmə cəhdi",
 	"logentry-emailauth-recovery-submit": "$1 üçün hesabın bərpası sorğusu göndərildi"
 }
