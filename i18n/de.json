@@ -41,6 +41,8 @@
 	"emailauth-accountrecovery-error-badtoken": "Ungültiger Bestätigungslink.\nDer Link ist möglicherweise abgelaufen.",
 	"emailauth-accountrecovery-disabled": "Die Kontowiederherstellung ist in diesem Wiki nicht möglich. Bitte wende dich an die Website-Administratoren, um Hilfe zu erhalten.",
 	"logentry-emailauth-verify-failed": "Fehlgeschlagener Versuch der E-Mail-Authentifizierung",
+	"logentry-emailauth-verify-failure": "Fehlgeschlagener Versuch der E-Mail-Authentifizierung für $4",
 	"logentry-emailauth-verify-success": "Erfolgreicher Versuch der E-Mail-Authentifizierung",
-	"logentry-emailauth-recovery-submit": "Es wurde ein Antrag auf Kontowiederherstellung für $1 eingereicht."
+	"logentry-emailauth-recovery-submit": "Es wurde ein Antrag auf Kontowiederherstellung für $1 eingereicht.",
+	"logentry-emailauth-account-recovery-submit": "Es wurde ein Antrag auf Kontowiederherstellung für $4 eingereicht"
 }

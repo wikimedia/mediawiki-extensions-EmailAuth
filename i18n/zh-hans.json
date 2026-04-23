@@ -7,6 +7,7 @@
 			"Key0121",
 			"Liuxinyu970226",
 			"Peterxy12",
+			"TigerZhang",
 			"魔琴"
 		]
 	},
@@ -47,5 +48,6 @@
 	"emailauth-accountrecovery-disabled": "本wiki不提供账号恢复服务。请联系网站管理员寻求帮助。",
 	"logentry-emailauth-verify-failed": "失败的电子邮件身份验证尝试",
 	"logentry-emailauth-verify-success": "成功的电子邮件身份验证尝试",
-	"logentry-emailauth-recovery-submit": "已为$1提交账号恢复请求"
+	"logentry-emailauth-recovery-submit": "已为$1提交账号恢复请求",
+	"logentry-emailauth-account-recovery-submit": "已为$4提交账号恢复请求"
 }

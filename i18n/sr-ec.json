@@ -26,5 +26,7 @@
 	"emailauth-accountrecovery-error-generic": "Дошло је до грешке при обради Вашег захтева. Молимо поново покушајте касније.",
 	"emailauth-accountrecovery-error-invalid-data": "Наведене информације није било могуће обрадити. Молимо проверите уносе па покушајте поново.",
 	"emailauth-accountrecovery-error-service-unavailable": "Сервис за опоравак налога тренутно није доступан. Молимо покушајте касније.",
-	"emailauth-accountrecovery-error-badtoken": "Неважећи линк за потврду.\nЛинк је можда истекао."
+	"emailauth-accountrecovery-error-badtoken": "Неважећи линк за потврду.\nЛинк је можда истекао.",
+	"logentry-emailauth-verify-failure": "Покушај аутентификације имејла за $4 није успео",
+	"logentry-emailauth-account-recovery-submit": "Захтев за опоравак налога $4 је прослеђњн"
 }

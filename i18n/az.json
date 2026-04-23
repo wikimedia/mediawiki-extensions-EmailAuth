@@ -17,7 +17,7 @@
 	"emailauth-email-body-attack-p1": "Kimsə hesabınıza daxil olmağa cəhd etdiyi üçün bu e-poçt göndərilib. Giriş cəhdinə düzgün hesab adı və parol daxil edilib.",
 	"emailauth-email-body-attack-p2": "Əgər bu siz deyilsinizsə, parolunuzu indi dəyişməlisiniz.",
 	"emailauth-email-body-help-text": "Əlavə məlumat üçün $1 səhifəsinə baxın",
-	"emailauth-login-message": "Girişinizi doğrulamalısınız. E-poçt ünvanınıza ($1) doğrulama kodu göndərilib, zəhmət olmasa, o kodu buraya daxil edin.",
+	"emailauth-login-message": "Girişinizi təsdiq etmək üçün e-poçt ünvanınıza ($1) təsdiqləmə kodu göndərilib. Zəhmət olmasa, o kodu buraya daxil edin.",
 	"emailauth-login-help": "Hesabınızın e-poçt ünvanına artıq girə bilmirsinizsə, [[{{int:grouppage-sysop}}|sayt inzibatçıları]] ilə əlaqə saxlayın. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|ətraflı məlumat]])",
 	"emailauth-login-failure": "Yanlış təsdiqləmə kodu!",
 	"emailauth-login-retry-limit": "Çox sayda səhv!",
@@ -42,6 +42,8 @@
 	"emailauth-accountrecovery-error-badtoken": "Yanlış təsdiq linki.\nLinkin müddəti bitmiş ola bilər.",
 	"emailauth-accountrecovery-disabled": "Hesabın bərpası bu vikidə mövcud deyil. Kömək üçün sayt administratorları ilə əlaqə saxlayın.",
 	"logentry-emailauth-verify-failed": "Uğursuz e-poçt təsdiqləmə cəhdi",
+	"logentry-emailauth-verify-failure": "$4 üçün e-poçt autentifikasiyası təsdiqləmə cəhdi uğursuz oldu",
 	"logentry-emailauth-verify-success": "Uğurlu e-poçt təsdiqləmə cəhdi",
-	"logentry-emailauth-recovery-submit": "$1 üçün hesabın bərpası sorğusu göndərildi"
+	"logentry-emailauth-recovery-submit": "$1 üçün hesabın bərpası sorğusu göndərildi",
+	"logentry-emailauth-account-recovery-submit": "$4 üçün hesabın bərpası sorğusu göndərildi"
 }
