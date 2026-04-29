@@ -17,7 +17,7 @@
 	"emailauth-email-body-attack-p1": "Kimsə hesabınıza daxil olmağa cəhd etdiyi üçün bu e-poçt göndərilib. Giriş cəhdinə düzgün hesab adı və parol daxil edilib.",
 	"emailauth-email-body-attack-p2": "Əgər bu siz deyilsinizsə, parolunuzu indi dəyişməlisiniz.",
 	"emailauth-email-body-help-text": "Əlavə məlumat üçün $1 səhifəsinə baxın",
-	"emailauth-login-message": "Girişinizi doğrulamalısınız. E-poçt ünvanınıza ($1) doğrulama kodu göndərilib, zəhmət olmasa, o kodu buraya daxil edin.",
+	"emailauth-login-message": "Girişinizi təsdiq etmək üçün e-poçt ünvanınıza ($1) təsdiqləmə kodu göndərilib. Zəhmət olmasa, o kodu buraya daxil edin.",
 	"emailauth-login-message-no-email": "Girişinizi doğrulamalısınız. E-poçt ünvanınıza doğrulama kodu göndərilib, zəhmət olmasa, o kodu buraya daxil edin.",
 	"emailauth-login-help": "Hesabınızın e-poçt ünvanına artıq girə bilmirsinizsə, [[{{int:grouppage-sysop}}|sayt inzibatçıları]] ilə əlaqə saxlayın. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|ətraflı məlumat]])",
 	"emailauth-login-failure": "Yanlış təsdiqləmə kodu!",
