@@ -40,6 +40,8 @@
 	"emailauth-accountrecovery-error-badtoken": "Ligamine de confirmation invalide.\nEs possibile que le ligamine ha expirate.",
 	"emailauth-accountrecovery-disabled": "Le recuperation de contos non es disponibile sur iste wiki. Per favor contacta le administratores del sito pro assistentia.",
 	"logentry-emailauth-verify-failed": "Tentativa de verification de authentication de e-mail fallite",
+	"logentry-emailauth-verify-failure": "Tentativa de verification de authentication de e-mail fallite pro $4",
 	"logentry-emailauth-verify-success": "Tentativa de verification de authentication de e-mail succedite",
-	"logentry-emailauth-recovery-submit": "Un requesta de recuperation del conto ha essite submittite pro $1"
+	"logentry-emailauth-recovery-submit": "Un requesta de recuperation del conto ha essite submittite pro $1",
+	"logentry-emailauth-account-recovery-submit": "Un requesta de recuperation del conto ha essite submittite pro $4"
 }
