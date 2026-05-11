@@ -190,7 +190,12 @@ class ZendeskClient {
 
 		$body .= "Contact email: " . $ticketData['requester_email'] . "\n\n";
 
-		$body .= "Additional comments:\n" . ( $ticketData['description'] ?? 'None provided' );
+		if ( !empty( $ticketData['description'] ) ) {
+			$body .= "Additional comments:\n=== Begin user-supplied description (untrusted) ===\n"
+			 . ( $ticketData['description'] ) . "\n=== End user-supplied description ===";
+		} else {
+			$body .= "Additional comments:\nNone provided";
+		}
 
 		return $body;
 	}
