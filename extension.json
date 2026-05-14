@@ -24,7 +24,8 @@
 				"FormatterFactory",
 				"EmailAuth.Logger",
 				"EmailAuth.CheckUserLogger",
-				"UserIdentityLookup"
+				"UserIdentityLookup",
+				"AuthManager"
 			]
 		}
 	},

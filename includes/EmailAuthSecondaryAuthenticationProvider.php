@@ -56,6 +56,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 			'code' => substr( $token, 0, 2 ) . '...',
 		] );
 
+		$this->manager->setAuthenticationSessionData( 'EmailAuthChallengeUserID', $user->getId() );
 		$this->manager->setAuthenticationSessionData( 'EmailAuthToken', $token );
 		$this->manager->setAuthenticationSessionData( 'EmailAuthFailures', 0 );
 		if ( !$user->isEmailConfirmed() ) {

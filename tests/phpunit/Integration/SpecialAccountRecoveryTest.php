@@ -3,6 +3,8 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Extension\EmailAuth\Tests\Integration;
 
+use MediaWiki\Auth\AuthManager;
+use MediaWiki\Exception\PermissionsError;
 use MediaWiki\Extension\EmailAuth\AccountRecovery\Zendesk\ZendeskClient;
 use MediaWiki\Extension\EmailAuth\EmailAuthCheckUserLogger;
 use MediaWiki\Mail\IEmailer;
@@ -12,6 +14,7 @@ use MediaWiki\Status\Status;
 use MediaWiki\Tests\Specials\SpecialPageTestBase;
 use PHPUnit\Framework\MockObject\MockObject;
 use StatusValue;
+use Wikimedia\TestingAccessWrapper;
 
 /**
  * @covers \MediaWiki\Extension\EmailAuth\AccountRecovery\Special\SpecialAccountRecovery
@@ -56,8 +59,21 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 		return $this->getServiceContainer()->getSpecialPageFactory()->getPage( 'AccountRecovery' );
 	}
 
+	private function setupAuthManagerWithChallenge( int $challengeUserId ): void {
+		$authManager = $this->createMock( AuthManager::class );
+		$authManager->method( 'getAuthenticationSessionData' )
+			->willReturnCallback( static function ( $key ) use ( $challengeUserId ) {
+				if ( $key === 'EmailAuthChallengeUserID' ) {
+					return $challengeUserId;
+				}
+				return null;
+			} );
+		$this->setService( 'AuthManager', $authManager );
+	}
+
 	public function testSuccessfulFormSubmission(): void {
 		$user = $this->getTestUser()->getUser();
+		$this->setupAuthManagerWithChallenge( $user->getId() );
 
 		// Assert that an email is sent when we submit the form
 		$capturedToken = null;
@@ -120,6 +136,7 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 
 	public function testFormSubmissionLogsToCheckUser(): void {
 		$user = $this->getTestUser()->getUser();
+		$this->setupAuthManagerWithChallenge( $user->getId() );
 
 		$checkUserLogger = $this->createMock( EmailAuthCheckUserLogger::class );
 		$checkUserLogger->expects( $this->once() )
@@ -147,9 +164,82 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 	}
 
 	public function testConfirmBadToken() {
+		$this->setupAuthManagerWithChallenge( $this->getTestUser()->getUser()->getId() );
 		$this->zendeskMock->expects( $this->never() )->method( 'createTicket' );
 
 		[ $html ] = $this->executeSpecialPage( 'confirm/123abc' );
 		$this->assertStringContainsString( '(emailauth-accountrecovery-error-badtoken)', $html );
+	}
+
+	public function testNoFormWhenLoggedIn() {
+		$user = $this->getTestUser()->getUser();
+		$this->expectException( PermissionsError::class );
+		[ $html ] = $this->executeSpecialPage( '', null, null, $user );
+	}
+
+	public function testNoFormWhenNoChallengeIsActive(): void {
+		// getAuthenticationSessionData returns null by default (no challenge)
+
+		[ $html ] = $this->executeSpecialPage( '' );
+		$this->assertStringContainsString( '(emailauth-accountrecovery-no-emailauth)', $html );
+	}
+
+	public function testGetFormFieldsPrePopulatesUsernameWhenChallengeActive(): void {
+		$testUser = $this->getTestUser()->getUser();
+		$this->setupAuthManagerWithChallenge( $testUser->getId() );
+
+		$page = $this->newSpecialPage();
+		$wrapped = TestingAccessWrapper::newFromObject( $page );
+		$fields = $wrapped->getFormFields();
+
+		$this->assertStringContainsString( $testUser->getName(), $fields['username_display']['default'] );
+	}
+
+	public function testOnSubmitUsesSessionUsernameNotFormData(): void {
+		$challengeUser = $this->getTestUser()->getUser();
+		$this->setupAuthManagerWithChallenge( $challengeUser->getId() );
+
+		$this->emailerMock->expects( $this->once() )
+			->method( 'send' )
+			->with(
+				$this->anything(),
+				$this->anything(),
+				$this->anything(),
+				$this->callback( function ( $body ) use ( $challengeUser ) {
+					// Assert that we use the username from the challenge, not the username sent in the form.
+					$this->assertStringContainsString( $challengeUser->getName(), $body );
+					return true;
+				} )
+			);
+
+		$otherUser = $this->getTestUser( [ 'sysop' ] )->getUser();
+
+		$page = $this->newSpecialPage();
+		$result = $page->onSubmit( [
+			'username' => $otherUser->getName(),
+			'contact_email' => $otherUser->getEmail(),
+			'contact_email_confirm' => $otherUser->getEmail(),
+			'registered_email' => '',
+			'description' => '',
+		] );
+		$this->assertTrue( $result->isOK() );
+	}
+
+	public function testOnSubmitRejectsWithoutActiveChallenge(): void {
+		// No setupAuthManagerWithChallenge call — simulates no active EmailAuth challenge
+		$user = $this->getTestUser()->getUser();
+		$this->emailerMock->expects( $this->never() )->method( 'send' );
+
+		$page = $this->newSpecialPage();
+		$result = $page->onSubmit( [
+			'username' => $user->getName(),
+			'contact_email' => $user->getEmail(),
+			'contact_email_confirm' => $user->getEmail(),
+			'registered_email' => '',
+			'description' => '',
+		] );
+
+		$this->assertFalse( $result->isOK() );
+		$this->assertSame( 'emailauth-accountrecovery-no-emailauth', $result->getErrors()[0]['message'] );
 	}
 }

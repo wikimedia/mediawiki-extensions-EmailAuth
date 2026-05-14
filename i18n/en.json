@@ -32,6 +32,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "This confirmation link has expired. A new confirmation link has been sent to the contact email address you provided. Please click this new link to complete your account recovery request.",
 	"emailauth-accountrecovery-email-mismatch": "The email addresses you entered do not match. Please check and try again.",
 	"emailauth-accountrecovery-invalid-email": "Please enter a valid email address.",
+	"emailauth-accountrecovery-no-emailauth": "Please try to [[Special:UserLogin|log in]] or [[Special:PasswordReset|reset your password]] before attempting account recovery.",
 	"emailauth-accountrecovery-rate-limited": "You have submitted too many account recovery requests. Please wait before trying again.",
 	"emailauth-accountrecovery-error-generic": "An error occurred while processing your request. Please try again later.",
 	"emailauth-accountrecovery-error-invalid-data": "The information you provided could not be processed. Please check your entries and try again.",

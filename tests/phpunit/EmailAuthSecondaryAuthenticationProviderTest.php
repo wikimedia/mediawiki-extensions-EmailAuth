@@ -274,6 +274,23 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 			AuthenticationResponse::PASS ), $this->identicalTo( AuthenticationResponse::ABSTAIN ) ) );
 	}
 
+	public function testBeginSecondaryAuthenticationStoresChallengeUserId(): void {
+		$this->setTemporaryHook( 'EmailAuthRequireToken', static function ( $user, &$verificationRequired ) {
+			$verificationRequired = true;
+		} );
+
+		$this->session->clear();
+		$user = $this->getMockUser( true );
+		$user->expects( $this->once() )->method( 'sendMail' )->willReturn( Status::newGood() );
+		$response = $this->provider->beginSecondaryAuthentication( $user, [] );
+		$this->assertSame( AuthenticationResponse::UI, $response->status );
+
+		$this->assertSame(
+			$user->getId(),
+			$this->manager->getAuthenticationSessionData( 'EmailAuthChallengeUserID' )
+		);
+	}
+
 	protected function getMockUser( $isEmailConfirmed, $email = 'a@b.com' ) {
 		$user = $this->getMockBuilder( User::class )
 			->onlyMethods( [

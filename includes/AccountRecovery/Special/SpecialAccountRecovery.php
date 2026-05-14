@@ -3,9 +3,11 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Extension\EmailAuth\AccountRecovery\Special;
 
+use MediaWiki\Auth\AuthManager;
 use MediaWiki\Exception\PermissionsError;
 use MediaWiki\Extension\EmailAuth\AccountRecovery\Zendesk\ZendeskClient;
 use MediaWiki\Extension\EmailAuth\EmailAuthCheckUserLogger;
+use MediaWiki\Html\Html;
 use MediaWiki\Language\FormatterFactory;
 use MediaWiki\Language\RawMessage;
 use MediaWiki\Mail\IEmailer;
@@ -32,7 +34,8 @@ class SpecialAccountRecovery extends FormSpecialPage {
 		private readonly FormatterFactory $formatterFactory,
 		private readonly LoggerInterface $logger,
 		private readonly EmailAuthCheckUserLogger $checkUserLogger,
-		private readonly UserIdentityLookup $userIdentityLookup
+		private readonly UserIdentityLookup $userIdentityLookup,
+		private readonly AuthManager $authManager
 	) {
 		parent::__construct( 'AccountRecovery' );
 	}
@@ -50,9 +53,17 @@ class SpecialAccountRecovery extends FormSpecialPage {
 			$this->setHeaders();
 			$this->outputHeader();
 			$this->handleConfirmationLink( $matches[1] );
-		} else {
-			parent::execute( $par );
+			return;
 		}
+
+		// Don't execute this page if we are logged out and have no EmailAuth challenge.
+		if ( !$this->getUser()->isRegistered() && !$this->getUsernameFromEmailAuthChallenge() ) {
+			$this->setHeaders();
+			$this->getOutput()->addWikiMsg( 'emailauth-accountrecovery-no-emailauth' );
+			return;
+		}
+
+		parent::execute( $par );
 	}
 
 	/**
@@ -116,14 +127,13 @@ class SpecialAccountRecovery extends FormSpecialPage {
 
 	/** @inheritDoc */
 	protected function getFormFields() {
+		$challengeUsername = $this->getUsernameFromEmailAuthChallenge();
 		return [
-			'username' => [
-				'type' => 'user',
+			'username_display' => [
+				'type' => 'info',
 				'label-message' => 'emailauth-accountrecovery-username-label',
-				'exists' => true,
-				'required' => true,
-				'maxlength' => 255,
-				'filter-callback' => [ $this, 'trimValueIfString' ],
+				'default' => Html::element( 'strong', [], $challengeUsername ?? '' ),
+				'raw' => true,
 			],
 			'contact_email' => [
 				'type' => 'email',
@@ -217,10 +227,16 @@ class SpecialAccountRecovery extends FormSpecialPage {
 			}
 		}
 
+		// Validate user has an active EmailAuth challenge
+		$challengeUsername = $this->getUsernameFromEmailAuthChallenge();
+		if ( !$challengeUsername ) {
+			return Status::newFatal( 'emailauth-accountrecovery-no-emailauth' );
+		}
+
 		// Build a clean ticket payload from validated and trimmed data
 		$ticketData = [
 			'requester_email' => $contactEmail,
-			'requester_name' => trim( $data['username'] ),
+			'requester_name' => $challengeUsername,
 			'registered_email' => $registeredEmail,
 			'description' => isset( $data['description'] ) ? trim( $data['description'] ) : null,
 		];
@@ -341,6 +357,23 @@ class SpecialAccountRecovery extends FormSpecialPage {
 			[],
 			$this->getPageTitle()
 		);
+	}
+
+	/**
+	 * Check if the current session has an active emailauth challenge
+	 * (i.e. the user is in the middle of a login flow that requires
+	 * email verification) and return the associated username.
+	 *
+	 * @return string|null Username if an emailauth challenge is in progress, null otherwise
+	 */
+	private function getUsernameFromEmailAuthChallenge(): ?string {
+		$challengeUserId = $this->authManager->getAuthenticationSessionData( 'EmailAuthChallengeUserID' );
+
+		if ( $challengeUserId !== null ) {
+			return $this->userIdentityLookup->getUserIdentityByUserId( $challengeUserId )->getName();
+		}
+
+		return null;
 	}
 
 	/** @inheritDoc */

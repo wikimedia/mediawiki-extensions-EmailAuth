@@ -32,6 +32,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "Message shown on Special:AccountRecovery when the confirmation link has expired and a new confirmation email has been sent.",
 	"emailauth-accountrecovery-email-mismatch": "Error message when the two email addresses entered do not match",
 	"emailauth-accountrecovery-invalid-email": "Error message when an invalid email address is entered",
+	"emailauth-accountrecovery-no-emailauth": "Error message when a user attempts to load or submit the account recovery form without an active email authentication attempt for their session",
 	"emailauth-accountrecovery-rate-limited": "Error message when too many account recovery requests have been submitted",
 	"emailauth-accountrecovery-error-generic": "Generic error message when the account recovery request fails",
 	"emailauth-accountrecovery-error-invalid-data": "Error message when the submitted data could not be processed by the service",
