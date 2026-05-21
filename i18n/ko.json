@@ -9,10 +9,15 @@
 	"emailauth-token-label": "인증 코드",
 	"emailauth-token-help": "1회용 2FA 토큰을 이메일로 보냈습니다.",
 	"emailauth-email-subject": "$1의 로그인 인증 코드",
+	"emailauth-email-body-intro": "$1님, 새 기기에서 $2에 로그인 하려고 시도하는 것으로 보입니다.",
 	"emailauth-email-body-code-text": "당신의 인증 코드:",
+	"emailauth-email-body-warning": "이 코드는 당신의 계정에 접근하기 위한 것입니다. $1 뒤에 만료됩니다. 보안을 위해, 누구와도 공유하지 마세요.",
 	"emailauth-email-body-attack-heading": "당신이 아닌 경우:",
+	"emailauth-email-body-attack-p1": "이 이메일은 누군가가 당신의 계정에 로그인하려고 시도했기 때문에 보내졌습니다. 로그인 시도에는 올바른 계정 이름과 비밀번호가 포함되었습니다.",
+	"emailauth-email-body-attack-p2": "당신이 아닌 경우, 비밀번호를 지금 변경해야 합니다.",
 	"emailauth-email-body-help-text": "자세한 내용은 $1 항목을 참고하십시오.",
 	"emailauth-login-message": "로그인을 확인해야 합니다. 인증 코드가 당신의 이메일 주소 ($1)로 발송되었습니다. 해당 코드를 여기에 입력해 주십시오.",
+	"emailauth-login-help": "더이상 당신의 계정 이메일에 접근할 수 없는 경우, [[{{int:grouppage-sysop}}|사이트 관리자]]에게 문의하세요. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|더 알아보기]])",
 	"emailauth-login-failure": "인증 코드가 잘못됐습니다!",
 	"emailauth-login-retry-limit": "실패가 너무 많습니다!"
 }
