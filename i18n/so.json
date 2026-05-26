@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"emailauth-desc": "Waxay ku xaqiijisaa gelitaannada laga shakiyo iimayl ahaan",
+	"emailauth-token-label": "Koodhka xaqiijinta",
+	"emailauth-token-help": "Astaanta hal mar la isticmaalo ee 2FA oo loo soo diray iimayl.",
+	"emailauth-login-message": "Waxaad u baahan tahay inaad xaqiijiso gelitaankaaga. Koodh xaqiijin ayaa loo diray iimaylkaaga ($1), fadlan halkan geli koodhkaas.",
+	"emailauth-login-failure": "Koodhka xaqiijinta waa khalad!",
+	"emailauth-login-retry-limit": "Isku dayo badan oo fashilmay!"
+}
