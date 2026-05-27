@@ -33,6 +33,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "Iste ligamine de confirmation ha expirate. Un nove ligamine de confirmation ha essite inviate al adresse de e-mail fornite. Per favor clicca sur iste nove ligamine pro terminar tu requesta de recuperation de conto.",
 	"emailauth-accountrecovery-email-mismatch": "Le adresses de e-mail inserite non es identic. Per favor verifica e tenta lo de novo.",
 	"emailauth-accountrecovery-invalid-email": "Per favor insere un adresse de e-mail valide.",
+	"emailauth-accountrecovery-no-emailauth": "Per favor tenta [[Special:UserLogin|aperir session]] o [[Special:PasswordReset|reinitialisar tu contrasigno]] ante de tentar le recuperation del conto.",
 	"emailauth-accountrecovery-rate-limited": "Tu ha inviate troppo de requestas de recuperation de conto. Per favor attende ante de tentar lo de novo.",
 	"emailauth-accountrecovery-error-generic": "Un error ha occurrite durante le tractamento de tu requesta. Per favor tenta lo de novo plus tarde.",
 	"emailauth-accountrecovery-error-invalid-data": "Le information fornite non poteva esser tractate. Per favor verifica tu entratas e tenta lo de novo.",

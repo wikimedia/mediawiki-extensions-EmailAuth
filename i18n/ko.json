@@ -34,6 +34,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "이 확인 링크는 만료되었습니다. 제공된 연락처 이메일 주소로 새로운 확인 링크가 발송되었습니다. 계정 복구 요청을 완료하려면 새 링크를 클릭하세요.",
 	"emailauth-accountrecovery-email-mismatch": "입력한 이메일 주소가 일치하지 않습니다. 확인하고 다시 시도해 보세요.",
 	"emailauth-accountrecovery-invalid-email": "유효한 이메일 주소를 입력하세요",
+	"emailauth-accountrecovery-no-emailauth": "계정 복구를 시도하기 전에 [[Special:UserLogin|로그인]] 또는 [[Special:PasswordReset|비밀번호 재설정]]을 시도해 보세요.",
 	"emailauth-accountrecovery-rate-limited": "계정 복구 요청을 너무 많이 제출했습니다. 다시 시도하기 전 기다려주세요.",
 	"emailauth-accountrecovery-error-generic": "요청 처리 중 오류가 발생했습니다. 나중에 다시 시도해 주세요.",
 	"emailauth-accountrecovery-error-invalid-data": "입력하신 정보를 처리할 수 없습니다. 입력하신 내용을 확인하고 다시 시도해 주세요.",

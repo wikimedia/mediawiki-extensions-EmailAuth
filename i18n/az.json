@@ -35,6 +35,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "Bu təsdiq linkinin müddəti bitib. Təqdim etdiyiniz e-poçt ünvanına yeni təsdiq linki göndərilib. Hesab bərpa sorğunuzu tamamlamaq üçün bu yeni linkə klikləyin.",
 	"emailauth-accountrecovery-email-mismatch": "Daxil etdiyiniz e-poçt ünvanları uyğun gəlmir. Zəhmət olmasa, yoxlayın və yenidən cəhd edin.",
 	"emailauth-accountrecovery-invalid-email": "Etibarlı e-poçt ünvanı daxil edin.",
+	"emailauth-accountrecovery-no-emailauth": "Hesabın bərpasına cəhd etməmişdən əvvəl [[Special:UserLogin|daxil olmağa]] və ya [[Special:PasswordReset|parolunuzu sıfırlamağa]] çalışın.",
 	"emailauth-accountrecovery-rate-limited": "Siz həddən çox hesab bərpa sorğusu göndərmisiniz. Zəhmət olmasa, yenidən cəhd etməzdən əvvəl gözləyin.",
 	"emailauth-accountrecovery-error-generic": "Sorğunuzu emal edərkən xəta baş verdi. Zəhmət olmasa, daha sonra yenidən cəhd edin.",
 	"emailauth-accountrecovery-error-invalid-data": "Təqdim etdiyiniz məlumatı emal etmək mümkün olmadı. Zəhmət olmasa, məlumat yoxlayın və yenidən cəhd edin.",

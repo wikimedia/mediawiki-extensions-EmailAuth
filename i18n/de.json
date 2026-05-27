@@ -34,6 +34,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "Dieser Bestätigungslink ist abgelaufen. Ein neuer Bestätigungslink wurde an die von dir angegebene E-Mail-Adresse gesendet. Bitte klicke auf diesen neuen Link, um deine Kontowiederherstellungsanfrage abzuschließen.",
 	"emailauth-accountrecovery-email-mismatch": "Die eingegebenen E-Mail-Adressen stimmen nicht überein. Bitte überprüfen deine Angaben und versuche es erneut.",
 	"emailauth-accountrecovery-invalid-email": "Bitte gib eine gültige E-Mail-Adresse ein",
+	"emailauth-accountrecovery-no-emailauth": "Bitte versuche, dich [[Special:UserLogin|anzumelden]] oder [[Special:PasswordReset|dein Passwort zurückzusetzen]], bevor du versuchst, dein Konto wiederherzustellen.",
 	"emailauth-accountrecovery-rate-limited": "Du hast zu viele Anträge auf Kontowiederherstellung gestellt. Bitte warte, bevor du es erneut versuchst.",
 	"emailauth-accountrecovery-error-generic": "Bei der Bearbeitung deiner Anfrage ist ein Fehler aufgetreten. Bitte versuche es später erneut.",
 	"emailauth-accountrecovery-error-invalid-data": "Die von dir angegebenen Informationen konnten nicht verarbeitet werden. Bitte überprüfe deine Eingaben und versuche es erneut.",

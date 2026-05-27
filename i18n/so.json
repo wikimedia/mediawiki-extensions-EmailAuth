@@ -33,6 +33,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "Xiriirka xaqiijinta wuu dhacay. Xiriir cusub oo xaqiijin ah ayaa loo diray iimaylka la xiriirka ee aad bixisay. Fadlan guji xiriirkan cusub si aad u dhammaystirto codsigaaga soo celinta akoonka.",
 	"emailauth-accountrecovery-email-mismatch": "Iimaylka aad gelisay isma waafaqsana. Fadlan hubi oo mar kale isku day.",
 	"emailauth-accountrecovery-invalid-email": "Fadlan geli iimayl sax ah.",
+	"emailauth-accountrecovery-no-emailauth": "Fadlan isku day inaad [[Special:UserLogin|gasho]] ama [[Special:PasswordReset|dib u dejiso eraygaaga sirta ah]] ka hor intaadan isku dayin soo kabashada akoonka.",
 	"emailauth-accountrecovery-rate-limited": "Waxaad gudbisay codsiyo badan oo soo celinta akoonka ah. Fadlan sug ka hor intaadan mar kale isku dayin.",
 	"emailauth-accountrecovery-error-generic": "Khalad ayaa dhacay intii lagu guda jiray habaynta codsigaaga. Fadlan isku day mar kale mar dambe.",
 	"emailauth-accountrecovery-error-invalid-data": "Macluumaadka aad bixisay lama habayn karin. Fadlan hubi xogta aad gelisay oo mar kale isku day.",

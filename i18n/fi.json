@@ -36,6 +36,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "Tämä vahvistuslinkki on vanhentunut. Uusi vahvistuslinkki on lähetetty antamaasi sähköpostiosoitteeseen, josta sinut tavoittaa. Klikkaa tätä uutta linkkiä vahvistaaksesi tunnuksen palautuspyyntösi.",
 	"emailauth-accountrecovery-email-mismatch": "Antamasi sähköpostiosoitteet eivät täsmää. Tarkista ne ja yritä uudelleen.",
 	"emailauth-accountrecovery-invalid-email": "Anna kelvollinen sähköpostiosoite.",
+	"emailauth-accountrecovery-no-emailauth": "Kokeile [[Special:UserLogin|kirjautua sisään]] tai [[Special:PasswordReset|uusia salasanasi]] ennen kuin yrität käyttäjätunnuksen palauttamista.",
 	"emailauth-accountrecovery-rate-limited": "Olet lähettänyt liian monta tunnuksen palautuspyyntöä. Odota ennen kuin yrität uudelleen.",
 	"emailauth-accountrecovery-error-generic": "Pyyntöäsi käsiteltäessä tapahtui virhe. Yritä myöhemmin uudelleen.",
 	"emailauth-accountrecovery-error-invalid-data": "Antamiasi tietoja ei voitu käsitellä. Tarkista syötteet ja yritä uudelleen.",

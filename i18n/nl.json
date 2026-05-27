@@ -35,6 +35,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "Deze bevestigingskoppeling is verlopen. Er is een nieuwe bevestigingskoppeling gestuurd naar het e-mailadres dat u hebt verstrekt. Klik op deze nieuwe koppeling om uw accountherstelaanvraag te voltooien.",
 	"emailauth-accountrecovery-email-mismatch": "De ingevoerde e-mailadressen komen niet overeen. Controleer ze en probeer het opnieuw.",
 	"emailauth-accountrecovery-invalid-email": "Voer een geldig e-mailadres in.",
+	"emailauth-accountrecovery-no-emailauth": "Probeer eerst [[Special:UserLogin|aan te melden]] of [[Special:PasswordReset|uw wachtwoord opnieuw in te stellen]] voordat u probeert uw account te herstellen.",
 	"emailauth-accountrecovery-rate-limited": "U heeft te veel verzoeken voor accountherstel ingediend. Wacht even voordat u het opnieuw probeert.",
 	"emailauth-accountrecovery-error-generic": "Er is een fout opgetreden bij het verwerken van uw verzoek. Probeer het later opnieuw.",
 	"emailauth-accountrecovery-error-invalid-data": "De door u verstrekte informatie kon niet worden verwerkt. Controleer uw invoer en probeer het opnieuw.",

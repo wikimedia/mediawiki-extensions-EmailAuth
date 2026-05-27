@@ -20,5 +20,6 @@
 	"emailauth-login-failure": "Net valabelen Iwwerpréiwungs-Code!",
 	"emailauth-login-retry-limit": "Ze vill dacks e falsche Code aginn!",
 	"emailauth-accountrecovery-username-label": "Benotzernumm",
-	"emailauth-accountrecovery-invalid-email": "Gitt wgl. eng gülteg E-Mail-Adress an."
+	"emailauth-accountrecovery-invalid-email": "Gitt wgl. eng gülteg E-Mail-Adress an.",
+	"emailauth-accountrecovery-no-emailauth": "Probéiert wgl. fir d'éischt, Iech [[Special:UserLogin|anzeloggen]] oder [[Special:PasswordReset|Äert Passwuert zeréckzesetzen]], ier Dir probéiert, Äre Kont ze recuperéieren."
 }

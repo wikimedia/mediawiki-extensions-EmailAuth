@@ -34,6 +34,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "Esta ligazón de confirmación caducou. Enviámosche unha nova ligazón de confirmación ao enderezo de contacto que proporcionaches. Fai clic nesa nova ligazón para completares a solicitude de recuperación da túa conta.",
 	"emailauth-accountrecovery-email-mismatch": "Os enderezos de correo electrónico que introduciches non coinciden. Compróbaos e inténtao de novo.",
 	"emailauth-accountrecovery-invalid-email": "Escribe un enderezo de correo electrónico válido.",
+	"emailauth-accountrecovery-no-emailauth": "Intenta [[Special:UserLogin|iniciar sesión]] ou [[Special:PasswordReset|restablecer o teu contrasinal]] antes de recuperar a conta.",
 	"emailauth-accountrecovery-rate-limited": "Enviaches demasiadas solicitudes de recuperación de conta. Agarda antes de intentalo de novo.",
 	"emailauth-accountrecovery-error-generic": "Produciuse un erro ao procesar a túa solicitude. Inténtao de novo máis tarde.",
 	"emailauth-accountrecovery-error-invalid-data": "Non se puido procesar a información que proporcionaches. Revisa as túas entradas e inténtao de novo.",
