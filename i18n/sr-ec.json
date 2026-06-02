@@ -23,6 +23,7 @@
 	"emailauth-accountrecovery-confirmation-subject": "Потврдите Ваш захтев за опоравком налога",
 	"emailauth-accountrecovery-email-mismatch": "Унесене имејл адресе се не поклапају, молимо исправите и покушајте поново.",
 	"emailauth-accountrecovery-invalid-email": "Молимо унесите ваљану имејл адресу.",
+	"emailauth-accountrecovery-no-emailauth": "Молимо пробајте прво [[Special:UserLogin|пријавити се]] или [[Special:PasswordReset|ресетовати лозинку]] пре опоравка налога.",
 	"emailauth-accountrecovery-error-generic": "Дошло је до грешке при обради Вашег захтева. Молимо поново покушајте касније.",
 	"emailauth-accountrecovery-error-invalid-data": "Наведене информације није било могуће обрадити. Молимо проверите уносе па покушајте поново.",
 	"emailauth-accountrecovery-error-service-unavailable": "Сервис за опоравак налога тренутно није доступан. Молимо покушајте касније.",
