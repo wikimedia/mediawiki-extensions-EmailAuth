@@ -33,6 +33,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "Оваа потврдна врска е истечена. Испратена е нова потврдна врска на е-поштата што ја внесовте за контакт. Стиснете на новата врска за да го завршите барањето за повраток на сметка.",
 	"emailauth-accountrecovery-email-mismatch": "Внесените е-пошти не се совпаѓаат. Направете исправка и обидете се повторно.",
 	"emailauth-accountrecovery-invalid-email": "Внесете важечка е-пошта.",
+	"emailauth-accountrecovery-no-emailauth": "Пробајте да [[Special:UserLogin|се најавите]] или [[Special:PasswordReset|ставете нова лозинка]] пред да направите обид за повраток на сметката.",
 	"emailauth-accountrecovery-rate-limited": "Поднесовте премногу барања за повраток на сметка. Почекајте пред да пробате повторно.",
 	"emailauth-accountrecovery-error-generic": "Се појави грешка при обработката на вашето барање. Обидете се подоцна.",
 	"emailauth-accountrecovery-error-invalid-data": "Внесените информации не можат да се обработат. Проверете го внесеното и обидете се повторно.",
