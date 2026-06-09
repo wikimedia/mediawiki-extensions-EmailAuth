@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Otokoume"
+			"Otokoume",
+			"Tensama0415"
 		]
 	},
 	"emailauth-desc": "不審なログインをメールで確認する",
