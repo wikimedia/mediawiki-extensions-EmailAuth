@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Luky001"
+			"Luky001",
+			"Wizzard"
 		]
 	},
 	"emailauth-desc": "Overuje podozrivé prihlásenia e-mailom",
@@ -41,5 +42,5 @@
 	"emailauth-accountrecovery-disabled": "Obnovenie účtu nie je na tejto wiki k dispozícii. Pre pomoc kontaktujte administrátorov stránky.",
 	"logentry-emailauth-verify-failed": "Neúspešný pokus o overenie prostredníctvom e-mailovej autentifikácie",
 	"logentry-emailauth-verify-success": "Úspešný pokus o overenie prostredníctvom e-mailovej autentifikácie",
-	"logentry-emailauth-recovery-submit": "Žiadosť o obnovenie účtu bola odoslaná"
+	"logentry-emailauth-recovery-submit": "Bola odoslaná žiadosť o obnovenie účtu $1"
 }
