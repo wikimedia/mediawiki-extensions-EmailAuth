@@ -34,6 +34,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "انتهت صلاحية رابط التأكيد هذا. تم إرسال رابط تأكيد جديد إلى عنوان البريد الإلكتروني الذي أدخلته. يُرجى النقر على هذا الرابط الجديد لإكمال طلب استرداد حسابك.",
 	"emailauth-accountrecovery-email-mismatch": "عناوين البريد الإلكتروني التي أدخلتها غير متطابقة. يُرجى التحقق والمحاولة مرة أخرى.",
 	"emailauth-accountrecovery-invalid-email": "يرجى إدخال عنوان بريد إلكتروني صالح.",
+	"emailauth-accountrecovery-no-emailauth": "يرجى محاولة [[Special:UserLogin|تسجيل الدخول]] أو [[Special:PasswordReset|إعادة تعيين كلمة المرور]] قبل محاولة استعادة الحساب.",
 	"emailauth-accountrecovery-rate-limited": "لقد أرسلتَ عددًا كبيرًا جدًا من طلبات استرداد الحساب. يُرجى الانتظار قبل المحاولة مجددًا.",
 	"emailauth-accountrecovery-error-generic": "حدث خطأ أثناء معالجة طلبك. يُرجى المحاولة لاحقًا.",
 	"emailauth-accountrecovery-error-invalid-data": "تعذّرت معالجة المعلومات التي أدخلتها. يُرجى مراجعة إدخالاتك والمحاولة مجددًا.",
@@ -41,6 +42,8 @@
 	"emailauth-accountrecovery-error-badtoken": "رابط التأكيد غير صالح.\nقد يكون الرابط منتهي الصلاحية.",
 	"emailauth-accountrecovery-disabled": "استعادة الحساب غير متاحة على هذا الويكي. يُرجى التواصل مع إدارة الموقع للمساعدة.",
 	"logentry-emailauth-verify-failed": "محاولة فاشلة للتحقق من صحة البريد الإلكتروني",
+	"logentry-emailauth-verify-failure": "محاولة فاشلة للتحقق من صحة البريد الإلكتروني مقابل $4",
 	"logentry-emailauth-verify-success": "محاولة ناجحة للتحقق من صحة البريد الإلكتروني",
-	"logentry-emailauth-recovery-submit": "تم تقديم طلب استرداد حساب بقيمة $1"
+	"logentry-emailauth-recovery-submit": "تم تقديم طلب استرداد حساب بقيمة $1",
+	"logentry-emailauth-account-recovery-submit": "تم تقديم طلب استرداد الحساب مقابل $4"
 }
