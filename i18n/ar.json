@@ -41,6 +41,8 @@
 	"emailauth-accountrecovery-error-badtoken": "رابط التأكيد غير صالح.\nقد يكون الرابط منتهي الصلاحية.",
 	"emailauth-accountrecovery-disabled": "استعادة الحساب غير متاحة على هذا الويكي. يُرجى التواصل مع إدارة الموقع للمساعدة.",
 	"logentry-emailauth-verify-failed": "محاولة فاشلة للتحقق من صحة البريد الإلكتروني",
+	"logentry-emailauth-verify-failure": "محاولة فاشلة للتحقق من صحة البريد الإلكتروني مقابل $4",
 	"logentry-emailauth-verify-success": "محاولة ناجحة للتحقق من صحة البريد الإلكتروني",
-	"logentry-emailauth-recovery-submit": "تم تقديم طلب استرداد حساب بقيمة $1"
+	"logentry-emailauth-recovery-submit": "تم تقديم طلب استرداد حساب بقيمة $1",
+	"logentry-emailauth-account-recovery-submit": "تم تقديم طلب استرداد الحساب مقابل $4"
 }
