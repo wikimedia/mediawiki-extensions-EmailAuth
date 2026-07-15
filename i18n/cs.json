@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"MrJaroslavik"
+		]
+	},
+	"emailauth-login-message": "Je třeba ověřit vaše přihlášení. Na vaši e-mailovou adresu ($1) byl zaslán ověřovací kód. Prosím, zadejte ho sem."
+}
