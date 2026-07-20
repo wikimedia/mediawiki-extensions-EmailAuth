@@ -17,9 +17,11 @@
 	"emailauth-email-body-help-text": "Fir méi Informatiounen, kuckt $1",
 	"emailauth-login-message": "Dir musst Är Umeldung verifizéieren. Et gouf e Verifizéierungscode op Är E-Mail-Adress ($1) geschéckt; gitt dee Code wgl. hei an.",
 	"emailauth-login-help": "Kontaktéiert d'[[{{int:grouppage-sysop}}|Administrateure vun der Säit]], wann Dir keen Zougrëff méi op d'E-Mail-Adress vun Ärem Kont hutt. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|Méi Informatiounen]])",
-	"emailauth-login-failure": "Net valabelen Iwwerpréiwungs-Code!",
+	"emailauth-login-failure": "Ongültege Verifikatiounscode!",
 	"emailauth-login-retry-limit": "Ze vill dacks e falsche Code aginn!",
 	"emailauth-accountrecovery-username-label": "Benotzernumm",
 	"emailauth-accountrecovery-invalid-email": "Gitt wgl. eng gülteg E-Mail-Adress an.",
-	"emailauth-accountrecovery-no-emailauth": "Probéiert wgl. fir d'éischt, Iech [[Special:UserLogin|anzeloggen]] oder [[Special:PasswordReset|Äert Passwuert zeréckzesetzen]], ier Dir probéiert, Äre Kont ze recuperéieren."
+	"emailauth-accountrecovery-no-emailauth": "Probéiert wgl. fir d'éischt, Iech [[Special:UserLogin|anzeloggen]] oder [[Special:PasswordReset|Äert Passwuert zeréckzesetzen]], ier Dir probéiert, Äre Kont ze recuperéieren.",
+	"emailauth-accountrecovery-error-invalid-data": "D'Informatiounen, déi Dir uginn hutt, konnten net verschafft ginn. Iwwerpréift wgl. nach eng Kéier Är Angaben a probéiert dann nach eng Kéier.",
+	"emailauth-accountrecovery-error-badtoken": "Ongültege Confirmatiounslink.\nDe Link ass méiglecherweis ofgelaf."
 }
