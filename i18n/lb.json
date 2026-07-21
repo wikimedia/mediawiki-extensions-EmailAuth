@@ -11,6 +11,6 @@
 	"emailauth-token-help": "Eemol gültegen 2FA-Token, dee per E-Mail geschéckt gouf.",
 	"emailauth-email-subject": "Ären Iwwerpréifings-Code fir $1 fir Iech anzeloggen",
 	"emailauth-login-message": "Dir musst Är Umeldung verifizéieren. Et gouf e Verifizéierungscode op Är E-Mail-Adress ($1) geschéckt; gitt dee Code wgl. hei an.",
-	"emailauth-login-failure": "Net valabelen Iwwerpréiwungs-Code!",
+	"emailauth-login-failure": "Ongültege Verifikatiounscode!",
 	"emailauth-login-retry-limit": "Ze vill dacks e falsche Code aginn!"
 }
