@@ -6,6 +6,7 @@ namespace MediaWiki\Extension\EmailAuth\Tests;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Auth\AuthManager;
+use MediaWiki\Auth\ElevatedSecurityAuthenticationRequest;
 use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\EmailAuth\EmailAuthCheckUserLogger;
 use MediaWiki\Extension\EmailAuth\EmailAuthSecondaryAuthenticationProvider;
@@ -98,6 +99,14 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		$response = $this->provider->continueSecondaryAuthentication( $user,
 			AuthenticationRequest::loadRequestsFromSubmission( $response->neededRequests,
 				[ 'token' => $this->manager->getAuthenticationSessionData( 'EmailAuthToken' ) ] ) );
+		$this->assertSame( AuthenticationResponse::PASS, $response->status );
+
+		// Don't require a token when reauthenticating
+		$this->session->clear();
+		$user = $this->getMockUser( true );
+		$elevatedSecurityReq = TestingAccessWrapper::construct( ElevatedSecurityAuthenticationRequest::class );
+		$elevatedSecurityReq->securityLevel = 'foo';
+		$response = $this->provider->beginSecondaryAuthentication( $user, [ $elevatedSecurityReq ] );
 		$this->assertSame( AuthenticationResponse::PASS, $response->status );
 
 		// abort after 4 failed attempts

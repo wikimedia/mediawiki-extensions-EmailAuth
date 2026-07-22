@@ -6,6 +6,7 @@ namespace MediaWiki\Extension\EmailAuth;
 use MediaWiki\Auth\AbstractSecondaryAuthenticationProvider;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthenticationResponse;
+use MediaWiki\Auth\ElevatedSecurityAuthenticationRequest;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Deferred\DeferredUpdates;
 use MediaWiki\Html\Html;
@@ -36,6 +37,11 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 
 	/** @inheritDoc */
 	public function beginSecondaryAuthentication( $user, array $reqs ) {
+		if ( AuthenticationRequest::getRequestByClass( $reqs, ElevatedSecurityAuthenticationRequest::class ) ) {
+			// Don't challenge when an already logged-in user is reauthenticating
+			return AuthenticationResponse::newPass();
+		}
+
 		$token = $this->generateToken();
 		$messages = $this->runEmailAuthRequireToken( $user, $token );
 		if ( !$messages ) {
