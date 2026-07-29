@@ -7,5 +7,16 @@
 	"emailauth-desc": "د برېښليک له لارې شکمن ننوتل تاييدوي",
 	"emailauth-token-label": "تاييد کوډ:",
 	"emailauth-token-help": "د برېښليک له لارې يو ځل د دوه‌گوني پټنوم تاييد لېږل‌شوی.",
-	"emailauth-email-subject": "ستاسو د $1 ننوتلو تاييد کوډ"
+	"emailauth-email-subject": "ستاسو د $1 ننوتلو تاييد کوډ",
+	"emailauth-email-body-intro": "$1، داسې ښکاري چې تاسو له يو نوي سولگره په $2 کې د ننوتلو هڅه کوئ.",
+	"emailauth-email-body-code-text": "ستاسو تاييد کوډ دا دی:",
+	"emailauth-email-body-warning": "دا کوډ ستاسو گڼون ته د لاسرسي لپاره اړين دی. دا به $1 پای ته ورسېږي. ستاسو د خونديتوب لپاره، دا له چا سره مه شريکوئ.",
+	"emailauth-email-body-attack-heading": "که دا تاسو نه ياست:",
+	"emailauth-email-body-attack-p1": "دا برېښليک ځکه درلېږل شوی چې يو چا ستاسو گڼون ته د ننوتلو هڅه کړې وه. د ننوتلو هڅه کې ستاسو د گڼون سم نوم او پټنوم شامل وو.",
+	"emailauth-email-body-attack-p2": "که دا تاسو نه ياست؛ نو تاسو بايد خپل پټنوم همدا اوس بدل کړئ.",
+	"emailauth-email-body-help-text": "د نورو مالوماتو لپاره، $1 وگورئ",
+	"emailauth-login-message": "تاسو بايد خپل ننوتل تاييد کړئ. تاييد کوډ ستاسو برېښليک پتې ($1) درلېږل شوی، مهرباني وکړئ هغه کوډ دلته دننه کړئ.",
+	"emailauth-login-help": "که تاسو نور خپلې برېښليک پتې ته لاسرسی نلرئ؛ نو د [[{{int:grouppage-sysop}}|وېبځي پازوالانو]] سره اړيکه ونيسئ. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|نور مالومات]])",
+	"emailauth-login-failure": "ناسم تاييد کوډ",
+	"emailauth-login-retry-limit": "ډېرې زياتې ناکامۍ!"
 }
