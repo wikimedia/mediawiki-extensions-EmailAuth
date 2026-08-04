@@ -1,7 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jeeputer"
+			"Jeeputer",
+			"LordProfo"
 		]
-	}
+	},
+	"emailauth-token-label": "کد تأیید",
+	"emailauth-login-message": "شما باید ورود خود را تأیید کنید. یک کد تأیید به نشانی ایمیل شما فرستاده شده است ($1)، لطفاً آن کد را اینجا وارد کنید.",
+	"emailauth-login-failure": "کد تأیید نامعتبر است!"
 }
