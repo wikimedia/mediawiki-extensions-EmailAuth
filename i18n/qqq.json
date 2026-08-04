@@ -39,6 +39,8 @@
 	"emailauth-accountrecovery-error-service-unavailable": "Error message when the account recovery service is temporarily unavailable",
 	"emailauth-accountrecovery-error-badtoken": "Message shown on Special:AccountRecovery when an invalid confirmation code is used.",
 	"emailauth-accountrecovery-disabled": "Error message shown when the account recovery feature is not enabled on the wiki (when $wgEmailAuthEnableAccountRecovery is false)",
+	"emailauth-accountrecovery-usernotification-subject": "Subject line of the email notifying the email address on the account of an Special:AccountRecovery request",
+	"emailauth-accountrecovery-usernotification-body": "Text of the email notifying the email address on the account of an Special:AccountRecovery request.\n\nParameters:\n* $1 - Username",
 	"logentry-emailauth-verify-failed": "Log entry for a failed email authentication verification attempt, shown in CheckUser.\n\nThis message is only used for older log entries, new log entries use {{msg-mw|logentry-emailauth-verify-failure}}.",
 	"logentry-emailauth-verify-failure": "Log entry for a failed email authentication verification attempt, shown in CheckUser.\n\nParameters:\n* $4 - Username, as a link",
 	"logentry-emailauth-verify-success": "Log entry for a successful email authentication verification attempt, shown in CheckUser",

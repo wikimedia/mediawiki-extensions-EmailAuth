@@ -28,6 +28,8 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 	/** @var MockObject&IEmailer */
 	private $emailerMock;
 
+	private const string ADMIN_EMAIL = 'admin@wiki.example';
+
 	protected function setUp(): void {
 		parent::setUp();
 
@@ -49,7 +51,8 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 		$this->overrideConfigValues( [
 			'EmailAuthEnableAccountRecovery' => true,
 			'EmailAuthAccountRecoveryTokenExpiry' => 900,
-			MainConfigNames::PasswordSender => 'admin@wiki.example',
+			MainConfigNames::PasswordSender => self::ADMIN_EMAIL,
+			'EmailAuthAccountRecoveryNotificationSender' => self::ADMIN_EMAIL,
 			MainConfigNames::CanonicalServer => 'https://example.org',
 			MainConfigNames::ArticlePath => '/wiki/$1'
 		] );
@@ -77,31 +80,51 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 
 		// Assert that an email is sent when we submit the form
 		$capturedToken = null;
-		$this->emailerMock->expects( $this->once() )
+		$this->emailerMock->expects( $this->exactly( 2 ) )
 			->method( 'send' )
-			->with(
-				$this->callback( function ( $to ) use ( $user ) {
-					$this->assertSame( $user->getEmail(), $to->address );
-					return true;
-				} ),
-				$this->callback( function ( $sender ) {
-					$this->assertSame( 'admin@wiki.example', $sender->address );
-					$this->assertSame( '(emailsender)', $sender->name );
-					return true;
-				} ),
-				'(emailauth-accountrecovery-confirmation-subject)',
-				$this->callback( function ( $body ) use ( $user, &$capturedToken ) {
-					$escapedUserName = preg_quote( $user->getName(), '/' );
-					$regex = "/^\(emailauth-accountrecovery-confirmation-body: $escapedUserName, " .
-						"\(duration-minutes: 15\), " .
-						"https:\/\/example.org\/wiki\/Special:AccountRecovery\/confirm\/([0-9a-fA-F]+)\)$/";
-					$this->assertMatchesRegularExpression( $regex, $body );
+			->withConsecutive(
+				[
+					$this->callback( function ( $to ) use ( $user ) {
+						$this->assertSame( $user->getEmail(), $to->address );
+						return true;
+					} ),
+					$this->callback( function ( $sender ) {
+						$this->assertSame( self::ADMIN_EMAIL, $sender->address );
+						return true;
+					} ),
+					'(emailauth-accountrecovery-usernotification-subject)',
+					$this->callback( function ( $body ) use ( $user ) {
+						$this->assertSame(
+							"(emailauth-accountrecovery-usernotification-body: {$user->getName()})",
+							$body
+						);
+						return true;
+					} )
+				],
+				[
+					$this->callback( function ( $to ) use ( $user ) {
+						$this->assertSame( $user->getEmail(), $to->address );
+						return true;
+					} ),
+					$this->callback( function ( $sender ) {
+						$this->assertSame( self::ADMIN_EMAIL, $sender->address );
+						$this->assertSame( '(emailsender)', $sender->name );
+						return true;
+					} ),
+					'(emailauth-accountrecovery-confirmation-subject)',
+					$this->callback( function ( $body ) use ( $user, &$capturedToken ) {
+						$escapedUserName = preg_quote( $user->getName(), '/' );
+						$regex = "/^\(emailauth-accountrecovery-confirmation-body: $escapedUserName, " .
+							"\(duration-minutes: 15\), " .
+							"https:\/\/example.org\/wiki\/Special:AccountRecovery\/confirm\/([0-9a-fA-F]+)\)$/";
+						$this->assertMatchesRegularExpression( $regex, $body );
 
-					$matches = null;
-					preg_match( $regex, $body, $matches );
-					$capturedToken = $matches[ 1 ];
-					return true;
-				} )
+						$matches = null;
+						preg_match( $regex, $body, $matches );
+						$capturedToken = $matches[ 1 ];
+						return true;
+					} )
+				]
 			);
 
 		[ $html ] = $this->executeSpecialPage( '', new FauxRequest( [
@@ -199,15 +222,17 @@ class SpecialAccountRecoveryTest extends SpecialPageTestBase {
 		$challengeUser = $this->getTestUser()->getUser();
 		$this->setupAuthManagerWithChallenge( $challengeUser->getId() );
 
-		$this->emailerMock->expects( $this->once() )
+		$this->emailerMock->expects( $this->exactly( 2 ) )
 			->method( 'send' )
 			->with(
 				$this->anything(),
 				$this->anything(),
 				$this->anything(),
 				$this->callback( function ( $body ) use ( $challengeUser ) {
-					// Assert that we use the username from the challenge, not the username sent in the form.
-					$this->assertStringContainsString( $challengeUser->getName(), $body );
+					if ( str_contains( $body, 'emailauth-accountrecovery-confirmation-body' ) ) {
+						// Assert that we use the username from the challenge, not the username sent in the form.
+						$this->assertStringContainsString( $challengeUser->getName(), $body );
+					}
 					return true;
 				} )
 			);

@@ -18,6 +18,7 @@ use MediaWiki\Parser\Sanitizer;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Status\Status;
 use MediaWiki\User\User;
+use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentityLookup;
 use MediaWiki\Utils\MWCryptRand;
 use Psr\Log\LoggerInterface;
@@ -35,7 +36,8 @@ class SpecialAccountRecovery extends FormSpecialPage {
 		private readonly LoggerInterface $logger,
 		private readonly EmailAuthCheckUserLogger $checkUserLogger,
 		private readonly UserIdentityLookup $userIdentityLookup,
-		private readonly AuthManager $authManager
+		private readonly AuthManager $authManager,
+		private readonly UserFactory $userFactory,
 	) {
 		parent::__construct( 'AccountRecovery' );
 	}
@@ -241,12 +243,20 @@ class SpecialAccountRecovery extends FormSpecialPage {
 			'description' => isset( $data['description'] ) ? trim( $data['description'] ) : null,
 		];
 
-		$targetUser = $this->userIdentityLookup->getUserIdentityByName( $ticketData['requester_name'] );
-		if ( $targetUser && $targetUser->isRegistered() ) {
+		$targetUser = $this->userFactory->newFromName( $challengeUsername );
+
+		if ( $targetUser && $targetUser->isNamed() ) {
 			$this->checkUserLogger->logAccountRecoverySubmission( $targetUser, $this->getUser() );
+
+			// And then supplement the ticket data with user data that is useful
+			// (if the user exists) to help verify a request!
+			$ticketData += [
+				// Email account attached to the account
+				'user_email' => $targetUser->getEmail(),
+			];
 		}
 
-		return $this->sendConfirmationEmail( $ticketData );
+		return $this->sendConfirmationEmail( $ticketData, false );
 	}
 
 	public function onSuccess() {
@@ -256,10 +266,9 @@ class SpecialAccountRecovery extends FormSpecialPage {
 	/**
 	 * Generate a token, stash the ticket data, and send a confirmation email to the user.
 	 * @phpcs:ignore Generic.Files.LineLength.TooLong
-	 * @param array{requester_email:string,requester_name:string,registered_email:?string,description:?string} $ticketData
-	 * @return Status
+	 * @param array{requester_email:string,requester_name:string,registered_email:?string,description:?string,user_email:?string} $ticketData
 	 */
-	private function sendConfirmationEmail( $ticketData ): Status {
+	private function sendConfirmationEmail( array $ticketData, bool $resend ): Status {
 		// Generate a validation token
 		$token = MWCryptRand::generateHex( 32 );
 		// Stash the ticket data in MicroStash, using the token as a key
@@ -285,6 +294,37 @@ class SpecialAccountRecovery extends FormSpecialPage {
 				...$this->getRequest()->getSecurityLogContext()
 			]
 		);
+
+		if (
+			!$resend &&
+			( isset( $ticketData['user_email'] ) && $ticketData['user_email'] !== '' )
+		) {
+			$sender = $this->getConfig()->get( 'EmailAuthAccountRecoveryNotificationSender' )
+				?: $this->getConfig()->get( MainConfigNames::PasswordSender );
+
+			$sv = $this->emailer->send(
+				new MailAddress( $ticketData['user_email'] ),
+				new MailAddress( $sender ),
+				$this->msg( 'emailauth-accountrecovery-usernotification-subject' )->text(),
+				$this->msg( 'emailauth-accountrecovery-usernotification-body' )
+					->params(
+						$ticketData['requester_name']
+					)
+					->text()
+			);
+			if ( !$sv->isGood() ) {
+				$this->logger->info(
+					'Account recovery request original email notification failed for {username}',
+					[
+						'username' => $ticketData['requester_name'],
+						'email' => $ticketData['requester_email'],
+						'user_email' => $ticketData['user_email'],
+						'status' => $sv->getMessages(),
+						...$this->getRequest()->getSecurityLogContext()
+					]
+				);
+			}
+		}
 
 		// Send the email
 		return Status::wrap( $this->emailer->send(
@@ -314,7 +354,7 @@ class SpecialAccountRecovery extends FormSpecialPage {
 
 		if ( time() - $stashedData['generated'] > $this->getConfig()->get( 'EmailAuthAccountRecoveryTokenExpiry' ) ) {
 			// If the token is too old, generate and send a new token
-			$emailResult = $this->sendConfirmationEmail( $stashedData['ticketData'] );
+			$emailResult = $this->sendConfirmationEmail( $stashedData['ticketData'], true );
 			if ( $emailResult->isOK() ) {
 				// Delete the entry for the old token
 				$this->microStash->delete( $stashKey );
