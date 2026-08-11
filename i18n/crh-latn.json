@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Don Alessandro"
+		]
+	},
+	"emailauth-token-label": "Tasdıqlama kodu",
+	"emailauth-login-message": "Kiriş malümatıñıznı tasdıqlamaq kerek. E-mail adresiñizge bir tasdıqlama kodu yiberildi ($1). Bu kodnı aşağıda yazsañız."
+}
