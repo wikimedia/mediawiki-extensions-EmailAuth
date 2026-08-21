@@ -48,6 +48,8 @@
 	"emailauth-accountrecovery-error-service-unavailable": "账号恢复服务暂不可用，请稍后再试。",
 	"emailauth-accountrecovery-error-badtoken": "无效的确认链接。该链接可能已过期。",
 	"emailauth-accountrecovery-disabled": "本wiki不提供账号恢复服务。请联系网站管理员寻求帮助。",
+	"emailauth-accountrecovery-usernotification-subject": "将您的{{SITENAME}}账号控制权转移到新的电子邮件地址",
+	"emailauth-accountrecovery-usernotification-body": "您好，$1，\n\n我们已收到恢复{{SITENAME}}账号“$1”访问权限的请求。\n\n如果您并非此请求的发起人，请尽快回复此邮件，我们将暂停处理该请求并检查您的回复。\n\n如果我们未从此电子邮件收到您的回复，会将该账号转移到其他电子邮件地址。",
 	"logentry-emailauth-verify-failed": "失败的电子邮件身份验证尝试",
 	"logentry-emailauth-verify-failure": "$4失败的电子邮件身份验证尝试",
 	"logentry-emailauth-verify-success": "成功的电子邮件身份验证尝试",

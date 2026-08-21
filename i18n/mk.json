@@ -40,6 +40,8 @@
 	"emailauth-accountrecovery-error-service-unavailable": "Повратокот на сметки е привремено недостапен. Обидете се подоцна.",
 	"emailauth-accountrecovery-error-badtoken": "Неважечка потврдна врска.\nВрската може да е истечена.",
 	"emailauth-accountrecovery-disabled": "Повратокот на сметки не е достапен на ова вики. Обратете се кај администраторите за помош.",
+	"emailauth-accountrecovery-usernotification-subject": "Префрлање на контролата врз вашата сметка на {{SITENAME}} на нова е-пошта",
+	"emailauth-accountrecovery-usernotification-body": "Здраво $1,\n\nДобивме барање да за повраток пристапот до сметката „$1“ на {{SITENAME}}.\n\nАко вие не сте го побарале повратокот, одговорете ни што поскоро, и ние ќе го запреме барањето додека го разгледаме вашиот одговор.\n\nАко не добиеме одговор од оваа е-пошта, ќе продолжиме со префрлање на сметката на друга е-пошта.",
 	"logentry-emailauth-verify-failed": "Неуспешен обид за заверка на е-пошта",
 	"logentry-emailauth-verify-failure": "Не успеа обидот за заверка на е-пошта за $4",
 	"logentry-emailauth-verify-success": "Успешен обид за заверка на е-пошта",

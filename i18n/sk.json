@@ -34,13 +34,18 @@
 	"emailauth-accountrecovery-confirmation-resent": "Platnosť tohto odkazu na potvrdenie vypršala. Na kontaktnú e-mailovú adresu, ktorú ste uviedli, bol odoslaný nový odkaz na potvrdenie. Kliknite na tento nový odkaz, aby ste dokončili žiadosť o obnovenie účtu.",
 	"emailauth-accountrecovery-email-mismatch": "Zadané e-mailové adresy sa nezhodujú. Skontrolujte ich a skúste to znova.",
 	"emailauth-accountrecovery-invalid-email": "Prosím, zadajte platnú e-mailovú adresu.",
+	"emailauth-accountrecovery-no-emailauth": "Skúste sa, prosím, [[Special:UserLogin|prihlásiť]] alebo si [[Special:PasswordReset|obnoviť heslo]] skôr, než sa pokúsite o obnovenie účtu.",
 	"emailauth-accountrecovery-rate-limited": "Odoslali ste príliš veľa žiadostí o obnovenie účtu. Pred ďalším pokusom počkajte, prosím.",
 	"emailauth-accountrecovery-error-generic": "Pri spracovaní vašej žiadosti sa vyskytla chyba. Skúste to znova neskôr, prosím.",
 	"emailauth-accountrecovery-error-invalid-data": "Zadané informácie nebolo možné spracovať. Skontrolujte svoje údaje a skúste to znova, prosím.",
 	"emailauth-accountrecovery-error-service-unavailable": "Služba obnovenia účtu je dočasne nedostupná. Skúste to znova neskôr.",
 	"emailauth-accountrecovery-error-badtoken": "Neplatný odkaz na potvrdenie.\nPlatnosť odkazu pravdepodobne vypršala.",
 	"emailauth-accountrecovery-disabled": "Obnovenie účtu nie je na tejto wiki k dispozícii. Pre pomoc kontaktujte administrátorov stránky.",
+	"emailauth-accountrecovery-usernotification-subject": "Prevod kontroly nad vaším účtom na {{GRAMMAR:lokál|{{SITENAME}}}} na novú e-mailovú adresu",
+	"emailauth-accountrecovery-usernotification-body": "Dobrý deň, $1,\n\ndostali sme žiadosť o obnovenie prístupu k účtu „$1“ na {{GRAMMAR:lokál|{{SITENAME}}}}.\n\nAk ste túto žiadosť nepodali vy, odpovedzte, prosím, na tento e-mail čo najskôr; žiadosť pozastavíme, kým vašu odpoveď posúdime.\n\nAk z tejto adresy nedostaneme odpoveď, môžeme účet previesť na inú e-mailovú adresu.",
 	"logentry-emailauth-verify-failed": "Neúspešný pokus o overenie prostredníctvom e-mailovej autentifikácie",
+	"logentry-emailauth-verify-failure": "Neúspešný pokus o overenie e-mailovej autentifikácie pre $4",
 	"logentry-emailauth-verify-success": "Úspešný pokus o overenie prostredníctvom e-mailovej autentifikácie",
-	"logentry-emailauth-recovery-submit": "Bola odoslaná žiadosť o obnovenie účtu $1"
+	"logentry-emailauth-recovery-submit": "Bola odoslaná žiadosť o obnovenie účtu $1",
+	"logentry-emailauth-account-recovery-submit": "Bola podaná žiadosť o obnovenie účtu pre $4"
 }

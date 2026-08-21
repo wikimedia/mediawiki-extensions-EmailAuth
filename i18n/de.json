@@ -41,6 +41,8 @@
 	"emailauth-accountrecovery-error-service-unavailable": "Der Kontowiederherstellungsdienst ist vorübergehend nicht verfügbar. Bitte versuche es später erneut.",
 	"emailauth-accountrecovery-error-badtoken": "Ungültiger Bestätigungslink.\nDer Link ist möglicherweise abgelaufen.",
 	"emailauth-accountrecovery-disabled": "Die Kontowiederherstellung ist in diesem Wiki nicht möglich. Bitte wende dich an die Website-Administratoren, um Hilfe zu erhalten.",
+	"emailauth-accountrecovery-usernotification-subject": "Übertragung der Kontrolle über dein {{SITENAME}}-Konto an eine neue E-Mail-Adresse",
+	"emailauth-accountrecovery-usernotification-body": "Hallo $1,\n\nwir haben eine Anfrage zur Wiederherstellung des Zugriffs auf das {{SITENAME}}-Konto „$1“ erhalten.\n\nFalls du diese Anfrage nicht gestellt hast, antworte bitte so schnell wie möglich auf diese E-Mail. Wir werden die Anfrage dann vorübergehend aussetzen, während wir deine Antwort prüfen.\n\nSollten wir keine Antwort auf diese E-Mail erhalten, behalten wir uns vor, das Konto auf eine andere E-Mail-Adresse zu übertragen.",
 	"logentry-emailauth-verify-failed": "Fehlgeschlagener Versuch der E-Mail-Authentifizierung",
 	"logentry-emailauth-verify-failure": "Fehlgeschlagener Versuch der E-Mail-Authentifizierung für $4",
 	"logentry-emailauth-verify-success": "Erfolgreicher Versuch der E-Mail-Authentifizierung",

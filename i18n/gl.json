@@ -41,6 +41,8 @@
 	"emailauth-accountrecovery-error-service-unavailable": "O servizo de recuperación de contas non está dispoñible temporalmente. Inténtao de novo máis tarde.",
 	"emailauth-accountrecovery-error-badtoken": "A ligazón de confirmación non é válida.\nSe cadra caducou.",
 	"emailauth-accountrecovery-disabled": "A recuperación de contas non está dispoñible neste wiki. Ponte en contacto coa administración do sitio para obter axuda.",
+	"emailauth-accountrecovery-usernotification-subject": "Transferindo o control da túa conta de {{SITENAME}} a un novo enderezo de correo electrónico",
+	"emailauth-accountrecovery-usernotification-body": "Boas, $1:\n\nRecibimos unha solicitude para recuperar o acceso á conta «$1» en {{SITENAME}}.\n\nSe non fixeches esta solicitude, responde a este correo electrónico canto antes e pausaremos a solicitude mentres revisamos a túa resposta.\n\nSe non recibimos resposta a este correo electrónico, entendemos que podemos proceder a transferir a conta a un enderezo de correo electrónico diferente.",
 	"logentry-emailauth-verify-failed": "Intento erróneo de verificación da autenticación do correo electrónico",
 	"logentry-emailauth-verify-failure": "Intento erróneo de verificación da autenticación do correo electrónico $4",
 	"logentry-emailauth-verify-success": "Intento correcto de verificación da autenticación do correo electrónico",

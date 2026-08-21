@@ -42,6 +42,8 @@
 	"emailauth-accountrecovery-error-service-unavailable": "Hesabın bərpası xidməti müvəqqəti olaraq əlçatan deyil. Zəhmət olmasa, sonra yenidən cəhd edin.",
 	"emailauth-accountrecovery-error-badtoken": "Yanlış təsdiq linki.\nLinkin müddəti bitmiş ola bilər.",
 	"emailauth-accountrecovery-disabled": "Hesabın bərpası bu vikidə mövcud deyil. Kömək üçün sayt administratorları ilə əlaqə saxlayın.",
+	"emailauth-accountrecovery-usernotification-subject": "{{SITENAME}} hesabınızın nəzarəti yeni bir e-poçt ünvanına köçürülür",
+	"emailauth-accountrecovery-usernotification-body": "Salam $1,\n\n“$1” adlı {{SITENAME}} hesabına girişin bərpası ilə bağlı sorğu almışıq.\n\nBu sorğunu siz göndərməmisinizsə, xahiş edirik, mümkün qədər tez bu e-poçta cavab verin. Cavabınızı nəzərdən keçirənədək sorğunu dayandıracağıq.\n\nBu e-poçtdan cavab almasaq, hesabı başqa e-poçt ünvanına köçürə bilərik.",
 	"logentry-emailauth-verify-failed": "Uğursuz e-poçt təsdiqləmə cəhdi",
 	"logentry-emailauth-verify-failure": "$4 üçün e-poçt autentifikasiyası təsdiqləmə cəhdi uğursuz oldu",
 	"logentry-emailauth-verify-success": "Uğurlu e-poçt təsdiqləmə cəhdi",

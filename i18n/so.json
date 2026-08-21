@@ -40,6 +40,8 @@
 	"emailauth-accountrecovery-error-service-unavailable": "Adeegga soo celinta akoonka si ku meelgaar ah uma shaqeynayo. Fadlan isku day mar kale mar dambe.",
 	"emailauth-accountrecovery-error-badtoken": "Xiriirka xaqiijinta waa khalad.\nWaxaa laga yaabaa in xiriirku dhacay.",
 	"emailauth-accountrecovery-disabled": "Soo celinta akoonka lagama heli karo wiki-kan. Fadlan la xiriir maamulayaasha goobta si aad caawimaad u hesho.",
+	"emailauth-accountrecovery-usernotification-subject": "U wareejinta maamulka akoonkaaga {{SITENAME}} ciwaan iimayl cusub",
+	"emailauth-accountrecovery-usernotification-body": "Salaan $1,\n\nWaxaan helnay codsi lagu soo ceshanayo gelitaanka akoonka {{SITENAME}} “$1”.\n\nHaddii aadan adigu samayn codsigan, fadlan iimaylkan uga jawaab sida ugu dhakhsaha badan, waxaana hakinin doonaa codsiga inta aan dib u eegayno jawaabtaada.\n\nHaddii aynaan iimaylkan ka helin jawaab, waxaa laga yaabaa inaan sii wadno u wareejinta akoonka ciwaan iimayl oo kale.",
 	"logentry-emailauth-verify-failed": "Isku daygii xaqiijinta iimaylka wuu fashilmay",
 	"logentry-emailauth-verify-failure": "Isku daygii xaqiijinta iimaylka ee $4 wuu fashilmay",
 	"logentry-emailauth-verify-success": "Isku daygii xaqiijinta iimaylka si guul leh ayuu u dhacay",
