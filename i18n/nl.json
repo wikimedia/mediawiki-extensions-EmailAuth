@@ -42,6 +42,8 @@
 	"emailauth-accountrecovery-error-service-unavailable": "Accountherstel is tijdelijk niet beschikbaar. Probeer het later opnieuw.",
 	"emailauth-accountrecovery-error-badtoken": "Ongeldige bevestigingskoppeling.\nMogelijk is de koppeling verlopen.",
 	"emailauth-accountrecovery-disabled": "Accountherstel is niet beschikbaar op deze wiki. Neem contact op met de sitebeheerders voor hulp.",
+	"emailauth-accountrecovery-usernotification-subject": "De controle over uw {{SITENAME}}-account wordt overgedragen naar een nieuw e-mailadres",
+	"emailauth-accountrecovery-usernotification-body": "Hallo $1,\n\nWe hebben een verzoek ontvangen om de toegang tot het {{SITENAME}}-account “$1” te herstellen.\n\nAls u dit verzoek niet hebt ingediend, reageer dan zo spoedig mogelijk op deze e-mail. Wij stoppen het verzoek dan tijdelijk terwijl we uw reactie beoordelen.\n\nAls we geen reactie op deze e-mail ontvangen, kunnen we het account overzetten naar een ander e-mailadres.",
 	"logentry-emailauth-verify-failed": "E-mailverificatie mislukt",
 	"logentry-emailauth-verify-failure": "Mislukte e-mailverificatiepoging voor $4",
 	"logentry-emailauth-verify-success": "Verificatie van e-mailauthenticatie geslaagd",
