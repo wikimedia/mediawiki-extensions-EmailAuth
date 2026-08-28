@@ -33,7 +33,7 @@
 	"emailauth-accountrecovery-success": "Twoja prośba o odzyskanie konta została pomyślnie wysłana. Nasz zespół ds. zaufania i bezpieczeństwa rozpatrzy Twoją prośbę i skontaktuje się z Tobą pod podanym przez Ciebie adresem e-mail.",
 	"emailauth-accountrecovery-confirmation-needed": "Wiadomość e-mail z potwierdzeniem została wysłana na podany przez Ciebie kontaktowy adres e-mail. Aby dokończyć prośbę o odzyskanie konta, kliknij link w wiadomości e-mail.",
 	"emailauth-accountrecovery-confirmation-subject": "Potwierdź swoją prośbę o odzyskanie konta",
-	"emailauth-accountrecovery-confirmation-body": "Otrzymaliśmy prośbę o odzyskanie konta o nazwie „$1” na {{GRAMMAR:MS.lp|{{SITENAME}}}}.\n\nAby kontynuować ten proces, kliknij poniższy link, aby zweryfikować swój adres e-mail. Link wygaśnie za $2.\n\n$3 \n\nJeśli to nie byłeś Ty, możesz bezpiecznie zignorować tę wiadomość e-mail, a na Twoim koncie nie zostaną wprowadzone żadne zmiany.",
+	"emailauth-accountrecovery-confirmation-body": "Otrzymaliśmy prośbę o odzyskanie konta „$1” w {{GRAMMAR:MS.lp|{{SITENAME}}}}.\n\nAby kontynuować ten proces, kliknij poniższy link, aby zweryfikować swój adres e-mail. Link wygaśnie za $2.\n\n$3 \n\nJeśli to nie Ty, możesz bezpiecznie zignorować tę wiadomość e-mail, a na Twoim koncie nie zostaną wprowadzone żadne zmiany.",
 	"emailauth-accountrecovery-confirmation-resent": "Ten link potwierdzający wygasł. Nowy link potwierdzający został wysłany na podany przez Ciebie kontaktowy adres e-mail. Kliknij nowy link, aby dokończyć prośbę o odzyskanie konta.",
 	"emailauth-accountrecovery-email-mismatch": "Podane adresy e-mail nie są takie same. Sprawdź i spróbuj ponownie.",
 	"emailauth-accountrecovery-invalid-email": "Proszę podać prawidłowy adres e-mail.",
