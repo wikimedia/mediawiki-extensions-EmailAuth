@@ -23,3 +23,8 @@ $specialPageAliases['he'] = [
 $specialPageAliases['ko'] = [
 	'AccountRecovery' => [ '계정복구' ],
 ];
+
+/** Vietnamese (vi) */
+$specialPageAliases['vi'] = [
+	'AccountRecovery' => [ 'Khôi_phục_tài_khoản' ],
+];
