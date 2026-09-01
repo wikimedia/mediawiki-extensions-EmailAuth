@@ -45,5 +45,6 @@
 	"emailauth-accountrecovery-disabled": "Odzyskiwanie konta nie jest dostępne na tej wiki. Aby uzyskać pomoc, skontaktuj się z administratorami witryny.",
 	"logentry-emailauth-verify-failed": "Nieudana próba weryfikacji uwierzytelnienia przez e-mail",
 	"logentry-emailauth-verify-success": "Udana próba weryfikacji uwierzytelnienia przez e-mail",
-	"logentry-emailauth-recovery-submit": "Złożono wniosek o odzyskanie konta"
+	"logentry-emailauth-recovery-submit": "Złożono wniosek o odzyskanie konta $1",
+	"logentry-emailauth-account-recovery-submit": "Złożono wniosek o odzyskanie konta $4"
 }
