@@ -15,9 +15,9 @@
 	"emailauth-email-body-intro": "$1, wygląda na to, że próbujesz się zalogować do {{GRAMMAR:D.lp|$2}} z nowego urządzenia.",
 	"emailauth-email-body-code-text": "Twój kod weryfikacyjny to:",
 	"emailauth-email-body-warning": "Ten kod jest wymagany, aby uzyskać dostęp do konta. Kod wygaśnie w ciągu $1. Nie udostępniaj go nikomu.",
-	"emailauth-email-body-attack-heading": "Jeśli to nie ty:",
+	"emailauth-email-body-attack-heading": "Jeśli to nie Ty:",
 	"emailauth-email-body-attack-p1": "Ta wiadomość została wysłana, ponieważ ktoś próbował zalogować się na Twoje konto. Próba logowania uwzględniała poprawną nazwę użytkownika oraz hasło.",
-	"emailauth-email-body-attack-p2": "Jeśli to nie ty, bezzwłocznie zmień hasło.",
+	"emailauth-email-body-attack-p2": "Jeśli to nie Ty, bezzwłocznie zmień hasło.",
 	"emailauth-email-body-help-text": "Aby dowiedzieć się więcej, zobacz $1",
 	"emailauth-login-message": "Musisz zweryfikować swoje logowanie. Kod weryfikacyjny został wysłany na Twój adres e-mail ($1). Wprowadź ten kod tutaj.",
 	"emailauth-login-help": "Jeśli nie masz dostępu do adresu e-mail przypisanego do swojego konta, skontaktuj się [[{{int:grouppage-sysop}}|administratorami strony]] ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|dowiedz się więcej]]).",
@@ -33,7 +33,7 @@
 	"emailauth-accountrecovery-success": "Twoja prośba o odzyskanie konta została pomyślnie wysłana. Nasz zespół ds. zaufania i bezpieczeństwa rozpatrzy Twoją prośbę i skontaktuje się z Tobą pod podanym przez Ciebie adresem e-mail.",
 	"emailauth-accountrecovery-confirmation-needed": "Wiadomość e-mail z potwierdzeniem została wysłana na podany przez Ciebie kontaktowy adres e-mail. Aby dokończyć prośbę o odzyskanie konta, kliknij link w wiadomości e-mail.",
 	"emailauth-accountrecovery-confirmation-subject": "Potwierdź swoją prośbę o odzyskanie konta",
-	"emailauth-accountrecovery-confirmation-body": "Otrzymaliśmy prośbę o odzyskanie konta o nazwie „$1” na {{GRAMMAR:MS.lp|{{SITENAME}}}}.\n\nAby kontynuować ten proces, kliknij poniższy link, aby zweryfikować swój adres e-mail. Link wygaśnie za $2.\n\n$3 \n\nJeśli to nie byłeś Ty, możesz bezpiecznie zignorować tę wiadomość e-mail, a na Twoim koncie nie zostaną wprowadzone żadne zmiany.",
+	"emailauth-accountrecovery-confirmation-body": "Otrzymaliśmy prośbę o odzyskanie konta „$1” w {{GRAMMAR:MS.lp|{{SITENAME}}}}.\n\nAby kontynuować ten proces, kliknij poniższy link, aby zweryfikować swój adres e-mail. Link wygaśnie za $2.\n\n$3 \n\nJeśli to nie Ty, możesz bezpiecznie zignorować tę wiadomość e-mail, a na Twoim koncie nie zostaną wprowadzone żadne zmiany.",
 	"emailauth-accountrecovery-confirmation-resent": "Ten link potwierdzający wygasł. Nowy link potwierdzający został wysłany na podany przez Ciebie kontaktowy adres e-mail. Kliknij nowy link, aby dokończyć prośbę o odzyskanie konta.",
 	"emailauth-accountrecovery-email-mismatch": "Podane adresy e-mail nie są takie same. Sprawdź i spróbuj ponownie.",
 	"emailauth-accountrecovery-invalid-email": "Proszę podać prawidłowy adres e-mail.",
@@ -45,5 +45,6 @@
 	"emailauth-accountrecovery-disabled": "Odzyskiwanie konta nie jest dostępne na tej wiki. Aby uzyskać pomoc, skontaktuj się z administratorami witryny.",
 	"logentry-emailauth-verify-failed": "Nieudana próba weryfikacji uwierzytelnienia przez e-mail",
 	"logentry-emailauth-verify-success": "Udana próba weryfikacji uwierzytelnienia przez e-mail",
-	"logentry-emailauth-recovery-submit": "Złożono wniosek o odzyskanie konta"
+	"logentry-emailauth-recovery-submit": "Złożono wniosek o odzyskanie konta $1",
+	"logentry-emailauth-account-recovery-submit": "Złożono wniosek o odzyskanie konta $4"
 }
