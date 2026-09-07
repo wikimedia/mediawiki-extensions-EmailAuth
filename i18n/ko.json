@@ -41,6 +41,8 @@
 	"emailauth-accountrecovery-error-service-unavailable": "일시적으로 계정 복구 서비스를 사용할 수 없습니다. 나중에 다시 시도해 주세요.",
 	"emailauth-accountrecovery-error-badtoken": "인증 링크가 유효하지 않습니다.\n해당 링크가 만료되었을 수 있습니다.",
 	"emailauth-accountrecovery-disabled": "이 위키에서는 계정 복구를 지원하지 않습니다. 도움이 필요하시면 사이트 관리자에게 문의하세요.",
+	"emailauth-accountrecovery-usernotification-subject": "{{SITENAME}} 계정의 제어권을 새 이메일 주소로 이전합니다",
+	"emailauth-accountrecovery-usernotification-body": "안녕하세요 $1님,\n\n저희는 {{SITENAME}}의 계정 \"$1\"에 대한 접근 권한 복구 요청을 받았습니다.\n\n만약 본인이 이 요청을 하지 않았다면, 가능한 한 빨리 이 이메일에 회신해 주시기 바랍니다.\n\n회신을 확인하는 동안 요청 처리를 일시 중단하겠습니다.\n\n만약 회신이 없을 경우, 해당 계정을 다른 이메일 주소로 이전할 수 있습니다.",
 	"logentry-emailauth-verify-failed": "이메일 인증 확인 시도 실패",
 	"logentry-emailauth-verify-failure": "$4에 대한 이메일 인증 확인 시도 실패",
 	"logentry-emailauth-verify-success": "이메일 인증 확인 시도 성공",
