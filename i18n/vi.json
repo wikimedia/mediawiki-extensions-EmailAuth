@@ -35,13 +35,18 @@
 	"emailauth-accountrecovery-confirmation-resent": "Liên kết xác nhận này đã hết hạn. Một liên kết xác nhận mới đã được gửi đến địa chỉ email liên hệ mà bạn đã cung cấp. Vui lòng nhấp vào liên kết mới này để hoàn tất yêu cầu khôi phục tài khoản của bạn.",
 	"emailauth-accountrecovery-email-mismatch": "Địa chỉ email bạn đã nhập không khớp. Vui lòng kiểm tra và thử lại.",
 	"emailauth-accountrecovery-invalid-email": "Vui lòng nhập địa chỉ email hợp lệ.",
+	"emailauth-accountrecovery-no-emailauth": "Vui lòng thử [[Special:UserLogin|đăng nhập]] hoặc [[Special:PasswordReset|đặt lại mật khẩu]] trước khi thử khôi phục tài khoản.",
 	"emailauth-accountrecovery-rate-limited": "Bạn đã gửi quá nhiều yêu cầu khôi phục tài khoản. Vui lòng chờ trước khi thử lại.",
 	"emailauth-accountrecovery-error-generic": "Đã xảy ra lỗi trong quá trình xử lý yêu cầu của bạn. Vui lòng thử lại sau.",
 	"emailauth-accountrecovery-error-invalid-data": "Không thể xử lý thông tin mà bạn đã cung cấp. Vui lòng kiểm tra thông tin đã nhập và thử lại.",
 	"emailauth-accountrecovery-error-service-unavailable": "Dịch vụ khôi phục tài khoản hiện đang tạm thời không khả dụng. Vui lòng thử lại sau.",
 	"emailauth-accountrecovery-error-badtoken": "Liên kết xác nhận không hợp lệ! Liên kết này có thể đã hết hạn.",
 	"emailauth-accountrecovery-disabled": "Tính năng khôi phục tài khoản hiện không khả dụng trên wiki này. Vui lòng liên hệ với bảo quản viên trang web để được hỗ trợ.",
+	"emailauth-accountrecovery-usernotification-subject": "Chuyển quyền kiểm soát tài khoản {{SITENAME}} của bạn sang một địa chỉ email mới",
+	"emailauth-accountrecovery-usernotification-body": "Xin chào $1,\n\nChúng tôi đã nhận được yêu cầu khôi phục quyền truy cập vào tài khoản {{SITENAME}} “$1”.\n\nNếu bạn không thực hiện yêu cầu này, vui lòng phản hồi email này càng sớm càng tốt, chúng tôi sẽ tạm dừng yêu cầu trong khi xem xét phản hồi của bạn.\n\nNếu chúng tôi không nhận được phản hồi từ email này, chúng tôi có thể sẽ tiến hành chuyển tài khoản sang một địa chỉ email khác.",
 	"logentry-emailauth-verify-failed": "Không thể xác thực bằng thư điện tử",
+	"logentry-emailauth-verify-failure": "Lần xác minh xác thực thư điện tử thất bại đối với $4",
 	"logentry-emailauth-verify-success": "Đã hoàn tất việc xác thực bằng thư điện tử",
-	"logentry-emailauth-recovery-submit": "Đã gửi yêu cầu khôi phục tài khoản"
+	"logentry-emailauth-recovery-submit": "Đã gửi yêu cầu khôi phục tài khoản cho $1",
+	"logentry-emailauth-account-recovery-submit": "Đã gửi yêu cầu khôi phục tài khoản cho $4"
 }
