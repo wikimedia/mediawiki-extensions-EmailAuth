@@ -42,6 +42,8 @@
 	"emailauth-accountrecovery-error-badtoken": "Liên kết xác nhận không hợp lệ! Liên kết này có thể đã hết hạn.",
 	"emailauth-accountrecovery-disabled": "Tính năng khôi phục tài khoản hiện không khả dụng trên wiki này. Vui lòng liên hệ với bảo quản viên trang web để được hỗ trợ.",
 	"logentry-emailauth-verify-failed": "Không thể xác thực bằng thư điện tử",
+	"logentry-emailauth-verify-failure": "Lần xác minh xác thực thư điện tử thất bại đối với $4",
 	"logentry-emailauth-verify-success": "Đã hoàn tất việc xác thực bằng thư điện tử",
-	"logentry-emailauth-recovery-submit": "Đã gửi yêu cầu khôi phục tài khoản"
+	"logentry-emailauth-recovery-submit": "Đã gửi yêu cầu khôi phục tài khoản cho $1",
+	"logentry-emailauth-account-recovery-submit": "Đã gửi yêu cầu khôi phục tài khoản cho $4"
 }
