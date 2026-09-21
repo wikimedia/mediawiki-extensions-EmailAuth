@@ -47,5 +47,6 @@
 	"logentry-emailauth-verify-failure": "$4에 대한 이메일 인증 확인 시도 실패",
 	"logentry-emailauth-verify-success": "이메일 인증 확인 시도 성공",
 	"logentry-emailauth-recovery-submit": "$1에 대한 계정 복구 요청이 제출되었습니다",
-	"logentry-emailauth-account-recovery-submit": "$4에 대한 계정 복구 요청이 제출되었습니다"
+	"logentry-emailauth-account-recovery-submit": "$4에 대한 계정 복구 요청이 제출되었습니다",
+	"emailauth-throttled": "너무 많은 이메일을 요청하셨습니다! 다음 코드를 요청하려면 $1 기다려 주세요."
 }

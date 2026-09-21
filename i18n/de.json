@@ -47,5 +47,6 @@
 	"logentry-emailauth-verify-failure": "Fehlgeschlagener Versuch der E-Mail-Authentifizierung für $4",
 	"logentry-emailauth-verify-success": "Erfolgreicher Versuch der E-Mail-Authentifizierung",
 	"logentry-emailauth-recovery-submit": "Es wurde ein Antrag auf Kontowiederherstellung für $1 eingereicht.",
-	"logentry-emailauth-account-recovery-submit": "Es wurde ein Antrag auf Kontowiederherstellung für $4 eingereicht"
+	"logentry-emailauth-account-recovery-submit": "Es wurde ein Antrag auf Kontowiederherstellung für $4 eingereicht",
+	"emailauth-throttled": "Es wurden zu viele E-Mails angefordert! Bitte warte $1, bevor du einen weiteren Code anforderst."
 }

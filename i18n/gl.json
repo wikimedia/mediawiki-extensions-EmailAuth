@@ -47,5 +47,6 @@
 	"logentry-emailauth-verify-failure": "Intento erróneo de verificación da autenticación do correo electrónico $4",
 	"logentry-emailauth-verify-success": "Intento correcto de verificación da autenticación do correo electrónico",
 	"logentry-emailauth-recovery-submit": "Enviouse unha solicitude de recuperación de conta para $1",
-	"logentry-emailauth-account-recovery-submit": "Enviouse unha solicitude de recuperación de conta para $4"
+	"logentry-emailauth-account-recovery-submit": "Enviouse unha solicitude de recuperación de conta para $4",
+	"emailauth-throttled": "Solicitáronse demasiados correos electrónicos! Agarde $1 antes de solicitar outro código."
 }

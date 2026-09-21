@@ -46,5 +46,6 @@
 	"logentry-emailauth-verify-failure": "Isku daygii xaqiijinta iimaylka ee $4 wuu fashilmay",
 	"logentry-emailauth-verify-success": "Isku daygii xaqiijinta iimaylka si guul leh ayuu u dhacay",
 	"logentry-emailauth-recovery-submit": "Codsi soo celinta akoonka ayaa loo gudbiyay $1",
-	"logentry-emailauth-account-recovery-submit": "Codsi soo celinta akoonka ayaa loo gudbiyay $4"
+	"logentry-emailauth-account-recovery-submit": "Codsi soo celinta akoonka ayaa loo gudbiyay $4",
+	"emailauth-throttled": "Waxaa la codsaday iimayllo aad u badan! Fadlan sug $1 ka hor intaadan codsan kood kale."
 }

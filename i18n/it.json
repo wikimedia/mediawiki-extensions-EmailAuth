@@ -42,5 +42,6 @@
 	"emailauth-accountrecovery-error-service-unavailable": "Il servizio di recupero dell'utenza non è temporaneamente disponibile. Riprova più tardi.",
 	"emailauth-accountrecovery-error-badtoken": "Link di conferma non valido.\nIl link potrebbe essere scaduto.",
 	"emailauth-accountrecovery-disabled": "Il recupero dell'utenza non è disponibile su questo wiki. Contatta gli amministratori del sito per ricevere assistenza.",
-	"logentry-emailauth-recovery-submit": "È stata inviata una richiesta di recupero per l'utenza $1"
+	"logentry-emailauth-recovery-submit": "È stata inviata una richiesta di recupero per l'utenza $1",
+	"emailauth-throttled": "Troppe email richieste! Attendi $1 prima di richiedere un altro codice."
 }

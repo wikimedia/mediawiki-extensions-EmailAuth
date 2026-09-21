@@ -54,5 +54,6 @@
 	"logentry-emailauth-verify-failure": "$4失败的电子邮件身份验证尝试",
 	"logentry-emailauth-verify-success": "成功的电子邮件身份验证尝试",
 	"logentry-emailauth-recovery-submit": "已为$1提交账号恢复请求",
-	"logentry-emailauth-account-recovery-submit": "已为$4提交账号恢复请求"
+	"logentry-emailauth-account-recovery-submit": "已为$4提交账号恢复请求",
+	"emailauth-throttled": "请求的邮件数过多！请等待$1后再请求新的代码。"
 }

@@ -48,5 +48,6 @@
 	"logentry-emailauth-verify-failure": "$4 üçün e-poçt autentifikasiyası təsdiqləmə cəhdi uğursuz oldu",
 	"logentry-emailauth-verify-success": "Uğurlu e-poçt təsdiqləmə cəhdi",
 	"logentry-emailauth-recovery-submit": "$1 üçün hesabın bərpası sorğusu göndərildi",
-	"logentry-emailauth-account-recovery-submit": "$4 üçün hesabın bərpası sorğusu göndərildi"
+	"logentry-emailauth-account-recovery-submit": "$4 üçün hesabın bərpası sorğusu göndərildi",
+	"emailauth-throttled": "Həddindən artıq çox e-poçt tələb olunub! Başqa bir kod tələb etməzdən əvvəl $1 gözləyin."
 }

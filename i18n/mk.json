@@ -46,5 +46,6 @@
 	"logentry-emailauth-verify-failure": "Не успеа обидот за заверка на е-пошта за $4",
 	"logentry-emailauth-verify-success": "Успешен обид за заверка на е-пошта",
 	"logentry-emailauth-recovery-submit": "Поднесено барање за повраток на сметка за $1",
-	"logentry-emailauth-account-recovery-submit": "Поднесено барање за повраток на сметка за $4"
+	"logentry-emailauth-account-recovery-submit": "Поднесено барање за повраток на сметка за $4",
+	"emailauth-throttled": "Побаравте премногу е-писма! Почекајте $1 пред да побарате друг код."
 }
