@@ -48,5 +48,6 @@
 	"logentry-emailauth-verify-failure": "Mislukte e-mailverificatiepoging voor $4",
 	"logentry-emailauth-verify-success": "Verificatie van e-mailauthenticatie geslaagd",
 	"logentry-emailauth-recovery-submit": "Er is een verzoek tot accountherstel ingediend voor $1",
-	"logentry-emailauth-account-recovery-submit": "Er is een verzoek tot accountherstel ingediend voor $4"
+	"logentry-emailauth-account-recovery-submit": "Er is een verzoek tot accountherstel ingediend voor $4",
+	"emailauth-throttled": "Er zijn te veel e-mails aangevraagd! Wacht $1 voordat u een nieuwe code aanvraagt."
 }
