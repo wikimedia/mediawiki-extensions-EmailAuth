@@ -48,5 +48,6 @@
 	"logentry-emailauth-verify-failure": "Lần xác minh xác thực thư điện tử thất bại đối với $4",
 	"logentry-emailauth-verify-success": "Đã hoàn tất việc xác thực bằng thư điện tử",
 	"logentry-emailauth-recovery-submit": "Đã gửi yêu cầu khôi phục tài khoản cho $1",
-	"logentry-emailauth-account-recovery-submit": "Đã gửi yêu cầu khôi phục tài khoản cho $4"
+	"logentry-emailauth-account-recovery-submit": "Đã gửi yêu cầu khôi phục tài khoản cho $4",
+	"emailauth-throttled": "Đã có quá nhiều yêu cầu gửi thw! Vui lòng đợi $1 trước khi yêu cầu mã khác."
 }
