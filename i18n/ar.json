@@ -45,5 +45,6 @@
 	"logentry-emailauth-verify-failure": "محاولة فاشلة للتحقق من صحة البريد الإلكتروني مقابل $4",
 	"logentry-emailauth-verify-success": "محاولة ناجحة للتحقق من صحة البريد الإلكتروني",
 	"logentry-emailauth-recovery-submit": "تم تقديم طلب استرداد حساب بقيمة $1",
-	"logentry-emailauth-account-recovery-submit": "تم تقديم طلب استرداد الحساب مقابل $4"
+	"logentry-emailauth-account-recovery-submit": "تم تقديم طلب استرداد الحساب مقابل $4",
+	"emailauth-throttled": "تم طلب عدد كبير جدًا من عناوين البريد الإلكتروني! يرجى الانتظار $1 قبل طلب رمز آخر."
 }
