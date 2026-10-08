@@ -113,7 +113,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		/** @var EmailAuthAuthenticationRequest $req */
 		$req = AuthenticationRequest::getRequestByClass( $reqs, EmailAuthAuthenticationRequest::class );
 		$logger = LoggerFactory::getInstance( 'EmailAuth' );
-		if ( $req && hash_equals( $token, $req->token ) ) {
+		if ( $req && $token !== '' && hash_equals( $token, $req->token ) ) {
 			$logger->info( 'Successful verification for {user}', [
 				'user' => $user->getName(),
 				'eventType' => 'emailauth-login-successful-verification',
