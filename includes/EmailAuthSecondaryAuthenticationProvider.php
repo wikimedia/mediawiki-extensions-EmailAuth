@@ -78,7 +78,7 @@ class EmailAuthSecondaryAuthenticationProvider extends AbstractSecondaryAuthenti
 		$token = $this->manager->getAuthenticationSessionData( 'EmailAuthToken', '' );
 		/** @var EmailAuthAuthenticationRequest $req */
 		$req = AuthenticationRequest::getRequestByClass( $reqs, EmailAuthAuthenticationRequest::class );
-		if ( $req && hash_equals( $token, $req->token ) ) {
+		if ( $req && $token !== '' && hash_equals( $token, $req->token ) ) {
 			LoggerFactory::getInstance( 'EmailAuth' )->info( 'Successful verification for {user}', [
 				'user' => $user->getName(),
 				'ip' => $user->getRequest()->getIP(),

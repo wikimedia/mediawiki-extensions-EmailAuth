@@ -48,8 +48,9 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 				$this->session->set( $key, $value );
 			} );
 		$this->manager->expects( $this->any() )->method( 'getAuthenticationSessionData' )
-			->willReturnCallback( function ( $key ) {
-				return $this->session->get( $key );
+			->willReturnCallback( function ( $key, $default = null ) {
+				$value = $this->session->get( $key );
+				return $value === false ? $default : $value;
 			} );
 		$this->provider->init(
 			$this->logger,
@@ -163,6 +164,7 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		}
 
 		// over the limit - pingLimiter returns true, do not send email
+		$this->session->clear();
 		$user = $this->getMockUser( true );
 		$user->expects( $this->never() )->method( 'sendMail' );
 		$user->method( 'pingLimiter' )->willReturn( true );
@@ -170,6 +172,15 @@ class EmailAuthSecondaryAuthenticationProviderTest extends MediaWikiIntegrationT
 		$this->assertSame( AuthenticationResponse::UI, $response->status );
 		$this->assertSame( 'error', $response->messageType );
 		$this->assertSame( 'emailauth-throttled', $response->message->getKey() );
+
+		// no code was sent, so no submitted code may pass
+		foreach ( [ ' ', '000000' ] as $code ) {
+			$response = $this->provider->continueSecondaryAuthentication( $user,
+				AuthenticationRequest::loadRequestsFromSubmission( $response->neededRequests,
+					[ 'token' => $code ] ) );
+			$this->assertSame( AuthenticationResponse::UI, $response->status );
+			$this->assertSame( 'emailauth-login-failure', $response->message->getKey() );
+		}
 	}
 
 	public function testBeginSecondaryAccountCreation() {
