@@ -42,6 +42,7 @@
 	"emailauth-accountrecovery-error-badtoken": "رابط التأكيد غير صالح.\nقد يكون الرابط منتهي الصلاحية.",
 	"emailauth-accountrecovery-disabled": "استعادة الحساب غير متاحة على هذا الويكي. يُرجى التواصل مع إدارة الموقع للمساعدة.",
 	"emailauth-accountrecovery-usernotification-subject": "نقل التحكم في حسابك {{SITENAME}} إلى عنوان بريد إلكتروني جديد",
+	"emailauth-accountrecovery-usernotification-body": "مرحبًا $1،\n\nلقد تلقينا طلبًا لاستعادة الوصول إلى حساب {{SITENAME}} المسمى \"$1\".\n\nإذا لم تكن أنت من قدم هذا الطلب، فيُرجى الرد على هذه الرسالة في أقرب وقت ممكن، وسنقوم بتعليق الطلب لحين مراجعة ردك.\n\nأما في حال عدم تلقينا ردًا على هذه الرسالة، فقد نمضي قدمًا في نقل الحساب إلى عنوان بريد إلكتروني آخر.",
 	"logentry-emailauth-verify-failed": "محاولة فاشلة للتحقق من صحة البريد الإلكتروني",
 	"logentry-emailauth-verify-failure": "محاولة فاشلة للتحقق من صحة البريد الإلكتروني مقابل $4",
 	"logentry-emailauth-verify-success": "محاولة ناجحة للتحقق من صحة البريد الإلكتروني",
