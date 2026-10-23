@@ -25,7 +25,7 @@
 	"emailauth-accountrecovery-confirmation-resent": "این پیوند تأییدیه منقضی شده است. یک پیوند تأییدیهٔ جدید به نشانی ایمیلی که ارائه دادید، ارسال شده است. برای تکمیل درخواست بازیابی حساب خوب روی این پیوند جدید کلیک کنید.",
 	"emailauth-accountrecovery-email-mismatch": "نشانی ایمیلی که وارد کرده‌اید منطبق نیست. لطفاً پس از بررسی، دوباره تلاش کنید.",
 	"emailauth-accountrecovery-invalid-email": "لطفاً یک مشانی ایمیل معتبر وارد کنید.",
-	"emailauth-accountrecovery-rate-limited": "شما درخواست‌های زیادی برای بازیابی حساب ثبت کرده‌اید. لطفاً پیش از تلاش مجدد کمی صبر کنید.",
+	"emailauth-accountrecovery-rate-limited": "شما درخواست‌های بسیاری برای بازیابی حساب ثبت کرده‌اید. لطفاً پیش از تلاش دوباره کمی صبر کنید.",
 	"emailauth-accountrecovery-error-generic": "هنگام پردازش درخواست شما خطایی رخ داد. لطفاً بعداً دوباره تلاش کنید.",
 	"emailauth-accountrecovery-error-invalid-data": "پردازش اطلاعاتی که ارائه کرده‌اید امکان‌پذیر نیست. لطفاً پس از بررسی ورودی‌های خود دوباره تلاش کنید.",
 	"emailauth-accountrecovery-error-service-unavailable": "سرویس بازیابی حساب موقتاً از دسترس خارج است. لطفاً بعداً دوباره تلاش کنید.",

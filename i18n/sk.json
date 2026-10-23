@@ -47,5 +47,6 @@
 	"logentry-emailauth-verify-failure": "Neúspešný pokus o overenie e-mailovej autentifikácie pre $4",
 	"logentry-emailauth-verify-success": "Úspešný pokus o overenie prostredníctvom e-mailovej autentifikácie",
 	"logentry-emailauth-recovery-submit": "Bola odoslaná žiadosť o obnovenie účtu $1",
-	"logentry-emailauth-account-recovery-submit": "Bola podaná žiadosť o obnovenie účtu pre $4"
+	"logentry-emailauth-account-recovery-submit": "Bola podaná žiadosť o obnovenie účtu pre $4",
+	"emailauth-throttled": "Vyžiadali ste príliš veľa e-mailov! Pred vyžiadaním ďalšieho kódu počkajte $1."
 }
