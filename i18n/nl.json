@@ -3,11 +3,12 @@
 		"authors": [
 			"Mainframe98",
 			"McDutchie",
-			"Siebrand"
+			"Siebrand",
+			"Sjoerddebruin"
 		]
 	},
 	"emailauth-desc": "Verifieert verdachte aanmeldpogingen via e-mails",
-	"emailauth-token-label": "Verificatie code",
+	"emailauth-token-label": "Verificatiecode",
 	"emailauth-token-help": "Eenmalig tweetrapsauthenticatie-token dat per e-mail is verstuurd.",
 	"emailauth-email-subject": "Uw aanmeldingsverificatiecode voor $1",
 	"emailauth-email-body-intro": "Hallo $1, het lijkt erop dat u probeert zich aan te melden vanaf een nieuw apparaat op $2.",
@@ -19,7 +20,7 @@
 	"emailauth-email-body-help-text": "Zie $1 voor meer informatie",
 	"emailauth-login-message": "U moet uw aanmeldingspoging verifiëren. Er is een verificatiecode naar uw e-mailadres ($1) verstuurd. Vul die code hier in.",
 	"emailauth-login-help": "Neem contact op met de [[{{int:grouppage-sysop}}|site administrators]] als u geen toegang meer hebt tot het e-mailadres van uw account; [[mw:Special:MyLanguage/Help:Extension:EmailAuth|meer informatie]].",
-	"emailauth-login-failure": "Onjuiste verificatie code!",
+	"emailauth-login-failure": "Onjuiste verificatiecode!",
 	"emailauth-login-retry-limit": "Te veel fouten!",
 	"emailauth-accountrecovery-intro": "{{SITENAME}}-account herstellen",
 	"emailauth-accountrecovery-logged-in": "Deze pagina is niet beschikbaar voor aangemelde gebruikers. Om een account te herstellen meldt u zich eerst af.",
