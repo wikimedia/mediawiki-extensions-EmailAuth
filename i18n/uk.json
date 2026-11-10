@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Piramidion"
+			"Piramidion",
+			"Ата"
 		]
 	},
 	"emailauth-desc": "Підтверджує через електронну пошту підозрілі випадки входу в систему.",

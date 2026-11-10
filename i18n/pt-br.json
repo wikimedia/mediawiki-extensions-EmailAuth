@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Eduardo Addad de Oliveira",
-			"Eduardoaddad"
+			"Eduardoaddad",
+			"Fúlvio",
+			"Sixaxis"
 		]
 	},
 	"emailauth-desc": "Verifica autenticações suspeitas por e-mail",

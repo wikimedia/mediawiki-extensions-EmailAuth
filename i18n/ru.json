@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
-			"Семён"
+			"Семён",
+			"EneshTranslates",
+			"Okras"
 		]
 	},
 	"emailauth-desc": "Проверяет подозрительные логины по электронной почте.",

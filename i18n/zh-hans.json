@@ -2,7 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Liuxinyu970226",
-			"Diskdance"
+			"Diskdance",
+			"ExoHyper2026",
+			"GuoPC",
+			"Key0121",
+			"Peterxy",
+			"Peterxy12",
+			"TigerZhang",
+			"魔琴"
 		]
 	},
 	"emailauth-desc": "使用电子邮件验证可疑登录",
@@ -12,5 +19,6 @@
 	"emailauth-email-body": "您登录$1所需的验证码为$2",
 	"emailauth-login-message": "您需要验证您的登录。验证码已发送到您的电子邮件地址（$1），请在此输入该代码。",
 	"emailauth-login-failure": "验证码无效！",
-	"emailauth-login-retry-limit": "失败次数过多！"
+	"emailauth-login-retry-limit": "失败次数过多！",
+	"emailauth-throttled": "请求的邮件数过多！请等待$1后再请求新的代码。"
 }

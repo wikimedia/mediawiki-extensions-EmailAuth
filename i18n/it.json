@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
-			"Superpes15"
+			"Superpes15",
+			"Dream Indigo",
+			"Freediman"
 		]
 	},
 	"emailauth-desc": "Verifica gli accessi sospetti tramite posta elettronica.",
@@ -12,5 +14,6 @@
 	"emailauth-email-body": "Il tuo codice di verifica accesso su $1 è $2",
 	"emailauth-login-message": "Devi verificare il tuo accesso. Un codice di verifica è stato inviato al tuo indirizzo di posta elettronica ($1), inserisci il codice qui.",
 	"emailauth-login-failure": "Codice di verifica non valido!",
-	"emailauth-login-retry-limit": "Troppi tentativi falliti!"
+	"emailauth-login-retry-limit": "Troppi tentativi falliti!",
+	"emailauth-throttled": "Troppe email richieste! Attendi $1 prima di richiedere un altro codice."
 }

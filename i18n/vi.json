@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Doraemonluonbentoi",
-			"Nvdtn19"
+			"Nvdtn19",
+			"NguoiDungKhongDinhDanh"
 		]
 	},
 	"emailauth-desc": "Xác minh các lần đăng nhập đáng ngờ qua email",
@@ -10,5 +11,6 @@
 	"emailauth-token-help": "Mã 2FA một lần được gửi qua email.",
 	"emailauth-login-message": "Để giữ an toàn cho tài khoản của bạn, chúng tôi cần đảm bảo rằng bạn chính là người đang cố đăng nhập. Một mã xác minh đã được gửi đến địa chỉ email của bạn ($1), vui lòng nhập mã đó vào đây.",
 	"emailauth-login-failure": "Mã xác minh không hợp lệ!",
-	"emailauth-login-retry-limit": "Bạn đã nhập sai mã quá nhiều lần!"
+	"emailauth-login-retry-limit": "Bạn đã nhập sai mã quá nhiều lần!",
+	"emailauth-throttled": "Đã có quá nhiều yêu cầu gửi thw! Vui lòng đợi $1 trước khi yêu cầu mã khác."
 }
