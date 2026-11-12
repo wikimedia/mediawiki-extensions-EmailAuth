@@ -22,5 +22,6 @@
 	"emailauth-login-message-no-email": "Devi verificare il tuo accesso. Un codice di verifica è stato inviato al tuo indirizzo di posta elettronica, inserisci il codice qui.",
 	"emailauth-login-help": "Contatta gli [[{{int:grouppage-sysop}}|amministratori del sito]] se non hai più accesso all'indirizzo email associato alla tua utenza. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|ulteriori informazioni]])",
 	"emailauth-login-failure": "Codice di verifica non valido!",
-	"emailauth-login-retry-limit": "Troppi tentativi falliti!"
+	"emailauth-login-retry-limit": "Troppi tentativi falliti!",
+	"emailauth-throttled": "Troppe email richieste! Attendi $1 prima di richiedere un altro codice."
 }

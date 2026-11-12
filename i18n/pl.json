@@ -23,5 +23,6 @@
 	"emailauth-login-message-no-email": "Musisz zweryfikować swoje logowanie. Kod weryfikacyjny został wysłany na twój adres e-mail, wprowadź ten kod tutaj.",
 	"emailauth-login-help": "Jeśli nie masz dostępu do adresu e-mail przypisanego do swojego konta, skontaktuj się [[{{int:grouppage-sysop}}|administratorami strony]] ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|dowiedz się więcej]]).",
 	"emailauth-login-failure": "Nieprawidłowy kod weryfikacyjny!",
-	"emailauth-login-retry-limit": "Zbyt wiele błędów!"
+	"emailauth-login-retry-limit": "Zbyt wiele błędów!",
+	"emailauth-throttled": "Wysłano zbyt wiele próśb o kody! Odczekaj $1, zanim poprosisz o kolejny kod."
 }

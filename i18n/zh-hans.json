@@ -27,5 +27,6 @@
 	"emailauth-login-message-no-email": "您需要验证您的登录。验证码已发送到您的电子邮件地址，请在此输入该代码。",
 	"emailauth-login-help": "如果您无法访问您账号的电子邮件地址，请联系[[{{int:grouppage-sysop}}|网站管理员]]。（[[mw:Special:MyLanguage/Help:Extension:EmailAuth|更多信息]]）",
 	"emailauth-login-failure": "验证码无效！",
-	"emailauth-login-retry-limit": "失败次数过多！"
+	"emailauth-login-retry-limit": "失败次数过多！",
+	"emailauth-throttled": "请求的邮件数过多！请等待$1后再请求新的代码。"
 }

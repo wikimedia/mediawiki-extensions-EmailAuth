@@ -20,5 +20,6 @@
 	"emailauth-login-message-no-email": "يجب عليك تأكيد تسجيل الدخول. تم إرسال رمز تحقق إلى بريدك الإلكتروني، يُرجى إدخاله هنا.",
 	"emailauth-login-help": "تواصل مع [[{{int:grouppage-sysop}}|مسؤولي الموقع]] إذا لم يعد بإمكانك الوصول إلى عنوان البريد الإلكتروني لحسابك. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|مزيد من المعلومات]])",
 	"emailauth-login-failure": "رمز التحقق غير صالح!",
-	"emailauth-login-retry-limit": "الكثير من الفشل!"
+	"emailauth-login-retry-limit": "الكثير من الفشل!",
+	"emailauth-throttled": "تم طلب عدد كبير جدًا من عناوين البريد الإلكتروني! يرجى الانتظار $1 قبل طلب رمز آخر."
 }

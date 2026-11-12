@@ -21,5 +21,6 @@
 	"emailauth-login-message-no-email": "Để giữ an toàn cho tài khoản của bạn, chúng tôi cần đảm bảo rằng bạn chính là người đang cố đăng nhập. Một mã xác minh đã được gửi đến địa chỉ email của bạn, vui lòng nhập mã đó vào đây.",
 	"emailauth-login-help": "Liên hệ một [[{{int:grouppage-sysop}}|bảo quản viên]] nếu bạn không còn quyền truy cập vào địa chỉ email của tài khoản. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|tìm hiểu thêm]])",
 	"emailauth-login-failure": "Mã xác minh không hợp lệ!",
-	"emailauth-login-retry-limit": "Bạn đã nhập sai mã quá nhiều lần!"
+	"emailauth-login-retry-limit": "Bạn đã nhập sai mã quá nhiều lần!",
+	"emailauth-throttled": "Đã có quá nhiều yêu cầu gửi thw! Vui lòng đợi $1 trước khi yêu cầu mã khác."
 }

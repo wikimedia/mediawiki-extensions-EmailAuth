@@ -21,5 +21,6 @@
 	"emailauth-login-message-no-email": "Girişinizi doğrulamalısınız. E-poçt ünvanınıza doğrulama kodu göndərilib, zəhmət olmasa, o kodu buraya daxil edin.",
 	"emailauth-login-help": "Hesabınızın e-poçt ünvanına artıq girə bilmirsinizsə, [[{{int:grouppage-sysop}}|sayt inzibatçıları]] ilə əlaqə saxlayın. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|ətraflı məlumat]])",
 	"emailauth-login-failure": "Yanlış təsdiqləmə kodu!",
-	"emailauth-login-retry-limit": "Çox sayda səhv!"
+	"emailauth-login-retry-limit": "Çox sayda səhv!",
+	"emailauth-throttled": "Həddindən artıq çox e-poçt tələb olunub! Başqa bir kod tələb etməzdən əvvəl $1 gözləyin."
 }

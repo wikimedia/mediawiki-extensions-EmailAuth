@@ -22,5 +22,6 @@
 	"emailauth-login-message-no-email": "U moet uw aanmeldingspoging verifiëren. Er is een verificatiecode naar uw e-mailadres verstuurd. Vul die code hier in.",
 	"emailauth-login-help": "Neem contact op met de [[{{int:grouppage-sysop}}|site administrators]] als u geen toegang meer hebt tot het e-mailadres van uw account; [[mw:Special:MyLanguage/Help:Extension:EmailAuth|meer informatie]].",
 	"emailauth-login-failure": "Onjuiste verificatiecode!",
-	"emailauth-login-retry-limit": "Te veel fouten!"
+	"emailauth-login-retry-limit": "Te veel fouten!",
+	"emailauth-throttled": "Er zijn te veel e-mails aangevraagd! Wacht $1 voordat u een nieuwe code aanvraagt."
 }

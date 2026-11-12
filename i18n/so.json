@@ -18,5 +18,6 @@
 	"emailauth-login-message": "Waxaad u baahan tahay inaad xaqiijiso gelitaankaaga. Koodh xaqiijin ayaa loo diray iimaylkaaga ($1), fadlan halkan geli koodhkaas.",
 	"emailauth-login-help": "La xiriir [[{{int:grouppage-sysop}}|maamulayaasha goobta]] haddii aadan mar dambe heli karin iimaylka akoonkaaga. ([[mw:Special:MyLanguage/Help:Extension:EmailAuth|macluumaad dheeraad ah]])",
 	"emailauth-login-failure": "Koodhka xaqiijinta waa khalad!",
-	"emailauth-login-retry-limit": "Isku dayo badan oo fashilmay!"
+	"emailauth-login-retry-limit": "Isku dayo badan oo fashilmay!",
+	"emailauth-throttled": "Waxaa la codsaday iimayllo aad u badan! Fadlan sug $1 ka hor intaadan codsan kood kale."
 }
